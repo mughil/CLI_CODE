@@ -10,6 +10,9 @@ reworked registry experience. No framework, no build step — plain HTML/CSS/JS.
 | `index.html` | Hero, live stats, both install paths (agents + `pip` toolkit), demo strip, matrices teaser |
 | `registry.html` | Searchable registry: instant filter by name/purpose, **harness / public** toggle, category filter, sortable columns, per-CLI detail drawer with copyable install/update/uninstall commands. Filter + open CLI are written to the URL, so any view is shareable. |
 | `matrices.html` | Capability matrices with CLI chips (linking into the registry) and expandable capability/provider lists |
+| `docs.html` | Self-contained documentation — install, registry usage, data format, deployment |
+
+All navigation is internal; the site has no outbound links.
 
 ## Design system
 

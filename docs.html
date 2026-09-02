@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docs — CLI_CODE</title>
+<meta name="description" content="How CLI_CODE works: install for agents or as a personal toolkit, browse the registry, use capability matrices, and update the catalog data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/theme.js" defer></script>
+<style>
+  .docs-layout { display: grid; grid-template-columns: 210px 1fr; gap: var(--space-4); align-items: start; }
+  @media (max-width: 860px) { .docs-layout { grid-template-columns: 1fr; } .docs-nav { position: static !important; } }
+  .docs-nav { position: sticky; top: 78px; font-family: var(--mono); font-size: 0.8rem; }
+  .docs-nav a { display: block; color: var(--ink-3); padding: 5px 0; }
+  .docs-nav a:hover { color: var(--accent-ink); text-decoration: none; }
+  .docs-body h2 { font-size: 1.4rem; margin: var(--space-4) 0 10px; scroll-margin-top: 78px; }
+  .docs-body h2:first-child { margin-top: 0; }
+  .docs-body h3 { font-size: 1rem; margin: var(--space-2) 0 6px; color: var(--ink); }
+  .docs-body p, .docs-body li { color: var(--ink-2); font-size: 0.94rem; }
+  .docs-body ul { padding-left: 20px; }
+  .docs-body code { font-family: var(--mono); font-size: 0.85em; background: var(--chip-bg); padding: 1px 5px; border-radius: 5px; color: var(--ink); }
+  .docs-body pre { background: var(--cmd-bg); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 12px 14px; overflow-x: auto; }
+  .docs-body pre code { background: none; padding: 0; font-size: 0.82rem; line-height: 1.7; }
+  .docs-body table { border-collapse: collapse; width: 100%; font-size: 0.88rem; margin: 10px 0; }
+  .docs-body th, .docs-body td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line-2); }
+  .docs-body th { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> cli_code</a>
+    <nav class="nav">
+      <a href="registry.html">Registry</a>
+      <a href="matrices.html">Matrices</a>
+      <a href="docs.html" class="active">Docs</a>
+      <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:34px;padding-bottom:60px">
+  <span class="eyebrow">Documentation</span>
+  <h1 class="sec-title">Using <span class="g">CLI_CODE</span></h1>
+  <p class="sec-sub">CLI_CODE is a registry of agent-native command-line interfaces. Point an AI agent at it and it can discover, install, and drive a CLI for the software it needs — no GUI in the loop.</p>
+
+  <div class="docs-layout" style="margin-top:var(--space-4)">
+    <nav class="docs-nav" aria-label="On this page">
+      <a href="#overview">Overview</a>
+      <a href="#agents">Install for agents</a>
+      <a href="#toolkit">Personal toolkit</a>
+      <a href="#registry">The registry</a>
+      <a href="#matrices">Capability matrices</a>
+      <a href="#demos">Demos</a>
+      <a href="#data">Catalog data</a>
+      <a href="#deploy">Deploy this site</a>
+      <a href="#license">License</a>
+    </nav>
+
+    <div class="docs-body">
+      <h2 id="overview">Overview</h2>
+      <p>Every entry in the registry is one CLI with a fixed contract: structured JSON output for agents, a human-readable mode for debugging, and a consistent set of subcommands. Two kinds of entry exist:</p>
+      <ul>
+        <li><b>Harness CLIs</b> — generated wrappers that drive real desktop software (Blender, FreeCAD, GIMP, OBS…) or local services through their own APIs.</li>
+        <li><b>Public CLIs</b> — third-party or official command-line tools already published to npm, Homebrew, or similar, catalogued here so agents can find them the same way.</li>
+      </ul>
+
+      <h2 id="agents">Install for agents</h2>
+      <p>Add the meta-skill once; the agent then reads the registry and installs whatever a task needs. Works with Claude Code, OpenClaw, Nanobot, Codex, and other SKILL-compatible agents.</p>
+      <pre><code>npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y</code></pre>
+      <p>Then prompt the agent:</p>
+      <pre><code>Find an appropriate CLI in CLI_CODE and complete the task: &lt;your task&gt;</code></pre>
+
+      <h2 id="toolkit">Personal toolkit</h2>
+      <p>The same registry is usable by hand through a small Python client.</p>
+      <pre><code>pip install cli-anything-hub</code></pre>
+      <table>
+        <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+        <tbody>
+          <tr><td><code>cli-hub list</code></td><td>Browse the registry</td></tr>
+          <tr><td><code>cli-hub search &lt;kw&gt;</code></td><td>Search by keyword</td></tr>
+          <tr><td><code>cli-hub install &lt;name&gt;</code></td><td>Install a CLI from the hub</td></tr>
+          <tr><td><code>cli-hub info &lt;name&gt;</code></td><td>Inspect one CLI</td></tr>
+          <tr><td><code>cli-hub update &lt;name&gt;</code></td><td>Update an install</td></tr>
+          <tr><td><code>cli-hub uninstall &lt;name&gt;</code></td><td>Remove an install</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="registry">The registry</h2>
+      <p>Open <a href="registry.html">Registry</a> to browse all entries. The page is fully client-side:</p>
+      <ul>
+        <li><b>Search</b> matches name, display name, description, and category as you type.</li>
+        <li><b>Harness / Public</b> toggle and the <b>category</b> dropdown narrow the list.</li>
+        <li>Every column header sorts; click again to reverse.</li>
+        <li>Click a row to open a detail panel with install / update / uninstall commands (each has a copy button), requirements, entry point, and contributors.</li>
+        <li>Filters and the open entry are written to the URL — copy the address bar to share an exact view, e.g. <code>registry.html?q=blender&amp;kind=harness</code>.</li>
+      </ul>
+
+      <h2 id="matrices">Capability matrices</h2>
+      <p>A matrix (<a href="matrices.html">Matrices</a>) is a capability-based plan for a whole workflow. It lists the intents in that workflow — "turn a brief into a storyboard", "encode the final cut" — and, for each, the provider CLIs that satisfy it. Hand one to an agent and it knows which tool to reach for at every step. Each CLI chip links to its registry entry.</p>
+
+      <h2 id="demos">Demos</h2>
+      <p>The three cards on the <a href="index.html">home page</a> show agents building real artifacts through generated CLIs:</p>
+      <ul>
+        <li><b>FreeCAD — Curiosity Rover:</b> an agent assembles a rover, publishing preview bundles and a replayable trajectory.</li>
+        <li><b>Blender — Orbital Relay Drone:</b> a hard-surface model grows under a live preview loop, each stage pushing render-backed bundles.</li>
+        <li><b>draw.io — System Diagram:</b> a full architecture diagram built and laid out from a text brief.</li>
+      </ul>
+      <p>Only poster images are bundled in this build; drop matching <code>.mp4</code> files into <code>assets/demos/</code> and swap the <code>&lt;img&gt;</code> tags for <code>&lt;video&gt;</code> to make them play.</p>
+
+      <h2 id="data">Catalog data</h2>
+      <p>Nothing about the catalog is hardcoded in the pages. Four JSON files under <code>data/</code> drive everything:</p>
+      <table>
+        <thead><tr><th>File</th><th>Contents</th></tr></thead>
+        <tbody>
+          <tr><td><code>registry.json</code></td><td>Harness CLIs — <code>{ meta, clis[] }</code></td></tr>
+          <tr><td><code>public_registry.json</code></td><td>Public / third-party CLIs — same shape, richer install fields</td></tr>
+          <tr><td><code>matrix_registry.json</code></td><td>Capability matrices — <code>{ meta, matrices[] }</code></td></tr>
+          <tr><td><code>registry-dates.json</code></td><td>Last-updated date keyed by CLI <code>name</code></td></tr>
+        </tbody>
+      </table>
+      <p>Each CLI object uses these fields: <code>name</code>, <code>display_name</code>, <code>description</code>, <code>category</code>, <code>version</code>, <code>requires</code>, <code>install_cmd</code>, and optionally <code>npx_cmd</code>, <code>update_cmd</code>, <code>uninstall_cmd</code>, <code>entry_point</code>, <code>package_manager</code>, <code>homepage</code>, <code>source_url</code>, <code>contributors[]</code>. Edit the files and reload — the UI re-renders.</p>
+
+      <h2 id="deploy">Deploy this site</h2>
+      <p>Static, no build step. Serve the folder root with any host. Locally, <code>fetch()</code> needs HTTP:</p>
+      <pre><code>python -m http.server 4173</code></pre>
+      <p>A GitHub Actions workflow at <code>.github/workflows/deploy-pages.yml</code> publishes the repo root to GitHub Pages on every push to <code>main</code>. One-time setup: repo Settings → Pages → Source: <b>GitHub Actions</b>.</p>
+
+      <h2 id="license">License</h2>
+      <p>Apache-2.0. Registry data is sourced from the upstream CLI-Anything project.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>CLI_CODE — updated build.</span>
+    <span>Apache-2.0</span>
+  </div>
+</footer>
+</body>
+</html>

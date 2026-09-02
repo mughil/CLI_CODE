@@ -36,6 +36,11 @@
       wire();
       readURL();
       apply();
+      var hashName = decodeURIComponent(location.hash.replace('#', ''));
+      if (hashName) {
+        var item = state.all.find(function (c) { return c.name === hashName; });
+        if (item) openDrawer(item);
+      }
     }).catch(function (err) {
       els.tbody.innerHTML = '<tr><td class="empty">Could not load registry data.<br><small>Serve this folder over HTTP (e.g. <code>python -m http.server</code>) — <code>file://</code> blocks fetch.</small></td></tr>';
       console.error(err);
@@ -172,9 +177,7 @@
   }
 
   function openDrawer(c) {
-    var contrib = (c.contributors || []).map(function (x) {
-      return x.url ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.name) + '</a>' : esc(x.name);
-    }).join(', ') || '—';
+    var contrib = (c.contributors || []).map(function (x) { return esc(x.name); }).join(', ') || '—';
 
     var cmds = [];
     if (c.install_cmd) cmds.push(cmdBlock('Install', c.install_cmd));
@@ -187,7 +190,7 @@
       '<button class="x" aria-label="Close">×</button>' +
       '<h2>' + esc(c.title) + '</h2>' +
       '<div class="d-meta">' +
-        '<span class="pill ' + c.kind + '">' + (c.kind === 'harness' ? 'CLI-Anything harness' : 'Public CLI') + '</span>' +
+        '<span class="pill ' + c.kind + '">' + (c.kind === 'harness' ? 'CLI_CODE harness' : 'Public CLI') + '</span>' +
         '<span class="pill">' + esc(c.category) + '</span>' +
         (c.version ? '<span class="pill">v' + esc(c.version) + '</span>' : '') +
         (c.date ? '<span class="pill">updated ' + c.date + '</span>' : '') +
@@ -199,10 +202,9 @@
         '<div class="kv">Entry point: <b class="mono">' + esc(c.entry_point || '—') + '</b></div>' +
         '<div class="kv">Package manager: <b>' + esc(c.package_manager || '—') + '</b></div>' +
         '<div class="kv">Contributors: <b>' + contrib + '</b></div>') +
-      sec('Links',
-        (c.homepage ? '<div class="kv"><a href="' + esc(c.homepage) + '" target="_blank" rel="noopener">Homepage ↗</a></div>' : '') +
-        (c.source_url ? '<div class="kv"><a href="' + esc(c.source_url) + '" target="_blank" rel="noopener">Source ↗</a></div>' : '') +
-        '<div class="kv"><a href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener">CLI-Anything repo ↗</a></div>');
+      ((c.homepage || c.source_url) ? sec('Reference',
+        (c.homepage ? '<div class="kv">Homepage: <b class="mono">' + esc(c.homepage) + '</b></div>' : '') +
+        (c.source_url ? '<div class="kv">Source: <b class="mono">' + esc(c.source_url) + '</b></div>' : '')) : '');
 
     els.drawer.querySelector('.x').addEventListener('click', closeDrawer);
     els.drawer.classList.add('open');

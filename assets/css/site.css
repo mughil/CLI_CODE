@@ -111,7 +111,7 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.18; letter-spacing: -0.02em; m
 }
 .theme-btn:hover { color: var(--accent-ink); border-color: var(--accent); }
 .theme-btn svg { width: 16px; height: 16px; }
-@media (max-width: 780px) { .nav a:not(.gh) { display: none; } }
+@media (max-width: 560px) { .nav { gap: 14px; } .nav a { font-size: 0.82rem; } }
 
 /* ---- sections ---- */
 section { padding: var(--space-5) 0; }
