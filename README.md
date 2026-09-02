@@ -1,4 +1,4 @@
-# CLI-Anything Hub — updated build
+# CLI_CODE
 
 A static rebuild of the [CLI-Anything](https://github.com/HKUDS/CLI-Anything) hub site with a
 reworked registry experience. No framework, no build step — plain HTML/CSS/JS.
@@ -13,7 +13,7 @@ reworked registry experience. No framework, no build step — plain HTML/CSS/JS.
 
 ## Design system
 
-`design-system/cli-anything-hub/MASTER.md` — generated with the ui-ux-pro-max skill.
+`design-system/CLI_CODE/MASTER.md` — generated with the ui-ux-pro-max skill.
 "Code dark + run green": slate `#0f172a` base, green `#22c55e` accent, IBM Plex Sans + JetBrains Mono.
 Dark is the default; a tuned light theme is available via the header toggle (persisted to `localStorage`).
 
