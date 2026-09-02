@@ -10,10 +10,12 @@
     "validate": "node scripts/validate-data.mjs",
     "check:drift": "node scripts/build-data.mjs --check",
     "check:links": "node scripts/check-links.mjs",
-    "check": "npm run validate && npm run check:drift && npm run check:links"
+    "check:html": "html-validate \"*.html\"",
+    "check": "npm run validate && npm run check:drift && npm run check:links && npm run check:html"
   },
   "devDependencies": {
     "ajv": "^8.17.1",
-    "ajv-formats": "^3.0.1"
+    "ajv-formats": "^3.0.1",
+    "html-validate": "^9.5.3"
   }
 }

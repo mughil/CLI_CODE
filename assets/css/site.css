@@ -1,6 +1,7 @@
-/* CLI-Anything Hub — "Code dark + run green" design system (ui-ux-pro-max: Dark Mode OLED).
-   Dark is the default; a tuned light theme is available via the toggle. */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+/* CLI_CODE — "Code dark + run green" design system (ui-ux-pro-max: Dark Mode OLED).
+   Dark is the default; a tuned light theme is available via the toggle.
+   Fonts load via <link> in each page's <head> (off the critical path), not
+   @import here — system fallbacks in --sans / --mono cover first paint. */
 
 :root {
   color-scheme: dark;
@@ -80,6 +81,8 @@ body {
 }
 a { color: var(--accent-ink); text-decoration: none; }
 a:hover { text-decoration: underline; }
+/* in-prose links must not rely on colour alone (WCAG 1.4.1) */
+p a, li a, dd a, .rec-why a, .sec-sub a { text-decoration: underline; }
 :focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: 4px; }
 h1, h2, h3, h4 { font-weight: 600; line-height: 1.18; letter-spacing: -0.02em; margin: 0; }
 .wrap { max-width: 1180px; margin: 0 auto; padding: 0 22px; }
@@ -344,6 +347,7 @@ kbd {
 .browse-toolbar { margin: 20px 0 14px; display: grid; gap: 12px; }
 .filters { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: end; }
 .filters label { display: grid; gap: 4px; font: 600 0.68rem var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); }
+.filters select.filter { min-width: 148px; }
 .filters label[hidden] { display: none; }
 .filters .chk { display: flex; align-items: center; gap: 7px; text-transform: none; letter-spacing: 0; font-size: 0.8rem; color: var(--ink-2); font-weight: 500; }
 .filters .chk input { width: 16px; height: 16px; accent-color: var(--accent); }
@@ -352,7 +356,7 @@ kbd {
 .reg-count { font: 500 0.86rem var(--mono); color: var(--ink-3); margin: 4px 0 10px; }
 .reg-count b { color: var(--ink); }
 
-.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); min-height: 70vh; }
 .reg-table td.c-name { min-width: 260px; }
 .reg-table .c-sub { color: var(--ink-2); font-size: 0.82rem; margin-top: 4px; line-height: 1.5; max-width: 60ch; }
 .reg-table .c-act { white-space: nowrap; display: flex; gap: 6px; }
@@ -505,7 +509,8 @@ a.chip:hover, button.chip:hover { border-color: var(--accent); color: var(--acce
 .rec-why b { color: var(--ink-2); font-weight: 600; }
 
 /* ---- stacks ---- */
-.preset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.preset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; min-height: 620px; }
+#mtx-grid { min-height: 400px; }
 .preset { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
 .preset-head { display: flex; justify-content: space-between; align-items: start; gap: 10px; }
 .preset-head h3 { font-size: 1.1rem; }

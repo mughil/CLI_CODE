@@ -28,7 +28,8 @@
 
     document.title = `${e.name} — CLI_CODE`;
     setMeta('description', e.summary);
-    setCanonical(`./cli.html?slug=${encodeURIComponent(e.slug)}`);
+    setCanonical(`${location.origin}${location.pathname}?slug=${encodeURIComponent(e.slug)}`);
+    injectJsonLd(e);
     try { window.CLIStore.addRecent(e.slug); } catch {}
 
     render(mount, e, data.bySlug);
@@ -164,6 +165,25 @@
       this.textContent = r.inCompare ? 'In compare' : 'Add to compare';
       this.setAttribute('aria-pressed', r.inCompare);
     });
+  }
+
+  function injectJsonLd(e) {
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: e.name,
+      description: e.summary,
+      applicationCategory: e.categories[0],
+      url: location.href,
+    };
+    if ((e.platforms || []).length) ld.operatingSystem = e.platforms.join(', ');
+    if (e.license) ld.license = e.license;
+    if (e.documentation) ld.softwareHelp = e.documentation;
+    const sameAs = [e.repository, e.documentation].filter(Boolean);
+    if (sameAs.length) ld.sameAs = sameAs;
+    let s = document.getElementById('cli-ld');
+    if (!s) { s = document.createElement('script'); s.type = 'application/ld+json'; s.id = 'cli-ld'; document.head.appendChild(s); }
+    s.textContent = JSON.stringify(ld);
   }
 
   function setMeta(name, content) {

@@ -1,0 +1,30 @@
+name: Incorrect data
+description: A tool's profile has a wrong or outdated fact.
+title: "Data: <slug> — <what's wrong>"
+labels: ["data"]
+body:
+  - type: input
+    id: slug
+    attributes:
+      label: Tool slug
+      description: From the URL — cli.html?slug=<slug>
+      placeholder: blender
+    validations: { required: true }
+  - type: dropdown
+    id: field
+    attributes:
+      label: Which field
+      options: [summary, description, categories, tags, useCases, platforms, language, runtime, license, install, examples, repository, documentation, difficulty, alternatives, related, lastVerified, other]
+    validations: { required: true }
+  - type: textarea
+    id: correction
+    attributes:
+      label: Correct value
+      description: What it should be.
+    validations: { required: true }
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A link to the tool's own docs that confirms it.
+    validations: { required: true }

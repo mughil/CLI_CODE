@@ -271,9 +271,78 @@ function emit(file, content) {
     }
   } else {
     writeFileSync(p(file), content);
-    console.log(`[ok] wrote ${file} (${entries.length} entries)`);
+    console.log(`[ok] wrote ${file}`);
   }
 }
 
 emit('data/clis.json', outClis);
 emit('data/meta.json', outMeta);
+
+// ---------- sitemap + robots ----------------------------------------------
+// SITE_URL is set by CI from the Pages URL; the default is an obvious placeholder.
+// Run locally as: SITE_URL=https://you.github.io/CLI_CODE npm run build
+const SITE_URL = (process.env.SITE_URL || 'https://EXAMPLE.invalid/CLI_CODE').replace(/\/+$/, '');
+if (!process.env.SITE_URL && !CHECK) console.log('  (note: SITE_URL not set — sitemap/OG use a placeholder host)');
+
+const CORE_PAGES = ['index.html', 'registry.html', 'find.html', 'stacks.html', 'docs.html'];
+const urlEntry = (loc, priority) =>
+  `  <url>\n    <loc>${SITE_URL}/${loc}</loc>\n    <priority>${priority}</priority>\n  </url>`;
+const sitemapUrls = [
+  ...CORE_PAGES.map((f) => urlEntry(f, f === 'index.html' ? '1.0' : '0.8')),
+  ...meta.categories.map((c) => urlEntry(`registry.html?cat=${encodeURIComponent(c.id)}`, '0.6')),
+  ...entries.map((e) => urlEntry(`cli.html?slug=${encodeURIComponent(e.slug)}`, e.dataQuality === 'curated' ? '0.7' : '0.5')),
+];
+emit('sitemap.xml',
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.join('\n')}\n</urlset>\n`);
+emit('robots.txt',
+  `# CLI_CODE\nUser-agent: *\nAllow: /\nDisallow: /cheatsheet.html\nDisallow: /saved.html\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+
+// ---------- social / SEO meta + canonical injection -----------------------
+// Each managed page carries "<!-- SEO:auto -->…<!-- /SEO:auto -->" in <head>;
+// regenerate the block from the page's own <title> + description so unfurls
+// stay in sync, and make the canonical absolute.
+const SEO_PAGES = [
+  'index.html', 'registry.html', 'cli.html', 'find.html', 'stacks.html',
+  'compare.html', 'cheatsheet.html', 'saved.html', 'docs.html',
+];
+const attr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+for (const file of SEO_PAGES) {
+  let html;
+  try { html = readFileSync(p(file), 'utf8'); } catch { continue; }
+  const title = (html.match(/<title>([^<]*)<\/title>/) || [])[1] || 'CLI_CODE';
+  const desc = (html.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
+  const block = [
+    '<!-- SEO:auto -->',
+    '<meta property="og:type" content="website">',
+    '<meta property="og:site_name" content="CLI_CODE">',
+    `<meta property="og:title" content="${attr(title)}">`,
+    `<meta property="og:description" content="${attr(desc)}">`,
+    `<meta property="og:url" content="${attr(`${SITE_URL}/${file}`)}">`,
+    '<meta name="twitter:card" content="summary">',
+    `<meta name="twitter:title" content="${attr(title)}">`,
+    `<meta name="twitter:description" content="${attr(desc)}">`,
+    '<!-- /SEO:auto -->',
+  ].join('\n');
+  let next = html.replace(/<!-- SEO:auto -->[\s\S]*?<!-- \/SEO:auto -->/, block);
+  next = next.replace(/<link rel="canonical" href="\.\/([^"]+)">/, `<link rel="canonical" href="${SITE_URL}/$1">`);
+
+  if (file === 'index.html' && next.includes('<!-- LD:auto -->')) {
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'CLI_CODE',
+      description: desc,
+      url: `${SITE_URL}/`,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/registry.html?q={search_term_string}` },
+        'query-input': 'required name=search_term_string',
+      },
+    };
+    next = next.replace(
+      /<!-- LD:auto -->[\s\S]*?<!-- \/LD:auto -->/,
+      `<!-- LD:auto -->\n<script type="application/ld+json">\n${JSON.stringify(ld, null, 2)}\n</script>\n<!-- /LD:auto -->`,
+    );
+  }
+  emit(file, next);
+}

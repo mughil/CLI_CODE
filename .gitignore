@@ -14,3 +14,7 @@ dist/
 
 # local zips
 *.zip
+
+# lighthouse reports
+lh-*.json
+.lighthouseci/

@@ -6,7 +6,7 @@
 
 ---
 
-**Project:** CLI-Anything Hub
+**Project:** CLI_CODE
 **Generated:** 2026-09-02 23:37:54
 **Category:** Developer Tool / IDE
 **Design Dials:** Variance 6/10 (Balanced / Modern) | Motion 4/10 (Standard) | Density 7/10 (Standard)

@@ -52,9 +52,21 @@ for (const file of htmlFiles) {
     const hits = [...html.matchAll(re)];
     for (const h of hits) {
       const line = html.slice(0, h.index).split('\n').length;
-      // allow inside <code>/<pre> only for the documented "file://" caveat
       warnings.push(`${rel}:${line}: contains "${tok.replace(/\\\\/g, '\\')}"`);
     }
+  }
+
+  // stale branding / dead internal targets
+  for (const bad of ['CLI-Anything Hub', 'clianything', 'matrices.html']) {
+    if (html.includes(bad)) {
+      const line = html.slice(0, html.indexOf(bad)).split('\n').length;
+      errors.push(`${rel}:${line}: stale reference "${bad}"`);
+    }
+  }
+
+  // images need alt text
+  for (const m of html.matchAll(/<img\b[^>]*>/g)) {
+    if (!/\salt=/.test(m[0])) errors.push(`${rel}: <img> without alt: ${m[0].slice(0, 70)}`);
   }
 
   // unsafe target=_blank

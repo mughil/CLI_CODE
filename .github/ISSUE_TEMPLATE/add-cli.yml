@@ -1,0 +1,44 @@
+name: Add a CLI
+description: Propose a command-line tool that isn't in the directory yet.
+title: "Add CLI: <tool name>"
+labels: ["add-cli"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The tool list is seeded from the upstream CLI-Anything registry. Use this
+        to propose a new entry — a maintainer will add it to the source data.
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+      placeholder: ripgrep
+    validations: { required: true }
+  - type: input
+    id: repo
+    attributes:
+      label: Repository or homepage URL
+      placeholder: https://github.com/BurntSushi/ripgrep
+    validations: { required: true }
+  - type: textarea
+    id: summary
+    attributes:
+      label: One-line summary
+      description: What it does, in a sentence.
+    validations: { required: true }
+  - type: dropdown
+    id: category
+    attributes:
+      label: Best-fit category
+      options: [ai, audio, automation, database, debugging, design, devops, devtools, diagrams, game, graphics, image, knowledge, music, network, office, search, science, storage, testing, video, web, other]
+    validations: { required: true }
+  - type: input
+    id: install
+    attributes:
+      label: Install command
+      placeholder: cargo install ripgrep
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Language, license, platforms, close alternatives already in the directory.
