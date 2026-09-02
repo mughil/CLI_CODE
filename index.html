@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CLI-Anything Hub — Agent-native CLI registry</title>
+<meta name="description" content="A registry of agent-native CLIs for any software, codebase, or Web API. Install with a single command and let AI agents operate it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/theme.js" defer></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="dot" aria-hidden="true"></span> cli-hub
+    </a>
+    <nav class="nav">
+      <a href="registry.html">Registry</a>
+      <a href="matrices.html">Matrices</a>
+      <a href="https://github.com/HKUDS/CLI-Anything#readme" target="_blank" rel="noopener">Docs</a>
+      <a class="gh" href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <span class="kicker reveal"><i aria-hidden="true"></i> npx skills add HKUDS/CLI-Anything</span>
+    <h1 class="reveal">Give your agents a <span class="g">command line</span> for anything</h1>
+    <p class="reveal">Any software. Any codebase. Any Web API. Generate an agent-native CLI and let AI agents operate it — install with a single command.</p>
+    <div class="stats">
+      <div class="stat reveal"><b id="s-total">—</b><span>CLIs available</span></div>
+      <div class="stat reveal"><b id="s-harness">—</b><span>Harness CLIs</span></div>
+      <div class="stat reveal"><b id="s-public">—</b><span>Public CLIs</span></div>
+      <div class="stat reveal"><b id="s-cats">—</b><span>Categories</span></div>
+    </div>
+    <p class="reveal" style="margin-top:var(--space-3)">
+      <a class="btn btn-accent" href="registry.html">Browse the registry
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </p>
+  </section>
+
+  <section class="wrap">
+    <div class="grid-2">
+      <div class="card reveal">
+        <span class="eyebrow">For agents</span>
+        <h3>Empower your agents — <span class="g">install in one command</span></h3>
+        <p>Works with Claude Code, OpenClaw, Nanobot, Codex, and other SKILL-compatible agents. Also on ClawHub and SkillHub.</p>
+        <div class="cmd">
+          <span class="tag">npx</span>
+          <code>npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y</code>
+          <button class="copy-btn" data-copy="npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y">Copy</button>
+        </div>
+        <p style="margin:12px 0 0;font-size:.86rem">Then prompt: <span class="g">“Find an appropriate CLI in CLI-Hub and complete the task: …”</span></p>
+      </div>
+
+      <div class="card reveal">
+        <span class="eyebrow">For you</span>
+        <h3>Empower yourself — <span class="g">your CLI toolkit</span></h3>
+        <p>A pip-installable client for browsing, searching, and installing CLIs from the hub.</p>
+        <div class="cmd">
+          <span class="tag">pip</span>
+          <code>pip install cli-anything-hub</code>
+          <button class="copy-btn" data-copy="pip install cli-anything-hub">Copy</button>
+        </div>
+        <div class="sub-cmds">
+          <div><b>cli-hub list</b><span>Browse the registry</span></div>
+          <div><b>cli-hub search</b><span>Search by keyword</span></div>
+          <div><b>cli-hub install</b><span>Install from CLI-Hub</span></div>
+          <div><b>cli-hub info</b><span>Inspect one CLI</span></div>
+          <div><b>cli-hub update</b><span>Update an install</span></div>
+          <div><b>cli-hub uninstall</b><span>Remove an install</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <span class="eyebrow reveal">See it work</span>
+    <h2 class="sec-title reveal">Real-world <span class="g">demos</span></h2>
+    <p class="sec-sub reveal">Agents driving desktop software through generated CLIs — no GUI in the loop.</p>
+    <div class="demos-strip" style="margin-top:var(--space-3)">
+      <a class="dposter reveal" href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener">
+        <img src="assets/demos/freecad-curiosity-preview-trajectory-poster.jpg" alt="FreeCAD Curiosity rover assembled by an agent">
+        <div class="body"><span class="cat">3D / CAD</span><h3><span class="g">FreeCAD</span> — Curiosity Rover</h3>
+        <p>An agent assembles a Curiosity-inspired rover, publishing real preview bundles and a replayable trajectory.</p></div>
+      </a>
+      <a class="dposter reveal" href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener">
+        <img src="assets/demos/blender-orbital-relay-drone-preview-trajectory-poster.jpg" alt="Blender orbital relay drone built by an agent">
+        <div class="body"><span class="cat">3D · Hard-surface</span><h3><span class="g">Blender</span> — Orbital Relay Drone</h3>
+        <p>A hard-surface drone grows under a real preview loop, each stage pushing render-backed bundles.</p></div>
+      </a>
+      <a class="dposter reveal" href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener">
+        <img src="assets/demos/drawio-demo-poster.jpg" alt="draw.io architecture diagram generated by an agent">
+        <div class="body"><span class="cat">Diagrams</span><h3><span class="g">draw.io</span> — System Diagram</h3>
+        <p>An agent builds and lays out a full architecture diagram straight from a text brief.</p></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <span class="eyebrow reveal">Collections</span>
+    <h2 class="sec-title reveal">Capability <span class="g">matrices</span></h2>
+    <p class="sec-sub reveal">Curated bundles that map an intent to the right provider CLI across the catalog — video creation, 3D/CAD, game dev, and more.</p>
+    <p class="reveal" style="margin-top:var(--space-2)"><a class="btn btn-ghost" href="matrices.html">Explore the matrices →</a></p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>CLI-Anything Hub — updated build. Data from the <a href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener">HKUDS/CLI-Anything</a> registry.</span>
+    <span>Apache-2.0</span>
+  </div>
+</footer>
+
+<script>
+Promise.all([
+  fetch('data/registry.json').then(function (r) { return r.json(); }),
+  fetch('data/public_registry.json').then(function (r) { return r.json(); })
+]).then(function (d) {
+  var h = d[0].clis || [], p = d[1].clis || [];
+  var cats = new Set(h.concat(p).map(function (c) { return c.category; }));
+  set('s-total', h.length + p.length); set('s-harness', h.length);
+  set('s-public', p.length); set('s-cats', cats.size);
+}).catch(function () {});
+function set(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registry — CLI-Anything Hub</title>
+<meta name="description" content="Searchable registry of agent-native CLIs. Filter by category, install method, and type; sort by any column; inspect any CLI.">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/theme.js" defer></script>
+<script src="assets/js/registry.js" defer></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="dot" aria-hidden="true"></span> cli-hub
+    </a>
+    <nav class="nav">
+      <a href="registry.html" class="active">Registry</a>
+      <a href="matrices.html">Matrices</a>
+      <a href="https://github.com/HKUDS/CLI-Anything#readme" target="_blank" rel="noopener">Docs</a>
+      <a class="gh" href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:34px;padding-bottom:60px">
+  <span class="eyebrow">The registry</span>
+  <h1 class="sec-title">Every <span class="g">agent-native CLI</span>, in one place</h1>
+  <p class="sec-sub">Search by name or purpose, narrow by category and type, sort any column, and click a row for install commands and details. Filters are saved to the URL, so any view is shareable.</p>
+
+  <div class="reg-toolbar" style="margin-top:22px">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="reg-search" type="search" placeholder="Search 100+ CLIs — blender, mock server, transcription…" autocomplete="off">
+    </div>
+    <div class="seg" id="reg-kind">
+      <button data-kind="all" class="on">All</button>
+      <button data-kind="harness">Harness</button>
+      <button data-kind="public">Public</button>
+    </div>
+    <select id="reg-category" class="filter"><option value="all">All categories</option></select>
+  </div>
+
+  <div class="reg-count" id="reg-count">Loading…</div>
+
+  <div style="overflow-x:auto">
+    <table class="reg-table">
+      <thead id="reg-head">
+        <tr>
+          <th data-sort="name">CLI <span class="arr">↕</span></th>
+          <th data-sort="category">Category <span class="arr">↕</span></th>
+          <th data-sort="package_manager">Install <span class="arr">↕</span></th>
+          <th data-sort="date">Updated <span class="arr">↕</span></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="reg-body"><tr><td colspan="5" class="empty">Loading registry…</td></tr></tbody>
+    </table>
+  </div>
+</main>
+
+<div class="drawer-scrim" id="drawer-scrim"></div>
+<aside class="drawer" id="drawer" aria-label="CLI details"></aside>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>Data from the <a href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener">HKUDS/CLI-Anything</a> registry.</span>
+    <span>Apache-2.0</span>
+  </div>
+</footer>
+</body>
+</html>
