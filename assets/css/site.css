@@ -115,7 +115,13 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.18; letter-spacing: -0.02em; m
 }
 .theme-btn:hover { color: var(--accent-ink); border-color: var(--accent); }
 .theme-btn svg { width: 16px; height: 16px; }
-@media (max-width: 560px) { .nav { gap: 14px; } .nav a { font-size: 0.82rem; } }
+@media (max-width: 560px) {
+  .site-head .wrap { gap: 12px; overflow-x: auto; scrollbar-width: none; }
+  .site-head .wrap::-webkit-scrollbar { display: none; }
+  .nav { gap: 13px; }
+  .nav a { font-size: 0.82rem; white-space: nowrap; }
+  .brand { flex: 0 0 auto; }
+}
 
 /* ---- sections ---- */
 section { padding: var(--space-5) 0; }
