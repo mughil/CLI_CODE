@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cli-code/schema/aiproject.schema.json",
+  "title": "CLI_CODE AI/LLM open-source GitHub project entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "slug", "name", "summary", "category", "repository", "lastVerified", "sources"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string", "minLength": 1, "maxLength": 260 },
+    "category": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": { "enum": ["inference", "serving", "local-runner", "training", "fine-tuning", "rag", "agents", "coding", "evaluation", "prompt-tooling", "vector-search", "optimization", "quantization", "multimodal", "observability", "ai-gateway", "orchestration", "app-framework"] }
+    },
+    "repository": { "type": "string", "format": "uri", "pattern": "^https://github\\.com/" },
+    "license": { "type": ["string", "null"] },
+    "language": { "type": ["string", "null"] },
+    "officialDocs": { "type": ["string", "null"], "format": "uri" },
+    "useCases": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "localCapable": { "type": "boolean" },
+    "adoption": { "enum": ["widely-used", "notable", "emerging", "unknown", null] },
+    "stars": { "type": ["integer", "null"], "minimum": 0 },
+    "starsVerifiedAt": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "lastVerified": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["type", "url", "title", "verifiedAt"],
+        "properties": {
+          "type": { "enum": ["github", "official-docs", "release-announcement", "huggingface"] },
+          "url": { "type": "string", "format": "uri" },
+          "title": { "type": "string" },
+          "verifiedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cli-code/schema/model.schema.json",
+  "title": "CLI_CODE AI / LLM model entry",
+  "description": "One AI model record. Fields are only set when traceable to an official source (see sources[]). Unknown beats fabricated.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "slug", "name", "provider", "modelType", "availability", "openSourceStatus", "categories", "lastVerified", "sources"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "provider": { "type": "string", "minLength": 1 },
+    "modelFamily": { "type": ["string", "null"] },
+    "version": { "type": ["string", "null"] },
+    "releaseDate": { "type": ["string", "null"], "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$" },
+    "knowledgeCutoff": { "type": ["string", "null"], "pattern": "^\\d{4}(-\\d{2})?$" },
+    "modelType": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": { "enum": ["chat", "reasoning", "instruct", "base", "coding", "multimodal", "vision", "audio", "speech", "embedding", "image-generation", "rerank", "moderation"] }
+    },
+    "categories": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": { "enum": ["frontier", "reasoning", "general-purpose", "coding", "multimodal", "vision", "audio", "speech", "small-language-model", "local", "open-source", "open-weight", "long-context", "agents", "research", "embeddings"] }
+    },
+    "availability": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": { "enum": ["api", "download", "local", "research-only", "waitlist"] }
+    },
+    "openSourceStatus": {
+      "enum": ["open-source", "open-weight", "proprietary", "api-only", "research-license", "commercial-use-restricted", "other-unknown"]
+    },
+    "license": { "type": ["string", "null"] },
+    "commercialUse": { "enum": ["yes", "no", "restricted", "unknown", null] },
+    "parameters": { "type": ["string", "null"] },
+    "activeParameters": { "type": ["string", "null"] },
+    "architecture": { "type": ["string", "null"] },
+    "contextWindow": { "type": ["integer", "null"], "minimum": 0 },
+    "maxOutput": { "type": ["integer", "null"], "minimum": 0 },
+    "inputModalities": { "type": "array", "items": { "enum": ["text", "image", "audio", "video", "pdf"] }, "uniqueItems": true },
+    "outputModalities": { "type": "array", "items": { "enum": ["text", "image", "audio", "video", "embeddings"] }, "uniqueItems": true },
+    "reasoning": { "enum": ["yes", "hybrid", "no", "unknown", null] },
+    "toolUse": { "enum": ["yes", "no", "unknown", null] },
+    "functionCalling": { "enum": ["yes", "no", "unknown", null] },
+    "structuredOutput": { "enum": ["yes", "no", "unknown", null] },
+    "vision": { "enum": ["yes", "no", "unknown", null] },
+    "audio": { "enum": ["yes", "no", "unknown", null] },
+    "video": { "enum": ["yes", "no", "unknown", null] },
+    "codeCapability": { "enum": ["strong", "moderate", "basic", "unknown", null] },
+    "multilingual": { "enum": ["yes", "no", "unknown", null] },
+    "localCapable": { "type": "boolean" },
+    "localRunners": { "type": "array", "items": { "enum": ["ollama", "llama.cpp", "mlx", "transformers", "vllm", "localai", "lm-studio", "tgi"] }, "uniqueItems": true },
+    "minimumHardware": { "type": ["string", "null"] },
+    "quantizationAvailable": { "enum": ["yes", "no", "unknown", null] },
+    "apiAvailable": { "type": "boolean" },
+    "apiEndpointDocumentation": { "type": ["string", "null"], "format": "uri" },
+    "modelRepository": { "type": ["string", "null"], "format": "uri" },
+    "githubRepository": { "type": ["string", "null"], "format": "uri" },
+    "huggingFace": { "type": ["string", "null"], "format": "uri" },
+    "officialDocumentation": { "type": ["string", "null"], "format": "uri" },
+    "technicalReport": { "type": ["string", "null"], "format": "uri" },
+    "benchmarks": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["name", "score", "source", "evaluatedAt"],
+        "properties": {
+          "name": { "type": "string" },
+          "score": { "type": ["number", "string"] },
+          "source": { "type": "string", "format": "uri" },
+          "evaluatedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "modelVersion": { "type": "string" }
+        }
+      }
+    },
+    "strengths": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "limitations": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "useCases": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "alternatives": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "uniqueItems": true },
+    "related": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "uniqueItems": true },
+    "pricing": {
+      "type": ["object", "null"], "additionalProperties": false,
+      "properties": {
+        "inputPerMTok": { "type": ["number", "null"] },
+        "outputPerMTok": { "type": ["number", "null"] },
+        "currency": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "pricingVerifiedAt": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "availabilityVerifiedAt": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "lastVerified": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["type", "url", "title", "verifiedAt"],
+        "properties": {
+          "type": { "enum": ["official-docs", "model-card", "github", "huggingface", "technical-report", "release-announcement", "benchmark", "pricing-page"] },
+          "url": { "type": "string", "format": "uri" },
+          "title": { "type": "string" },
+          "verifiedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+        }
+      }
+    }
+  }
+}

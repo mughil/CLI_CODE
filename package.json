@@ -11,7 +11,9 @@
     "check:drift": "node scripts/build-data.mjs --check",
     "check:links": "node scripts/check-links.mjs",
     "check:html": "html-validate \"*.html\"",
-    "check": "npm run validate && npm run check:drift && npm run check:links && npm run check:html"
+    "check:models": "node scripts/validate-models.mjs && node scripts/check-model-links.mjs",
+    "model-stats": "node scripts/model-stats.mjs",
+    "check": "npm run validate && npm run check:drift && npm run check:links && npm run check:html && npm run check:models"
   },
   "devDependencies": {
     "ajv": "^8.17.1",
