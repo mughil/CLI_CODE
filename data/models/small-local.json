@@ -1,0 +1,46 @@
+{
+  "$comment": "Batch 5 — small language models suitable for local / low-resource operation. Last update 2026-09-03.",
+  "group": "small-local",
+  "models": [
+    {
+      "id": "phi-4-mini-instruct",
+      "slug": "phi-4-mini-instruct",
+      "name": "Phi-4-mini-instruct",
+      "provider": "Microsoft",
+      "modelFamily": "Phi-4",
+      "releaseDate": "2025-02",
+      "modelType": ["chat", "instruct"],
+      "categories": ["small-language-model", "local", "general-purpose", "open-source", "long-context"],
+      "availability": ["download", "local"],
+      "openSourceStatus": "open-source",
+      "license": "MIT",
+      "commercialUse": "yes",
+      "parameters": "3.8B",
+      "architecture": "Dense decoder-only Transformer, 200K vocab",
+      "contextWindow": 128000,
+      "inputModalities": ["text"],
+      "outputModalities": ["text"],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": ["ollama", "llama.cpp", "transformers", "mlx", "vllm"],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Runs on a laptop / phone-class device at 4-bit (~2–4 GB); designed for memory-constrained environments",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "modelRepository": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "officialDocumentation": "https://huggingface.co/microsoft",
+      "strengths": ["MIT licensed", "128K context at 3.8B", "Function calling", "24 languages", "Genuinely edge-deployable"],
+      "limitations": ["Limited world knowledge and reasoning vs larger models", "Text only"],
+      "useCases": ["On-device assistants", "Edge inference", "Cheap local automation", "Fine-tuning base"],
+      "alternatives": ["gemma-3-4b", "qwen3-8-27b"],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        { "type": "model-card", "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct", "title": "Phi-4-mini-instruct — model card", "verifiedAt": "2026-09-03" }
+      ]
+    }
+  ]
+}

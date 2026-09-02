@@ -1,0 +1,49 @@
+{
+  "$comment": "Batch 3 — code-generation models. Last update 2026-09-03.",
+  "group": "coding",
+  "models": [
+    {
+      "id": "qwen3-coder-480b-a35b",
+      "slug": "qwen3-coder-480b-a35b",
+      "name": "Qwen3-Coder 480B-A35B",
+      "provider": "Alibaba Qwen",
+      "modelFamily": "Qwen3-Coder",
+      "version": "Qwen3-Coder-480B-A35B-Instruct",
+      "releaseDate": "2025-05-14",
+      "modelType": ["coding", "instruct"],
+      "categories": ["coding", "agents", "open-source", "open-weight", "long-context"],
+      "availability": ["download", "api", "local"],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "480B total",
+      "activeParameters": "35B",
+      "architecture": "Mixture-of-Experts, 160 experts (8 active per token)",
+      "contextWindow": 262144,
+      "inputModalities": ["text"],
+      "outputModalities": ["text"],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": ["vllm", "transformers", "llama.cpp"],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Multi-GPU for full precision; quantized GGUF builds run on high-memory single nodes — see model card",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "modelRepository": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "officialDocumentation": "https://huggingface.co/Qwen",
+      "strengths": ["Apache-2.0 code model at frontier scale", "262K native context (1M with YaRN)", "Agentic coding / tool use", "35B active params"],
+      "limitations": ["480B total footprint", "Not a reasoning model"],
+      "useCases": ["Self-hosted coding assistant", "Repo-scale code understanding", "Agentic code editing"],
+      "alternatives": ["deepseek-v4-flash", "glm-4-6", "claude-sonnet-5"],
+      "related": ["qwen3-8-27b"],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        { "type": "model-card", "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct", "title": "Qwen3-Coder-480B-A35B-Instruct — model card", "verifiedAt": "2026-09-03" }
+      ]
+    }
+  ]
+}
