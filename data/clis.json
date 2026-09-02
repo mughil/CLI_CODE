@@ -1,0 +1,4643 @@
+{
+  "schema": "schema/cli.schema.json",
+  "count": 103,
+  "clis": [
+    {
+      "id": "1password-cli",
+      "slug": "1password-cli",
+      "name": "1Password CLI",
+      "aliases": [],
+      "summary": "Official 1Password CLI for vault access, secrets retrieval, item automation, and desktop-app-backed authentication",
+      "description": "Official 1Password CLI for vault access, secrets retrieval, item automation, and desktop-app-backed authentication",
+      "categories": [
+        "devops"
+      ],
+      "tags": [
+        "automation",
+        "devops",
+        "secrets"
+      ],
+      "useCases": [
+        "Secret retrieval in scripts",
+        "CI/CD credential injection",
+        "Vault automation"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": null,
+      "runtime": null,
+      "license": "proprietary",
+      "install": [
+        {
+          "method": "brew",
+          "command": "brew install --cask 1password-cli",
+          "label": "Install"
+        },
+        {
+          "method": "brew",
+          "command": "brew upgrade --cask 1password-cli",
+          "label": "Update"
+        },
+        {
+          "method": "brew",
+          "command": "brew uninstall --cask 1password-cli",
+          "label": "Uninstall"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://developer.1password.com/docs/cli/get-started/",
+      "packageManagers": [
+        "brew"
+      ],
+      "difficulty": "intermediate",
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "curated",
+      "lastVerified": null
+    },
+    {
+      "id": "3mf",
+      "slug": "3mf",
+      "name": "3MF",
+      "aliases": [],
+      "summary": "Mesh geometry editor for 3D printing files — detect and resize cylindrical holes, repair meshes, compare 3MF files",
+      "description": "Mesh geometry editor for 3D printing files — detect and resize cylindrical holes, repair meshes, compare 3MF files",
+      "categories": [
+        "graphics"
+      ],
+      "tags": [
+        "3d",
+        "graphics",
+        "mesh"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=3MF/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://3mf.io",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-07-09"
+    },
+    {
+      "id": "adguardhome",
+      "slug": "adguardhome",
+      "name": "AdGuardHome",
+      "aliases": [],
+      "summary": "DNS ad-blocking and network infrastructure management via AdGuardHome REST API",
+      "description": "DNS ad-blocking and network infrastructure management via AdGuardHome REST API",
+      "categories": [
+        "network"
+      ],
+      "tags": [
+        "api",
+        "network",
+        "rest"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=adguardhome/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://adguard.com/adguard-home/overview.html",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "android-cli",
+      "slug": "android-cli",
+      "name": "Android CLI",
+      "aliases": [],
+      "summary": "Official Android terminal interface for SDK setup, project creation, emulator/device management, app run/deploy workflows, docs access, and skill management…",
+      "description": "Official Android terminal interface for SDK setup, project creation, emulator/device management, app run/deploy workflows, docs access, and skill management for any agent",
+      "categories": [
+        "mobile"
+      ],
+      "tags": [
+        "agent",
+        "mobile",
+        "terminal"
+      ],
+      "useCases": [],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": null,
+      "runtime": null,
+      "license": null,
+      "install": [],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://developer.android.com/tools/agents/android-cli",
+      "packageManagers": [],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "anygen",
+      "slug": "anygen",
+      "name": "AnyGen",
+      "aliases": [],
+      "summary": "Generate docs, slides, websites and more via AnyGen cloud API",
+      "description": "Generate docs, slides, websites and more via AnyGen cloud API",
+      "categories": [
+        "generation"
+      ],
+      "tags": [
+        "api",
+        "generation"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=anygen/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://anygen.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-03-17"
+    },
+    {
+      "id": "arcgis-pro",
+      "slug": "arcgis-pro",
+      "name": "ArcGIS Pro",
+      "aliases": [],
+      "summary": "Agent-native CLI for ArcGIS Pro (ArcPy): professional cartography (layouts + map series), geoprocessing, and feature query/edit — plus a live-Pro MCP bridge…",
+      "description": "Agent-native CLI for ArcGIS Pro (ArcPy): professional cartography (layouts + map series), geoprocessing, and feature query/edit — plus a live-Pro MCP bridge that drives the open session.",
+      "categories": [
+        "science"
+      ],
+      "tags": [
+        "agent",
+        "science"
+      ],
+      "useCases": [],
+      "platforms": [
+        "windows"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": null,
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/Jasper0122/CLI-Anything-Arcgis-Pro.git@v0.1.0",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/Jasper0122/CLI-Anything-Arcgis-Pro",
+      "documentation": "https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-22"
+    },
+    {
+      "id": "audacity",
+      "slug": "audacity",
+      "name": "Audacity",
+      "aliases": [],
+      "summary": "Audio editing and processing via sox",
+      "description": "Audio editing and processing via sox",
+      "categories": [
+        "audio"
+      ],
+      "tags": [
+        "audio",
+        "editing"
+      ],
+      "useCases": [
+        "Audio recording",
+        "Multi-track editing",
+        "Noise reduction and mastering"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C++",
+      "runtime": null,
+      "license": "GPL-3.0-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=audacity/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.audacityteam.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "blender",
+      "slug": "blender",
+      "name": "Blender",
+      "aliases": [],
+      "summary": "3D modeling, animation, and rendering via blender --background --python",
+      "description": "3D modeling, animation, and rendering via blender --background --python",
+      "categories": [
+        "3d"
+      ],
+      "tags": [
+        "3d",
+        "animation",
+        "modeling",
+        "rendering"
+      ],
+      "useCases": [
+        "3D modeling and sculpting",
+        "Rendering stills and animation",
+        "Procedural geometry and physics simulation"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C, C++, Python",
+      "runtime": null,
+      "license": "GPL-3.0-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=blender/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.blender.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "advanced",
+      "alternatives": [
+        "freecad"
+      ],
+      "related": [
+        "cloudcompare"
+      ],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-08-03"
+    },
+    {
+      "id": "browser",
+      "slug": "browser",
+      "name": "Browser",
+      "aliases": [],
+      "summary": "Browser automation via DOMShell MCP server.",
+      "description": "Browser automation via DOMShell MCP server. Maps Chrome's Accessibility Tree to a virtual filesystem for agent-native navigation.",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "agent",
+        "automation",
+        "browser",
+        "web"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=browser/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/apireno/DOMShell",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-03"
+    },
+    {
+      "id": "browser-cdp",
+      "slug": "browser-cdp",
+      "name": "Browser CDP",
+      "aliases": [],
+      "summary": "Browser automation via raw Chrome DevTools Protocol — connects to YOUR existing Chrome, no extensions, no new browser, inherits all cookies and sessions",
+      "description": "Browser automation via raw Chrome DevTools Protocol — connects to YOUR existing Chrome, no extensions, no new browser, inherits all cookies and sessions",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "automation",
+        "browser",
+        "web"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": null,
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/Uname58/cdp-agent-kit.git#subdirectory=contrib/cli-anything-harness/agent-harness",
+          "label": "Install"
+        },
+        {
+          "method": "pip",
+          "command": "pip install --upgrade --force-reinstall git+https://github.com/Uname58/cdp-agent-kit.git#subdirectory=contrib/cli-anything-harness/agent-harness",
+          "label": "Update"
+        },
+        {
+          "method": "shell",
+          "command": "pip uninstall -y cli-anything-browser-cdp",
+          "label": "Uninstall"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/Uname58/cdp-agent-kit",
+      "documentation": "https://github.com/Uname58/cdp-agent-kit",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-07-18"
+    },
+    {
+      "id": "calibre",
+      "slug": "calibre",
+      "name": "Calibre",
+      "aliases": [],
+      "summary": "E-book library management — list, search, metadata editing, format conversion via calibredb, ebook-convert, ebook-meta",
+      "description": "E-book library management — list, search, metadata editing, format conversion via calibredb, ebook-convert, ebook-meta",
+      "categories": [
+        "office"
+      ],
+      "tags": [
+        "ebook",
+        "editing",
+        "office",
+        "search"
+      ],
+      "useCases": [
+        "Ebook library management",
+        "Ebook format conversion",
+        "Metadata editing"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "Python",
+      "runtime": null,
+      "license": "GPL-3.0-only",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=calibre/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://calibre-ebook.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [],
+      "related": [
+        "zotero"
+      ],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-05-20"
+    },
+    {
+      "id": "cc-switch",
+      "slug": "cc-switch",
+      "name": "CC Switch",
+      "aliases": [],
+      "summary": "Manage AI coding tool configurations - inspect providers, skills, MCP servers, usage stats, and proxy settings",
+      "description": "Manage AI coding tool configurations - inspect providers, skills, MCP servers, usage stats, and proxy settings",
+      "categories": [
+        "devops"
+      ],
+      "tags": [
+        "ai",
+        "devops",
+        "proxy"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=cc-switch/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/HKUDS/CLI-Anything",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-11"
+    },
+    {
+      "id": "chromadb",
+      "slug": "chromadb",
+      "name": "ChromaDB",
+      "aliases": [],
+      "summary": "Vector database operations — collections, documents, semantic search via ChromaDB HTTP API",
+      "description": "Vector database operations — collections, documents, semantic search via ChromaDB HTTP API",
+      "categories": [
+        "database"
+      ],
+      "tags": [
+        "api",
+        "database",
+        "documents",
+        "http",
+        "search",
+        "vector",
+        "vector-database"
+      ],
+      "useCases": [
+        "Vector storage for RAG",
+        "Embedding similarity search",
+        "Local AI memory"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "Python, Rust",
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=chromadb/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.trychroma.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "intermediate",
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-04-08"
+    },
+    {
+      "id": "clibrowser",
+      "slug": "clibrowser",
+      "name": "clibrowser",
+      "aliases": [],
+      "summary": "Zero-dependency CLI browser for AI agents with search, extraction, forms, RSS, crawling, auth, and WebMCP support",
+      "description": "Zero-dependency CLI browser for AI agents with search, extraction, forms, RSS, crawling, auth, and WebMCP support",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "ai",
+        "browser",
+        "search",
+        "web"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "rust",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "cargo",
+          "command": "cargo install --git https://github.com/allthingssecurity/clibrowser.git --tag v0.1.0 --locked",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/allthingssecurity/clibrowser",
+      "packageManagers": [
+        "cargo"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-03"
+    },
+    {
+      "id": "cloakbrowser",
+      "slug": "cloakbrowser",
+      "name": "CloakBrowser CLI",
+      "aliases": [],
+      "summary": "Agent-friendly CLI for CloakBrowser — stealth Chromium that passes every bot detection test.",
+      "description": "Agent-friendly CLI for CloakBrowser — stealth Chromium that passes every bot detection test. Covers fingerprint flags, humanize behaviors, page operations, content extraction, cookies, storage, network, multi-page sessions, and CDP gateway.",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "agent",
+        "chromium",
+        "web"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": null,
+      "install": [
+        {
+          "method": "npm",
+          "command": "npm install -g @dreamor/cloakbrowser-cli cloakbrowser playwright-core",
+          "label": "Install"
+        },
+        {
+          "method": "npx",
+          "command": "npx @dreamor/cloakbrowser-cli",
+          "label": "Run via npx"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/dreamor/cloakbrowser-cli",
+      "documentation": "https://github.com/dreamor/cloakbrowser-cli",
+      "packageManagers": [
+        "npm",
+        "npx"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-07-30"
+    },
+    {
+      "id": "cloudanalyzer",
+      "slug": "cloudanalyzer",
+      "name": "CloudAnalyzer",
+      "aliases": [],
+      "summary": "Point cloud and trajectory QA: Chamfer/AUC/F1, ATE/RPE/drift, ground segmentation metrics, config-driven quality gates, baseline evolution — harness wraps…",
+      "description": "Point cloud and trajectory QA: Chamfer/AUC/F1, ATE/RPE/drift, ground segmentation metrics, config-driven quality gates, baseline evolution — harness wraps the CloudAnalyzer Python API",
+      "categories": [
+        "graphics"
+      ],
+      "tags": [
+        "api",
+        "graphics"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=cloudanalyzer/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/rsasaki0109/CloudAnalyzer",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-07"
+    },
+    {
+      "id": "cloudcompare",
+      "slug": "cloudcompare",
+      "name": "CloudCompare",
+      "aliases": [],
+      "summary": "3D point cloud and mesh processing: load/save, color ops, normal estimation, Delaunay meshing, noise filtering, ICP registration, connected component…",
+      "description": "3D point cloud and mesh processing: load/save, color ops, normal estimation, Delaunay meshing, noise filtering, ICP registration, connected component segmentation",
+      "categories": [
+        "graphics"
+      ],
+      "tags": [
+        "3d",
+        "graphics",
+        "mesh"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=cloudcompare/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://cloudcompare.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-03-30"
+    },
+    {
+      "id": "comfyui",
+      "slug": "comfyui",
+      "name": "ComfyUI",
+      "aliases": [],
+      "summary": "AI image generation workflow management via ComfyUI REST API",
+      "description": "AI image generation workflow management via ComfyUI REST API",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "ai",
+        "api",
+        "image",
+        "rest",
+        "workflow"
+      ],
+      "useCases": [
+        "Node-based image generation",
+        "Diffusion pipeline design",
+        "Batch generation workflows"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "Python",
+      "runtime": null,
+      "license": "GPL-3.0-only",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=comfyui/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/comfyanonymous/ComfyUI",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "advanced",
+      "alternatives": [],
+      "related": [
+        "ollama"
+      ],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-08-03"
+    },
+    {
+      "id": "contentful",
+      "slug": "contentful",
+      "name": "Contentful CLI",
+      "aliases": [],
+      "summary": "Official Contentful CLI for spaces, migrations, imports, exports, seeding, and environment management",
+      "description": "Official Contentful CLI for spaces, migrations, imports, exports, seeding, and environment management",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "web"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": null,
+      "install": [
+        {
+          "method": "npm",
+          "command": "npm install -g contentful-cli",
+          "label": "Install"
+        },
+        {
+          "method": "npx",
+          "command": "npx contentful-cli",
+          "label": "Run via npx"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/contentful/contentful-cli",
+      "documentation": "https://www.contentful.com/",
+      "packageManagers": [
+        "npm",
+        "npx"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-18"
+    },
+    {
+      "id": "deployhq",
+      "slug": "deployhq",
+      "name": "DeployHQ CLI",
+      "aliases": [],
+      "summary": "Deploy code, manage projects/servers, run and monitor deployments via the DeployHQ platform — for humans and AI agents",
+      "description": "Deploy code, manage projects/servers, run and monitor deployments via the DeployHQ platform — for humans and AI agents",
+      "categories": [
+        "devops"
+      ],
+      "tags": [
+        "ai",
+        "devops"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": null,
+      "install": [
+        {
+          "method": "brew",
+          "command": "brew install deployhq/tap/dhq",
+          "label": "Install"
+        },
+        {
+          "method": "brew",
+          "command": "brew upgrade dhq",
+          "label": "Update"
+        },
+        {
+          "method": "brew",
+          "command": "brew uninstall dhq",
+          "label": "Uninstall"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/deployhq/deployhq-cli",
+      "documentation": "https://www.deployhq.com",
+      "packageManagers": [
+        "brew"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-18"
+    },
+    {
+      "id": "dify-workflow",
+      "slug": "dify-workflow",
+      "name": "Dify Workflow",
+      "aliases": [],
+      "summary": "CLI-Anything wrapper for the Dify workflow DSL editor covering create, inspect, validate, edit, export, and layout operations",
+      "description": "CLI-Anything wrapper for the Dify workflow DSL editor covering create, inspect, validate, edit, export, and layout operations",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "ai",
+        "workflow"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=dify-workflow/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/Akabane71/dify-workflow-cli",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-07"
+    },
+    {
+      "id": "drawio",
+      "slug": "drawio",
+      "name": "Draw.io",
+      "aliases": [],
+      "summary": "Diagram creation and export via draw.io CLI",
+      "description": "Diagram creation and export via draw.io CLI",
+      "categories": [
+        "diagrams"
+      ],
+      "tags": [
+        "diagram",
+        "diagrams"
+      ],
+      "useCases": [
+        "Diagramming",
+        "Architecture and flowchart diagrams",
+        "Whiteboarding"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows",
+        "web"
+      ],
+      "language": "JavaScript",
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=drawio/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.drawio.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [
+        "mermaid"
+      ],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-05-19"
+    },
+    {
+      "id": "eez-studio",
+      "slug": "eez-studio",
+      "name": "EEZ Studio",
+      "aliases": [],
+      "summary": "EEZ Studio project, LVGL UI, and SCPI command automation via native .eez-project JSON and real EEZ Studio backend hooks",
+      "description": "EEZ Studio project, LVGL UI, and SCPI command automation via native .eez-project JSON and real EEZ Studio backend hooks",
+      "categories": [
+        "automation"
+      ],
+      "tags": [
+        "automation"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=eez-studio/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.envox.eu/studio/studio-introduction/",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-11"
+    },
+    {
+      "id": "elevenlabs",
+      "slug": "elevenlabs",
+      "name": "ElevenLabs CLI",
+      "aliases": [],
+      "summary": "Official ElevenLabs CLI for managing voice agents as code with local configs, templates, auth, push/pull sync, tests, widgets, and branch-aware workflows",
+      "description": "Official ElevenLabs CLI for managing voice agents as code with local configs, templates, auth, push/pull sync, tests, widgets, and branch-aware workflows",
+      "categories": [
+        "audio"
+      ],
+      "tags": [
+        "audio",
+        "voice"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": null,
+      "install": [
+        {
+          "method": "npm",
+          "command": "npm install -g @elevenlabs/cli",
+          "label": "Install"
+        },
+        {
+          "method": "npx",
+          "command": "npx @elevenlabs/cli@latest",
+          "label": "Run via npx"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/elevenlabs/cli",
+      "documentation": "https://github.com/elevenlabs/cli",
+      "packageManagers": [
+        "npm",
+        "npx"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-19"
+    },
+    {
+      "id": "eth2-quickstart",
+      "slug": "eth2-quickstart",
+      "name": "ETH2 QuickStart",
+      "aliases": [],
+      "summary": "Hardened Ethereum node deployment and operations via the eth2-quickstart automation scripts",
+      "description": "Hardened Ethereum node deployment and operations via the eth2-quickstart automation scripts",
+      "categories": [
+        "devops"
+      ],
+      "tags": [
+        "automation",
+        "deployment",
+        "devops"
+      ],
+      "useCases": [],
+      "platforms": [
+        "linux"
+      ],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=eth2-quickstart/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/chimera-defi/eth2-quickstart",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "exa",
+      "slug": "exa",
+      "name": "Exa",
+      "aliases": [],
+      "summary": "AI-powered web search and content extraction via the Exa API",
+      "description": "AI-powered web search and content extraction via the Exa API",
+      "categories": [
+        "search"
+      ],
+      "tags": [
+        "ai",
+        "api",
+        "search"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=exa/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://exa.ai",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-08"
+    },
+    {
+      "id": "feishu",
+      "slug": "feishu",
+      "name": "Feishu/Lark CLI",
+      "aliases": [],
+      "summary": "Official Lark (Feishu) CLI for managing Lark apps, bots, and cloud resources from the terminal",
+      "description": "Official Lark (Feishu) CLI for managing Lark apps, bots, and cloud resources from the terminal",
+      "categories": [
+        "communication"
+      ],
+      "tags": [
+        "communication",
+        "terminal"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": null,
+      "install": [
+        {
+          "method": "npm",
+          "command": "npm install -g @larksuite/cli",
+          "label": "Install"
+        },
+        {
+          "method": "npx",
+          "command": "npx @larksuite/cli",
+          "label": "Run via npx"
+        },
+        {
+          "method": "agent-skill",
+          "command": "npx skills add larksuite/cli -y -g",
+          "label": "Agent skill"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/larksuite/cli",
+      "documentation": "https://github.com/larksuite/cli",
+      "packageManagers": [
+        "npm",
+        "npx"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "firefly-iii",
+      "slug": "firefly-iii",
+      "name": "Firefly III",
+      "aliases": [],
+      "summary": "Personal finance management via the Firefly III REST API",
+      "description": "Personal finance management via the Firefly III REST API",
+      "categories": [
+        "finance"
+      ],
+      "tags": [
+        "api",
+        "finance",
+        "rest"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=firefly-iii/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.firefly-iii.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-05-13"
+    },
+    {
+      "id": "freecad",
+      "slug": "freecad",
+      "name": "FreeCAD",
+      "aliases": [],
+      "summary": "Parametric 3D CAD modeling via FreeCAD CLI (258 commands: Part, Sketcher, PartDesign, Assembly, Mesh, TechDraw, Draft, FEM, CAM, and more)",
+      "description": "Parametric 3D CAD modeling via FreeCAD CLI (258 commands: Part, Sketcher, PartDesign, Assembly, Mesh, TechDraw, Draft, FEM, CAM, and more)",
+      "categories": [
+        "3d"
+      ],
+      "tags": [
+        "3d",
+        "cad",
+        "mesh",
+        "modeling"
+      ],
+      "useCases": [
+        "Parametric 3D CAD modeling",
+        "Mechanical part design",
+        "Technical drawing generation"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C++, Python",
+      "runtime": null,
+      "license": "LGPL-2.1-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=freecad/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.freecad.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "advanced",
+      "alternatives": [],
+      "related": [
+        "blender"
+      ],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-04-24"
+    },
+    {
+      "id": "generate-veo-video",
+      "slug": "generate-veo-video",
+      "name": "Generate Veo Video",
+      "aliases": [],
+      "summary": "CLI for generating videos with Google Veo 3.1 via Vertex AI/Gemini — text-to-video, image-to-video, reference images, frame morphing, and video extension",
+      "description": "CLI for generating videos with Google Veo 3.1 via Vertex AI/Gemini — text-to-video, image-to-video, reference images, frame morphing, and video extension",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "ai",
+        "image",
+        "video"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": null,
+      "install": [
+        {
+          "method": "uv",
+          "command": "uv tool install git+https://github.com/charles-forsyth/generate-veo-video.git",
+          "label": "Install"
+        },
+        {
+          "method": "shell",
+          "command": "uv tool upgrade generate-veo-video",
+          "label": "Update"
+        },
+        {
+          "method": "shell",
+          "command": "uv tool uninstall generate-veo-video",
+          "label": "Uninstall"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/charles-forsyth/generate-veo-video",
+      "documentation": "https://github.com/charles-forsyth/generate-veo-video",
+      "packageManagers": [
+        "git",
+        "uv"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2025-12-14"
+    },
+    {
+      "id": "gimp",
+      "slug": "gimp",
+      "name": "GIMP",
+      "aliases": [],
+      "summary": "Raster image processing via gimp -i -b (batch mode)",
+      "description": "Raster image processing via gimp -i -b (batch mode)",
+      "categories": [
+        "image"
+      ],
+      "tags": [
+        "image",
+        "raster"
+      ],
+      "useCases": [
+        "Photo retouching",
+        "Image composition",
+        "Scripted batch image processing"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C",
+      "runtime": null,
+      "license": "GPL-3.0-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=gimp/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.gimp.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "intermediate",
+      "alternatives": [
+        "krita"
+      ],
+      "related": [
+        "inkscape"
+      ],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-04-19"
+    },
+    {
+      "id": "godot",
+      "slug": "godot",
+      "name": "Godot Engine",
+      "aliases": [],
+      "summary": "Game engine project management, scene editing, export and GDScript execution via Godot 4 headless mode",
+      "description": "Game engine project management, scene editing, export and GDScript execution via Godot 4 headless mode",
+      "categories": [
+        "game"
+      ],
+      "tags": [
+        "editing",
+        "game",
+        "game-engine",
+        "godot"
+      ],
+      "useCases": [
+        "2D and 3D game development",
+        "Cross-platform game export",
+        "Rapid prototyping"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C++",
+      "runtime": null,
+      "license": "MIT",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=godot/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://godotengine.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "intermediate",
+      "alternatives": [
+        "sbox"
+      ],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-06-03"
+    },
+    {
+      "id": "hacker-feeds-cli",
+      "slug": "hacker-feeds-cli",
+      "name": "Hacker Feeds CLI",
+      "aliases": [],
+      "summary": "CLI for GitHub Trending, Hacker News, Reddit, Product Hunt, DEV.to, Lobsters, EchoJS, and V2EX feeds",
+      "description": "CLI for GitHub Trending, Hacker News, Reddit, Product Hunt, DEV.to, Lobsters, EchoJS, and V2EX feeds",
+      "categories": [
+        "search"
+      ],
+      "tags": [
+        "search"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/collectivewinca/hacker-feeds-cli.git",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/collectivewinca/hacker-feeds-cli",
+      "documentation": "https://github.com/collectivewinca/hacker-feeds-cli",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "inkscape",
+      "slug": "inkscape",
+      "name": "Inkscape",
+      "aliases": [],
+      "summary": "SVG vector graphics with export via inkscape --export-filename",
+      "description": "SVG vector graphics with export via inkscape --export-filename",
+      "categories": [
+        "image"
+      ],
+      "tags": [
+        "image",
+        "svg",
+        "vector"
+      ],
+      "useCases": [
+        "Vector illustration",
+        "Logo design",
+        "SVG authoring and cleanup"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C++",
+      "runtime": null,
+      "license": "GPL-2.0-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=inkscape/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://inkscape.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "intermediate",
+      "alternatives": [],
+      "related": [
+        "gimp"
+      ],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "inkstitch",
+      "slug": "inkstitch",
+      "name": "Ink/Stitch",
+      "aliases": [],
+      "summary": "Machine-embroidery digitization — set stitch params, validate, preview, and export to DST/PES/JEF/VP3 via Ink/Stitch",
+      "description": "Machine-embroidery digitization — set stitch params, validate, preview, and export to DST/PES/JEF/VP3 via Ink/Stitch",
+      "categories": [
+        "design"
+      ],
+      "tags": [
+        "design"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install cli-anything-inkstitch",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/bobbymarko/cli-anything-inkstitch",
+      "documentation": "https://inkstitch.org",
+      "packageManagers": [
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-19"
+    },
+    {
+      "id": "intelwatch",
+      "slug": "intelwatch",
+      "name": "Intelwatch",
+      "aliases": [],
+      "summary": "Competitive intelligence, M&A due diligence, and OSINT directly from your terminal.",
+      "description": "Competitive intelligence, M&A due diligence, and OSINT directly from your terminal.",
+      "categories": [
+        "osint"
+      ],
+      "tags": [
+        "osint",
+        "terminal"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=intelwatch/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/ashroth/intelwatch",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-03-30"
+    },
+    {
+      "id": "iterm2",
+      "slug": "iterm2",
+      "name": "iTerm2",
+      "aliases": [],
+      "summary": "Control a running iTerm2 instance — manage windows, tabs, split panes, send text, read output, run tmux -CC, broadcast keystrokes, and configure preferences.",
+      "description": "Control a running iTerm2 instance — manage windows, tabs, split panes, send text, read output, run tmux -CC, broadcast keystrokes, and configure preferences.",
+      "categories": [
+        "devops"
+      ],
+      "tags": [
+        "devops"
+      ],
+      "useCases": [],
+      "platforms": [
+        "macos"
+      ],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=iterm2/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://iterm2.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-03-24"
+    },
+    {
+      "id": "jimeng",
+      "slug": "jimeng",
+      "name": "Jimeng / Dreamina CLI",
+      "aliases": [],
+      "summary": "Official ByteDance AI image and video generation CLI — text-to-image, text-to-video, image-to-video, digital human, and intelligent canvas; domestic brand…",
+      "description": "Official ByteDance AI image and video generation CLI — text-to-image, text-to-video, image-to-video, digital human, and intelligent canvas; domestic brand is Jimeng (即梦), international brand is Dreamina",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "ai",
+        "image",
+        "video"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": null,
+      "install": [
+        {
+          "method": "shell",
+          "command": "curl -s https://jimeng.jianying.com/cli | bash",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://jimeng.jianying.com/",
+      "packageManagers": [],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": null
+    },
+    {
+      "id": "joplin",
+      "slug": "joplin",
+      "name": "Joplin",
+      "aliases": [],
+      "summary": "Note-taking and to-do automation — manage notebooks, notes, to-dos, tags, attachments, search, sync, and import/export via the Joplin terminal CLI",
+      "description": "Note-taking and to-do automation — manage notebooks, notes, to-dos, tags, attachments, search, sync, and import/export via the Joplin terminal CLI",
+      "categories": [
+        "knowledge"
+      ],
+      "tags": [
+        "automation",
+        "knowledge",
+        "notes",
+        "search",
+        "terminal"
+      ],
+      "useCases": [
+        "Note-taking",
+        "Web clipping",
+        "End-to-end encrypted sync"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": "AGPL-3.0-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=joplin/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://joplinapp.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [
+        "obsidian",
+        "siyuan"
+      ],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "jumpserver",
+      "slug": "jumpserver",
+      "name": "JumpServer",
+      "aliases": [],
+      "summary": "Bastion host management — manage assets, users, permissions, sessions, accounts, and audit logs via JumpServer REST API",
+      "description": "Bastion host management — manage assets, users, permissions, sessions, accounts, and audit logs via JumpServer REST API",
+      "categories": [
+        "devops"
+      ],
+      "tags": [
+        "api",
+        "devops",
+        "rest"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=jumpserver/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.jumpserver.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-11"
+    },
+    {
+      "id": "kdenlive",
+      "slug": "kdenlive",
+      "name": "Kdenlive",
+      "aliases": [],
+      "summary": "Video editing and rendering via melt",
+      "description": "Video editing and rendering via melt",
+      "categories": [
+        "video"
+      ],
+      "tags": [
+        "editing",
+        "rendering",
+        "video"
+      ],
+      "useCases": [
+        "Non-linear video editing",
+        "Multi-track timelines",
+        "Effects and transitions"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C++",
+      "runtime": null,
+      "license": "GPL-2.0-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=kdenlive/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://kdenlive.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "intermediate",
+      "alternatives": [
+        "shotcut"
+      ],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-04-14"
+    },
+    {
+      "id": "krita",
+      "slug": "krita",
+      "name": "Krita",
+      "aliases": [],
+      "summary": "Digital painting and raster image editing via Krita CLI export pipeline",
+      "description": "Digital painting and raster image editing via Krita CLI export pipeline",
+      "categories": [
+        "image"
+      ],
+      "tags": [
+        "editing",
+        "image",
+        "painting",
+        "pipeline",
+        "raster"
+      ],
+      "useCases": [
+        "Digital painting",
+        "Concept art",
+        "Frame-by-frame animation"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C++",
+      "runtime": null,
+      "license": "GPL-3.0-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=krita/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://krita.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [
+        "gimp"
+      ],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-04-13"
+    },
+    {
+      "id": "libreoffice",
+      "slug": "libreoffice",
+      "name": "LibreOffice",
+      "aliases": [],
+      "summary": "Create and manipulate ODF documents, export to PDF/DOCX/XLSX/PPTX via headless mode",
+      "description": "Create and manipulate ODF documents, export to PDF/DOCX/XLSX/PPTX via headless mode",
+      "categories": [
+        "office"
+      ],
+      "tags": [
+        "documents",
+        "office",
+        "pdf"
+      ],
+      "useCases": [
+        "Document authoring",
+        "Headless format conversion",
+        "Spreadsheets and presentations"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C++, Java",
+      "runtime": null,
+      "license": "MPL-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=libreoffice/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.libreoffice.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-05-20"
+    },
+    {
+      "id": "live2d",
+      "slug": "live2d",
+      "name": "Live2D Cubism",
+      "aliases": [],
+      "summary": "Inspect, validate, edit, lint, diff, batch-manage, and deploy Live2D Cubism models (.model3.json, .moc3, .motion3.json, .exp3.json) from the command line —…",
+      "description": "Inspect, validate, edit, lint, diff, batch-manage, and deploy Live2D Cubism models (.model3.json, .moc3, .motion3.json, .exp3.json) from the command line — 42 commands covering the full model lifecycle",
+      "categories": [
+        "graphics"
+      ],
+      "tags": [
+        "graphics",
+        "model"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=live2d/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.live2d.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-14"
+    },
+    {
+      "id": "lldb",
+      "slug": "lldb",
+      "name": "LLDB",
+      "aliases": [],
+      "summary": "Stateful native debugging via LLDB with JSON CLI workflows and a stdio Debug Adapter Protocol server",
+      "description": "Stateful native debugging via LLDB with JSON CLI workflows and a stdio Debug Adapter Protocol server",
+      "categories": [
+        "debugging"
+      ],
+      "tags": [
+        "debugging"
+      ],
+      "useCases": [],
+      "platforms": [
+        "windows"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=lldb/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://lldb.llvm.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-05-13"
+    },
+    {
+      "id": "macrocli",
+      "slug": "macrocli",
+      "name": "MacroCLI",
+      "aliases": [],
+      "summary": "Layered macro runtime that converts GUI workflows into parameterized, agent-callable macros — record once, run anywhere via CLI with backend routing across…",
+      "description": "Layered macro runtime that converts GUI workflows into parameterized, agent-callable macros — record once, run anywhere via CLI with backend routing across native APIs, file transforms, accessibility controls, and visual template matching",
+      "categories": [
+        "automation"
+      ],
+      "tags": [
+        "agent",
+        "automation"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=macrocli/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/HKUDS/CLI-Anything/tree/main/macrocli",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-05-19"
+    },
+    {
+      "id": "magnific",
+      "slug": "magnific",
+      "name": "Magnific",
+      "aliases": [],
+      "summary": "Agent-native CLI harness for Magnific's remote MCP media-generation server — generate and upscale images and video via mcpc OAuth without loading the full…",
+      "description": "Agent-native CLI harness for Magnific's remote MCP media-generation server — generate and upscale images and video via mcpc OAuth without loading the full MCP schema each turn",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "agent",
+        "ai",
+        "oauth",
+        "video"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/workcr/magnific-cli-anything.git",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/workcr/magnific-cli-anything",
+      "documentation": "https://magnific.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-19"
+    },
+    {
+      "id": "mailchimp",
+      "slug": "mailchimp",
+      "name": "Mailchimp",
+      "aliases": [],
+      "summary": "Mailchimp Marketing API v3.0 — manage audiences, campaigns, reports, automations, ecommerce, templates, and more from an agent-native CLI",
+      "description": "Mailchimp Marketing API v3.0 — manage audiences, campaigns, reports, automations, ecommerce, templates, and more from an agent-native CLI",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "agent",
+        "api",
+        "ecommerce",
+        "web"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=mailchimp/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://mailchimp.com/developer/marketing/",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-05-13"
+    },
+    {
+      "id": "meerk40t",
+      "slug": "meerk40t",
+      "name": "MeerK40t",
+      "aliases": [],
+      "summary": "Laser cutting/engraving via the real MeerK40t kernel — elements, operations, SVG/G-code export with placement guard, and real GRBL hardware control (detect,…",
+      "description": "Laser cutting/engraving via the real MeerK40t kernel — elements, operations, SVG/G-code export with placement guard, and real GRBL hardware control (detect, preflight check, jog, frame) with machine profiles and --json output",
+      "categories": [
+        "3d"
+      ],
+      "tags": [
+        "3d",
+        "svg"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install cli-anything-meerk40t",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/George-RD/cli-anything-meerk40t",
+      "documentation": "https://github.com/meerk40t/meerk40t",
+      "packageManagers": [
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-07-27"
+    },
+    {
+      "id": "mermaid",
+      "slug": "mermaid",
+      "name": "Mermaid",
+      "aliases": [],
+      "summary": "Mermaid Live Editor state files and renderer URLs",
+      "description": "Mermaid Live Editor state files and renderer URLs",
+      "categories": [
+        "diagrams"
+      ],
+      "tags": [
+        "diagrams"
+      ],
+      "useCases": [
+        "Diagrams from text",
+        "Version-controlled diagrams",
+        "Embedding diagrams in Markdown"
+      ],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": "JavaScript, TypeScript",
+      "runtime": "node",
+      "license": "MIT",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=mermaid/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://mermaid.js.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [
+        "drawio"
+      ],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-04-13"
+    },
+    {
+      "id": "minimax",
+      "slug": "minimax",
+      "name": "MiniMax",
+      "aliases": [],
+      "summary": "Chat and TTS via MiniMax AI API — MiniMax-M3 and MiniMax-M2.7 chat models and speech-2.x TTS",
+      "description": "Chat and TTS via MiniMax AI API — MiniMax-M3 and MiniMax-M2.7 chat models and speech-2.x TTS",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "ai",
+        "api",
+        "speech",
+        "tts"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=minimax/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://platform.minimax.io",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-03"
+    },
+    {
+      "id": "minimax-cli",
+      "slug": "minimax-cli",
+      "name": "MiniMax CLI",
+      "aliases": [],
+      "summary": "MiniMax AI platform CLI for managing tokens, models, and API interactions from the command line",
+      "description": "MiniMax AI platform CLI for managing tokens, models, and API interactions from the command line",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "ai",
+        "api"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": null,
+      "install": [
+        {
+          "method": "npm",
+          "command": "npm install -g minimax-cli",
+          "label": "Install"
+        },
+        {
+          "method": "npx",
+          "command": "npx minimax-cli",
+          "label": "Run via npx"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://platform.minimax.io",
+      "packageManagers": [
+        "npm",
+        "npx"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-01-06"
+    },
+    {
+      "id": "mubu",
+      "slug": "mubu",
+      "name": "Mubu",
+      "aliases": [],
+      "summary": "Knowledge management and outlining via local Mubu desktop data",
+      "description": "Knowledge management and outlining via local Mubu desktop data",
+      "categories": [
+        "office"
+      ],
+      "tags": [
+        "office"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=mubu/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://mubu.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "musescore",
+      "slug": "musescore",
+      "name": "MuseScore",
+      "aliases": [],
+      "summary": "CLI for music notation — transpose, export PDF/audio/MIDI, extract parts, manage instruments",
+      "description": "CLI for music notation — transpose, export PDF/audio/MIDI, extract parts, manage instruments",
+      "categories": [
+        "music"
+      ],
+      "tags": [
+        "audio",
+        "music",
+        "pdf"
+      ],
+      "useCases": [
+        "Music notation and scoring",
+        "Sheet-music engraving",
+        "MIDI and MusicXML export"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C++",
+      "runtime": null,
+      "license": "GPL-3.0-only",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=musescore/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://musescore.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-05-19"
+    },
+    {
+      "id": "n8n",
+      "slug": "n8n",
+      "name": "n8n",
+      "aliases": [],
+      "summary": "Workflow automation via n8n REST API — 55+ commands",
+      "description": "Workflow automation via n8n REST API — 55+ commands",
+      "categories": [
+        "automation"
+      ],
+      "tags": [
+        "api",
+        "automation",
+        "rest",
+        "workflow"
+      ],
+      "useCases": [
+        "Workflow automation",
+        "Connecting APIs and SaaS tools",
+        "Scheduled data pipelines"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "TypeScript",
+      "runtime": null,
+      "license": "Sustainable Use License",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=n8n/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://n8n.io",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "intermediate",
+      "alternatives": [
+        "dify-workflow"
+      ],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-08-03"
+    },
+    {
+      "id": "notebooklm",
+      "slug": "notebooklm",
+      "name": "NotebookLM",
+      "aliases": [],
+      "summary": "Experimental NotebookLM harness scaffold wrapping the installed notebooklm CLI for notebook, source, chat, artifact, download, and sharing workflows",
+      "description": "Experimental NotebookLM harness scaffold wrapping the installed notebooklm CLI for notebook, source, chat, artifact, download, and sharing workflows",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=notebooklm/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://notebooklm.google.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-03-17"
+    },
+    {
+      "id": "novita",
+      "slug": "novita",
+      "name": "Novita",
+      "aliases": [],
+      "summary": "Access AI models via Novita's OpenAI-compatible API (DeepSeek, GLM, MiniMax)",
+      "description": "Access AI models via Novita's OpenAI-compatible API (DeepSeek, GLM, MiniMax)",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "ai",
+        "api"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=novita/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://novita.ai",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-03-19"
+    },
+    {
+      "id": "nsight-graphics",
+      "slug": "nsight-graphics",
+      "name": "Nsight Graphics CLI",
+      "aliases": [],
+      "summary": "Windows-first Nsight Graphics CLI for Graphics/OpenGL capture, GPU Trace summary, Generate C++ Capture, and ngfx-replay analysis",
+      "description": "Windows-first Nsight Graphics CLI for Graphics/OpenGL capture, GPU Trace summary, Generate C++ Capture, and ngfx-replay analysis",
+      "categories": [
+        "graphics"
+      ],
+      "tags": [
+        "capture",
+        "graphics"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=nsight-graphics/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://developer.nvidia.com/nsight-graphics",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-24"
+    },
+    {
+      "id": "nslogger",
+      "slug": "nslogger",
+      "name": "NSLogger",
+      "aliases": [],
+      "summary": "Capture, parse, filter, export, and mirror NSLogger iOS/macOS logs from the CLI",
+      "description": "Capture, parse, filter, export, and mirror NSLogger iOS/macOS logs from the CLI",
+      "categories": [
+        "devops"
+      ],
+      "tags": [
+        "capture",
+        "devops"
+      ],
+      "useCases": [],
+      "platforms": [
+        "macos"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=nslogger/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/fpillet/NSLogger",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-05-13"
+    },
+    {
+      "id": "obs-studio",
+      "slug": "obs-studio",
+      "name": "OBS Studio",
+      "aliases": [],
+      "summary": "Create and manage streaming/recording scenes via command line",
+      "description": "Create and manage streaming/recording scenes via command line",
+      "categories": [
+        "streaming"
+      ],
+      "tags": [
+        "streaming"
+      ],
+      "useCases": [
+        "Screen and camera recording",
+        "Live streaming",
+        "Scene composition"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C, C++",
+      "runtime": null,
+      "license": "GPL-2.0-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=obs-studio/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://obsproject.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "intermediate",
+      "alternatives": [],
+      "related": [
+        "openscreen"
+      ],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-08-03"
+    },
+    {
+      "id": "obsidian",
+      "slug": "obsidian",
+      "name": "Obsidian",
+      "aliases": [],
+      "summary": "Knowledge management and note-taking — manage notes, search vault, execute commands via Obsidian Local REST API",
+      "description": "Knowledge management and note-taking — manage notes, search vault, execute commands via Obsidian Local REST API",
+      "categories": [
+        "knowledge"
+      ],
+      "tags": [
+        "api",
+        "knowledge",
+        "notes",
+        "rest",
+        "search"
+      ],
+      "useCases": [
+        "Personal knowledge management",
+        "Linked Markdown note-taking",
+        "Local-first documentation"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": null,
+      "runtime": null,
+      "license": "proprietary",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=obsidian/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://obsidian.md",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [
+        "joplin",
+        "siyuan"
+      ],
+      "related": [
+        "obsidian-agent-cli",
+        "obsidian-cli"
+      ],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-05-18"
+    },
+    {
+      "id": "obsidian-agent-cli",
+      "slug": "obsidian-agent-cli",
+      "name": "Obsidian CLI",
+      "aliases": [],
+      "summary": "Full-featured CLI for Obsidian — manage notes, canvases, Excalidraw diagrams, Kanban boards, periodic notes, git, tasks, and more.",
+      "description": "Full-featured CLI for Obsidian — manage notes, canvases, Excalidraw diagrams, Kanban boards, periodic notes, git, tasks, and more. Includes an AI agent skill for persistent knowledge capture and project memory.",
+      "categories": [
+        "productivity"
+      ],
+      "tags": [
+        "agent",
+        "ai",
+        "capture",
+        "notes",
+        "productivity"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": null,
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install obsidian-agent-cli",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/ProxyLandLLC/obsidian-agent-cli",
+      "documentation": "https://obsidian.md",
+      "packageManagers": [
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-07-08"
+    },
+    {
+      "id": "obsidian-cli",
+      "slug": "obsidian-cli",
+      "name": "Obsidian CLI",
+      "aliases": [],
+      "summary": "Official Obsidian command line interface for vault automation, developer tools, screenshots, search, history, and plugin workflows",
+      "description": "Official Obsidian command line interface for vault automation, developer tools, screenshots, search, history, and plugin workflows",
+      "categories": [
+        "knowledge"
+      ],
+      "tags": [
+        "automation",
+        "knowledge",
+        "search"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": null,
+      "install": [],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://obsidian.md/help/cli",
+      "packageManagers": [],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": null
+    },
+    {
+      "id": "ollama",
+      "slug": "ollama",
+      "name": "Ollama",
+      "aliases": [],
+      "summary": "Local LLM inference and model management via Ollama REST API",
+      "description": "Local LLM inference and model management via Ollama REST API",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "ai",
+        "api",
+        "inference",
+        "llm",
+        "model",
+        "rest"
+      ],
+      "useCases": [
+        "Running local LLMs",
+        "Serving models over a local HTTP API",
+        "Offline inference"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "Go",
+      "runtime": null,
+      "license": "MIT",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=ollama/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://ollama.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [],
+      "related": [
+        "comfyui",
+        "openwebui"
+      ],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-03-22"
+    },
+    {
+      "id": "openrefine",
+      "slug": "openrefine",
+      "name": "OpenRefine",
+      "aliases": [],
+      "summary": "Agent-native CLI for OpenRefine import, operation-history cleaning, row inspection, export, and session undo/redo through the real local HTTP API.",
+      "description": "Agent-native CLI for OpenRefine import, operation-history cleaning, row inspection, export, and session undo/redo through the real local HTTP API.",
+      "categories": [
+        "database"
+      ],
+      "tags": [
+        "agent",
+        "api",
+        "database",
+        "http"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=openrefine/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://openrefine.org/",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-03"
+    },
+    {
+      "id": "openscreen",
+      "slug": "openscreen",
+      "name": "Openscreen",
+      "aliases": [],
+      "summary": "Screen recording editor — zoom, speed ramps, trim, crop, annotations, backgrounds, and polished exports via ffmpeg",
+      "description": "Screen recording editor — zoom, speed ramps, trim, crop, annotations, backgrounds, and polished exports via ffmpeg",
+      "categories": [
+        "video"
+      ],
+      "tags": [
+        "ffmpeg",
+        "screen-recording",
+        "video"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=openscreen/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/siddharthvaddem/openscreen",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-24"
+    },
+    {
+      "id": "openwebui",
+      "slug": "openwebui",
+      "name": "OpenWebUI",
+      "aliases": [],
+      "summary": "Operate a running OpenWebUI backend through an agent-friendly CLI",
+      "description": "Operate a running OpenWebUI backend through an agent-friendly CLI",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "agent",
+        "ai"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/ashaiful/cli-anything-openwebui.git",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/ashaiful/cli-anything-openwebui",
+      "documentation": "https://openwebui.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": null
+    },
+    {
+      "id": "palmier",
+      "slug": "palmier",
+      "name": "Palmier Pro",
+      "aliases": [],
+      "summary": "Agent-native CLI harness for the Palmier Pro local MCP video editor — drive timeline editing, media, captions, and AI generation from the command line",
+      "description": "Agent-native CLI harness for the Palmier Pro local MCP video editor — drive timeline editing, media, captions, and AI generation from the command line",
+      "categories": [
+        "video"
+      ],
+      "tags": [
+        "agent",
+        "ai",
+        "editing",
+        "video"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/workcr/palmier-cli-anything.git",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/workcr/palmier-cli-anything",
+      "documentation": "https://palmier.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-19"
+    },
+    {
+      "id": "pieces",
+      "slug": "pieces",
+      "name": "Pieces OS CLI",
+      "aliases": [],
+      "summary": "Agent-native CLI for Pieces OS — persistent long-term memory for developers.",
+      "description": "Agent-native CLI for Pieces OS — persistent long-term memory for developers. Search, create, and manage memory assets, snippets, and models via Pieces OS REST API.",
+      "categories": [
+        "productivity"
+      ],
+      "tags": [
+        "agent",
+        "api",
+        "productivity",
+        "rest",
+        "search"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": null,
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/goddardoven110907/cli-anything-pieces.git",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/goddardoven110907/cli-anything-pieces",
+      "documentation": "https://pieces.app",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-18"
+    },
+    {
+      "id": "pm2",
+      "slug": "pm2",
+      "name": "PM2",
+      "aliases": [],
+      "summary": "Node.js process management — list, start, stop, restart, logs, and metrics via PM2 CLI",
+      "description": "Node.js process management — list, start, stop, restart, logs, and metrics via PM2 CLI",
+      "categories": [
+        "devops"
+      ],
+      "tags": [
+        "devops"
+      ],
+      "useCases": [
+        "Node.js process management",
+        "Zero-downtime reloads",
+        "Process and log monitoring"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "JavaScript",
+      "runtime": "node",
+      "license": "AGPL-3.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=pm2/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://pm2.keymetrics.io",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-04-08"
+    },
+    {
+      "id": "py4csr",
+      "slug": "py4csr",
+      "name": "TraceCSR / Py4CSR CLI",
+      "aliases": [],
+      "summary": "GxP-compliant agent harness for CDISC Clinical Study Report (CSR) and Tables/Figures/Listings (TFL) generation",
+      "description": "GxP-compliant agent harness for CDISC Clinical Study Report (CSR) and Tables/Figures/Listings (TFL) generation",
+      "categories": [
+        "data-science"
+      ],
+      "tags": [
+        "agent",
+        "data-science"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": null,
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install py4csr",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/yanmingyu92/py4csr",
+      "documentation": "https://github.com/yanmingyu92/py4csr",
+      "packageManagers": [
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-17"
+    },
+    {
+      "id": "qgis",
+      "slug": "qgis",
+      "name": "QGIS",
+      "aliases": [],
+      "summary": "Geospatial project authoring, layout export, and processing via PyQGIS and qgis_process",
+      "description": "Geospatial project authoring, layout export, and processing via PyQGIS and qgis_process",
+      "categories": [
+        "science"
+      ],
+      "tags": [
+        "geospatial",
+        "science"
+      ],
+      "useCases": [
+        "Geospatial analysis",
+        "Map production",
+        "Batch geodata processing"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C++, Python",
+      "runtime": null,
+      "license": "GPL-2.0-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=QGIS/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://qgis.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "advanced",
+      "alternatives": [
+        "arcgis-pro"
+      ],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-04-15"
+    },
+    {
+      "id": "quietshrink",
+      "slug": "quietshrink",
+      "name": "QuietShrink",
+      "aliases": [],
+      "summary": "Compress macOS screen recordings on Apple Silicon — 70-90% smaller files at visually lossless quality, hardware-encoded, computer stays silent",
+      "description": "Compress macOS screen recordings on Apple Silicon — 70-90% smaller files at visually lossless quality, hardware-encoded, computer stays silent",
+      "categories": [
+        "video"
+      ],
+      "tags": [
+        "video"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=quietshrink/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/achiya-automation/quietshrink",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "renderdoc",
+      "slug": "renderdoc",
+      "name": "RenderDoc",
+      "aliases": [],
+      "summary": "GPU frame capture analysis: pipeline state, shader export, texture inspection, draw call browsing",
+      "description": "GPU frame capture analysis: pipeline state, shader export, texture inspection, draw call browsing",
+      "categories": [
+        "graphics"
+      ],
+      "tags": [
+        "capture",
+        "graphics",
+        "pipeline",
+        "texture"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=renderdoc/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://renderdoc.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-24"
+    },
+    {
+      "id": "rms",
+      "slug": "rms",
+      "name": "Teltonika RMS",
+      "aliases": [],
+      "summary": "Device management and monitoring via Teltonika RMS REST API",
+      "description": "Device management and monitoring via Teltonika RMS REST API",
+      "categories": [
+        "network"
+      ],
+      "tags": [
+        "api",
+        "monitoring",
+        "network",
+        "rest"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=rms/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://rms.teltonika-networks.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-03-25"
+    },
+    {
+      "id": "safari",
+      "slug": "safari",
+      "name": "Safari",
+      "aliases": [],
+      "summary": "Native macOS Safari browser automation via safari-mcp — 84 tools for navigation, DOM, forms, network capture, and screenshots",
+      "description": "Native macOS Safari browser automation via safari-mcp — 84 tools for navigation, DOM, forms, network capture, and screenshots",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "automation",
+        "browser",
+        "capture",
+        "web"
+      ],
+      "useCases": [],
+      "platforms": [
+        "macos"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=safari/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/achiya-automation/safari-mcp",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-12"
+    },
+    {
+      "id": "sanity",
+      "slug": "sanity",
+      "name": "Sanity CLI",
+      "aliases": [],
+      "summary": "Official Sanity CLI for studios, datasets, schemas, imports, exports, and structured content workflows",
+      "description": "Official Sanity CLI for studios, datasets, schemas, imports, exports, and structured content workflows",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "web"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": null,
+      "install": [
+        {
+          "method": "npm",
+          "command": "npm install -g sanity",
+          "label": "Install"
+        },
+        {
+          "method": "npx",
+          "command": "npx sanity@latest",
+          "label": "Run via npx"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/sanity-io/sanity",
+      "documentation": "https://www.sanity.io/",
+      "packageManagers": [
+        "npm",
+        "npx"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "sbox",
+      "slug": "sbox",
+      "name": "s&box",
+      "aliases": [],
+      "summary": "Game engine project management for s&box (Source 2): scenes, prefabs, materials, sounds, codegen, asset graph, project validation",
+      "description": "Game engine project management for s&box (Source 2): scenes, prefabs, materials, sounds, codegen, asset graph, project validation",
+      "categories": [
+        "game"
+      ],
+      "tags": [
+        "game",
+        "game-engine"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=sbox/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://sbox.game",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "seaclip",
+      "slug": "seaclip",
+      "name": "SeaClip",
+      "aliases": [],
+      "summary": "Kanban board, 6-agent AI pipeline, and issue management via SeaClip-Lite FastAPI + SQLite",
+      "description": "Kanban board, 6-agent AI pipeline, and issue management via SeaClip-Lite FastAPI + SQLite",
+      "categories": [
+        "project-management"
+      ],
+      "tags": [
+        "agent",
+        "ai",
+        "pipeline",
+        "project-management"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=seaclip/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/t4tarzan/cli-anything-seaclip",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-08"
+    },
+    {
+      "id": "sentry",
+      "slug": "sentry",
+      "name": "Sentry CLI",
+      "aliases": [],
+      "summary": "Official Sentry CLI for releases, sourcemaps, debug files, monitors, and org/project automation",
+      "description": "Official Sentry CLI for releases, sourcemaps, debug files, monitors, and org/project automation",
+      "categories": [
+        "devops"
+      ],
+      "tags": [
+        "automation",
+        "devops"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": null,
+      "install": [
+        {
+          "method": "npm",
+          "command": "npm install -g @sentry/cli",
+          "label": "Install"
+        },
+        {
+          "method": "npx",
+          "command": "npx @sentry/cli",
+          "label": "Run via npx"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/getsentry/sentry-cli",
+      "documentation": "https://docs.sentry.io/cli/",
+      "packageManagers": [
+        "npm",
+        "npx"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-18"
+    },
+    {
+      "id": "shopify",
+      "slug": "shopify",
+      "name": "Shopify CLI",
+      "aliases": [],
+      "summary": "Official Shopify CLI for apps, themes, functions, extensions, and Hydrogen storefront workflows",
+      "description": "Official Shopify CLI for apps, themes, functions, extensions, and Hydrogen storefront workflows",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "web"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": null,
+      "install": [
+        {
+          "method": "npm",
+          "command": "npm install -g @shopify/cli",
+          "label": "Install"
+        },
+        {
+          "method": "npx",
+          "command": "npx @shopify/cli@latest",
+          "label": "Run via npx"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/Shopify/cli",
+      "documentation": "https://shopify.dev/docs/api/shopify-cli",
+      "packageManagers": [
+        "npm",
+        "npx"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "shotcut",
+      "slug": "shotcut",
+      "name": "Shotcut",
+      "aliases": [],
+      "summary": "Video editing and rendering via melt/ffmpeg",
+      "description": "Video editing and rendering via melt/ffmpeg",
+      "categories": [
+        "video"
+      ],
+      "tags": [
+        "editing",
+        "ffmpeg",
+        "rendering",
+        "video"
+      ],
+      "useCases": [
+        "Video editing",
+        "Format conversion",
+        "Timeline-based assembly"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "C++",
+      "runtime": null,
+      "license": "GPL-3.0-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=shotcut/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://shotcut.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "beginner",
+      "alternatives": [
+        "kdenlive"
+      ],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-05-19"
+    },
+    {
+      "id": "siyuan",
+      "slug": "siyuan",
+      "name": "SiYuan CLI",
+      "aliases": [],
+      "summary": "Knowledge management and note-taking via SiYuan HTTP API — manage notebooks, documents, blocks, and search content from the command line",
+      "description": "Knowledge management and note-taking via SiYuan HTTP API — manage notebooks, documents, blocks, and search content from the command line",
+      "categories": [
+        "knowledge"
+      ],
+      "tags": [
+        "api",
+        "documents",
+        "http",
+        "knowledge",
+        "search"
+      ],
+      "useCases": [
+        "Block-based note-taking",
+        "Self-hosted knowledge base"
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "language": "TypeScript, Go",
+      "runtime": null,
+      "license": "AGPL-3.0-or-later",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=siyuan/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/siyuan-note/siyuan",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": "intermediate",
+      "alternatives": [
+        "joplin",
+        "obsidian"
+      ],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "curated",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "sketch",
+      "slug": "sketch",
+      "name": "Sketch",
+      "aliases": [],
+      "summary": "Generate Sketch design files (.sketch) from JSON design specifications via sketch-constructor",
+      "description": "Generate Sketch design files (.sketch) from JSON design specifications via sketch-constructor",
+      "categories": [
+        "design"
+      ],
+      "tags": [
+        "design"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "npm",
+          "command": "cd sketch/agent-harness && npm install && npm link",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.sketch.com",
+      "packageManagers": [
+        "npm"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "slay-the-spire-ii",
+      "slug": "slay-the-spire-ii",
+      "name": "Slay the Spire 2",
+      "aliases": [
+        "slay_the_spire_ii"
+      ],
+      "summary": "Control the real Slay the Spire 2 game via local STS2_Bridge HTTP API",
+      "description": "Control the real Slay the Spire 2 game via local STS2_Bridge HTTP API",
+      "categories": [
+        "game"
+      ],
+      "tags": [
+        "api",
+        "game",
+        "http"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=slay_the_spire_ii/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/HKUDS/CLI-Anything/tree/main/slay_the_spire_ii",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-03-26"
+    },
+    {
+      "id": "smithue-cli",
+      "slug": "smithue-cli",
+      "name": "SmithUE CLI",
+      "aliases": [],
+      "summary": "CLI tool for controlling Unreal Engine editor via SmithUE plugin.",
+      "description": "CLI tool for controlling Unreal Engine editor via SmithUE plugin. Enables AI agents to execute editor commands, list tools, search capabilities, and monitor editor status.",
+      "categories": [
+        "devtools"
+      ],
+      "tags": [
+        "ai",
+        "devtools",
+        "search",
+        "unreal"
+      ],
+      "useCases": [],
+      "platforms": [
+        "windows"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": null,
+      "install": [
+        {
+          "method": "npm",
+          "command": "npm install -g smithue-cli",
+          "label": "Install"
+        },
+        {
+          "method": "npx",
+          "command": "npx smithue-cli",
+          "label": "Run via npx"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/123dx-svg/smithue-cli",
+      "documentation": "https://github.com/123dx-svg/smithue-cli",
+      "packageManagers": [
+        "npm",
+        "npx"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-02"
+    },
+    {
+      "id": "stata",
+      "slug": "stata",
+      "name": "Stata",
+      "aliases": [],
+      "summary": "Run Stata do-files, batch jobs, and reproducible econometric projects from the terminal with JSON output, log parsing, project scaffolding, and security guard",
+      "description": "Run Stata do-files, batch jobs, and reproducible econometric projects from the terminal with JSON output, log parsing, project scaffolding, and security guard",
+      "categories": [
+        "science"
+      ],
+      "tags": [
+        "science",
+        "security",
+        "terminal"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/LI-Meng420/stata-cli.git",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/LI-Meng420/stata-cli",
+      "documentation": "https://www.stata.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": null
+    },
+    {
+      "id": "suno",
+      "slug": "suno",
+      "name": "Suno CLI",
+      "aliases": [],
+      "summary": "CLI for generating music with Suno AI from lyrics and style prompts, with batch generation, status polling, downloads, and automatic MP3 tagging",
+      "description": "CLI for generating music with Suno AI from lyrics and style prompts, with batch generation, status polling, downloads, and automatic MP3 tagging",
+      "categories": [
+        "music"
+      ],
+      "tags": [
+        "ai",
+        "music"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": null,
+      "install": [
+        {
+          "method": "pip",
+          "command": "python3 -m pip install git+https://github.com/slauger/suno-cli.git",
+          "label": "Install"
+        },
+        {
+          "method": "pip",
+          "command": "python3 -m pip install --upgrade --force-reinstall git+https://github.com/slauger/suno-cli.git",
+          "label": "Update"
+        },
+        {
+          "method": "shell",
+          "command": "python3 -m pip uninstall -y suno-cli",
+          "label": "Uninstall"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/slauger/suno-cli",
+      "documentation": "https://github.com/slauger/suno-cli",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-02-22"
+    },
+    {
+      "id": "tigris",
+      "slug": "tigris",
+      "name": "Tigris",
+      "aliases": [],
+      "summary": "Object storage management — buckets, objects, presigned URLs, snapshots, IAM, scoped access keys.",
+      "description": "Object storage management — buckets, objects, presigned URLs, snapshots, IAM, scoped access keys. Wraps the official `tigris` CLI (S3-compatible, globally distributed, no egress fees)",
+      "categories": [
+        "storage"
+      ],
+      "tags": [
+        "storage"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=tigris/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://www.tigrisdata.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-11"
+    },
+    {
+      "id": "tinyfish",
+      "slug": "tinyfish",
+      "name": "TinyFish Web Agent",
+      "aliases": [],
+      "summary": "All four TinyFish products from the terminal: web search, clean page extraction, natural-language browser automation, and remote CDP browser sessions — via…",
+      "description": "All four TinyFish products from the terminal: web search, clean page extraction, natural-language browser automation, and remote CDP browser sessions — via the REST APIs.",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "agent",
+        "automation",
+        "browser",
+        "rest",
+        "search",
+        "terminal",
+        "web"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install cli-anything-tinyfish",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/webdevtodayjason/cli-anything-tinyfish",
+      "documentation": "https://tinyfish.ai",
+      "packageManagers": [
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-11"
+    },
+    {
+      "id": "ueatelier",
+      "slug": "ueatelier",
+      "name": "UEAtelier",
+      "aliases": [],
+      "summary": "Unreal Editor 5.6/5.7 MCP self-extension workbench - editor automation, build diagnostics, Task Atlas workflows, PIE smoke verification, scaffold pipeline",
+      "description": "Unreal Editor 5.6/5.7 MCP self-extension workbench - editor automation, build diagnostics, Task Atlas workflows, PIE smoke verification, scaffold pipeline",
+      "categories": [
+        "game"
+      ],
+      "tags": [
+        "automation",
+        "game",
+        "pipeline",
+        "unreal"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/edwinmeng163-oss/UEAtelier.git#subdirectory=Tools/UEAtelierCli",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/edwinmeng163-oss/UEAtelier",
+      "documentation": "https://github.com/edwinmeng163-oss/UEAtelier",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-07-14"
+    },
+    {
+      "id": "unimol-tools",
+      "slug": "unimol-tools",
+      "name": "Uni-Mol Tools",
+      "aliases": [
+        "unimol_tools"
+      ],
+      "summary": "Molecular property prediction — train and predict with 5 task types (classification, regression, multiclass, multilabel) for drug discovery",
+      "description": "Molecular property prediction — train and predict with 5 task types (classification, regression, multiclass, multilabel) for drug discovery",
+      "categories": [
+        "science"
+      ],
+      "tags": [
+        "science"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=unimol_tools/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/dptech-corp/Uni-Mol/tree/main/unimol_tools",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-15"
+    },
+    {
+      "id": "unrealinsights",
+      "slug": "unrealinsights",
+      "name": "Unreal Insights",
+      "aliases": [],
+      "summary": "Windows-first Unreal trace capture, background session control, engine-matched UnrealInsights builds, and headless Timing Insights export workflows",
+      "description": "Windows-first Unreal trace capture, background session control, engine-matched UnrealInsights builds, and headless Timing Insights export workflows",
+      "categories": [
+        "debugging"
+      ],
+      "tags": [
+        "capture",
+        "debugging",
+        "unreal"
+      ],
+      "useCases": [],
+      "platforms": [
+        "windows"
+      ],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=unrealinsights/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-insights-in-unreal-engine",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-05-13"
+    },
+    {
+      "id": "ve-twini",
+      "slug": "ve-twini",
+      "name": "VE Twini",
+      "aliases": [],
+      "summary": "Unified Twitter/X CLI bridging bird (GraphQL API) and opencli (browser automation)",
+      "description": "Unified Twitter/X CLI bridging bird (GraphQL API) and opencli (browser automation)",
+      "categories": [
+        "communication"
+      ],
+      "tags": [
+        "api",
+        "automation",
+        "browser",
+        "communication",
+        "graphql"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/collectivewinca/ve-twini.git#subdirectory=agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/collectivewinca/ve-twini",
+      "documentation": "https://x.com",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-28"
+    },
+    {
+      "id": "videocaptioner",
+      "slug": "videocaptioner",
+      "name": "VideoCaptioner",
+      "aliases": [],
+      "summary": "AI-powered video captioning — transcribe speech, optimize/translate subtitles, burn styled subtitles into video",
+      "description": "AI-powered video captioning — transcribe speech, optimize/translate subtitles, burn styled subtitles into video",
+      "categories": [
+        "video"
+      ],
+      "tags": [
+        "ai",
+        "speech",
+        "video"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=videocaptioner/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://github.com/WEIFENG2333/VideoCaptioner",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-19"
+    },
+    {
+      "id": "vivideo",
+      "slug": "vivideo",
+      "name": "Vivideo CLI",
+      "aliases": [],
+      "summary": "Vivideo AI video generation CLI — create avatar and text-to-video content from the terminal, scripts, CI, or agents.",
+      "description": "Vivideo AI video generation CLI — create avatar and text-to-video content from the terminal, scripts, CI, or agents. Supports auto and manual modes, model/avatar/voice/brand-kit listing, credit estimates, and status/wait polling.",
+      "categories": [
+        "ai"
+      ],
+      "tags": [
+        "ai",
+        "ci",
+        "model",
+        "terminal",
+        "video",
+        "voice"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": null,
+      "install": [
+        {
+          "method": "npm",
+          "command": "npm install -g @vivideo/cli",
+          "label": "Install"
+        },
+        {
+          "method": "npx",
+          "command": "npx @vivideo/cli",
+          "label": "Run via npx"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://vivideo.ai",
+      "packageManagers": [
+        "npm",
+        "npx"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-07-28"
+    },
+    {
+      "id": "wavetone",
+      "slug": "wavetone",
+      "name": "WaveTone",
+      "aliases": [],
+      "summary": "Prepare WaveTone 2.61 audio transcription manifests, probe audio files, and launch the real Windows WaveTone executable",
+      "description": "Prepare WaveTone 2.61 audio transcription manifests, probe audio files, and launch the real Windows WaveTone executable",
+      "categories": [
+        "audio"
+      ],
+      "tags": [
+        "audio",
+        "transcription"
+      ],
+      "useCases": [],
+      "platforms": [
+        "windows"
+      ],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=wavetone/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "http://ackiesound.ifdef.jp/",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-07"
+    },
+    {
+      "id": "web-yu-pri",
+      "slug": "web-yu-pri",
+      "name": "Web Yu-pri",
+      "aliases": [],
+      "summary": "Japan Post Web Yu-pri browser workflow automation for login, inspection, screenshots, dry-run planning, and contents-form filling",
+      "description": "Japan Post Web Yu-pri browser workflow automation for login, inspection, screenshots, dry-run planning, and contents-form filling",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "automation",
+        "browser",
+        "web",
+        "workflow"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=web-yu-pri/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://mgr.post.japanpost.jp/C30P01Action.do",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-06-09"
+    },
+    {
+      "id": "wecom",
+      "slug": "wecom",
+      "name": "WeCom CLI",
+      "aliases": [],
+      "summary": "Official WeCom open-platform CLI for contacts, todos, meetings, messages, calendars, docs, and smart sheets",
+      "description": "Official WeCom open-platform CLI for contacts, todos, meetings, messages, calendars, docs, and smart sheets",
+      "categories": [
+        "communication"
+      ],
+      "tags": [
+        "communication"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "node",
+      "license": null,
+      "install": [
+        {
+          "method": "npm",
+          "command": "npm install -g @wecom/cli",
+          "label": "Install"
+        },
+        {
+          "method": "npx",
+          "command": "npx @wecom/cli",
+          "label": "Run via npx"
+        },
+        {
+          "method": "agent-skill",
+          "command": "npx skills add WeComTeam/wecom-cli -y -g",
+          "label": "Agent skill"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/WecomTeam/wecom-cli",
+      "documentation": "https://open.work.weixin.qq.com/",
+      "packageManagers": [
+        "npm",
+        "npx"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-18"
+    },
+    {
+      "id": "wiremock",
+      "slug": "wiremock",
+      "name": "WireMock",
+      "aliases": [],
+      "summary": "HTTP mock server management — create stubs, inspect requests, record traffic, and manage scenarios via WireMock REST API",
+      "description": "HTTP mock server management — create stubs, inspect requests, record traffic, and manage scenarios via WireMock REST API",
+      "categories": [
+        "testing"
+      ],
+      "tags": [
+        "api",
+        "http",
+        "mock",
+        "rest",
+        "testing"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "java",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=wiremock/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://wiremock.org",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-04-01"
+    },
+    {
+      "id": "x-twitter-scraper",
+      "slug": "x-twitter-scraper",
+      "name": "X Twitter Scraper CLI",
+      "aliases": [],
+      "summary": "CLI for Twitter search, profile and follower exports, monitoring, webhooks, and approved X actions through Xquik.",
+      "description": "CLI for Twitter search, profile and follower exports, monitoring, webhooks, and approved X actions through Xquik. Not affiliated with X Corp.",
+      "categories": [
+        "communication"
+      ],
+      "tags": [
+        "communication",
+        "monitoring",
+        "search"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "go",
+      "license": null,
+      "install": [
+        {
+          "method": "go",
+          "command": "go install github.com/Xquik-dev/x-twitter-scraper-cli/cmd/x-twitter-scraper@v0.13.1",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/Xquik-dev/x-twitter-scraper-cli",
+      "documentation": "https://xquik.com",
+      "packageManagers": [
+        "go"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "public",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-20"
+    },
+    {
+      "id": "zoom",
+      "slug": "zoom",
+      "name": "Zoom",
+      "aliases": [],
+      "summary": "Meeting management via Zoom REST API (OAuth2)",
+      "description": "Meeting management via Zoom REST API (OAuth2)",
+      "categories": [
+        "communication"
+      ],
+      "tags": [
+        "api",
+        "communication",
+        "rest"
+      ],
+      "useCases": [],
+      "platforms": [],
+      "language": null,
+      "runtime": null,
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=zoom/agent-harness",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": null,
+      "documentation": "https://zoom.us",
+      "packageManagers": [
+        "git",
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-05-19"
+    },
+    {
+      "id": "zotero",
+      "slug": "zotero",
+      "name": "Zotero",
+      "aliases": [],
+      "summary": "CLI & MCP server for Zotero 7/8 — 52 MCP tools + 70+ CLI commands for search, import, PDF, BibTeX, notes, and more",
+      "description": "CLI & MCP server for Zotero 7/8 — 52 MCP tools + 70+ CLI commands for search, import, PDF, BibTeX, notes, and more",
+      "categories": [
+        "office"
+      ],
+      "tags": [
+        "notes",
+        "office",
+        "pdf",
+        "search"
+      ],
+      "useCases": [],
+      "platforms": [
+        "cross-platform"
+      ],
+      "language": null,
+      "runtime": "python",
+      "license": "Apache-2.0",
+      "install": [
+        {
+          "method": "pip",
+          "command": "pip install cli-anything-zotero",
+          "label": "Install"
+        }
+      ],
+      "examples": [],
+      "repository": "https://github.com/PiaoyangGuohai1/cli-anything-zotero",
+      "documentation": "https://www.zotero.org",
+      "packageManagers": [
+        "pip"
+      ],
+      "difficulty": null,
+      "alternatives": [],
+      "related": [],
+      "source": "harness",
+      "dataQuality": "derived",
+      "lastVerified": "2026-08-21"
+    }
+  ]
+}

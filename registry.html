@@ -3,70 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Registry — CLI_CODE</title>
-<meta name="description" content="Searchable registry of agent-native CLIs. Filter by category, install method, and type; sort by any column; inspect any CLI.">
+<title>Browse CLI tools — CLI_CODE</title>
+<meta name="description" content="Search and filter an open directory of command-line tools by category, platform, language, and install method. Instant client-side search, keyboard-driven.">
+<link rel="canonical" href="./registry.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/theme.js" defer></script>
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/search.js" defer></script>
+<script src="assets/js/store.js" defer></script>
 <script src="assets/js/registry.js" defer></script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="index.html">
-      <span class="dot" aria-hidden="true"></span> cli_code
-    </a>
-    <nav class="nav">
-      <a href="registry.html" class="active">Registry</a>
-      <a href="matrices.html">Matrices</a>
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> cli_code</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="registry.html" aria-current="page">Browse</a>
+      <a href="matrices.html">Stacks</a>
       <a href="docs.html">Docs</a>
       <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
     </nav>
   </div>
 </header>
 
-<main class="wrap" style="padding-top:34px;padding-bottom:60px">
-  <span class="eyebrow">The registry</span>
-  <h1 class="sec-title">Every <span class="g">agent-native CLI</span>, in one place</h1>
-  <p class="sec-sub">Search by name or purpose, narrow by category and type, sort any column, and click a row for install commands and details. Filters are saved to the URL, so any view is shareable.</p>
+<main id="main" class="wrap" style="padding-top:30px;padding-bottom:64px">
+  <h1 class="sec-title">Browse <span class="g">CLI tools</span></h1>
+  <p class="sec-sub">Instant search across name, tags, summary and use cases. Filters and sort are saved to the URL. Press <kbd>/</kbd> to search, <kbd>&uarr;</kbd><kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to clear.</p>
 
-  <div class="reg-toolbar" style="margin-top:22px">
+  <div class="browse-toolbar" role="search">
     <div class="search-box">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-      <input id="reg-search" type="search" placeholder="Search 100+ CLIs — blender, mock server, transcription…" autocomplete="off">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" type="search" placeholder="Search tools — mock server, transcription, vector database…" autocomplete="off" aria-label="Search CLI tools" spellcheck="false">
     </div>
-    <div class="seg" id="reg-kind">
-      <button data-kind="all" class="on">All</button>
-      <button data-kind="harness">Harness</button>
-      <button data-kind="public">Public</button>
+    <div class="filters">
+      <label>Source <select id="f-source" class="filter">
+        <option value="all">All sources</option>
+        <option value="harness">harness</option>
+        <option value="public">public</option>
+      </select></label>
+      <label>Category <select id="f-category" class="filter"></select></label>
+      <label>Platform <select id="f-platform" class="filter"></select></label>
+      <label>Language <select id="f-language" class="filter"></select></label>
+      <label>Install <select id="f-pm" class="filter"></select></label>
+      <label>Difficulty <select id="f-difficulty" class="filter"></select></label>
+      <label class="chk"><input type="checkbox" id="f-curated"> Curated only</label>
+      <button type="button" id="f-clear" class="btn-sm ghost">Clear</button>
     </div>
-    <select id="reg-category" class="filter"><option value="all">All categories</option></select>
   </div>
 
-  <div class="reg-count" id="reg-count">Loading…</div>
+  <p class="reg-count" id="result-count" aria-live="polite">Loading…</p>
 
-  <div style="overflow-x:auto">
+  <div class="table-scroll">
     <table class="reg-table">
-      <thead id="reg-head">
-        <tr>
-          <th data-sort="name">CLI <span class="arr">↕</span></th>
-          <th data-sort="category">Category <span class="arr">↕</span></th>
-          <th data-sort="package_manager">Install <span class="arr">↕</span></th>
-          <th data-sort="date">Updated <span class="arr">↕</span></th>
-          <th></th>
+      <thead>
+        <tr id="thead-row">
+          <th data-sort="name" aria-sort="none" scope="col">Tool <span class="arr" aria-hidden="true"></span></th>
+          <th data-sort="category" aria-sort="none" scope="col">Category <span class="arr" aria-hidden="true"></span></th>
+          <th scope="col">Platforms</th>
+          <th scope="col">Language</th>
+          <th data-sort="updated" aria-sort="none" scope="col">Verified <span class="arr" aria-hidden="true"></span></th>
+          <th scope="col"><span class="sr-only">Actions</span></th>
         </tr>
       </thead>
-      <tbody id="reg-body"><tr><td colspan="5" class="empty">Loading registry…</td></tr></tbody>
+      <tbody id="rows"><tr><td colspan="6" class="empty">Loading dataset…</td></tr></tbody>
     </table>
   </div>
 </main>
 
-<div class="drawer-scrim" id="drawer-scrim"></div>
-<aside class="drawer" id="drawer" aria-label="CLI details"></aside>
-
 <footer class="site-foot">
   <div class="wrap">
-    <span>Registry data sourced from the upstream CLI-Anything project.</span>
+    <span>CLI_CODE — open CLI directory. Data built from <code>data/clis.json</code>.</span>
     <span>Apache-2.0</span>
   </div>
 </footer>

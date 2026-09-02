@@ -11,21 +11,22 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="index.html">
       <span class="dot" aria-hidden="true"></span> cli_code
     </a>
-    <nav class="nav">
-      <a href="registry.html">Registry</a>
-      <a href="matrices.html" class="active">Matrices</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="registry.html">Browse</a>
+      <a href="matrices.html" aria-current="page">Stacks</a>
       <a href="docs.html">Docs</a>
       <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
     </nav>
   </div>
 </header>
 
-<main class="wrap" style="padding-top:34px;padding-bottom:60px">
+<main id="main" class="wrap" style="padding-top:34px;padding-bottom:60px">
   <span class="eyebrow">Collections</span>
   <h1 class="sec-title">Capability <span class="g">matrices</span></h1>
   <p class="sec-sub">Each matrix is a capability-based plan for a whole workflow: it lists the intents (“turn a brief into a storyboard”, “encode the final cut”) and, for each, the provider CLIs that can do it. Give one to an agent and it knows which tool to reach for at every step.</p>

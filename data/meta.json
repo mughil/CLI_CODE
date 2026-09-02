@@ -1,0 +1,595 @@
+{
+  "generated": "static",
+  "counts": {
+    "total": 103,
+    "harness": 79,
+    "public": 24,
+    "curated": 25
+  },
+  "categories": [
+    {
+      "id": "ai",
+      "count": 12
+    },
+    {
+      "id": "web",
+      "count": 11
+    },
+    {
+      "id": "devops",
+      "count": 9
+    },
+    {
+      "id": "graphics",
+      "count": 6
+    },
+    {
+      "id": "video",
+      "count": 6
+    },
+    {
+      "id": "communication",
+      "count": 5
+    },
+    {
+      "id": "game",
+      "count": 4
+    },
+    {
+      "id": "knowledge",
+      "count": 4
+    },
+    {
+      "id": "office",
+      "count": 4
+    },
+    {
+      "id": "science",
+      "count": 4
+    },
+    {
+      "id": "3d",
+      "count": 3
+    },
+    {
+      "id": "audio",
+      "count": 3
+    },
+    {
+      "id": "automation",
+      "count": 3
+    },
+    {
+      "id": "image",
+      "count": 3
+    },
+    {
+      "id": "database",
+      "count": 2
+    },
+    {
+      "id": "debugging",
+      "count": 2
+    },
+    {
+      "id": "design",
+      "count": 2
+    },
+    {
+      "id": "diagrams",
+      "count": 2
+    },
+    {
+      "id": "music",
+      "count": 2
+    },
+    {
+      "id": "network",
+      "count": 2
+    },
+    {
+      "id": "productivity",
+      "count": 2
+    },
+    {
+      "id": "search",
+      "count": 2
+    },
+    {
+      "id": "data-science",
+      "count": 1
+    },
+    {
+      "id": "devtools",
+      "count": 1
+    },
+    {
+      "id": "finance",
+      "count": 1
+    },
+    {
+      "id": "generation",
+      "count": 1
+    },
+    {
+      "id": "mobile",
+      "count": 1
+    },
+    {
+      "id": "osint",
+      "count": 1
+    },
+    {
+      "id": "project-management",
+      "count": 1
+    },
+    {
+      "id": "storage",
+      "count": 1
+    },
+    {
+      "id": "streaming",
+      "count": 1
+    },
+    {
+      "id": "testing",
+      "count": 1
+    }
+  ],
+  "platforms": [
+    {
+      "id": "cross-platform",
+      "count": 34
+    },
+    {
+      "id": "windows",
+      "count": 30
+    },
+    {
+      "id": "macos",
+      "count": 28
+    },
+    {
+      "id": "linux",
+      "count": 26
+    },
+    {
+      "id": "web",
+      "count": 1
+    }
+  ],
+  "languages": [
+    {
+      "id": "C++",
+      "count": 12
+    },
+    {
+      "id": "Python",
+      "count": 6
+    },
+    {
+      "id": "C",
+      "count": 3
+    },
+    {
+      "id": "JavaScript",
+      "count": 3
+    },
+    {
+      "id": "TypeScript",
+      "count": 3
+    },
+    {
+      "id": "Go",
+      "count": 2
+    },
+    {
+      "id": "Java",
+      "count": 1
+    },
+    {
+      "id": "Rust",
+      "count": 1
+    }
+  ],
+  "runtimes": [
+    {
+      "id": "node",
+      "count": 21
+    },
+    {
+      "id": "python",
+      "count": 17
+    },
+    {
+      "id": "go",
+      "count": 1
+    },
+    {
+      "id": "java",
+      "count": 1
+    },
+    {
+      "id": "rust",
+      "count": 1
+    }
+  ],
+  "packageManagers": [
+    {
+      "id": "pip",
+      "count": 83
+    },
+    {
+      "id": "git",
+      "count": 78
+    },
+    {
+      "id": "npm",
+      "count": 12
+    },
+    {
+      "id": "npx",
+      "count": 11
+    },
+    {
+      "id": "brew",
+      "count": 2
+    },
+    {
+      "id": "cargo",
+      "count": 1
+    },
+    {
+      "id": "go",
+      "count": 1
+    },
+    {
+      "id": "uv",
+      "count": 1
+    }
+  ],
+  "difficulties": [
+    {
+      "id": "beginner",
+      "count": 12
+    },
+    {
+      "id": "intermediate",
+      "count": 9
+    },
+    {
+      "id": "advanced",
+      "count": 4
+    }
+  ],
+  "tags": [
+    {
+      "id": "api",
+      "count": 23
+    },
+    {
+      "id": "ai",
+      "count": 22
+    },
+    {
+      "id": "agent",
+      "count": 15
+    },
+    {
+      "id": "automation",
+      "count": 15
+    },
+    {
+      "id": "search",
+      "count": 14
+    },
+    {
+      "id": "rest",
+      "count": 12
+    },
+    {
+      "id": "web",
+      "count": 11
+    },
+    {
+      "id": "video",
+      "count": 10
+    },
+    {
+      "id": "devops",
+      "count": 9
+    },
+    {
+      "id": "browser",
+      "count": 7
+    },
+    {
+      "id": "editing",
+      "count": 7
+    },
+    {
+      "id": "terminal",
+      "count": 7
+    },
+    {
+      "id": "capture",
+      "count": 6
+    },
+    {
+      "id": "graphics",
+      "count": 6
+    },
+    {
+      "id": "image",
+      "count": 6
+    },
+    {
+      "id": "3d",
+      "count": 5
+    },
+    {
+      "id": "communication",
+      "count": 5
+    },
+    {
+      "id": "http",
+      "count": 5
+    },
+    {
+      "id": "audio",
+      "count": 4
+    },
+    {
+      "id": "game",
+      "count": 4
+    },
+    {
+      "id": "knowledge",
+      "count": 4
+    },
+    {
+      "id": "notes",
+      "count": 4
+    },
+    {
+      "id": "office",
+      "count": 4
+    },
+    {
+      "id": "pipeline",
+      "count": 4
+    },
+    {
+      "id": "science",
+      "count": 4
+    },
+    {
+      "id": "workflow",
+      "count": 4
+    },
+    {
+      "id": "documents",
+      "count": 3
+    },
+    {
+      "id": "mesh",
+      "count": 3
+    },
+    {
+      "id": "model",
+      "count": 3
+    },
+    {
+      "id": "pdf",
+      "count": 3
+    },
+    {
+      "id": "rendering",
+      "count": 3
+    },
+    {
+      "id": "unreal",
+      "count": 3
+    },
+    {
+      "id": "database",
+      "count": 2
+    },
+    {
+      "id": "debugging",
+      "count": 2
+    },
+    {
+      "id": "design",
+      "count": 2
+    },
+    {
+      "id": "diagrams",
+      "count": 2
+    },
+    {
+      "id": "ffmpeg",
+      "count": 2
+    },
+    {
+      "id": "game-engine",
+      "count": 2
+    },
+    {
+      "id": "modeling",
+      "count": 2
+    },
+    {
+      "id": "monitoring",
+      "count": 2
+    },
+    {
+      "id": "music",
+      "count": 2
+    },
+    {
+      "id": "network",
+      "count": 2
+    },
+    {
+      "id": "productivity",
+      "count": 2
+    },
+    {
+      "id": "raster",
+      "count": 2
+    },
+    {
+      "id": "speech",
+      "count": 2
+    },
+    {
+      "id": "svg",
+      "count": 2
+    },
+    {
+      "id": "vector",
+      "count": 2
+    },
+    {
+      "id": "voice",
+      "count": 2
+    },
+    {
+      "id": "animation",
+      "count": 1
+    },
+    {
+      "id": "cad",
+      "count": 1
+    },
+    {
+      "id": "chromium",
+      "count": 1
+    },
+    {
+      "id": "ci",
+      "count": 1
+    },
+    {
+      "id": "data-science",
+      "count": 1
+    },
+    {
+      "id": "deployment",
+      "count": 1
+    },
+    {
+      "id": "devtools",
+      "count": 1
+    },
+    {
+      "id": "diagram",
+      "count": 1
+    },
+    {
+      "id": "ebook",
+      "count": 1
+    },
+    {
+      "id": "ecommerce",
+      "count": 1
+    },
+    {
+      "id": "finance",
+      "count": 1
+    },
+    {
+      "id": "generation",
+      "count": 1
+    },
+    {
+      "id": "geospatial",
+      "count": 1
+    },
+    {
+      "id": "godot",
+      "count": 1
+    },
+    {
+      "id": "graphql",
+      "count": 1
+    },
+    {
+      "id": "inference",
+      "count": 1
+    },
+    {
+      "id": "llm",
+      "count": 1
+    },
+    {
+      "id": "mobile",
+      "count": 1
+    },
+    {
+      "id": "mock",
+      "count": 1
+    },
+    {
+      "id": "oauth",
+      "count": 1
+    },
+    {
+      "id": "osint",
+      "count": 1
+    },
+    {
+      "id": "painting",
+      "count": 1
+    },
+    {
+      "id": "project-management",
+      "count": 1
+    },
+    {
+      "id": "proxy",
+      "count": 1
+    },
+    {
+      "id": "screen-recording",
+      "count": 1
+    },
+    {
+      "id": "secrets",
+      "count": 1
+    },
+    {
+      "id": "security",
+      "count": 1
+    },
+    {
+      "id": "storage",
+      "count": 1
+    },
+    {
+      "id": "streaming",
+      "count": 1
+    },
+    {
+      "id": "testing",
+      "count": 1
+    },
+    {
+      "id": "texture",
+      "count": 1
+    },
+    {
+      "id": "transcription",
+      "count": 1
+    },
+    {
+      "id": "tts",
+      "count": 1
+    },
+    {
+      "id": "vector-database",
+      "count": 1
+    }
+  ]
+}

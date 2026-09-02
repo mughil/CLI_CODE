@@ -1,0 +1,19 @@
+{
+  "name": "cli-code",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-contained open-source CLI discovery and intelligence platform.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "node scripts/build-data.mjs",
+    "validate": "node scripts/validate-data.mjs",
+    "check:drift": "node scripts/build-data.mjs --check",
+    "check:links": "node scripts/check-links.mjs",
+    "check": "npm run validate && npm run check:drift && npm run check:links"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

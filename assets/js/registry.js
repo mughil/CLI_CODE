@@ -1,229 +1,281 @@
-// Registry page: load + merge both registries, then search / filter / sort / detail drawer.
+/**
+ * registry.js — the Browse page. Search + facet filters + sortable table over
+ * data/clis.json, with URL-persisted state and full keyboard control.
+ * Rows link to cli.html?slug=<slug> (the canonical, deep-linkable tool view).
+ */
 (function () {
-  var state = {
-    all: [],
-    view: [],
-    q: '',
-    kind: 'all',        // all | harness | public
-    category: 'all',
-    sort: 'name',        // name | category | kind | date
-    dir: 1,
-  };
+  'use strict';
 
-  var els = {};
+  const S = {
+    clis: [], index: null, meta: null,
+    q: '', source: 'all', category: 'all', platform: 'all',
+    language: 'all', pm: 'all', difficulty: 'all', curated: false,
+    sort: 'relevance', dir: -1,
+    view: [], sel: -1,
+  };
+  const el = {};
+
   document.addEventListener('DOMContentLoaded', init);
 
-  function init() {
-    els.search = document.getElementById('reg-search');
-    els.category = document.getElementById('reg-category');
-    els.seg = document.getElementById('reg-kind');
-    els.count = document.getElementById('reg-count');
-    els.tbody = document.getElementById('reg-body');
-    els.head = document.getElementById('reg-head');
-    els.drawer = document.getElementById('drawer');
-    els.scrim = document.getElementById('drawer-scrim');
+  async function init() {
+    el.search = document.getElementById('q');
+    el.source = document.getElementById('f-source');
+    el.category = document.getElementById('f-category');
+    el.platform = document.getElementById('f-platform');
+    el.language = document.getElementById('f-language');
+    el.pm = document.getElementById('f-pm');
+    el.difficulty = document.getElementById('f-difficulty');
+    el.curated = document.getElementById('f-curated');
+    el.clear = document.getElementById('f-clear');
+    el.count = document.getElementById('result-count');
+    el.tbody = document.getElementById('rows');
+    el.head = document.getElementById('thead-row');
 
-    Promise.all([
-      fetchJSON('data/registry.json'),
-      fetchJSON('data/public_registry.json'),
-      fetchJSON('data/registry-dates.json'),
-    ]).then(function (r) {
-      var dates = r[2] || {};
-      var harness = (r[0].clis || []).map(function (c) { return normalize(c, 'harness', dates); });
-      var pub = (r[1].clis || []).map(function (c) { return normalize(c, 'public', dates); });
-      state.all = harness.concat(pub);
-      buildCategoryOptions();
-      wire();
-      readURL();
-      apply();
-      var hashName = decodeURIComponent(location.hash.replace('#', ''));
-      if (hashName) {
-        var item = state.all.find(function (c) { return c.name === hashName; });
-        if (item) openDrawer(item);
-      }
-    }).catch(function (err) {
-      els.tbody.innerHTML = '<tr><td class="empty">Could not load registry data.<br><small>Serve this folder over HTTP (e.g. <code>python -m http.server</code>) — <code>file://</code> blocks fetch.</small></td></tr>';
-      console.error(err);
-    });
+    try {
+      const data = await window.CLIData.load();
+      S.clis = data.clis;
+      S.meta = data.meta;
+      S.index = window.CLISearch.build(S.clis);
+    } catch (err) {
+      el.tbody.innerHTML = `<tr><td colspan="6" class="empty">Could not load the dataset (${String(err.message || err)}).<br>Serve the folder over HTTP — <code>npm run build</code> then a static server.</td></tr>`;
+      return;
+    }
+
+    buildFacetOptions();
+    wire();
+    readURL();
+    apply();
   }
 
-  function fetchJSON(u) { return fetch(u).then(function (r) { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); }); }
-
-  function normalize(c, kind, dates) {
-    return {
-      kind: kind,
-      name: c.name,
-      title: c.display_name || c.name,
-      description: c.description || '',
-      category: c.category || 'other',
-      version: c.version || '',
-      requires: c.requires || '',
-      homepage: c.homepage || c.docs_url || c.source_url || '',
-      source_url: c.source_url || '',
-      install_cmd: c.install_cmd || '',
-      npx_cmd: c.npx_cmd || '',
-      skill_md: c.skill_md || '',
-      entry_point: c.entry_point || '',
-      package_manager: c.package_manager || (kind === 'harness' ? 'pip / git' : ''),
-      update_cmd: c.update_cmd || '',
-      uninstall_cmd: c.uninstall_cmd || '',
-      contributors: c.contributors || (c.contributor ? [{ name: c.contributor, url: c.contributor_url }] : []),
-      date: dates[c.name] || null,
-    };
+  function opts(list, label) {
+    return `<option value="all">${label}</option>` +
+      list.map((o) => `<option value="${o.id}">${o.id} (${o.count})</option>`).join('');
   }
 
-  function buildCategoryOptions() {
-    var cats = Array.from(new Set(state.all.map(function (c) { return c.category; }))).sort();
-    els.category.innerHTML = '<option value="all">All categories</option>' +
-      cats.map(function (c) { return '<option value="' + c + '">' + c + '</option>'; }).join('');
+  function buildFacetOptions() {
+    const m = S.meta;
+    el.category.innerHTML = opts(m.categories, 'All categories');
+    el.platform.innerHTML = opts(m.platforms, 'All platforms');
+    el.language.innerHTML = opts(m.languages, 'Any language');
+    el.pm.innerHTML = opts(m.packageManagers, 'Any install method');
+    if (m.difficulties.length) {
+      el.difficulty.innerHTML = opts(m.difficulties, 'Any difficulty');
+      el.difficulty.closest('label').hidden = false;
+    } else {
+      el.difficulty.closest('label').hidden = true;
+    }
   }
 
   function wire() {
-    els.search.addEventListener('input', function () { state.q = this.value.trim().toLowerCase(); pushURL(); apply(); });
-    els.category.addEventListener('change', function () { state.category = this.value; pushURL(); apply(); });
-    els.seg.addEventListener('click', function (e) {
-      var b = e.target.closest('button'); if (!b) return;
-      state.kind = b.dataset.kind;
-      els.seg.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x === b); });
-      pushURL(); apply();
+    let t;
+    el.search.addEventListener('input', function () {
+      clearTimeout(t);
+      t = setTimeout(() => { S.q = el.search.value.trim(); S.sel = -1; sync(); }, 90);
     });
-    els.head.addEventListener('click', function (e) {
-      var th = e.target.closest('th'); if (!th || !th.dataset.sort) return;
-      if (state.sort === th.dataset.sort) state.dir *= -1;
-      else { state.sort = th.dataset.sort; state.dir = 1; }
-      pushURL(); apply();
+    for (const [node, key] of [
+      [el.source, 'source'], [el.category, 'category'], [el.platform, 'platform'],
+      [el.language, 'language'], [el.pm, 'pm'], [el.difficulty, 'difficulty'],
+    ]) {
+      node.addEventListener('change', () => { S[key] = node.value; sync(); });
+    }
+    el.curated.addEventListener('change', () => { S.curated = el.curated.checked; sync(); });
+    el.clear.addEventListener('click', resetAll);
+
+    el.head.addEventListener('click', (e) => {
+      const th = e.target.closest('th[data-sort]');
+      if (!th) return;
+      const k = th.dataset.sort;
+      if (S.sort === k) S.dir *= -1;
+      else { S.sort = k; S.dir = k === 'name' ? 1 : -1; }
+      sync();
     });
-    els.scrim.addEventListener('click', closeDrawer);
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDrawer(); });
-    window.addEventListener('hashchange', function () {
-      var n = decodeURIComponent(location.hash.replace('#', ''));
-      var item = state.all.find(function (c) { return c.name === n; });
-      if (item) openDrawer(item); else closeDrawer();
-    });
+
+    document.addEventListener('keydown', onKey);
+    window.addEventListener('popstate', () => { readURL(); apply(); });
   }
 
-  function readURL() {
-    var p = new URLSearchParams(location.search);
-    if (p.get('q')) { state.q = p.get('q').toLowerCase(); els.search.value = p.get('q'); }
-    if (p.get('cat')) { state.category = p.get('cat'); els.category.value = p.get('cat'); }
-    if (p.get('kind')) {
-      state.kind = p.get('kind');
-      els.seg.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x.dataset.kind === state.kind); });
+  function onKey(e) {
+    if (e.key === '/' && document.activeElement !== el.search) {
+      e.preventDefault(); el.search.focus(); el.search.select(); return;
     }
-    if (p.get('sort')) state.sort = p.get('sort');
-    if (p.get('dir')) state.dir = p.get('dir') === '-1' ? -1 : 1;
+    if (e.key === 'Escape') {
+      if (document.activeElement === el.search && el.search.value) {
+        el.search.value = ''; S.q = ''; sync();
+      } else {
+        el.search.blur(); S.sel = -1; renderSelection();
+      }
+      return;
+    }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      if (!S.view.length) return;
+      e.preventDefault();
+      S.sel += e.key === 'ArrowDown' ? 1 : -1;
+      if (S.sel < 0) S.sel = 0;
+      if (S.sel >= S.view.length) S.sel = S.view.length - 1;
+      renderSelection(true);
+    }
+    if (e.key === 'Enter' && S.sel >= 0 && S.view[S.sel]) {
+      location.href = `cli.html?slug=${encodeURIComponent(S.view[S.sel].slug)}`;
+    }
+  }
+
+  function resetAll() {
+    Object.assign(S, {
+      q: '', source: 'all', category: 'all', platform: 'all',
+      language: 'all', pm: 'all', difficulty: 'all', curated: false,
+      sort: 'relevance', dir: -1, sel: -1,
+    });
+    el.search.value = '';
+    el.source.value = el.category.value = el.platform.value = 'all';
+    el.language.value = el.pm.value = el.difficulty.value = 'all';
+    el.curated.checked = false;
+    sync();
+  }
+
+  function sync() { pushURL(); apply(); }
+
+  function readURL() {
+    const p = new URLSearchParams(location.search);
+    const g = (k, d) => p.get(k) ?? d;
+    S.q = g('q', '');
+    S.source = g('source', 'all');
+    S.category = g('cat', 'all');
+    S.platform = g('platform', 'all');
+    S.language = g('lang', 'all');
+    S.pm = g('pm', 'all');
+    S.difficulty = g('difficulty', 'all');
+    S.curated = g('curated', '') === '1';
+    S.sort = g('sort', 'relevance');
+    S.dir = g('dir', '-1') === '1' ? 1 : -1;
+    el.search.value = S.q;
+    el.source.value = S.source;
+    el.category.value = S.category;
+    el.platform.value = S.platform;
+    el.language.value = S.language;
+    el.pm.value = S.pm;
+    el.difficulty.value = S.difficulty;
+    el.curated.checked = S.curated;
   }
 
   function pushURL() {
-    var p = new URLSearchParams();
-    if (state.q) p.set('q', state.q);
-    if (state.category !== 'all') p.set('cat', state.category);
-    if (state.kind !== 'all') p.set('kind', state.kind);
-    if (state.sort !== 'name') p.set('sort', state.sort);
-    if (state.dir !== 1) p.set('dir', '-1');
-    var qs = p.toString();
-    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+    const p = new URLSearchParams();
+    if (S.q) p.set('q', S.q);
+    if (S.source !== 'all') p.set('source', S.source);
+    if (S.category !== 'all') p.set('cat', S.category);
+    if (S.platform !== 'all') p.set('platform', S.platform);
+    if (S.language !== 'all') p.set('lang', S.language);
+    if (S.pm !== 'all') p.set('pm', S.pm);
+    if (S.difficulty !== 'all') p.set('difficulty', S.difficulty);
+    if (S.curated) p.set('curated', '1');
+    if (S.sort !== 'relevance') p.set('sort', S.sort);
+    if (S.dir === 1 && S.sort !== 'name') p.set('dir', '1');
+    if (S.dir === -1 && S.sort === 'name') p.set('dir', '-1');
+    const qs = p.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+  }
+
+  function passesFacets(e) {
+    if (S.source !== 'all' && e.source !== S.source) return false;
+    if (S.category !== 'all' && !e.categories.includes(S.category)) return false;
+    if (S.platform !== 'all' && !(e.platforms || []).includes(S.platform)) return false;
+    if (S.language !== 'all' && !(e.language || '').split(/,\s*/).includes(S.language)) return false;
+    if (S.pm !== 'all' && !(e.packageManagers || []).includes(S.pm)) return false;
+    if (S.difficulty !== 'all' && e.difficulty !== S.difficulty) return false;
+    if (S.curated && e.dataQuality !== 'curated') return false;
+    return true;
   }
 
   function apply() {
-    var q = state.q;
-    state.view = state.all.filter(function (c) {
-      if (state.kind !== 'all' && c.kind !== state.kind) return false;
-      if (state.category !== 'all' && c.category !== state.category) return false;
-      if (!q) return true;
-      return (c.name + ' ' + c.title + ' ' + c.description + ' ' + c.category).toLowerCase().indexOf(q) !== -1;
-    });
-    state.view.sort(function (a, b) {
-      var k = state.sort, av, bv;
-      if (k === 'date') { av = a.date || ''; bv = b.date || ''; }
-      else { av = (a[k] || '').toString().toLowerCase(); bv = (b[k] || '').toString().toLowerCase(); }
-      return (av < bv ? -1 : av > bv ? 1 : 0) * state.dir;
-    });
+    let rows;
+    let terms = [];
+    if (S.q) {
+      const hits = window.CLISearch.query(S.index, S.q, { limit: 500 });
+      terms = window.CLISearch.queryTokens(S.q);
+      rows = hits.filter((h) => passesFacets(h.entry)).map((h) => ({ ...h.entry, _score: h.score, _terms: h.terms }));
+    } else {
+      rows = S.clis.filter(passesFacets).map((e) => ({ ...e, _score: 0, _terms: [] }));
+    }
+
+    const cmp = {
+      relevance: (a, b) => (b._score - a._score) || a.name.localeCompare(b.name),
+      name: (a, b) => a.name.localeCompare(b.name) * S.dir,
+      updated: (a, b) => ((b.lastVerified || '') > (a.lastVerified || '') ? 1 : -1) * (S.dir === -1 ? 1 : -1),
+      category: (a, b) => (a.categories[0] || '').localeCompare(b.categories[0] || '') * S.dir,
+    };
+    if (S.sort === 'relevance') {
+      rows.sort(S.q ? cmp.relevance : (a, b) => a.name.localeCompare(b.name));
+    } else {
+      rows.sort(cmp[S.sort] || cmp.name);
+    }
+
+    S.view = rows;
+    S._terms = terms;
     render();
   }
 
   function render() {
-    var n = state.view.length, t = state.all.length;
-    els.count.innerHTML = 'Showing <b>' + n + '</b> of ' + t + ' CLIs';
+    const n = S.view.length;
+    el.count.innerHTML = `<b>${n}</b> of ${S.clis.length} tools` +
+      (S.q ? ` · matching “${window.CLISearch.escapeHtml(S.q)}”` : '') +
+      (S.q ? '' : ` · sorted by ${S.sort === 'relevance' ? 'name' : S.sort}`);
 
-    els.head.querySelectorAll('th').forEach(function (th) {
-      var on = th.dataset.sort === state.sort;
-      th.classList.toggle('sorted', on);
-      var arr = th.querySelector('.arr');
-      if (arr) arr.textContent = on ? (state.dir === 1 ? '↑' : '↓') : '↕';
+    el.head.querySelectorAll('th[data-sort]').forEach((th) => {
+      const on = th.dataset.sort === S.sort;
+      th.setAttribute('aria-sort', on ? (S.dir === 1 ? 'ascending' : 'descending') : 'none');
+      const a = th.querySelector('.arr');
+      if (a) a.textContent = on ? (S.dir === 1 ? '▲' : '▼') : '';
     });
 
-    if (!n) { els.tbody.innerHTML = '<tr><td colspan="5" class="empty">No CLIs match those filters.</td></tr>'; return; }
+    if (!n) {
+      el.tbody.innerHTML = `<tr><td colspan="6" class="empty">No tools match. <button type="button" class="linklike" id="empty-reset">Clear filters</button></td></tr>`;
+      document.getElementById('empty-reset')?.addEventListener('click', resetAll);
+      return;
+    }
 
-    els.tbody.innerHTML = state.view.map(function (c) {
-      return '<tr class="row" data-name="' + esc(c.name) + '">' +
-        '<td><div class="reg-name">' + esc(c.title) +
-          ' <span class="pill ' + c.kind + '">' + (c.kind === 'harness' ? 'harness' : 'public') + '</span></div>' +
-          '<div class="reg-desc">' + esc(c.description) + '</div></td>' +
-        '<td><span class="cat-tag">' + esc(c.category) + '</span></td>' +
-        '<td class="mono" style="font-size:.76rem;color:var(--ink-3)">' + esc(c.package_manager || '—') + '</td>' +
-        '<td class="reg-date">' + (c.date || '—') + '</td>' +
-        '<td><button class="copy-btn" data-copy="' + esc(c.install_cmd) + '">Copy install</button></td>' +
-      '</tr>';
-    }).join('');
+    const hl = (t) => window.CLISearch.highlight(t, S._terms);
+    const fav = window.CLIStore.get().favorites;
 
-    els.tbody.querySelectorAll('tr.row').forEach(function (tr) {
-      tr.addEventListener('click', function (e) {
-        if (e.target.closest('[data-copy]')) return;
-        var item = state.all.find(function (c) { return c.name === tr.dataset.name; });
-        if (item) { location.hash = encodeURIComponent(item.name); openDrawer(item); }
+    el.tbody.innerHTML = S.view.map((e, i) => `
+      <tr class="row${i === S.sel ? ' sel' : ''}" data-slug="${e.slug}">
+        <td class="c-name">
+          <button class="star${fav.includes(e.slug) ? ' on' : ''}" data-fav="${e.slug}" aria-label="${fav.includes(e.slug) ? 'Remove from' : 'Add to'} favorites" aria-pressed="${fav.includes(e.slug)}">${fav.includes(e.slug) ? '★' : '☆'}</button>
+          <a class="name-link" href="cli.html?slug=${encodeURIComponent(e.slug)}">${hl(e.name)}</a>
+          ${e.dataQuality === 'curated' ? '<span class="pill curated" title="Human-verified profile">curated</span>' : ''}
+          <span class="pill src ${e.source}">${e.source}</span>
+          <div class="c-sub">${hl(e.summary)}</div>
+        </td>
+        <td>${e.categories.map((c) => `<span class="tagcat">${c}</span>`).join(' ')}</td>
+        <td class="mono sm">${(e.platforms || []).join(', ') || '—'}</td>
+        <td class="mono sm">${window.CLISearch.escapeHtml(e.language || e.runtime || '—')}</td>
+        <td class="mono sm nowrap">${e.lastVerified || '—'}</td>
+        <td class="c-act">
+          <a class="btn-sm" href="cli.html?slug=${encodeURIComponent(e.slug)}">Open</a>
+          ${e.install[0] ? `<button class="btn-sm ghost" data-copy="${window.CLISearch.escapeHtml(e.install[0].command)}">Copy install</button>` : ''}
+        </td>
+      </tr>`).join('');
+
+    el.tbody.querySelectorAll('tr.row').forEach((tr) => {
+      tr.addEventListener('click', (ev) => {
+        if (ev.target.closest('[data-fav]') || ev.target.closest('[data-copy]') || ev.target.closest('a')) return;
+        location.href = `cli.html?slug=${encodeURIComponent(tr.dataset.slug)}`;
+      });
+    });
+    el.tbody.querySelectorAll('[data-fav]').forEach((b) => {
+      b.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        const on = window.CLIStore.toggleFavorite(b.dataset.fav);
+        b.classList.toggle('on', on);
+        b.textContent = on ? '★' : '☆';
+        b.setAttribute('aria-pressed', on);
+        b.setAttribute('aria-label', `${on ? 'Remove from' : 'Add to'} favorites`);
       });
     });
   }
 
-  function openDrawer(c) {
-    var contrib = (c.contributors || []).map(function (x) { return esc(x.name); }).join(', ') || '—';
-
-    var cmds = [];
-    if (c.install_cmd) cmds.push(cmdBlock('Install', c.install_cmd));
-    if (c.npx_cmd) cmds.push(cmdBlock('Run via npx', c.npx_cmd));
-    if (c.skill_md && /^(npx|pnpm|https?:)/.test(c.skill_md)) cmds.push(cmdBlock('Agent skill', c.skill_md));
-    if (c.update_cmd) cmds.push(cmdBlock('Update', c.update_cmd));
-    if (c.uninstall_cmd) cmds.push(cmdBlock('Uninstall', c.uninstall_cmd));
-
-    els.drawer.innerHTML =
-      '<button class="x" aria-label="Close">×</button>' +
-      '<h2>' + esc(c.title) + '</h2>' +
-      '<div class="d-meta">' +
-        '<span class="pill ' + c.kind + '">' + (c.kind === 'harness' ? 'CLI_CODE harness' : 'Public CLI') + '</span>' +
-        '<span class="pill">' + esc(c.category) + '</span>' +
-        (c.version ? '<span class="pill">v' + esc(c.version) + '</span>' : '') +
-        (c.date ? '<span class="pill">updated ' + c.date + '</span>' : '') +
-      '</div>' +
-      '<p style="color:var(--ink-2);font-size:.92rem;margin:0">' + esc(c.description) + '</p>' +
-      (c.requires ? sec('Requires', '<p>' + esc(c.requires) + '</p>') : '') +
-      (cmds.length ? sec('Commands', cmds.join('')) : '') +
-      sec('Details',
-        '<div class="kv">Entry point: <b class="mono">' + esc(c.entry_point || '—') + '</b></div>' +
-        '<div class="kv">Package manager: <b>' + esc(c.package_manager || '—') + '</b></div>' +
-        '<div class="kv">Contributors: <b>' + contrib + '</b></div>') +
-      ((c.homepage || c.source_url) ? sec('Reference',
-        (c.homepage ? '<div class="kv">Homepage: <b class="mono">' + esc(c.homepage) + '</b></div>' : '') +
-        (c.source_url ? '<div class="kv">Source: <b class="mono">' + esc(c.source_url) + '</b></div>' : '')) : '');
-
-    els.drawer.querySelector('.x').addEventListener('click', closeDrawer);
-    els.drawer.classList.add('open');
-    els.scrim.classList.add('open');
+  function renderSelection(scroll) {
+    el.tbody.querySelectorAll('tr.row').forEach((tr, i) => {
+      tr.classList.toggle('sel', i === S.sel);
+      if (scroll && i === S.sel) tr.scrollIntoView({ block: 'nearest' });
+    });
   }
-
-  function closeDrawer() {
-    els.drawer.classList.remove('open');
-    els.scrim.classList.remove('open');
-    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
-  }
-
-  function sec(title, html) { return '<div class="d-sec"><h4>' + title + '</h4>' + html + '</div>'; }
-  function cmdBlock(label, text) {
-    return '<div class="cmd" style="margin-bottom:8px"><span class="tag">' + esc(label) + '</span>' +
-      '<code>' + esc(text) + '</code>' +
-      '<button class="copy-btn" data-copy="' + esc(text) + '">Copy</button></div>';
-  }
-  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (m) {
-    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
-  }); }
 })();

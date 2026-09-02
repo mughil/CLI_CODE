@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- GitHub Pages serves this file for any missing deep path, so resolve every
+     relative URL against the site root (first path segment) instead of the
+     unknown current directory. Works at "/" and at "/CLI_CODE/" alike. -->
+<script>
+  (function () {
+    var seg = location.pathname.split('/')[1] || '';
+    var root = seg && seg.indexOf('.') === -1 ? '/' + seg + '/' : '/';
+    document.write('<base href="' + root + '">');
+  })();
+</script>
+<title>Page not found — CLI_CODE</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/theme.js" defer></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> cli_code</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="registry.html">Browse</a>
+      <a href="matrices.html">Stacks</a>
+      <a href="docs.html">Docs</a>
+      <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding:80px 22px;text-align:center">
+  <p class="eyebrow">404</p>
+  <h1 class="sec-title">Page <span class="g">not found</span></h1>
+  <p class="sec-sub" style="margin:0 auto">That path doesn't exist. Looking for a specific tool? Search the directory.</p>
+  <p style="margin-top:28px">
+    <a class="btn btn-accent" href="registry.html">Browse CLI tools</a>
+    <a class="btn btn-ghost" href="index.html">Home</a>
+  </p>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap"><span>CLI_CODE</span><span>Apache-2.0</span></div>
+</footer>
+</body>
+</html>

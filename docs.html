@@ -30,19 +30,20 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> cli_code</a>
-    <nav class="nav">
-      <a href="registry.html">Registry</a>
-      <a href="matrices.html">Matrices</a>
-      <a href="docs.html" class="active">Docs</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="registry.html">Browse</a>
+      <a href="matrices.html">Stacks</a>
+      <a href="docs.html" aria-current="page">Docs</a>
       <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
     </nav>
   </div>
 </header>
 
-<main class="wrap" style="padding-top:34px;padding-bottom:60px">
+<main id="main" class="wrap" style="padding-top:34px;padding-bottom:60px">
   <span class="eyebrow">Documentation</span>
   <h1 class="sec-title">Using <span class="g">CLI_CODE</span></h1>
   <p class="sec-sub">CLI_CODE is a registry of agent-native command-line interfaces. Point an AI agent at it and it can discover, install, and drive a CLI for the software it needs — no GUI in the loop.</p>
@@ -89,18 +90,19 @@
         </tbody>
       </table>
 
-      <h2 id="registry">The registry</h2>
-      <p>Open <a href="registry.html">Registry</a> to browse all entries. The page is fully client-side:</p>
+      <h2 id="registry">Browse &amp; search</h2>
+      <p>Open <a href="registry.html">Browse</a> to search all entries. Everything runs client-side over <code>data/clis.json</code>:</p>
       <ul>
-        <li><b>Search</b> matches name, display name, description, and category as you type.</li>
-        <li><b>Harness / Public</b> toggle and the <b>category</b> dropdown narrow the list.</li>
-        <li>Every column header sorts; click again to reverse.</li>
-        <li>Click a row to open a detail panel with install / update / uninstall commands (each has a copy button), requirements, entry point, and contributors.</li>
-        <li>Filters and the open entry are written to the URL — copy the address bar to share an exact view, e.g. <code>registry.html?q=blender&amp;kind=harness</code>.</li>
+        <li><b>Weighted search</b> ranks by field: name 10, aliases 8, tags 6, summary/description 5, category 4, use cases 4, language 2, platform 2. Matches are highlighted; multi-word queries require every term to match.</li>
+        <li><b>Facets:</b> source, category, platform, language, install method, difficulty (shown when data exists), and a <b>Curated only</b> toggle.</li>
+        <li><b>Sort</b> by name, category, or verified date — click a header, click again to reverse.</li>
+        <li><b>Keyboard:</b> <kbd>/</kbd> focus search, <kbd>&uarr;</kbd><kbd>&darr;</kbd> move, <kbd>Enter</kbd> open, <kbd>Esc</kbd> clear.</li>
+        <li>Every filter is written to the URL — share <code>registry.html?q=mock&amp;cat=testing</code> and it reopens the same view.</li>
+        <li>Each row links to its <b>tool page</b> (<code>cli.html?slug=&lt;slug&gt;</code>): install methods, platforms, language, use cases, alternatives, and related tools. Favorites and recently-viewed are kept in your browser only.</li>
       </ul>
 
       <h2 id="matrices">Capability matrices</h2>
-      <p>A matrix (<a href="matrices.html">Matrices</a>) is a capability-based plan for a whole workflow. It lists the intents in that workflow — "turn a brief into a storyboard", "encode the final cut" — and, for each, the provider CLIs that satisfy it. Hand one to an agent and it knows which tool to reach for at every step. Each CLI chip links to its registry entry.</p>
+      <p>A matrix (<a href="matrices.html">Stacks</a>) is a capability-based plan for a whole workflow. It lists the intents in that workflow — "turn a brief into a storyboard", "encode the final cut" — and, for each, the provider CLIs that satisfy it. Hand one to an agent and it knows which tool to reach for at every step. Each CLI chip links to its registry entry.</p>
 
       <h2 id="demos">Demos</h2>
       <p>The three cards on the <a href="index.html">home page</a> show agents building real artifacts through generated CLIs:</p>
@@ -112,25 +114,50 @@
       <p>Only poster images are bundled in this build; drop matching <code>.mp4</code> files into <code>assets/demos/</code> and swap the <code>&lt;img&gt;</code> tags for <code>&lt;video&gt;</code> to make them play.</p>
 
       <h2 id="data">Catalog data</h2>
-      <p>Nothing about the catalog is hardcoded in the pages. Four JSON files under <code>data/</code> drive everything:</p>
+      <p>Nothing about the catalog is hardcoded in the pages. A build step
+        (<code>npm run build</code>) merges the upstream registry snapshots with a
+        human-verified <b>overlay</b> and emits <code>data/clis.json</code> +
+        <code>data/meta.json</code>, validated against
+        <code>schema/cli.schema.json</code>. Derivation never invents domain
+        facts — use cases, alternatives, difficulty and precise language come
+        only from <code>data/overlay.json</code>.</p>
       <table>
         <thead><tr><th>File</th><th>Contents</th></tr></thead>
         <tbody>
-          <tr><td><code>registry.json</code></td><td>Harness CLIs — <code>{ meta, clis[] }</code></td></tr>
-          <tr><td><code>public_registry.json</code></td><td>Public / third-party CLIs — same shape, richer install fields</td></tr>
-          <tr><td><code>matrix_registry.json</code></td><td>Capability matrices — <code>{ meta, matrices[] }</code></td></tr>
-          <tr><td><code>registry-dates.json</code></td><td>Last-updated date keyed by CLI <code>name</code></td></tr>
+          <tr><td><code>data/clis.json</code></td><td>Built, normalized entries the site loads (generated)</td></tr>
+          <tr><td><code>data/meta.json</code></td><td>Facet counts: categories, platforms, languages, install methods (generated)</td></tr>
+          <tr><td><code>data/overlay.json</code></td><td>Contributor-maintained verified facts, keyed by slug</td></tr>
+          <tr><td><code>data/registry.json</code>, <code>data/public_registry.json</code></td><td>Upstream registry snapshots (harness + public), inputs to the build</td></tr>
+          <tr><td><code>data/registry-dates.json</code></td><td>Last-verified date keyed by tool name, input to the build</td></tr>
+          <tr><td><code>data/matrix_registry.json</code></td><td>Capability matrices for the Stacks page</td></tr>
         </tbody>
       </table>
-      <p>Each CLI object uses these fields: <code>name</code>, <code>display_name</code>, <code>description</code>, <code>category</code>, <code>version</code>, <code>requires</code>, <code>install_cmd</code>, and optionally <code>npx_cmd</code>, <code>update_cmd</code>, <code>uninstall_cmd</code>, <code>entry_point</code>, <code>package_manager</code>, <code>homepage</code>, <code>source_url</code>, <code>contributors[]</code>. Edit the files and reload — the UI re-renders.</p>
+      <p id="contributing">A built entry follows <code>schema/cli.schema.json</code>:
+        <code>id</code>, <code>slug</code>, <code>name</code>, <code>aliases</code>,
+        <code>summary</code>, <code>description</code>, <code>categories</code>,
+        <code>tags</code>, <code>useCases</code>, <code>platforms</code>,
+        <code>language</code>, <code>runtime</code>, <code>license</code>,
+        <code>install[]</code>, <code>examples[]</code>, <code>repository</code>,
+        <code>documentation</code>, <code>packageManagers</code>,
+        <code>difficulty</code>, <code>alternatives</code>, <code>related</code>,
+        <code>lastVerified</code>. To add or correct facts for a tool, edit its
+        block in <code>data/overlay.json</code> and run:</p>
+      <pre><code>npm install
+npm run build      # regenerate data/clis.json + data/meta.json
+npm run check      # schema + cross-references + link integrity</code></pre>
 
-      <h2 id="deploy">Deploy this site</h2>
-      <p>Static, no build step. Serve the folder root with any host. Locally, <code>fetch()</code> needs HTTP:</p>
-      <pre><code>python -m http.server 4173</code></pre>
-      <p>A GitHub Actions workflow at <code>.github/workflows/deploy-pages.yml</code> publishes the repo root to GitHub Pages on every push to <code>main</code>. One-time setup: repo Settings → Pages → Source: <b>GitHub Actions</b>.</p>
+      <h2 id="deploy">Run &amp; deploy</h2>
+      <p>The shipped site is static, zero-dependency. <code>fetch()</code> needs HTTP, so serve the folder — do not open <code>index.html</code> directly:</p>
+      <pre><code>npm install &amp;&amp; npm run build
+npx http-server -p 4173   # or: python -m http.server 4173</code></pre>
+      <p>Paths are relative, so it also works served from a subpath such as
+        <code>/CLI_CODE/</code>. The GitHub Actions workflow at
+        <code>.github/workflows/deploy-pages.yml</code> builds, validates and
+        publishes to GitHub Pages on every push to <code>main</code>. One-time
+        setup: repo Settings &rarr; Pages &rarr; Source: <b>GitHub Actions</b>.</p>
 
       <h2 id="license">License</h2>
-      <p>Apache-2.0. Registry data is sourced from the upstream CLI-Anything project.</p>
+      <p>Apache-2.0. Underlying registry data is sourced from the upstream CLI-Anything project.</p>
     </div>
   </div>
 </main>

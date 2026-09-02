@@ -1,0 +1,201 @@
+{
+  "$comment": "Contributor-maintained overlay of human-verified facts, keyed by tool slug. Merged over derived data by scripts/build-data.mjs (arrays union, scalars win). Only add facts you can verify from the tool's own docs; set nothing you are unsure of. See CONTRIBUTING.md.",
+  "entries": {
+    "blender": {
+      "language": "C, C++, Python",
+      "license": "GPL-3.0-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "advanced",
+      "useCases": ["3D modeling and sculpting", "Rendering stills and animation", "Procedural geometry and physics simulation"],
+      "alternatives": ["freecad"],
+      "related": ["cloudcompare"]
+    },
+    "gimp": {
+      "language": "C",
+      "license": "GPL-3.0-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "intermediate",
+      "useCases": ["Photo retouching", "Image composition", "Scripted batch image processing"],
+      "alternatives": ["krita"],
+      "related": ["inkscape"]
+    },
+    "krita": {
+      "language": "C++",
+      "license": "GPL-3.0-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "beginner",
+      "useCases": ["Digital painting", "Concept art", "Frame-by-frame animation"],
+      "alternatives": ["gimp"]
+    },
+    "inkscape": {
+      "language": "C++",
+      "license": "GPL-2.0-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "intermediate",
+      "useCases": ["Vector illustration", "Logo design", "SVG authoring and cleanup"],
+      "related": ["gimp"]
+    },
+    "freecad": {
+      "language": "C++, Python",
+      "license": "LGPL-2.1-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "advanced",
+      "useCases": ["Parametric 3D CAD modeling", "Mechanical part design", "Technical drawing generation"],
+      "related": ["blender"]
+    },
+    "ollama": {
+      "language": "Go",
+      "license": "MIT",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "beginner",
+      "useCases": ["Running local LLMs", "Serving models over a local HTTP API", "Offline inference"],
+      "related": ["openwebui", "comfyui"]
+    },
+    "n8n": {
+      "language": "TypeScript",
+      "license": "Sustainable Use License",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "intermediate",
+      "useCases": ["Workflow automation", "Connecting APIs and SaaS tools", "Scheduled data pipelines"],
+      "alternatives": ["dify-workflow"]
+    },
+    "obsidian": {
+      "license": "proprietary",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "beginner",
+      "useCases": ["Personal knowledge management", "Linked Markdown note-taking", "Local-first documentation"],
+      "alternatives": ["joplin", "siyuan"],
+      "related": ["obsidian-cli", "obsidian-agent-cli"]
+    },
+    "joplin": {
+      "license": "AGPL-3.0-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "beginner",
+      "useCases": ["Note-taking", "Web clipping", "End-to-end encrypted sync"],
+      "alternatives": ["obsidian", "siyuan"]
+    },
+    "siyuan": {
+      "language": "TypeScript, Go",
+      "license": "AGPL-3.0-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "intermediate",
+      "useCases": ["Block-based note-taking", "Self-hosted knowledge base"],
+      "alternatives": ["obsidian", "joplin"]
+    },
+    "libreoffice": {
+      "language": "C++, Java",
+      "license": "MPL-2.0",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "beginner",
+      "useCases": ["Document authoring", "Headless format conversion", "Spreadsheets and presentations"]
+    },
+    "calibre": {
+      "language": "Python",
+      "license": "GPL-3.0-only",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "beginner",
+      "useCases": ["Ebook library management", "Ebook format conversion", "Metadata editing"],
+      "related": ["zotero"]
+    },
+    "godot": {
+      "language": "C++",
+      "license": "MIT",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "intermediate",
+      "useCases": ["2D and 3D game development", "Cross-platform game export", "Rapid prototyping"],
+      "alternatives": ["sbox"]
+    },
+    "musescore": {
+      "language": "C++",
+      "license": "GPL-3.0-only",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "beginner",
+      "useCases": ["Music notation and scoring", "Sheet-music engraving", "MIDI and MusicXML export"]
+    },
+    "audacity": {
+      "language": "C++",
+      "license": "GPL-3.0-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "beginner",
+      "useCases": ["Audio recording", "Multi-track editing", "Noise reduction and mastering"]
+    },
+    "obs-studio": {
+      "language": "C, C++",
+      "license": "GPL-2.0-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "intermediate",
+      "useCases": ["Screen and camera recording", "Live streaming", "Scene composition"],
+      "related": ["openscreen"]
+    },
+    "shotcut": {
+      "language": "C++",
+      "license": "GPL-3.0-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "beginner",
+      "useCases": ["Video editing", "Format conversion", "Timeline-based assembly"],
+      "alternatives": ["kdenlive"]
+    },
+    "kdenlive": {
+      "language": "C++",
+      "license": "GPL-2.0-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "intermediate",
+      "useCases": ["Non-linear video editing", "Multi-track timelines", "Effects and transitions"],
+      "alternatives": ["shotcut"]
+    },
+    "qgis": {
+      "language": "C++, Python",
+      "license": "GPL-2.0-or-later",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "advanced",
+      "useCases": ["Geospatial analysis", "Map production", "Batch geodata processing"],
+      "alternatives": ["arcgis-pro"]
+    },
+    "drawio": {
+      "language": "JavaScript",
+      "license": "Apache-2.0",
+      "platforms": ["linux", "macos", "windows", "web"],
+      "difficulty": "beginner",
+      "useCases": ["Diagramming", "Architecture and flowchart diagrams", "Whiteboarding"],
+      "alternatives": ["mermaid"]
+    },
+    "mermaid": {
+      "language": "JavaScript, TypeScript",
+      "runtime": "node",
+      "license": "MIT",
+      "platforms": ["cross-platform"],
+      "difficulty": "beginner",
+      "useCases": ["Diagrams from text", "Version-controlled diagrams", "Embedding diagrams in Markdown"],
+      "alternatives": ["drawio"]
+    },
+    "pm2": {
+      "language": "JavaScript",
+      "runtime": "node",
+      "license": "AGPL-3.0",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "beginner",
+      "useCases": ["Node.js process management", "Zero-downtime reloads", "Process and log monitoring"]
+    },
+    "chromadb": {
+      "language": "Python, Rust",
+      "license": "Apache-2.0",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "intermediate",
+      "useCases": ["Vector storage for RAG", "Embedding similarity search", "Local AI memory"]
+    },
+    "1password-cli": {
+      "license": "proprietary",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "intermediate",
+      "useCases": ["Secret retrieval in scripts", "CI/CD credential injection", "Vault automation"]
+    },
+    "comfyui": {
+      "language": "Python",
+      "license": "GPL-3.0-only",
+      "platforms": ["linux", "macos", "windows"],
+      "difficulty": "advanced",
+      "useCases": ["Node-based image generation", "Diffusion pipeline design", "Batch generation workflows"],
+      "related": ["ollama"]
+    }
+  }
+}
