@@ -1,1 +1,663 @@
-{"projects":[]}
+{
+  "$comment": "Batch 7 — high-value open-source GitHub projects for running, serving, building with and evaluating modern AI models. Every record verified against the GitHub REST API on 2026-09-03; stars are time-sensitive (see starsVerifiedAt). license null = GitHub reports NOASSERTION (custom license — see repo).",
+  "projects": [
+    {
+      "id": "llama-cpp",
+      "slug": "llama-cpp",
+      "name": "llama.cpp",
+      "summary": "LLM inference in C/C++ — the reference CPU/GPU engine and GGUF format behind most local-model tooling.",
+      "category": [
+        "inference",
+        "local-runner",
+        "quantization"
+      ],
+      "repository": "https://github.com/ggml-org/llama.cpp",
+      "license": "MIT",
+      "language": "C++",
+      "useCases": [
+        "Run quantized LLMs on CPU or consumer GPU",
+        "Embed inference in apps",
+        "GGUF conversion / quantization"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 126814,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/ggml-org/llama.cpp",
+          "title": "ggml-org/llama.cpp — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "ollama",
+      "slug": "ollama",
+      "name": "Ollama",
+      "summary": "Get up and running with local models in one command — packaging, a model registry, and an OpenAI-compatible API over llama.cpp.",
+      "category": [
+        "local-runner",
+        "inference",
+        "serving"
+      ],
+      "repository": "https://github.com/ollama/ollama",
+      "license": "MIT",
+      "language": "Go",
+      "officialDocs": "https://ollama.com",
+      "useCases": [
+        "One-command local model runs",
+        "Local OpenAI-compatible endpoint",
+        "Model management"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 180001,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/ollama/ollama",
+          "title": "ollama/ollama — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "vllm",
+      "slug": "vllm",
+      "name": "vLLM",
+      "summary": "High-throughput, memory-efficient inference and serving engine for LLMs (PagedAttention, continuous batching).",
+      "category": [
+        "serving",
+        "inference",
+        "optimization"
+      ],
+      "repository": "https://github.com/vllm-project/vllm",
+      "license": "Apache-2.0",
+      "language": "Python",
+      "officialDocs": "https://vllm.ai",
+      "useCases": [
+        "Production LLM serving at scale",
+        "Batch inference",
+        "Self-hosted OpenAI-compatible API"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 90802,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/vllm-project/vllm",
+          "title": "vllm-project/vllm — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "sglang",
+      "slug": "sglang",
+      "name": "SGLang",
+      "summary": "High-performance serving framework for LLMs and multimodal models, with a structured-generation front end.",
+      "category": [
+        "serving",
+        "inference",
+        "optimization"
+      ],
+      "repository": "https://github.com/sgl-project/sglang",
+      "license": "Apache-2.0",
+      "language": "Python",
+      "officialDocs": "https://sglang.io",
+      "useCases": [
+        "Low-latency serving",
+        "Structured / constrained generation",
+        "Multimodal model serving"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 33522,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/sgl-project/sglang",
+          "title": "sgl-project/sglang — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "transformers",
+      "slug": "transformers",
+      "name": "Transformers",
+      "summary": "Hugging Face's model-definition framework for text, vision, audio and multimodal models — inference and training.",
+      "category": [
+        "inference",
+        "training",
+        "fine-tuning"
+      ],
+      "repository": "https://github.com/huggingface/transformers",
+      "license": "Apache-2.0",
+      "language": "Python",
+      "officialDocs": "https://huggingface.co/transformers",
+      "useCases": [
+        "Load and run almost any open model",
+        "Fine-tuning",
+        "Research / prototyping"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 164728,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/huggingface/transformers",
+          "title": "huggingface/transformers — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "unsloth",
+      "slug": "unsloth",
+      "name": "Unsloth",
+      "summary": "Faster, lower-memory fine-tuning (and increasingly local run/train UI) for LLMs and diffusion models across GGUF/MLX.",
+      "category": [
+        "fine-tuning",
+        "training",
+        "optimization",
+        "local-runner"
+      ],
+      "repository": "https://github.com/unslothai/unsloth",
+      "license": "Apache-2.0",
+      "language": "Python",
+      "officialDocs": "https://unsloth.ai/docs",
+      "useCases": [
+        "Memory-efficient LoRA / QLoRA fine-tuning",
+        "Single-GPU training",
+        "Local train + run"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 75504,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/unslothai/unsloth",
+          "title": "unslothai/unsloth — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "mlx",
+      "slug": "mlx",
+      "name": "MLX",
+      "summary": "Apple's array framework for machine learning on Apple silicon — the basis for local model inference/training on Macs.",
+      "category": [
+        "inference",
+        "training",
+        "local-runner",
+        "optimization"
+      ],
+      "repository": "https://github.com/ml-explore/mlx",
+      "license": "MIT",
+      "language": "C++",
+      "officialDocs": "https://ml-explore.github.io/mlx/",
+      "useCases": [
+        "Run / fine-tune models on Apple silicon",
+        "Unified-memory inference",
+        "On-device ML"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 28277,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/ml-explore/mlx",
+          "title": "ml-explore/mlx — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "langchain",
+      "slug": "langchain",
+      "name": "LangChain",
+      "summary": "Framework / platform for building LLM applications and agents — chains, tools, memory, and a large integration surface.",
+      "category": [
+        "app-framework",
+        "agents",
+        "orchestration",
+        "rag"
+      ],
+      "repository": "https://github.com/langchain-ai/langchain",
+      "license": "MIT",
+      "language": "Python",
+      "officialDocs": "https://docs.langchain.com/langchain/",
+      "useCases": [
+        "LLM app scaffolding",
+        "Agent + tool orchestration",
+        "RAG pipelines"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 145528,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/langchain-ai/langchain",
+          "title": "langchain-ai/langchain — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "llamaindex",
+      "slug": "llamaindex",
+      "name": "LlamaIndex",
+      "summary": "Data framework for LLM apps — document ingestion, indexing, retrieval, and document/agent workflows.",
+      "category": [
+        "rag",
+        "app-framework",
+        "agents"
+      ],
+      "repository": "https://github.com/run-llama/llama_index",
+      "license": "MIT",
+      "language": "Python",
+      "officialDocs": "https://developers.llamaindex.ai",
+      "useCases": [
+        "RAG over private data",
+        "Document parsing / indexing",
+        "Retrieval agents"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 51982,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/run-llama/llama_index",
+          "title": "run-llama/llama_index — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "dspy",
+      "slug": "dspy",
+      "name": "DSPy",
+      "summary": "Framework for programming — not prompting — language models: declarative modules plus optimizers that compile prompts/weights.",
+      "category": [
+        "prompt-tooling",
+        "app-framework",
+        "orchestration",
+        "evaluation"
+      ],
+      "repository": "https://github.com/stanfordnlp/dspy",
+      "license": "MIT",
+      "language": "Python",
+      "officialDocs": "https://dspy.ai",
+      "useCases": [
+        "Optimize prompts / pipelines automatically",
+        "Structured LLM programs",
+        "Reproducible LLM systems"
+      ],
+      "localCapable": true,
+      "adoption": "notable",
+      "stars": 37734,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/stanfordnlp/dspy",
+          "title": "stanfordnlp/dspy — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "open-webui",
+      "slug": "open-webui",
+      "name": "Open WebUI",
+      "summary": "Self-hosted, feature-rich chat UI for local and API models (Ollama, OpenAI-compatible), with RAG, tools and multi-user.",
+      "category": [
+        "app-framework",
+        "local-runner",
+        "rag"
+      ],
+      "repository": "https://github.com/open-webui/open-webui",
+      "license": null,
+      "language": "Python",
+      "officialDocs": "https://openwebui.com",
+      "useCases": [
+        "Private ChatGPT-style interface",
+        "Team LLM access over local models",
+        "RAG chat"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 150737,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/open-webui/open-webui",
+          "title": "open-webui/open-webui — GitHub API (license: NOASSERTION)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "aider",
+      "slug": "aider",
+      "name": "Aider",
+      "summary": "AI pair programming in the terminal — edits your git repo with a model, with automatic commits and repo-map context.",
+      "category": [
+        "coding",
+        "agents"
+      ],
+      "repository": "https://github.com/Aider-AI/aider",
+      "license": "Apache-2.0",
+      "language": "Python",
+      "officialDocs": "https://aider.chat/",
+      "useCases": [
+        "CLI coding assistant",
+        "Repo-wide edits with a model of your choice",
+        "Works with local or API models"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 48682,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/Aider-AI/aider",
+          "title": "Aider-AI/aider — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "openhands",
+      "slug": "openhands",
+      "name": "OpenHands",
+      "summary": "Open platform for AI software-development agents — the agent runs in a sandbox, edits code, runs commands and browses.",
+      "category": [
+        "coding",
+        "agents"
+      ],
+      "repository": "https://github.com/OpenHands/OpenHands",
+      "license": "MIT",
+      "language": "TypeScript",
+      "officialDocs": "https://openhands.dev",
+      "useCases": [
+        "Autonomous coding tasks",
+        "Issue-to-PR workflows",
+        "Sandboxed dev agents"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 85985,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/OpenHands/OpenHands",
+          "title": "OpenHands/OpenHands — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "litellm",
+      "slug": "litellm",
+      "name": "LiteLLM",
+      "summary": "AI gateway / proxy — call 100+ LLM APIs in a unified OpenAI format with cost tracking, routing, guardrails and logging.",
+      "category": [
+        "ai-gateway",
+        "observability",
+        "orchestration"
+      ],
+      "repository": "https://github.com/BerriAI/litellm",
+      "license": null,
+      "language": "Python",
+      "officialDocs": "https://docs.litellm.ai/docs/",
+      "useCases": [
+        "One API for many providers",
+        "Per-team spend limits / keys",
+        "Fallbacks and load balancing"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 57855,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/BerriAI/litellm",
+          "title": "BerriAI/litellm — GitHub API (license: NOASSERTION)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "dify",
+      "slug": "dify",
+      "name": "Dify",
+      "summary": "Platform for building agentic workflows and RAG pipelines with a visual builder, model catalog and tool support.",
+      "category": [
+        "app-framework",
+        "orchestration",
+        "rag",
+        "agents"
+      ],
+      "repository": "https://github.com/langgenius/dify",
+      "license": null,
+      "language": "TypeScript",
+      "officialDocs": "https://dify.ai",
+      "useCases": [
+        "Low-code LLM apps",
+        "Visual agent / workflow design",
+        "Self-hosted RAG"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 154256,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/langgenius/dify",
+          "title": "langgenius/dify — GitHub API (license: NOASSERTION)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "haystack",
+      "slug": "haystack",
+      "name": "Haystack",
+      "summary": "deepset's Python framework for production LLM applications — pipelines for RAG, agents and search.",
+      "category": [
+        "rag",
+        "app-framework",
+        "orchestration"
+      ],
+      "repository": "https://github.com/deepset-ai/haystack",
+      "license": "Apache-2.0",
+      "language": "Python",
+      "officialDocs": "https://haystack.deepset.ai",
+      "useCases": [
+        "Production RAG pipelines",
+        "Document search",
+        "Composable LLM workflows"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 26398,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/deepset-ai/haystack",
+          "title": "deepset-ai/haystack — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "lm-evaluation-harness",
+      "slug": "lm-evaluation-harness",
+      "name": "LM Evaluation Harness",
+      "summary": "EleutherAI's framework for few-shot evaluation of language models — the de-facto standard for reproducible LLM benchmarks.",
+      "category": [
+        "evaluation"
+      ],
+      "repository": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "license": "MIT",
+      "language": "Python",
+      "officialDocs": "https://www.eleuther.ai",
+      "useCases": [
+        "Reproducible benchmark runs",
+        "Compare open models on standard tasks",
+        "Track fine-tune regressions"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 13873,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/EleutherAI/lm-evaluation-harness",
+          "title": "EleutherAI/lm-evaluation-harness — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "langfuse",
+      "slug": "langfuse",
+      "name": "Langfuse",
+      "summary": "Open-source LLM engineering platform — tracing/observability, evals, prompt management, datasets and a playground.",
+      "category": [
+        "observability",
+        "evaluation",
+        "prompt-tooling"
+      ],
+      "repository": "https://github.com/langfuse/langfuse",
+      "license": null,
+      "language": "TypeScript",
+      "officialDocs": "https://langfuse.com",
+      "useCases": [
+        "Trace and debug LLM apps",
+        "Prompt versioning",
+        "Offline / online evals"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 34111,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/langfuse/langfuse",
+          "title": "langfuse/langfuse — GitHub API (license: NOASSERTION)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "qdrant",
+      "slug": "qdrant",
+      "name": "Qdrant",
+      "summary": "High-performance vector database and search engine written in Rust, for embeddings-based retrieval at scale.",
+      "category": [
+        "vector-search",
+        "rag"
+      ],
+      "repository": "https://github.com/qdrant/qdrant",
+      "license": "Apache-2.0",
+      "language": "Rust",
+      "officialDocs": "https://qdrant.tech",
+      "useCases": [
+        "Vector store for RAG",
+        "Semantic / hybrid search",
+        "Recommendation retrieval"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 34347,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/qdrant/qdrant",
+          "title": "qdrant/qdrant — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "chroma",
+      "slug": "chroma",
+      "name": "Chroma",
+      "summary": "Open-source embedding database designed for building LLM apps with retrieval — simple local-first API.",
+      "category": [
+        "vector-search",
+        "rag"
+      ],
+      "repository": "https://github.com/chroma-core/chroma",
+      "license": "Apache-2.0",
+      "language": "Rust",
+      "officialDocs": "https://www.trychroma.com",
+      "useCases": [
+        "Local vector store for RAG prototypes",
+        "Embedding search",
+        "AI app memory"
+      ],
+      "localCapable": true,
+      "adoption": "widely-used",
+      "stars": 29206,
+      "starsVerifiedAt": "2026-09-03",
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://api.github.com/repos/chroma-core/chroma",
+          "title": "chroma-core/chroma — GitHub API",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    }
+  ]
+}
