@@ -151,20 +151,20 @@
 
       <h2 id="contributing">Contributing a tool profile</h2>
       <p>To add or correct verified facts for a tool, edit its block in <code>data/overlay.json</code> (keyed by slug). Set only what you can confirm from the tool's own docs. <code>alternatives</code> and <code>related</code> must point at slugs that exist in the dataset. Then:</p>
-      <pre><code>npm install
+      <pre tabindex="0"><code>npm install
 npm run build      # regenerate data/clis.json + data/meta.json
 npm run check      # schema + cross-references + drift + link integrity</code></pre>
       <p>CI runs <code>npm run check</code> on every push; a failing schema or dangling reference blocks the deploy.</p>
 
       <h2 id="deploy">Run &amp; deploy</h2>
       <p>The shipped site is static and zero-dependency. <code>fetch()</code> needs HTTP, so serve the folder — do not open <code>index.html</code> directly:</p>
-      <pre><code>npm install &amp;&amp; npm run build
+      <pre tabindex="0"><code>npm install &amp;&amp; npm run build
 npx http-server -p 4173   # or: python -m http.server 4173</code></pre>
       <p>All paths are relative, so it works served from a subpath such as <code>/CLI_CODE/</code>. <code>.github/workflows/deploy-pages.yml</code> builds, validates and publishes to GitHub Pages on every push to <code>main</code>. One-time setup: repo Settings &rarr; Pages &rarr; Source: <b>GitHub Actions</b>.</p>
 
       <h2 id="agents">For AI agents</h2>
       <p>The harness entries are designed to be discovered and driven by SKILL-compatible agents (Claude Code, OpenClaw, Nanobot, Codex). Add the meta-skill once and the agent reads the registry itself:</p>
-      <pre><code>npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y</code></pre>
+      <pre tabindex="0"><code>npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y</code></pre>
       <p>Then: <em>“Find an appropriate CLI in CLI_CODE and complete the task: &lt;task&gt;”</em>. A pip client also exists — <code>pip install cli-anything-hub</code>, then <code>cli-hub list|search|install|info|update|uninstall</code>.</p>
 
       <h2 id="license">License</h2>

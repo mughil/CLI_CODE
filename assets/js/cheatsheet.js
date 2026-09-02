@@ -28,17 +28,17 @@
       ? e.install.map((i) => `<div class="cs-cmd"><span class="cs-label">${esc(i.label && i.label !== 'Install' ? i.label : i.method)}</span><code>${esc(i.command)}</code></div>`).join('')
       : '<p class="muted">No install command recorded — see the tool page.</p>';
     const examples = e.examples.length
-      ? `<h4>Examples</h4>` + e.examples.map((x) =>
+      ? `<h3>Examples</h3>` + e.examples.map((x) =>
         `<div class="cs-ex"><div class="cs-ex-t">${esc(x.title)}</div><code>${esc(x.command)}</code>${x.description ? `<p class="muted sm">${esc(x.description)}</p>` : ''}</div>`).join('')
       : (e.source === 'harness'
         ? '<p class="muted sm">Harness CLI — subcommands are listed in the tool\'s <code>SKILL.md</code>; run the entry point with <code>--help</code> after install.</p>'
         : '<p class="muted sm">No examples documented yet.</p>');
 
     return `<section class="cs-tool">
-      <h3><a href="cli.html?slug=${encodeURIComponent(e.slug)}">${esc(e.name)}</a>
-        <span class="pill src ${e.source}">${e.source}</span></h3>
+      <h2><a href="cli.html?slug=${encodeURIComponent(e.slug)}">${esc(e.name)}</a>
+        <span class="pill src ${e.source}">${e.source}</span></h2>
       <p class="muted">${esc(e.summary)}</p>
-      <h4>Install</h4>
+      <h3>Install</h3>
       ${installs}
       ${examples}
     </section>`;
@@ -64,18 +64,17 @@
 
     document.title = `${title || 'Cheat sheet'} — CLI_CODE`;
     mount.innerHTML = `
-      <div class="cs-head no-print">
+      <div class="cs-head">
         <div>
           <h1 class="sec-title" style="margin:0">${esc(title || 'Cheat sheet')}</h1>
           <p class="muted sm">${tools.length} tool${tools.length > 1 ? 's' : ''} · generated from local data</p>
         </div>
-        <div class="cs-actions">
+        <div class="cs-actions no-print">
           <button class="btn-sm" id="cs-print">Print</button>
           <button class="btn-sm ghost" id="cs-copy">Copy all commands</button>
         </div>
       </div>
       <div class="cs-doc">
-        <h1 class="print-only">${esc(title || 'Cheat sheet')} — CLI_CODE</h1>
         ${tools.map(toolBlock).join('')}
         <p class="muted sm cs-foot">Commands are drawn from each tool's registry entry. Some entries have install steps only until contributors add examples.</p>
       </div>`;

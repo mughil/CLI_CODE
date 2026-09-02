@@ -208,12 +208,14 @@ section { padding: var(--space-5) 0; }
 .card > p { color: var(--ink-2); font-size: 0.9rem; margin: 0 0 14px; }
 
 .cmd {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: flex-start; gap: 10px;
   background: var(--cmd-bg); border: 1px solid var(--line); border-radius: var(--radius-sm);
-  padding: 10px 12px; font-family: var(--mono); font-size: 0.82rem; overflow: hidden;
+  padding: 10px 12px; font-family: var(--mono); font-size: 0.82rem;
 }
-.cmd code { flex: 1; overflow-x: auto; white-space: nowrap; color: var(--ink); scrollbar-width: none; }
-.cmd code::-webkit-scrollbar { display: none; }
+/* wrap long commands rather than scroll — no focus-trap for keyboard users
+   (WCAG 2.1.1) and the whole command stays visible. */
+.cmd code { flex: 1; min-width: 0; white-space: normal; overflow-wrap: anywhere; color: var(--ink); }
+.cmd .copy-btn { margin-top: 1px; }
 .cmd .tag { color: var(--accent-ink); font-size: 0.66rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
 .copy-btn {
   background: var(--chip-bg); border: 1px solid var(--line); color: var(--ink-2);
@@ -596,8 +598,8 @@ a.chip:hover, button.chip:hover { border-color: var(--accent); color: var(--acce
 .cs-head { display: flex; justify-content: space-between; align-items: start; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
 .cs-actions { display: flex; gap: 8px; }
 .cs-tool { margin-bottom: 26px; padding-bottom: 20px; border-bottom: 1px solid var(--line-2); }
-.cs-tool h3 { font-size: 1.15rem; display: flex; gap: 8px; align-items: center; }
-.cs-tool h4 { font: 600 0.7rem var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); margin: 14px 0 6px; }
+.cs-tool h2 { font-size: 1.15rem; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.cs-tool h3 { font: 600 0.7rem var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); margin: 14px 0 6px; }
 .cs-cmd { display: flex; gap: 10px; align-items: baseline; padding: 5px 0; font-family: var(--mono); font-size: 0.82rem; }
 .cs-cmd .cs-label { color: var(--accent-ink); font-size: 0.7rem; text-transform: uppercase; flex: 0 0 auto; }
 .cs-cmd code, .cs-ex code { color: var(--ink); word-break: break-all; }
