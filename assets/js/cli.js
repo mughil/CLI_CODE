@@ -27,6 +27,7 @@
     if (!e) { notFound(mount, slug); return; }
 
     document.title = `${e.name} — CLI_CODE`;
+    setSocialTitle(`${e.name} — CLI_CODE`);
     setMeta('description', e.summary);
     setCanonical(`${location.origin}${location.pathname}?slug=${encodeURIComponent(e.slug)}`);
     injectJsonLd(e);
@@ -190,6 +191,18 @@
     let m = document.querySelector(`meta[name="${name}"]`);
     if (!m) { m = document.createElement('meta'); m.name = name; document.head.appendChild(m); }
     m.content = content;
+    // keep social tags in sync for JS-rendering crawlers
+    for (const [sel, key] of [['meta[property="og:description"]', name], ['meta[name="twitter:description"]', name]]) {
+      if (name !== 'description') break;
+      const el = document.querySelector(sel);
+      if (el) el.content = content;
+    }
+  }
+  function setSocialTitle(t) {
+    for (const sel of ['meta[property="og:title"]', 'meta[name="twitter:title"]']) {
+      const el = document.querySelector(sel);
+      if (el) el.content = t;
+    }
   }
   function setCanonical(href) {
     let l = document.querySelector('link[rel="canonical"]');
