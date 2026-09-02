@@ -90,6 +90,7 @@
       sync();
     });
 
+    el.tbody.addEventListener('click', onTbodyClick);
     document.addEventListener('keydown', onKey);
     window.addEventListener('popstate', () => { readURL(); apply(); });
   }
@@ -255,34 +256,36 @@
         </td>
       </tr>`).join('');
 
-    el.tbody.querySelectorAll('tr.row').forEach((tr) => {
-      tr.addEventListener('click', (ev) => {
-        if (ev.target.closest('button') || ev.target.closest('a')) return;
-        location.href = `cli.html?slug=${encodeURIComponent(tr.dataset.slug)}`;
-      });
-    });
-    el.tbody.querySelectorAll('[data-fav]').forEach((b) => {
-      b.addEventListener('click', (ev) => {
-        ev.stopPropagation();
-        const on = window.CLIStore.toggleFavorite(b.dataset.fav);
-        b.classList.toggle('on', on);
-        b.textContent = on ? '★' : '☆';
-        b.setAttribute('aria-pressed', on);
-        b.setAttribute('aria-label', `${on ? 'Remove from' : 'Add to'} favorites`);
-      });
-    });
-    el.tbody.querySelectorAll('[data-cmp]').forEach((b) => {
-      b.addEventListener('click', (ev) => {
-        ev.stopPropagation();
-        const r = window.CLIStore.toggleCompare(b.dataset.cmp);
-        if (!r.ok) { flashBar(`Compare holds at most ${r.limit} tools.`); return; }
-        b.classList.toggle('on', r.inCompare);
-        b.textContent = r.inCompare ? 'In compare' : 'Compare';
-        b.setAttribute('aria-pressed', r.inCompare);
-        renderBar();
-      });
-    });
     renderBar();
+  }
+
+  // One delegated listener for the whole table (bound once in wire()), instead
+  // of ~3 listeners per row — keeps main-thread work flat as the list grows.
+  function onTbodyClick(ev) {
+    const favBtn = ev.target.closest('[data-fav]');
+    if (favBtn) {
+      ev.stopPropagation();
+      const on = window.CLIStore.toggleFavorite(favBtn.dataset.fav);
+      favBtn.classList.toggle('on', on);
+      favBtn.textContent = on ? '★' : '☆';
+      favBtn.setAttribute('aria-pressed', on);
+      favBtn.setAttribute('aria-label', `${on ? 'Remove from' : 'Add to'} favorites`);
+      return;
+    }
+    const cmpBtn = ev.target.closest('[data-cmp]');
+    if (cmpBtn) {
+      ev.stopPropagation();
+      const r = window.CLIStore.toggleCompare(cmpBtn.dataset.cmp);
+      if (!r.ok) { flashBar(`Compare holds at most ${r.limit} tools.`); return; }
+      cmpBtn.classList.toggle('on', r.inCompare);
+      cmpBtn.textContent = r.inCompare ? 'In compare' : 'Compare';
+      cmpBtn.setAttribute('aria-pressed', r.inCompare);
+      renderBar();
+      return;
+    }
+    if (ev.target.closest('a') || ev.target.closest('button')) return;
+    const row = ev.target.closest('tr.row');
+    if (row) location.href = `cli.html?slug=${encodeURIComponent(row.dataset.slug)}`;
   }
 
   function renderBar() {
