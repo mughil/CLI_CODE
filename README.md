@@ -40,7 +40,11 @@ Then open <http://localhost:4173/>. A `.claude/launch.json` is included for the 
 
 ## Deploy
 
-Any static host (GitHub Pages, Netlify, Cloudflare Pages, `nginx`). Serve the folder root as-is.
+**GitHub Pages (automated):** `.github/workflows/deploy-pages.yml` builds and deploys the repo
+root on every push to `main`. One-time setup: repo **Settings → Pages → Build and deployment →
+Source: GitHub Actions**. Then push, or run the workflow manually from the Actions tab.
+
+Any other static host (Netlify, Cloudflare Pages, `nginx`) works too — serve the folder root as-is.
 
 ## License
 
