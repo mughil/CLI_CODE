@@ -1,7 +1,5 @@
 # CLI_CODE
 User-agent: *
 Allow: /
-Disallow: /cheatsheet.html
-Disallow: /saved.html
 
 Sitemap: https://EXAMPLE.invalid/CLI_CODE/sitemap.xml

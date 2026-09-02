@@ -6,19 +6,31 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/registry.html</loc>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/find.html</loc>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/stacks.html</loc>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://EXAMPLE.invalid/CLI_CODE/compare.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://EXAMPLE.invalid/CLI_CODE/cheatsheet.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://EXAMPLE.invalid/CLI_CODE/saved.html</loc>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/docs.html</loc>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/registry.html?cat=ai</loc>

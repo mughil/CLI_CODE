@@ -123,8 +123,7 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.18; letter-spacing: -0.02em; m
 
 /* Reserve vertical space for JS-rendered regions so the "Loading…" -> content
    swap does not shift the footer / page (CLS). Sized to typical content. */
-#cli-view, #saved-view { min-height: 100vh; }
-#cmp-view, #cs-view { min-height: 70vh; }
+#cli-view, #saved-view, #cmp-view, #cs-view { min-height: 100vh; }
 #find-results { min-height: 40vh; }
 
 /* ---- reveal animation (motion 4/10 — standard stagger) ---- */

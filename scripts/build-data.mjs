@@ -284,18 +284,21 @@ emit('data/meta.json', outMeta);
 const SITE_URL = (process.env.SITE_URL || 'https://EXAMPLE.invalid/CLI_CODE').replace(/\/+$/, '');
 if (!process.env.SITE_URL && !CHECK) console.log('  (note: SITE_URL not set — sitemap/OG use a placeholder host)');
 
-const CORE_PAGES = ['index.html', 'registry.html', 'find.html', 'stacks.html', 'docs.html'];
+const CORE_PAGES = [
+  'index.html', 'registry.html', 'find.html', 'stacks.html',
+  'compare.html', 'cheatsheet.html', 'saved.html', 'docs.html',
+];
 const urlEntry = (loc, priority) =>
   `  <url>\n    <loc>${SITE_URL}/${loc}</loc>\n    <priority>${priority}</priority>\n  </url>`;
 const sitemapUrls = [
-  ...CORE_PAGES.map((f) => urlEntry(f, f === 'index.html' ? '1.0' : '0.8')),
+  ...CORE_PAGES.map((f) => urlEntry(f, f === 'index.html' ? '1.0' : '0.7')),
   ...meta.categories.map((c) => urlEntry(`registry.html?cat=${encodeURIComponent(c.id)}`, '0.6')),
   ...entries.map((e) => urlEntry(`cli.html?slug=${encodeURIComponent(e.slug)}`, e.dataQuality === 'curated' ? '0.7' : '0.5')),
 ];
 emit('sitemap.xml',
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.join('\n')}\n</urlset>\n`);
 emit('robots.txt',
-  `# CLI_CODE\nUser-agent: *\nAllow: /\nDisallow: /cheatsheet.html\nDisallow: /saved.html\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+  `# CLI_CODE\nUser-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 
 // ---------- social / SEO meta + canonical injection -----------------------
 // Each managed page carries "<!-- SEO:auto -->…<!-- /SEO:auto -->" in <head>;
