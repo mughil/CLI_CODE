@@ -1,6 +1,6 @@
 // Theme toggle with persistence + system default.
 (function () {
-  var KEY = 'cli-hub-theme';
+  var KEY = 'clicode:theme';
   var root = document.documentElement;
   var stored = null;
   try { stored = localStorage.getItem(KEY); } catch (e) {}
@@ -32,6 +32,19 @@
   }
 })();
 
+// Shared: keep the "Saved" nav badge in sync with favorites.
+document.addEventListener('DOMContentLoaded', function () {
+  var badge = document.getElementById('nav-fav-count');
+  if (!badge || !window.CLIStore) return;
+  function paint() {
+    var n = window.CLIStore.get().favorites.length;
+    badge.textContent = n;
+    badge.hidden = n === 0;
+  }
+  paint();
+  window.addEventListener('clistore:change', paint);
+});
+
 // Shared: staggered reveal-on-scroll for [.reveal] elements.
 document.addEventListener('DOMContentLoaded', function () {
   var items = document.querySelectorAll('.reveal');
@@ -55,6 +68,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
   items.forEach(function (el) { io.observe(el); });
+  // safety net: never leave content invisible if the observer misfires
+  setTimeout(function () {
+    document.querySelectorAll('.reveal:not(.in)').forEach(function (el) { el.classList.add('in'); });
+  }, 2500);
 });
 
 // Shared: copy-to-clipboard for any [data-copy] button.

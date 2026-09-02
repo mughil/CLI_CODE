@@ -4,10 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Docs — CLI_CODE</title>
-<meta name="description" content="How CLI_CODE works: install for agents or as a personal toolkit, browse the registry, use capability matrices, and update the catalog data.">
+<meta name="description" content="How CLI_CODE works: search and facets, Find my CLI, stacks, compare, cheat sheets, local state, the data model, contributing, and deployment.">
+<link rel="canonical" href="./docs.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/store.js" defer></script>
 <script src="assets/js/theme.js" defer></script>
 <style>
   .docs-layout { display: grid; grid-template-columns: 210px 1fr; gap: var(--space-4); align-items: start; }
@@ -24,7 +26,7 @@
   .docs-body pre { background: var(--cmd-bg); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 12px 14px; overflow-x: auto; }
   .docs-body pre code { background: none; padding: 0; font-size: 0.82rem; line-height: 1.7; }
   .docs-body table { border-collapse: collapse; width: 100%; font-size: 0.88rem; margin: 10px 0; }
-  .docs-body th, .docs-body td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line-2); }
+  .docs-body th, .docs-body td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
   .docs-body th { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); }
 </style>
 </head>
@@ -36,8 +38,10 @@
     <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> cli_code</a>
     <nav class="nav" aria-label="Primary">
       <a href="registry.html">Browse</a>
-      <a href="matrices.html">Stacks</a>
+      <a href="find.html">Find</a>
+      <a href="stacks.html">Stacks</a>
       <a href="docs.html" aria-current="page">Docs</a>
+      <a href="saved.html" class="nav-icon" aria-label="Saved" title="Saved"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg><span class="nav-badge" id="nav-fav-count" hidden></span></a>
       <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
     </nav>
   </div>
@@ -45,116 +49,112 @@
 
 <main id="main" class="wrap" style="padding-top:34px;padding-bottom:60px">
   <span class="eyebrow">Documentation</span>
-  <h1 class="sec-title">Using <span class="g">CLI_CODE</span></h1>
-  <p class="sec-sub">CLI_CODE is a registry of agent-native command-line interfaces. Point an AI agent at it and it can discover, install, and drive a CLI for the software it needs — no GUI in the loop.</p>
+  <h1 class="sec-title">How <span class="g">CLI_CODE</span> works</h1>
+  <p class="sec-sub">An open, self-contained directory of command-line tools for developers. Everything runs in the browser over a built JSON dataset — no server, no tracking.</p>
 
   <div class="docs-layout" style="margin-top:var(--space-4)">
     <nav class="docs-nav" aria-label="On this page">
       <a href="#overview">Overview</a>
-      <a href="#agents">Install for agents</a>
-      <a href="#toolkit">Personal toolkit</a>
-      <a href="#registry">The registry</a>
-      <a href="#matrices">Capability matrices</a>
-      <a href="#demos">Demos</a>
-      <a href="#data">Catalog data</a>
-      <a href="#deploy">Deploy this site</a>
+      <a href="#browse">Browse &amp; search</a>
+      <a href="#find">Find my CLI</a>
+      <a href="#stacks">Stacks</a>
+      <a href="#compare">Compare</a>
+      <a href="#cheatsheet">Cheat sheets</a>
+      <a href="#local">Local state</a>
+      <a href="#urls">Tool pages &amp; URLs</a>
+      <a href="#data">Data model</a>
+      <a href="#contributing">Contributing</a>
+      <a href="#deploy">Run &amp; deploy</a>
+      <a href="#agents">For AI agents</a>
       <a href="#license">License</a>
     </nav>
 
     <div class="docs-body">
       <h2 id="overview">Overview</h2>
-      <p>Every entry in the registry is one CLI with a fixed contract: structured JSON output for agents, a human-readable mode for debugging, and a consistent set of subcommands. Two kinds of entry exist:</p>
+      <p>Each entry is one command-line tool with a structured profile. Two kinds:</p>
       <ul>
-        <li><b>Harness CLIs</b> — generated wrappers that drive real desktop software (Blender, FreeCAD, GIMP, OBS…) or local services through their own APIs.</li>
-        <li><b>Public CLIs</b> — third-party or official command-line tools already published to npm, Homebrew, or similar, catalogued here so agents can find them the same way.</li>
+        <li><b>Harness CLIs</b> — agent-native wrappers that drive real desktop software (Blender, GIMP, OBS…) or local services through their APIs, with structured JSON output.</li>
+        <li><b>Public CLIs</b> — third-party or official tools already published to npm, Homebrew, PyPI and similar, catalogued the same way.</li>
       </ul>
+      <p>25 entries have a <b>human-verified profile</b> (language, license, platforms, difficulty, use cases, alternatives). The rest are auto-derived from the source registry and are marked as such — nothing is fabricated.</p>
 
-      <h2 id="agents">Install for agents</h2>
-      <p>Add the meta-skill once; the agent then reads the registry and installs whatever a task needs. Works with Claude Code, OpenClaw, Nanobot, Codex, and other SKILL-compatible agents.</p>
-      <pre><code>npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y</code></pre>
-      <p>Then prompt the agent:</p>
-      <pre><code>Find an appropriate CLI in CLI_CODE and complete the task: &lt;your task&gt;</code></pre>
-
-      <h2 id="toolkit">Personal toolkit</h2>
-      <p>The same registry is usable by hand through a small Python client.</p>
-      <pre><code>pip install cli-anything-hub</code></pre>
+      <h2 id="browse">Browse &amp; search</h2>
+      <p><a href="registry.html">Browse</a> runs a weighted client-side search over <code>data/clis.json</code>:</p>
       <table>
-        <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+        <thead><tr><th>Field</th><th>Weight</th></tr></thead>
         <tbody>
-          <tr><td><code>cli-hub list</code></td><td>Browse the registry</td></tr>
-          <tr><td><code>cli-hub search &lt;kw&gt;</code></td><td>Search by keyword</td></tr>
-          <tr><td><code>cli-hub install &lt;name&gt;</code></td><td>Install a CLI from the hub</td></tr>
-          <tr><td><code>cli-hub info &lt;name&gt;</code></td><td>Inspect one CLI</td></tr>
-          <tr><td><code>cli-hub update &lt;name&gt;</code></td><td>Update an install</td></tr>
-          <tr><td><code>cli-hub uninstall &lt;name&gt;</code></td><td>Remove an install</td></tr>
+          <tr><td>name (exact / token / prefix)</td><td>12 / 10 / 7</td></tr>
+          <tr><td>aliases</td><td>8</td></tr>
+          <tr><td>tags</td><td>6</td></tr>
+          <tr><td>summary + description</td><td>5</td></tr>
+          <tr><td>categories</td><td>4</td></tr>
+          <tr><td>use cases</td><td>4</td></tr>
+          <tr><td>language / platform</td><td>2</td></tr>
         </tbody>
       </table>
-
-      <h2 id="registry">Browse &amp; search</h2>
-      <p>Open <a href="registry.html">Browse</a> to search all entries. Everything runs client-side over <code>data/clis.json</code>:</p>
       <ul>
-        <li><b>Weighted search</b> ranks by field: name 10, aliases 8, tags 6, summary/description 5, category 4, use cases 4, language 2, platform 2. Matches are highlighted; multi-word queries require every term to match.</li>
-        <li><b>Facets:</b> source, category, platform, language, install method, difficulty (shown when data exists), and a <b>Curated only</b> toggle.</li>
-        <li><b>Sort</b> by name, category, or verified date — click a header, click again to reverse.</li>
-        <li><b>Keyboard:</b> <kbd>/</kbd> focus search, <kbd>&uarr;</kbd><kbd>&darr;</kbd> move, <kbd>Enter</kbd> open, <kbd>Esc</kbd> clear.</li>
-        <li>Every filter is written to the URL — share <code>registry.html?q=mock&amp;cat=testing</code> and it reopens the same view.</li>
-        <li>Each row links to its <b>tool page</b> (<code>cli.html?slug=&lt;slug&gt;</code>): install methods, platforms, language, use cases, alternatives, and related tools. Favorites and recently-viewed are kept in your browser only.</li>
+        <li>Multi-word queries use <b>AND</b> semantics; matched terms are highlighted.</li>
+        <li><b>Facets:</b> source, category, platform, language, install method, difficulty (shown only when data exists), plus a <b>Curated only</b> toggle.</li>
+        <li><b>Sort</b> by name, category, or verified date — click a header, again to reverse.</li>
+        <li><b>Keyboard:</b> <kbd>/</kbd> focus, <kbd>&uarr;</kbd><kbd>&darr;</kbd> move, <kbd>Enter</kbd> open, <kbd>Esc</kbd> clear.</li>
+        <li>State is in the URL: <code>registry.html?q=mock&amp;cat=testing&amp;source=harness</code> reopens the same view.</li>
       </ul>
 
-      <h2 id="matrices">Capability matrices</h2>
-      <p>A matrix (<a href="matrices.html">Stacks</a>) is a capability-based plan for a whole workflow. It lists the intents in that workflow — "turn a brief into a storyboard", "encode the final cut" — and, for each, the provider CLIs that satisfy it. Hand one to an agent and it knows which tool to reach for at every step. Each CLI chip links to its registry entry.</p>
+      <h2 id="find">Find my CLI</h2>
+      <p><a href="find.html">Find</a> takes a plain-language goal and scores every tool against its tags, categories and use cases, with a small synonym map (“inspect http” &rarr; api, rest, request…). Each result shows exactly which fields matched. Deterministic — no AI service, no network call. Deep-linkable: <code>find.html?goal=edit+video</code>.</p>
 
-      <h2 id="demos">Demos</h2>
-      <p>The three cards on the <a href="index.html">home page</a> show agents building real artifacts through generated CLIs:</p>
+      <h2 id="stacks">Stacks</h2>
+      <p><a href="stacks.html">Stacks</a> has two parts:</p>
       <ul>
-        <li><b>FreeCAD — Curiosity Rover:</b> an agent assembles a rover, publishing preview bundles and a replayable trajectory.</li>
-        <li><b>Blender — Orbital Relay Drone:</b> a hard-surface model grows under a live preview loop, each stage pushing render-backed bundles.</li>
-        <li><b>draw.io — System Diagram:</b> a full architecture diagram built and laid out from a text brief.</li>
+        <li><b>Preset stacks</b> (<code>data/stacks.json</code>) — curated tool sets for Frontend, Backend, DevOps, Cloud, AI Engineering, Cybersecurity and Data Engineering, each pick annotated with its role. “Copy all installs” yields a commented shell block. Thin areas carry an explicit note.</li>
+        <li><b>Capability matrices</b> (<code>data/matrix_registry.json</code>) — for a whole workflow, the intents and the provider CLIs that satisfy each, designed to hand to an agent.</li>
       </ul>
-      <p>Only poster images are bundled in this build; drop matching <code>.mp4</code> files into <code>assets/demos/</code> and swap the <code>&lt;img&gt;</code> tags for <code>&lt;video&gt;</code> to make them play.</p>
 
-      <h2 id="data">Catalog data</h2>
-      <p>Nothing about the catalog is hardcoded in the pages. A build step
-        (<code>npm run build</code>) merges the upstream registry snapshots with a
-        human-verified <b>overlay</b> and emits <code>data/clis.json</code> +
-        <code>data/meta.json</code>, validated against
-        <code>schema/cli.schema.json</code>. Derivation never invents domain
-        facts — use cases, alternatives, difficulty and precise language come
-        only from <code>data/overlay.json</code>.</p>
+      <h2 id="compare">Compare</h2>
+      <p><a href="compare.html">Compare</a> puts 2–4 tools side by side. A <b>Key differences</b> summary leads (difficulty, language, license, platform gaps, missing data), then a field table with changed rows marked. Add tools from the <b>Compare</b> control on Browse or a tool page; the queue is deep-linkable as <code>compare.html?slugs=a,b,c</code>.</p>
+
+      <h2 id="cheatsheet">Cheat sheets</h2>
+      <p><a href="cheatsheet.html">Cheat sheet</a> composes a printable command reference from a set of tools — <code>?slugs=a,b</code>, <code>?stack=devops</code>, <code>?favorites=1</code>, or the compare queue. It shows install steps and any documented examples; it never invents commands, so derived entries show install steps plus a pointer to <code>--help</code>.</p>
+
+      <h2 id="local">Local state</h2>
+      <p><a href="saved.html">Saved</a> holds favorites, the compare queue, and recently-viewed tools. All of it lives in <code>localStorage</code> on this device only (schema-versioned; corrupt or old data is discarded on load). No account, nothing synced, nothing sent anywhere.</p>
+
+      <h2 id="urls">Tool pages &amp; URLs</h2>
+      <p>Every tool has a stable, deep-linkable page at <code>cli.html?slug=&lt;slug&gt;</code>: at-a-glance metadata, install methods, use cases, alternatives and related tools (cross-linked), tags, and authoritative external references. Categories are addressable via <code>registry.html?cat=&lt;category&gt;</code>.</p>
+
+      <h2 id="data">Data model</h2>
+      <p>A build step merges the upstream registry snapshots with a human-verified <b>overlay</b> and emits the files the site loads, validated against <code>schema/cli.schema.json</code> (JSON Schema 2020-12). Derivation never invents domain facts — use cases, alternatives, difficulty and precise language come only from the overlay.</p>
       <table>
-        <thead><tr><th>File</th><th>Contents</th></tr></thead>
+        <thead><tr><th>File</th><th>Role</th></tr></thead>
         <tbody>
-          <tr><td><code>data/clis.json</code></td><td>Built, normalized entries the site loads (generated)</td></tr>
-          <tr><td><code>data/meta.json</code></td><td>Facet counts: categories, platforms, languages, install methods (generated)</td></tr>
+          <tr><td><code>data/clis.json</code></td><td>Built, normalized entries the site loads <em>(generated)</em></td></tr>
+          <tr><td><code>data/meta.json</code></td><td>Facet counts <em>(generated)</em></td></tr>
           <tr><td><code>data/overlay.json</code></td><td>Contributor-maintained verified facts, keyed by slug</td></tr>
-          <tr><td><code>data/registry.json</code>, <code>data/public_registry.json</code></td><td>Upstream registry snapshots (harness + public), inputs to the build</td></tr>
-          <tr><td><code>data/registry-dates.json</code></td><td>Last-verified date keyed by tool name, input to the build</td></tr>
-          <tr><td><code>data/matrix_registry.json</code></td><td>Capability matrices for the Stacks page</td></tr>
+          <tr><td><code>data/stacks.json</code></td><td>Preset stacks (picks must reference real slugs)</td></tr>
+          <tr><td><code>data/registry.json</code>, <code>data/public_registry.json</code>, <code>data/registry-dates.json</code></td><td>Upstream snapshots — build inputs</td></tr>
+          <tr><td><code>data/matrix_registry.json</code></td><td>Capability matrices for Stacks</td></tr>
+          <tr><td><code>schema/*.schema.json</code></td><td>Validation schemas for entries and stacks</td></tr>
         </tbody>
       </table>
-      <p id="contributing">A built entry follows <code>schema/cli.schema.json</code>:
-        <code>id</code>, <code>slug</code>, <code>name</code>, <code>aliases</code>,
-        <code>summary</code>, <code>description</code>, <code>categories</code>,
-        <code>tags</code>, <code>useCases</code>, <code>platforms</code>,
-        <code>language</code>, <code>runtime</code>, <code>license</code>,
-        <code>install[]</code>, <code>examples[]</code>, <code>repository</code>,
-        <code>documentation</code>, <code>packageManagers</code>,
-        <code>difficulty</code>, <code>alternatives</code>, <code>related</code>,
-        <code>lastVerified</code>. To add or correct facts for a tool, edit its
-        block in <code>data/overlay.json</code> and run:</p>
+      <p>Built entry fields: <code>id</code>, <code>slug</code>, <code>name</code>, <code>aliases</code>, <code>summary</code>, <code>description</code>, <code>categories</code>, <code>tags</code>, <code>useCases</code>, <code>platforms</code>, <code>language</code>, <code>runtime</code>, <code>license</code>, <code>install[]</code>, <code>examples[]</code>, <code>repository</code>, <code>documentation</code>, <code>packageManagers</code>, <code>difficulty</code>, <code>alternatives</code>, <code>related</code>, <code>source</code>, <code>dataQuality</code>, <code>lastVerified</code>.</p>
+
+      <h2 id="contributing">Contributing a tool profile</h2>
+      <p>To add or correct verified facts for a tool, edit its block in <code>data/overlay.json</code> (keyed by slug). Set only what you can confirm from the tool's own docs. <code>alternatives</code> and <code>related</code> must point at slugs that exist in the dataset. Then:</p>
       <pre><code>npm install
 npm run build      # regenerate data/clis.json + data/meta.json
-npm run check      # schema + cross-references + link integrity</code></pre>
+npm run check      # schema + cross-references + drift + link integrity</code></pre>
+      <p>CI runs <code>npm run check</code> on every push; a failing schema or dangling reference blocks the deploy.</p>
 
       <h2 id="deploy">Run &amp; deploy</h2>
-      <p>The shipped site is static, zero-dependency. <code>fetch()</code> needs HTTP, so serve the folder — do not open <code>index.html</code> directly:</p>
+      <p>The shipped site is static and zero-dependency. <code>fetch()</code> needs HTTP, so serve the folder — do not open <code>index.html</code> directly:</p>
       <pre><code>npm install &amp;&amp; npm run build
 npx http-server -p 4173   # or: python -m http.server 4173</code></pre>
-      <p>Paths are relative, so it also works served from a subpath such as
-        <code>/CLI_CODE/</code>. The GitHub Actions workflow at
-        <code>.github/workflows/deploy-pages.yml</code> builds, validates and
-        publishes to GitHub Pages on every push to <code>main</code>. One-time
-        setup: repo Settings &rarr; Pages &rarr; Source: <b>GitHub Actions</b>.</p>
+      <p>All paths are relative, so it works served from a subpath such as <code>/CLI_CODE/</code>. <code>.github/workflows/deploy-pages.yml</code> builds, validates and publishes to GitHub Pages on every push to <code>main</code>. One-time setup: repo Settings &rarr; Pages &rarr; Source: <b>GitHub Actions</b>.</p>
+
+      <h2 id="agents">For AI agents</h2>
+      <p>The harness entries are designed to be discovered and driven by SKILL-compatible agents (Claude Code, OpenClaw, Nanobot, Codex). Add the meta-skill once and the agent reads the registry itself:</p>
+      <pre><code>npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y</code></pre>
+      <p>Then: <em>“Find an appropriate CLI in CLI_CODE and complete the task: &lt;task&gt;”</em>. A pip client also exists — <code>pip install cli-anything-hub</code>, then <code>cli-hub list|search|install|info|update|uninstall</code>.</p>
 
       <h2 id="license">License</h2>
       <p>Apache-2.0. Underlying registry data is sourced from the upstream CLI-Anything project.</p>
@@ -164,7 +164,7 @@ npx http-server -p 4173   # or: python -m http.server 4173</code></pre>
 
 <footer class="site-foot">
   <div class="wrap">
-    <span>CLI_CODE — updated build.</span>
+    <span>CLI_CODE — open CLI directory.</span>
     <span>Apache-2.0</span>
   </div>
 </footer>

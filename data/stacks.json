@@ -1,0 +1,92 @@
+{
+  "$comment": "Curated CLI stack presets. Each pick's slug must exist in data/clis.json (enforced by validate-data.mjs). Roles describe why the tool is in the stack. Contributor-editable.",
+  "stacks": [
+    {
+      "id": "frontend",
+      "name": "Frontend Development",
+      "description": "Design handoff, docs diagrams, and headless-browser inspection for building and debugging web UIs.",
+      "note": "The directory is light on build/lint/test-runner CLIs — pair this with your framework's own tooling.",
+      "picks": [
+        { "slug": "sketch", "role": "Design source of truth — export assets and specs for implementation" },
+        { "slug": "drawio", "role": "Architecture and flow diagrams for feature planning" },
+        { "slug": "mermaid", "role": "Diagrams-as-text committed alongside the code" },
+        { "slug": "browser", "role": "Drive a real Chrome tab to inspect the rendered DOM" },
+        { "slug": "clibrowser", "role": "Scriptable headless browsing for smoke checks" }
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend Development",
+      "description": "Mock upstream services, manage processes, clean data, and back features with a headless CMS and a vector store.",
+      "picks": [
+        { "slug": "wiremock", "role": "Stub and record HTTP dependencies during development and tests" },
+        { "slug": "pm2", "role": "Run and reload Node services with logs and metrics" },
+        { "slug": "openrefine", "role": "Interactive cleaning and reshaping of messy source data" },
+        { "slug": "chromadb", "role": "Vector storage for search and retrieval features" },
+        { "slug": "sanity", "role": "Structured content / headless CMS for content-driven APIs" }
+      ]
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "description": "Access control, deployments, error monitoring, process supervision, secrets, and network filtering.",
+      "picks": [
+        { "slug": "jumpserver", "role": "Bastion host — manage assets, sessions, and audit logs" },
+        { "slug": "deployhq", "role": "Build and release pipelines with rollbacks" },
+        { "slug": "sentry", "role": "Error and performance monitoring across services" },
+        { "slug": "pm2", "role": "Process manager for long-running Node workloads" },
+        { "slug": "1password-cli", "role": "Inject secrets into scripts and CI without plaintext" },
+        { "slug": "adguardhome", "role": "DNS-level filtering and network infrastructure control" }
+      ]
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud",
+      "description": "Object storage, deployment automation, credential handling, and observability for cloud-hosted apps.",
+      "note": "Coverage is partial — bring your provider's own CLI (aws / gcloud / az) alongside these.",
+      "picks": [
+        { "slug": "tigris", "role": "S3-compatible object storage management" },
+        { "slug": "deployhq", "role": "Automated deploys to cloud hosts" },
+        { "slug": "1password-cli", "role": "Cloud credentials and API keys on demand" },
+        { "slug": "sentry", "role": "Production error and release health tracking" }
+      ]
+    },
+    {
+      "id": "ai-engineering",
+      "name": "AI Engineering",
+      "description": "Local model serving, a vector database for RAG, image pipelines, and workflow orchestration for LLM apps.",
+      "picks": [
+        { "slug": "ollama", "role": "Serve local LLMs over an HTTP API for offline development" },
+        { "slug": "chromadb", "role": "Vector database for embeddings and retrieval" },
+        { "slug": "comfyui", "role": "Node-based diffusion pipelines for image generation" },
+        { "slug": "dify-workflow", "role": "Design and run LLM application workflows" },
+        { "slug": "openwebui", "role": "Chat front-end over local or remote models" },
+        { "slug": "n8n", "role": "Glue models, tools and data sources into automations" }
+      ]
+    },
+    {
+      "id": "cybersecurity",
+      "name": "Cybersecurity",
+      "description": "OSINT monitoring, anti-detection browsing, secret management, and network-level filtering.",
+      "note": "A small slice — this directory is not security-focused. Treat it as a starting point, not a toolkit.",
+      "picks": [
+        { "slug": "intelwatch", "role": "Monitor sources for OSINT signals and changes" },
+        { "slug": "cloakbrowser", "role": "Fingerprint-resistant browser automation for research" },
+        { "slug": "1password-cli", "role": "Vault automation and least-privilege secret access" },
+        { "slug": "adguardhome", "role": "Inspect and filter DNS traffic on a network" }
+      ]
+    },
+    {
+      "id": "data-engineering",
+      "name": "Data Engineering",
+      "description": "Data cleaning, a vector store, geospatial processing, reporting, and pipeline orchestration.",
+      "picks": [
+        { "slug": "openrefine", "role": "Clean, cluster and transform tabular data with an undo history" },
+        { "slug": "chromadb", "role": "Store and query vector embeddings" },
+        { "slug": "qgis", "role": "Batch geospatial processing and map production" },
+        { "slug": "py4csr", "role": "Programmatic clinical / statistical reporting" },
+        { "slug": "n8n", "role": "Schedule and connect extract-transform-load steps" }
+      ]
+    }
+  ]
+}

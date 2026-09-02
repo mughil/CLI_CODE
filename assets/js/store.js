@@ -61,6 +61,7 @@
       state.recent = [slug, ...state.recent.filter((s) => s !== slug)].slice(0, LIMITS.recent);
       persist();
     },
+    clearRecent() { state.recent = []; persist(); },
 
     inCompare: (slug) => state.compare.includes(slug),
     compareCount: () => state.compare.length,

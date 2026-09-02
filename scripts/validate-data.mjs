@@ -52,11 +52,27 @@ for (const e of entries) {
 // 4. doc-level count
 if (doc.count !== entries.length) errors.push(`doc.count ${doc.count} != entries ${entries.length}`);
 
+// 5. stack presets
+const stackSchema = readJSON('schema/stack.schema.json');
+const validateStack = ajv.compile(stackSchema);
+const stacks = (readJSON('data/stacks.json').stacks) || [];
+const stackIds = new Set();
+for (const s of stacks) {
+  if (!validateStack(s)) {
+    for (const err of validateStack.errors) errors.push(`stack ${s.id || '(no id)'}: ${err.instancePath} ${err.message}`);
+  }
+  if (stackIds.has(s.id)) errors.push(`duplicate stack id: ${s.id}`);
+  stackIds.add(s.id);
+  for (const pick of s.picks || []) {
+    if (!seen.has(pick.slug)) errors.push(`stack ${s.id}: pick "${pick.slug}" is not a known tool`);
+  }
+}
+
 if (errors.length) {
   console.error(`[FAIL] ${errors.length} validation error(s):\n` + errors.map((e) => '  - ' + e).join('\n'));
   process.exit(1);
 }
-console.log(`[ok] ${entries.length} entries valid (schema + ${countRefs()} cross-references resolve)`);
+console.log(`[ok] ${entries.length} entries + ${stacks.length} stacks valid (schema + ${countRefs()} cross-references resolve)`);
 
 function countRefs() {
   let n = 0;

@@ -115,6 +115,10 @@
           ${e.difficulty ? pill(e.difficulty, 'diff-' + e.difficulty) : ''}
           ${catLinks}
         </div>
+        <div class="cli-actions">
+          <button class="btn-sm ghost" id="cmp-btn" aria-pressed="${window.CLIStore.inCompare(e.slug)}">${window.CLIStore.inCompare(e.slug) ? 'In compare' : 'Add to compare'}</button>
+          <a class="btn-sm ghost" href="cheatsheet.html?slugs=${encodeURIComponent(e.slug)}">Cheat sheet</a>
+        </div>
       </header>
 
       ${e.description && e.description !== e.summary ? `<p class="cli-desc">${esc(e.description)}</p>` : ''}
@@ -151,6 +155,14 @@
       this.textContent = on ? '★' : '☆';
       this.setAttribute('aria-pressed', on);
       this.setAttribute('aria-label', `${on ? 'Remove from' : 'Add to'} favorites`);
+    });
+
+    const cmpBtn = document.getElementById('cmp-btn');
+    cmpBtn.addEventListener('click', function () {
+      const r = window.CLIStore.toggleCompare(e.slug);
+      if (!r.ok) { this.textContent = `Compare limit is ${r.limit}`; setTimeout(() => { this.textContent = 'Add to compare'; }, 1600); return; }
+      this.textContent = r.inCompare ? 'In compare' : 'Add to compare';
+      this.setAttribute('aria-pressed', r.inCompare);
     });
   }
 

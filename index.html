@@ -3,132 +3,100 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CLI_CODE — Agent-native CLI registry</title>
-<meta name="description" content="A registry of agent-native CLIs for any software, codebase, or Web API. Install with a single command and let AI agents operate it.">
+<title>CLI_CODE — open directory of command-line tools</title>
+<meta name="description" content="An open, self-contained directory of command-line tools for developers. Search by task, compare alternatives, build a stack, and generate cheat sheets — all client-side.">
+<link rel="canonical" href="./index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/search.js" defer></script>
+<script src="assets/js/store.js" defer></script>
 <script src="assets/js/theme.js" defer></script>
+<script src="assets/js/home.js" defer></script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="index.html">
-      <span class="dot" aria-hidden="true"></span> cli_code
-    </a>
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> cli_code</a>
     <nav class="nav" aria-label="Primary">
       <a href="registry.html">Browse</a>
-      <a href="matrices.html">Stacks</a>
+      <a href="find.html">Find</a>
+      <a href="stacks.html">Stacks</a>
       <a href="docs.html">Docs</a>
+      <a href="saved.html" class="nav-icon" aria-label="Saved" title="Saved"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg><span class="nav-badge" id="nav-fav-count" hidden></span></a>
       <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="hero wrap">
-    <span class="kicker reveal"><i aria-hidden="true"></i> npx skills add HKUDS/CLI-Anything</span>
-    <h1 class="reveal">Give your agents a <span class="g">command line</span> for anything</h1>
-    <p class="reveal">Any software. Any codebase. Any Web API. Generate an agent-native CLI and let AI agents operate it — install with a single command.</p>
-    <div class="stats">
-      <div class="stat reveal"><b id="s-total">—</b><span>CLIs available</span></div>
-      <div class="stat reveal"><b id="s-harness">—</b><span>Harness CLIs</span></div>
-      <div class="stat reveal"><b id="s-public">—</b><span>Public CLIs</span></div>
-      <div class="stat reveal"><b id="s-cats">—</b><span>Categories</span></div>
-    </div>
-    <p class="reveal" style="margin-top:var(--space-3)">
-      <a class="btn btn-accent" href="registry.html">Browse the registry
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
+  <section class="home-hero wrap">
+    <h1>Find the right <span class="g">command-line tool</span></h1>
+    <p>An open, self-contained directory of developer CLIs — search by task, compare alternatives, assemble a stack, print a cheat sheet. No tracking, no backend.</p>
+
+    <form id="home-search" role="search">
+      <div class="search-box lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="home-q" type="search" placeholder="Search tools — mock server, transcription, vector database…" aria-label="Search CLI tools" autocomplete="off">
+        <button type="submit" class="btn btn-accent">Search</button>
+      </div>
+    </form>
+
+    <p class="home-stats">
+      <b id="s-total">—</b> tools ·
+      <b id="s-cat">—</b> categories ·
+      <b id="s-curated">—</b> with verified profiles
     </p>
-  </section>
 
-  <section class="wrap">
-    <div class="grid-2">
-      <div class="card reveal">
-        <span class="eyebrow">For agents</span>
-        <h3>Empower your agents — <span class="g">install in one command</span></h3>
-        <p>Works with Claude Code, OpenClaw, Nanobot, Codex, and other SKILL-compatible agents. Also on ClawHub and SkillHub.</p>
-        <div class="cmd">
-          <span class="tag">npx</span>
-          <code>npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y</code>
-          <button class="copy-btn" data-copy="npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y">Copy</button>
-        </div>
-        <p style="margin:12px 0 0;font-size:.86rem">Then prompt: <span class="g">“Find an appropriate CLI in CLI_CODE and complete the task: …”</span></p>
-      </div>
-
-      <div class="card reveal">
-        <span class="eyebrow">For you</span>
-        <h3>Empower yourself — <span class="g">your CLI toolkit</span></h3>
-        <p>A pip-installable client for browsing, searching, and installing CLIs from the hub.</p>
-        <div class="cmd">
-          <span class="tag">pip</span>
-          <code>pip install cli-anything-hub</code>
-          <button class="copy-btn" data-copy="pip install cli-anything-hub">Copy</button>
-        </div>
-        <div class="sub-cmds">
-          <div><b>cli-hub list</b><span>Browse the registry</span></div>
-          <div><b>cli-hub search</b><span>Search by keyword</span></div>
-          <div><b>cli-hub install</b><span>Install from the hub</span></div>
-          <div><b>cli-hub info</b><span>Inspect one CLI</span></div>
-          <div><b>cli-hub update</b><span>Update an install</span></div>
-          <div><b>cli-hub uninstall</b><span>Remove an install</span></div>
-        </div>
-      </div>
+    <div id="recent-wrap" hidden class="home-recent">
+      <span class="muted mono sm">Recently viewed</span>
+      <span id="recent-list"></span>
     </div>
   </section>
 
   <section class="wrap">
-    <span class="eyebrow reveal">See it work</span>
-    <h2 class="sec-title reveal">Real-world <span class="g">demos</span></h2>
-    <p class="sec-sub reveal">Agents driving desktop software through generated CLIs — no GUI in the loop.</p>
-    <div class="demos-strip" style="margin-top:var(--space-3)">
-      <a class="dposter reveal" href="docs.html#demos">
-        <img src="assets/demos/freecad-curiosity-preview-trajectory-poster.jpg" alt="FreeCAD Curiosity rover assembled by an agent">
-        <div class="body"><span class="cat">3D / CAD</span><h3><span class="g">FreeCAD</span> — Curiosity Rover</h3>
-        <p>An agent assembles a Curiosity-inspired rover, publishing real preview bundles and a replayable trajectory.</p></div>
+    <h2 class="sub-h">Browse by category</h2>
+    <div class="chips" id="cat-chips"></div>
+  </section>
+
+  <section class="wrap">
+    <h2 class="sub-h">Four ways in</h2>
+    <div class="feature-grid">
+      <a class="feature" href="registry.html">
+        <h3>Browse</h3>
+        <p>Weighted search plus facets for source, category, platform, language, install method and difficulty. Keyboard-driven, URL-shareable.</p>
       </a>
-      <a class="dposter reveal" href="docs.html#demos">
-        <img src="assets/demos/blender-orbital-relay-drone-preview-trajectory-poster.jpg" alt="Blender orbital relay drone built by an agent">
-        <div class="body"><span class="cat">3D · Hard-surface</span><h3><span class="g">Blender</span> — Orbital Relay Drone</h3>
-        <p>A hard-surface drone grows under a real preview loop, each stage pushing render-backed bundles.</p></div>
+      <a class="feature" href="find.html">
+        <h3>Find my CLI</h3>
+        <p>Describe a task in plain language. Get ranked tools, each with the tags and use cases that matched — no black box.</p>
       </a>
-      <a class="dposter reveal" href="docs.html#demos">
-        <img src="assets/demos/drawio-demo-poster.jpg" alt="draw.io architecture diagram generated by an agent">
-        <div class="body"><span class="cat">Diagrams</span><h3><span class="g">draw.io</span> — System Diagram</h3>
-        <p>An agent builds and lays out a full architecture diagram straight from a text brief.</p></div>
+      <a class="feature" href="stacks.html">
+        <h3>Stacks</h3>
+        <p>Preset tool sets for frontend, backend, DevOps, cloud, AI, security and data work — plus capability matrices for agents.</p>
+      </a>
+      <a class="feature" href="compare.html">
+        <h3>Compare</h3>
+        <p>Put 2–4 tools side by side. The differences that matter are called out, not just a metadata dump.</p>
       </a>
     </div>
   </section>
 
   <section class="wrap">
-    <span class="eyebrow reveal">Collections</span>
-    <h2 class="sec-title reveal">Capability <span class="g">matrices</span></h2>
-    <p class="sec-sub reveal">Curated bundles that map an intent to the right provider CLI across the catalog — video creation, 3D/CAD, game dev, and more.</p>
-    <p class="reveal" style="margin-top:var(--space-2)"><a class="btn btn-ghost" href="matrices.html">Explore the matrices →</a></p>
+    <h2 class="sub-h">Verified profiles</h2>
+    <p class="sec-sub">Hand-checked entries with language, license, platforms, difficulty, use cases and alternatives.</p>
+    <div class="mini-grid" id="curated-grid" style="margin-top:16px"></div>
+    <p style="margin-top:16px"><a class="btn btn-ghost" href="registry.html?curated=1">All verified profiles →</a></p>
   </section>
 </main>
 
 <footer class="site-foot">
   <div class="wrap">
-    <span>CLI_CODE — updated build. Registry data sourced from the upstream CLI-Anything project.</span>
+    <span>CLI_CODE — open CLI directory. Data built from <code>data/clis.json</code>; underlying registry from the upstream CLI-Anything project.</span>
     <span>Apache-2.0</span>
   </div>
 </footer>
-
-<script>
-Promise.all([
-  fetch('data/registry.json').then(function (r) { return r.json(); }),
-  fetch('data/public_registry.json').then(function (r) { return r.json(); })
-]).then(function (d) {
-  var h = d[0].clis || [], p = d[1].clis || [];
-  var cats = new Set(h.concat(p).map(function (c) { return c.category; }));
-  set('s-total', h.length + p.length); set('s-harness', h.length);
-  set('s-public', p.length); set('s-cats', cats.size);
-}).catch(function () {});
-function set(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
-</script>
 </body>
 </html>

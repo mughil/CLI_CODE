@@ -233,7 +233,8 @@
     }
 
     const hl = (t) => window.CLISearch.highlight(t, S._terms);
-    const fav = window.CLIStore.get().favorites;
+    const st = window.CLIStore.get();
+    const fav = st.favorites, cmp = st.compare;
 
     el.tbody.innerHTML = S.view.map((e, i) => `
       <tr class="row${i === S.sel ? ' sel' : ''}" data-slug="${e.slug}">
@@ -250,13 +251,13 @@
         <td class="mono sm nowrap">${e.lastVerified || '—'}</td>
         <td class="c-act">
           <a class="btn-sm" href="cli.html?slug=${encodeURIComponent(e.slug)}">Open</a>
-          ${e.install[0] ? `<button class="btn-sm ghost" data-copy="${window.CLISearch.escapeHtml(e.install[0].command)}">Copy install</button>` : ''}
+          <button class="btn-sm ghost cmp-toggle${cmp.includes(e.slug) ? ' on' : ''}" data-cmp="${e.slug}" aria-pressed="${cmp.includes(e.slug)}">${cmp.includes(e.slug) ? 'In compare' : 'Compare'}</button>
         </td>
       </tr>`).join('');
 
     el.tbody.querySelectorAll('tr.row').forEach((tr) => {
       tr.addEventListener('click', (ev) => {
-        if (ev.target.closest('[data-fav]') || ev.target.closest('[data-copy]') || ev.target.closest('a')) return;
+        if (ev.target.closest('button') || ev.target.closest('a')) return;
         location.href = `cli.html?slug=${encodeURIComponent(tr.dataset.slug)}`;
       });
     });
@@ -270,6 +271,51 @@
         b.setAttribute('aria-label', `${on ? 'Remove from' : 'Add to'} favorites`);
       });
     });
+    el.tbody.querySelectorAll('[data-cmp]').forEach((b) => {
+      b.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        const r = window.CLIStore.toggleCompare(b.dataset.cmp);
+        if (!r.ok) { flashBar(`Compare holds at most ${r.limit} tools.`); return; }
+        b.classList.toggle('on', r.inCompare);
+        b.textContent = r.inCompare ? 'In compare' : 'Compare';
+        b.setAttribute('aria-pressed', r.inCompare);
+        renderBar();
+      });
+    });
+    renderBar();
+  }
+
+  function renderBar() {
+    let bar = document.getElementById('cmp-bar');
+    const q = window.CLIStore.get().compare;
+    if (!q.length) { if (bar) bar.remove(); return; }
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.id = 'cmp-bar';
+      bar.className = 'cmp-bar';
+      document.body.appendChild(bar);
+    }
+    bar.innerHTML = `<span><b>${q.length}</b> in compare</span>
+      ${q.length >= 2 ? `<a class="btn-sm" href="compare.html?slugs=${q.join(',')}">Compare</a>` : '<span class="muted sm">add one more</span>'}
+      <button class="btn-sm ghost" id="cmp-bar-clear">Clear</button>`;
+    document.getElementById('cmp-bar-clear').addEventListener('click', () => {
+      window.CLIStore.clearCompare();
+      renderBar();
+      el.tbody.querySelectorAll('[data-cmp]').forEach((b) => {
+        b.classList.remove('on'); b.textContent = 'Compare'; b.setAttribute('aria-pressed', 'false');
+      });
+    });
+  }
+
+  function flashBar(msg) {
+    let bar = document.getElementById('cmp-bar');
+    if (!bar) { renderBar(); bar = document.getElementById('cmp-bar'); }
+    if (!bar) return;
+    const note = document.createElement('span');
+    note.className = 'cmp-bar-note';
+    note.textContent = msg;
+    bar.appendChild(note);
+    setTimeout(() => note.remove(), 2200);
   }
 
   function renderSelection(scroll) {
