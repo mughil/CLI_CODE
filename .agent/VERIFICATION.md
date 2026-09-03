@@ -3,35 +3,34 @@
 Updated: 2026-09-03
 
 ## Counts
-- CLI_COUNT: 103 / 500  *(blocked — no verified source for +397; tracked in ROADMAP, not a delivery gate)*
-- MODEL_COUNT: 13 / >=50   (Batch 1 committed)
-- GITHUB_AI_PROJECT_COUNT: 0
+- CLI_COUNT: 103 (verified) — "500" is a ROADMAP target, not a delivery gate (no source for +397; non-fabrication rule stands)
+- MODEL_COUNT: 50 / >=50  ✅
+- GITHUB_AI_PROJECT_COUNT: 20
 
-## AI hub — batch progress
-- [x] Infra: schemas, 3 validators, `npm run check:models` wired into `npm run check`
-- [x] `docs/MODEL-DATA.md`
-- [x] Batch 1 — frontier + reasoning (13 models: OpenAI GPT-5.6 Sol/Terra/Luna,
-      Anthropic Fable 5.1 / Opus 5 / Sonnet 5 / Haiku 4.5, Google Gemini 3.8 Flash /
-      3.1 Pro / 2.5 Pro / 2.5 Flash, xAI Grok 4.6 / 4.3). All api-only, sourced.
-- [ ] Batch 2 — open-source / open-weight (Llama 4.x, DeepSeek V3.x/R1.x, Qwen3,
-      Mistral, Gemma 3, Phi, OLMo, Falcon, Command) — needs HF/official verification
-- [ ] Batch 3 — coding (Qwen3-Coder, DeepSeek-Coder, Codestral, GPT-5.x-Codex, StarCoder2)
-- [ ] Batch 4 — multimodal / vision / audio / speech
-- [ ] Batch 5 — small / local (Gemma 3n, Phi mini, Qwen3 0.6-4B, SmolLM, Llama 3.2 1/3B)
-- [ ] Batch 6 — embeddings + other
-- [ ] Batch 7 — data/ai-projects.json (llama.cpp, Ollama, vLLM, Transformers,
-      LangChain, LlamaIndex, DSPy, Aider, OpenHands, LiteLLM, …) via live GitHub
-- [ ] Batch 8 — UI: models.html (search+facets), model.html?slug=, model-compare.html,
-      find-model.html, run-local.html, ai-explorer.html + assets/js/model*.js;
-      reuse the CLI search/data/store patterns
-- [ ] Batch 9 — SEO (model pages -> sitemap), nav, CI job, README/ROADMAP updates
-- [ ] Batch 10 — ZIP verify in clean dir + push + GitHub Actions + live verify
+## AI hub — COMPLETE (batches 1–10)
+- Infra: schema/model.schema.json, schema/aiproject.schema.json,
+  scripts/{validate-models,model-stats,check-model-links}.mjs, docs/MODEL-DATA.md
+- Data: data/models/*.json (50, per-group) + data/ai-projects.json (20),
+  merged by build-data.mjs -> data/models.json + data/model-meta.json
+- 18 providers · 22 open-source · 11 open-weight · 13 api-only ·
+  1 research-license · 34 local-capable · 37 API-available. Every field sourced.
+- UI: models.html, model.html?slug=, find-model.html, model-compare.html,
+  run-local.html, ai-explorer.html + assets/js/{modeldata,models,model,
+  find-model,model-compare,run-local,ai-explorer}.js
+- Nav: "Models" added everywhere. Sitemap + SEO + docs + README + ROADMAP +
+  CONTRIBUTING updated. `npm run check` includes check:models.
 
-## Perf/a11y pass — DONE, committed (a2a4d47, 28b1594, a4f0177). NOT pushed.
-index P98 · registry P99 · cli/saved/compare P100 · find/stacks/docs P97-100
-A11y 100 · Best-practices 100 · SEO 100 (indexed pages).
+## Verification (mobile Lighthouse, gzip server ≈ production)
+- models P98 · model P100 · find-model P100 · compare P100 · run-local P100 ·
+  ai-explorer P95 — all A100 (a11y) B100 SEO100, CLS <= 0.08
+- Fresh-extract ZIP test: npm install + build + check all green (16 html, 25 js)
+
+## Pending
+- git push (24 commits ahead of origin/main including the perf/a11y pass and
+  the whole AI hub)
+- GitHub Actions run + live verification at https://mughil.github.io/CLI_CODE/
 
 ## Do NOT
-- run `git checkout -- .` (discarded uncommitted work twice)
-- fabricate model facts — omit unverified fields
-- call open-weight models "open source"
+- run `git checkout -- .`
+- fabricate model facts
+- call open-weight "open source"
