@@ -26,7 +26,8 @@
     mount.innerHTML = `
       <h1 class="sec-title">Run AI models <span class="g">locally</span></h1>
       <p class="sec-sub"><b>${local.length}</b> of ${data.models.length} models in the directory can run on your own hardware. Grouped by runner where documented. Hardware needs vary by quantization — figures on each model page come from its model card, not estimates.</p>
-      <div class="preset-grid" style="margin-top:20px">
+      <h2 class="sub-h" style="margin-top:24px">By runner</h2>
+      <div class="preset-grid">
         ${RUNNERS.map(([key, label, blurb]) => {
           const list = local.filter((m) => (m.localRunners || []).includes(key));
           if (!list.length) return '';
