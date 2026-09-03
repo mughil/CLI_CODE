@@ -126,7 +126,7 @@
       ${e.description && e.description !== e.summary ? `<p class="cli-desc">${esc(e.description)}</p>` : ''}
 
       <section class="cli-sec"><h2>At a glance</h2>
-        <dl class="meta-grid">${meta.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join('')}</dl>
+        <div class="meta-grid">${meta.map(([k, v]) => `<dl class="mg-cell"><dt>${esc(k)}</dt><dd>${v}</dd></dl>`).join('')}</div>
       </section>
 
       ${section('Install', e.install.length ? e.install.map(cmdRow).join('') : '<p class="muted">No install command recorded. See the repository below.</p>')}

@@ -451,6 +451,7 @@ a.tagcat:hover { border-color: var(--accent); color: var(--accent-ink); text-dec
 .cli-sec h2 { font-size: 1.05rem; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line-2); }
 
 .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px 20px; margin: 0; }
+.meta-grid .mg-cell { margin: 0; }
 .meta-grid dt { font: 600 0.66rem var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); }
 .meta-grid dd { margin: 3px 0 0; color: var(--ink); font-size: 0.9rem; }
 

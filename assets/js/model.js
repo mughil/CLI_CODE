@@ -42,7 +42,7 @@
   };
   const ctxLabel = (n) => n == null ? 'Not documented' : n >= 1000000 ? (n / 1000000) + 'M tokens' : n >= 1000 ? Math.round(n / 1000) + 'K tokens' : n + ' tokens';
 
-  function row(k, v) { return v ? `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>` : ''; }
+  function row(k, v) { return v ? `<dl class="mg-cell"><dt>${esc(k)}</dt><dd>${v}</dd></dl>` : ''; }
   function sec(t, body) { return body ? `<section class="cli-sec"><h2>${esc(t)}</h2>${body}</section>` : ''; }
   function card(slug, bySlug) {
     const t = bySlug.get(slug); if (!t) return '';
@@ -112,8 +112,8 @@
         </div>
       </header>
       ${m.description ? `<p class="cli-desc">${esc(m.description)}</p>` : ''}
-      <section class="cli-sec"><h2>At a glance</h2><dl class="meta-grid">${facts}</dl></section>
-      <section class="cli-sec"><h2>Capabilities</h2><dl class="meta-grid">${caps}</dl></section>
+      <section class="cli-sec"><h2>At a glance</h2><div class="meta-grid">${facts}</div></section>
+      <section class="cli-sec"><h2>Capabilities</h2><div class="meta-grid">${caps}</div></section>
       ${sec('Strengths', (m.strengths || []).length ? `<ul class="usecases">${m.strengths.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>` : '')}
       ${sec('Limitations', (m.limitations || []).length ? `<ul class="usecases">${m.limitations.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>` : '')}
       ${sec('Ideal use cases', (m.useCases || []).length ? `<ul class="usecases">${m.useCases.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>` : '')}
