@@ -1,6 +1,18 @@
 {
   "$comment": "Contributor-maintained overlay of human-verified facts, keyed by tool slug. Merged over derived data by scripts/build-data.mjs (arrays union, scalars win). Only add facts you can verify from the tool's own docs; set nothing you are unsure of. See CONTRIBUTING.md.",
   "entries": {
+    "anygen": {
+      "$note": "Upstream homepage https://anygen.com no longer serves HTTPS (dead); no verified replacement — suppress the broken link.",
+      "documentation": null
+    },
+    "intelwatch": {
+      "$note": "Upstream repo github.com/ashroth/intelwatch returns 404 (deleted); no verified replacement — suppress the broken link.",
+      "documentation": null
+    },
+    "stata": {
+      "$note": "Upstream source_url github.com/LI-Meng420/stata-cli returns 404; homepage https://www.stata.com is valid and kept.",
+      "repository": null
+    },
     "blender": {
       "language": "C, C++, Python",
       "license": "GPL-3.0-or-later",

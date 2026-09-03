@@ -35,7 +35,6 @@
       const data = await window.CLIData.load();
       S.clis = data.clis;
       S.meta = data.meta;
-      S.index = window.CLISearch.build(S.clis);
     } catch (err) {
       el.tbody.innerHTML = `<tr><td colspan="6" class="empty">Could not load the dataset (${String(err.message || err)}).<br>Serve the folder over HTTP — <code>npm run build</code> then a static server.</td></tr>`;
       return;
@@ -45,6 +44,10 @@
     wire();
     readURL();
     apply();
+
+    // warm the search index off the critical path so the first query is instant
+    const warm = () => { S.index = S.index || window.CLISearch.build(S.clis); };
+    ('requestIdleCallback' in window) ? requestIdleCallback(warm, { timeout: 2000 }) : setTimeout(warm, 800);
   }
 
   function opts(list, label) {
@@ -191,6 +194,7 @@
     let rows;
     let terms = [];
     if (S.q) {
+      S.index = S.index || window.CLISearch.build(S.clis); // built on first search, not on load
       const hits = window.CLISearch.query(S.index, S.q, { limit: 500 });
       terms = window.CLISearch.queryTokens(S.q);
       rows = hits.filter((h) => passesFacets(h.entry)).map((h) => ({ ...h.entry, _score: h.score, _terms: h.terms }));

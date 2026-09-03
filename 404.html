@@ -11,7 +11,9 @@
      unknown current directory. Works at "/" and at "/CLI_CODE/" alike. -->
 <script>
   (function () {
-    var seg = location.pathname.split('/')[1] || '';
+    var raw = location.pathname.split('/')[1] || '';
+    // only a plain path segment can be a Pages project root; anything else -> "/"
+    var seg = /^[A-Za-z0-9._-]+$/.test(raw) ? raw : '';
     var root = seg && seg.indexOf('.') === -1 ? '/' + seg + '/' : '/';
     document.write('<base href="' + root + '">');
   })();

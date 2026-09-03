@@ -380,6 +380,7 @@ kbd {
 .sm { font-size: 0.82rem; }
 .nowrap { white-space: nowrap; }
 .linklike { background: none; border: 0; color: var(--accent-ink); cursor: pointer; font: inherit; text-decoration: underline; padding: 0; }
+@media (pointer: coarse) { .linklike { padding: 4px 2px; } }
 
 .btn-sm {
   display: inline-flex; align-items: center; gap: 6px; font: 600 0.78rem var(--sans);
@@ -415,10 +416,14 @@ mark { background: color-mix(in srgb, var(--accent) 35%, transparent); color: in
 
 .star {
   background: none; border: 0; cursor: pointer; color: var(--ink-3); font-size: 1rem;
-  line-height: 1; padding: 2px; vertical-align: middle;
+  line-height: 1; vertical-align: middle;
+  /* WCAG 2.2 AA target size — icon-only control needs its own hit area */
+  min-width: 24px; min-height: 24px; padding: 4px;
+  display: inline-flex; align-items: center; justify-content: center;
 }
 .star:hover, .star.on { color: var(--warn); }
 .star.lg { font-size: 1.5rem; }
+@media (pointer: coarse) { .star { min-width: 32px; min-height: 32px; } }
 
 .tagcat {
   display: inline-block; font: 600 0.68rem var(--mono); text-transform: uppercase; letter-spacing: 0.03em;

@@ -250,7 +250,7 @@
     },
     {
       "id": "Python",
-      "count": 78
+      "count": 77
     },
     {
       "id": "Rust",
@@ -258,7 +258,7 @@
     },
     {
       "id": "C",
-      "count": 44
+      "count": 45
     },
     {
       "id": "C++",
@@ -422,7 +422,7 @@
   "packageManagers": [
     {
       "id": "brew",
-      "count": 304
+      "count": 303
     },
     {
       "id": "pip",

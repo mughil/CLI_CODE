@@ -212,14 +212,20 @@ function normalize(raw, source) {
     examples: (ov.examples || []).map((e) => ({
       title: e.title, command: e.command, ...(e.description ? { description: e.description } : {}),
     })),
-    repository: ov.repository ?? raw.source_url ?? null,
-    documentation: ov.documentation ?? raw.homepage ?? null,
+    // overlay wins even when it sets an explicit null — lets a contributor
+    // suppress a dead upstream link without inventing a replacement.
+    repository: 'repository' in ov ? ov.repository : (raw.source_url ?? null),
+    documentation: 'documentation' in ov ? ov.documentation : (raw.homepage ?? null),
     packageManagers,
     difficulty: ov.difficulty ?? null,
     alternatives: [...new Set(ov.alternatives || [])].sort(),
     related: [...new Set(ov.related || [])].sort(),
     source,
-    dataQuality: overlay[slug] ? 'curated' : 'derived',
+    // "curated" means the overlay supplies verified domain facts — not merely a
+    // link suppression or a note.
+    dataQuality: ov && Object.keys(ov).some(
+      (k) => !k.startsWith('$') && !['repository', 'documentation'].includes(k) && ov[k] != null,
+    ) ? 'curated' : 'derived',
     lastVerified: dates[raw.name] || null,
   };
 }

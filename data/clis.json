@@ -488,7 +488,7 @@
       ],
       "examples": [],
       "repository": null,
-      "documentation": "https://anygen.com",
+      "documentation": null,
       "packageManagers": [
         "git",
         "pip"
@@ -3284,8 +3284,8 @@
         }
       ],
       "examples": [],
-      "repository": null,
-      "documentation": "https://curlie.io",
+      "repository": "https://github.com/rs/curlie",
+      "documentation": "https://github.com/rs/curlie",
       "packageManagers": [
         "brew"
       ],
@@ -4000,8 +4000,8 @@
         }
       ],
       "examples": [],
-      "repository": null,
-      "documentation": "https://dns.lookup.dog",
+      "repository": "https://github.com/ogham/dog",
+      "documentation": "https://github.com/ogham/dog",
       "packageManagers": [
         "brew"
       ],
@@ -4079,8 +4079,8 @@
         }
       ],
       "examples": [],
-      "repository": null,
-      "documentation": "https://dooit.readthedocs.io",
+      "repository": "https://github.com/dooit-org/dooit",
+      "documentation": "https://dooit-org.github.io/dooit/",
       "packageManagers": [
         "pipx"
       ],
@@ -8284,7 +8284,7 @@
       ],
       "examples": [],
       "repository": null,
-      "documentation": "https://github.com/ashroth/intelwatch",
+      "documentation": null,
       "packageManagers": [
         "git",
         "pip"
@@ -8313,22 +8313,20 @@
       "platforms": [
         "linux"
       ],
-      "language": "Python",
+      "language": "C",
       "runtime": null,
       "license": "GPL-2.0",
       "install": [
         {
-          "method": "brew",
-          "command": "brew install iotop",
+          "method": "shell",
+          "command": "sudo apt install iotop",
           "label": "Install"
         }
       ],
       "examples": [],
-      "repository": null,
-      "documentation": "https://repo.or.cz/w/iotop.git",
-      "packageManagers": [
-        "brew"
-      ],
+      "repository": "https://github.com/Tomas-M/iotop",
+      "documentation": "https://github.com/Tomas-M/iotop",
+      "packageManagers": [],
       "difficulty": null,
       "alternatives": [],
       "related": [],
@@ -16618,7 +16616,7 @@
         }
       ],
       "examples": [],
-      "repository": "https://github.com/LI-Meng420/stata-cli",
+      "repository": null,
       "documentation": "https://www.stata.com",
       "packageManagers": [
         "git",
@@ -19161,7 +19159,7 @@
       ],
       "examples": [],
       "repository": null,
-      "documentation": "http://websocketd.com",
+      "documentation": "https://websocketd.com",
       "packageManagers": [
         "brew"
       ],
