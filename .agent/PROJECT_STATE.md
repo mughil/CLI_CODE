@@ -43,3 +43,18 @@ Updated: 2026-09-03
 - run `git checkout -- .`
 - fabricate model facts
 - call open-weight "open source"
+
+## CLI registry -> 500 (2026-09-03, commits 9c56a85 / d978ba2)
+- Root cause of "still 103": none. data.js fetches data/clis.json (cache:no-cache),
+  every count dynamic, no service worker, no hardcoded 103. Source data was 103.
+- data/catalog_registry.json = new canonical source: 397 hand-curated REAL CLI tools.
+  build-data.mjs merges harness(79)+public(24)+catalog(397)=500. All ids/slugs unique.
+- validate-data.mjs: hard size gate prints "CLI DATA VALIDATION ... PASS", fails
+  unless total==uniqIds==uniqSlugs==500 (EXPECT_TOOLS override). In npm run check + CI.
+- build-data.mjs: content-hash ?v= cache-busting on all assets/{js,css} refs (STEP 10).
+- registry.js: initial render capped at 60 rows (+ "show all") -> mobile perf 85 -> 97.
+- Live verified: registry "500 of 500", search finds kubectl/ripgrep/ffmpeg,
+  source=catalog filter -> 397, cli.html detail for new tools, home "500 tools",
+  Find My CLI + Compare + Stacks OK, AI hub 50 models OK, zero console errors.
+- Lighthouse live: registry P97 A100 B100 SEO100, cli P99, index P99.
+- GitHub Actions runs #9 #10 success. ZIP fresh-extract: 500 / PASS.
