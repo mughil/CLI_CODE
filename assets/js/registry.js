@@ -11,7 +11,7 @@
     q: '', source: 'all', category: 'all', platform: 'all',
     language: 'all', pm: 'all', difficulty: 'all', curated: false,
     sort: 'relevance', dir: -1,
-    view: [], sel: -1,
+    view: [], sel: -1, limit: 60,
   };
   const el = {};
 
@@ -113,6 +113,7 @@
       S.sel += e.key === 'ArrowDown' ? 1 : -1;
       if (S.sel < 0) S.sel = 0;
       if (S.sel >= S.view.length) S.sel = S.view.length - 1;
+      if (S.sel >= (S.limit || Infinity)) { S.limit = Infinity; render(); }
       renderSelection(true);
     }
     if (e.key === 'Enter' && S.sel >= 0 && S.view[S.sel]) {
@@ -211,14 +212,17 @@
 
     S.view = rows;
     S._terms = terms;
+    S.limit = 60; // cap the initial DOM; "show all" or keyboard nav lifts it
     render();
   }
 
   function render() {
     const n = S.view.length;
+    const shown = Math.min(n, S.limit || n);
     el.count.innerHTML = `<b>${n}</b> of ${S.clis.length} tools` +
       (S.q ? ` · matching “${window.CLISearch.escapeHtml(S.q)}”` : '') +
-      (S.q ? '' : ` · sorted by ${S.sort === 'relevance' ? 'name' : S.sort}`);
+      (S.q ? '' : ` · sorted by ${S.sort === 'relevance' ? 'name' : S.sort}`) +
+      (n > shown ? ` · showing ${shown} <button type="button" class="linklike" id="show-all">show all</button>` : '');
 
     el.head.querySelectorAll('th[data-sort]').forEach((th) => {
       const on = th.dataset.sort === S.sort;
@@ -237,7 +241,7 @@
     const st = window.CLIStore.get();
     const fav = st.favorites, cmp = st.compare;
 
-    el.tbody.innerHTML = S.view.map((e, i) => `
+    el.tbody.innerHTML = S.view.slice(0, shown).map((e, i) => `
       <tr class="row${i === S.sel ? ' sel' : ''}" data-slug="${e.slug}">
         <td class="c-name">
           <button class="star${fav.includes(e.slug) ? ' on' : ''}" data-fav="${e.slug}" aria-label="${fav.includes(e.slug) ? 'Remove from' : 'Add to'} favorites" aria-pressed="${fav.includes(e.slug)}">${fav.includes(e.slug) ? '★' : '☆'}</button>
@@ -256,6 +260,7 @@
         </td>
       </tr>`).join('');
 
+    document.getElementById('show-all')?.addEventListener('click', () => { S.limit = Infinity; render(); });
     renderBar();
   }
 
