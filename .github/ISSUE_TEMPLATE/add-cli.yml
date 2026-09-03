@@ -1,7 +1,7 @@
 name: Add a CLI
 description: Propose a command-line tool that isn't in the directory yet.
 title: "Add CLI: <tool name>"
-labels: ["add-cli"]
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:

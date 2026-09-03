@@ -1,0 +1,60 @@
+name: Documentation
+description: Something in the README, CONTRIBUTING, docs page or in-app copy is wrong, missing or unclear.
+title: "Docs: <short description>"
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Documentation fixes are very welcome — including small ones. If you already
+        know the fix, feel free to send a PR directly instead of opening this.
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options:
+        - README.md
+        - CONTRIBUTING.md
+        - docs/MODEL-DATA.md
+        - docs.html (in-app documentation)
+        - SECURITY.md / CODE_OF_CONDUCT.md
+        - ROADMAP.md / CHANGELOG.md
+        - Issue or PR templates
+        - In-app copy (button, label, empty state, help text)
+        - Other
+    validations: { required: true }
+  - type: input
+    id: location
+    attributes:
+      label: Exact location
+      description: File and heading, or the page URL and the text you saw.
+      placeholder: CONTRIBUTING.md → "Add an AI model"
+    validations: { required: true }
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem
+      options:
+        - Incorrect / out of date
+        - Missing information
+        - Confusing or ambiguous
+        - Broken link
+        - Typo or formatting
+    validations: { required: true }
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+    validations: { required: true }
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested wording
+      description: Optional, but the fastest way to get it fixed.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked this is still wrong on the current `main`
+          required: true

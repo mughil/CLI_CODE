@@ -1,0 +1,110 @@
+name: Add an AI model
+description: Propose an AI / LLM model that isn't in the directory yet.
+title: "Add model: <model name>"
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every model fact in CLI_CODE must be traceable to an official source.
+        Please fill in what you can verify and leave the rest blank —
+        **"unknown" is always better than a guess.**
+        Full rules: [docs/MODEL-DATA.md](https://github.com/mughil/CLI_CODE/blob/main/docs/MODEL-DATA.md)
+  - type: input
+    id: name
+    attributes:
+      label: Model name
+      placeholder: Example Model 8B
+    validations: { required: true }
+  - type: input
+    id: provider
+    attributes:
+      label: Provider / organisation
+      placeholder: Example AI
+    validations: { required: true }
+  - type: input
+    id: source
+    attributes:
+      label: Official source URL
+      description: Model card, official docs, or the provider's announcement. This is required.
+      placeholder: https://huggingface.co/example/model-8b
+    validations: { required: true }
+  - type: dropdown
+    id: openness
+    attributes:
+      label: Openness (by LICENCE, not by whether weights are downloadable)
+      options:
+        - open-source (OSI-style licence — Apache-2.0, MIT)
+        - open-weight (downloadable under a custom/restricted licence — Llama, Gemma)
+        - proprietary
+        - api-only
+        - research-license
+        - commercial-use-restricted
+        - other-unknown
+    validations: { required: true }
+  - type: input
+    id: license
+    attributes:
+      label: Licence identifier
+      placeholder: Apache-2.0
+  - type: dropdown
+    id: categories
+    attributes:
+      label: Categories
+      multiple: true
+      options:
+        - frontier
+        - reasoning
+        - general-purpose
+        - coding
+        - multimodal
+        - vision
+        - audio
+        - speech
+        - embeddings
+        - small-language-model
+        - local
+        - long-context
+        - agents
+        - research
+    validations: { required: true }
+  - type: input
+    id: context
+    attributes:
+      label: Context window
+      placeholder: 128000
+  - type: input
+    id: params
+    attributes:
+      label: Parameters
+      placeholder: 8B (or "117B total / 5.1B active")
+  - type: dropdown
+    id: availability
+    attributes:
+      label: How can it be used?
+      multiple: true
+      options: [api, download, local, research-only, waitlist]
+    validations: { required: true }
+  - type: input
+    id: runners
+    attributes:
+      label: Local runners that document support
+      description: Only ones you can verify — Ollama, llama.cpp, MLX, vLLM, Transformers, LocalAI, LM Studio, TGI.
+      placeholder: ollama, llama.cpp
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should it be in the directory?
+      description: What does it do better or differently than models already listed?
+    validations: { required: true }
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: Every fact above comes from the official source I linked — nothing is guessed
+          required: true
+        - label: I classified openness by the actual licence, not by whether weights can be downloaded
+          required: true
+        - label: I searched existing models and issues for a duplicate
+          required: true

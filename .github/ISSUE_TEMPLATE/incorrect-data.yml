@@ -1,7 +1,7 @@
 name: Incorrect data
 description: A tool's profile has a wrong or outdated fact.
 title: "Data: <slug> — <what's wrong>"
-labels: ["data"]
+labels: ["bug"]
 body:
   - type: input
     id: slug

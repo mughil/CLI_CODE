@@ -1,0 +1,64 @@
+name: Bug report
+description: Something on the site is broken or behaves incorrectly.
+title: "Bug: <short description>"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. For a **wrong fact about a tool or model**, please use
+        "Incorrect data" instead. For a **security issue**, do not open an issue —
+        use a [private advisory](https://github.com/mughil/CLI_CODE/security/advisories/new).
+  - type: input
+    id: page
+    attributes:
+      label: Page / URL
+      description: The full URL where it happens, including any query string.
+      placeholder: https://mughil.github.io/CLI_CODE/registry.html?q=ripgrep
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the URL above
+        2. Type "ripgrep" in the search box
+        3. Press ArrowDown
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened
+    validations: { required: true }
+  - type: textarea
+    id: console
+    attributes:
+      label: Console / network errors
+      description: Open DevTools (F12) → Console and Network. Paste anything red.
+      render: text
+  - type: input
+    id: env
+    attributes:
+      label: Browser and OS
+      placeholder: Firefox 141 on Windows 11
+    validations: { required: true }
+  - type: dropdown
+    id: viewport
+    attributes:
+      label: Viewport
+      options: [Desktop, Tablet, Mobile]
+    validations: { required: true }
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I reloaded with a hard refresh (Ctrl/Cmd+Shift+R) and it still happens
+          required: true
+        - label: I searched existing issues for a duplicate
+          required: true

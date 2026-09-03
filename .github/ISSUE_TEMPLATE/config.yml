@@ -1,1 +1,14 @@
 blank_issues_enabled: false
+contact_links:
+  - name: 📖 Live site
+    url: https://mughil.github.io/CLI_CODE/
+    about: Search 500 CLI tools and 50 AI models before opening an issue.
+  - name: 🛠 Contributing guide
+    url: https://github.com/mughil/CLI_CODE/blob/main/CONTRIBUTING.md
+    about: How to add a tool, correct a fact, add a model, and validate your change.
+  - name: 🤖 AI model data rules
+    url: https://github.com/mughil/CLI_CODE/blob/main/docs/MODEL-DATA.md
+    about: Sourcing rules, the openness taxonomy, and the verification workflow.
+  - name: 🔒 Report a security issue
+    url: https://github.com/mughil/CLI_CODE/security/advisories/new
+    about: Please report vulnerabilities privately, never as a public issue.
