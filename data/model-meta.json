@@ -1,0 +1,317 @@
+{
+  "generated": "static",
+  "counts": {
+    "total": 50,
+    "openSource": 22,
+    "openWeight": 11,
+    "proprietary": 13,
+    "localCapable": 34,
+    "apiAvailable": 37,
+    "providers": 18
+  },
+  "providers": [
+    {
+      "id": "Google DeepMind",
+      "count": 9
+    },
+    {
+      "id": "Alibaba Qwen",
+      "count": 6
+    },
+    {
+      "id": "OpenAI",
+      "count": 6
+    },
+    {
+      "id": "Anthropic",
+      "count": 4
+    },
+    {
+      "id": "Mistral AI",
+      "count": 4
+    },
+    {
+      "id": "DeepSeek",
+      "count": 3
+    },
+    {
+      "id": "IBM",
+      "count": 2
+    },
+    {
+      "id": "Meta",
+      "count": 2
+    },
+    {
+      "id": "Moonshot AI",
+      "count": 2
+    },
+    {
+      "id": "Technology Innovation Institute",
+      "count": 2
+    },
+    {
+      "id": "xAI",
+      "count": 2
+    },
+    {
+      "id": "Zhipu AI",
+      "count": 2
+    },
+    {
+      "id": "AI21 Labs",
+      "count": 1
+    },
+    {
+      "id": "Allen Institute for AI",
+      "count": 1
+    },
+    {
+      "id": "Black Forest Labs",
+      "count": 1
+    },
+    {
+      "id": "Cohere",
+      "count": 1
+    },
+    {
+      "id": "Microsoft",
+      "count": 1
+    },
+    {
+      "id": "Stability AI",
+      "count": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": "general-purpose",
+      "count": 35
+    },
+    {
+      "id": "local",
+      "count": 29
+    },
+    {
+      "id": "long-context",
+      "count": 27
+    },
+    {
+      "id": "open-weight",
+      "count": 24
+    },
+    {
+      "id": "multimodal",
+      "count": 23
+    },
+    {
+      "id": "open-source",
+      "count": 22
+    },
+    {
+      "id": "coding",
+      "count": 18
+    },
+    {
+      "id": "reasoning",
+      "count": 17
+    },
+    {
+      "id": "vision",
+      "count": 17
+    },
+    {
+      "id": "agents",
+      "count": 16
+    },
+    {
+      "id": "frontier",
+      "count": 14
+    },
+    {
+      "id": "small-language-model",
+      "count": 12
+    },
+    {
+      "id": "research",
+      "count": 7
+    },
+    {
+      "id": "audio",
+      "count": 2
+    },
+    {
+      "id": "embeddings",
+      "count": 2
+    },
+    {
+      "id": "speech",
+      "count": 2
+    }
+  ],
+  "openness": [
+    {
+      "id": "open-source",
+      "count": 22
+    },
+    {
+      "id": "api-only",
+      "count": 13
+    },
+    {
+      "id": "open-weight",
+      "count": 11
+    },
+    {
+      "id": "commercial-use-restricted",
+      "count": 2
+    },
+    {
+      "id": "other-unknown",
+      "count": 1
+    },
+    {
+      "id": "research-license",
+      "count": 1
+    }
+  ],
+  "availability": [
+    {
+      "id": "download",
+      "count": 37
+    },
+    {
+      "id": "api",
+      "count": 36
+    },
+    {
+      "id": "local",
+      "count": 33
+    },
+    {
+      "id": "research-only",
+      "count": 1
+    },
+    {
+      "id": "waitlist",
+      "count": 1
+    }
+  ],
+  "contextBuckets": [
+    {
+      "id": "unknown",
+      "count": 17
+    },
+    {
+      "id": "large",
+      "count": 13
+    },
+    {
+      "id": "medium",
+      "count": 13
+    },
+    {
+      "id": "very-large",
+      "count": 6
+    },
+    {
+      "id": "small",
+      "count": 1
+    }
+  ],
+  "localRunners": [
+    {
+      "id": "transformers",
+      "count": 34
+    },
+    {
+      "id": "vllm",
+      "count": 28
+    },
+    {
+      "id": "llama.cpp",
+      "count": 18
+    },
+    {
+      "id": "ollama",
+      "count": 15
+    },
+    {
+      "id": "mlx",
+      "count": 8
+    }
+  ],
+  "projects": {
+    "count": 20,
+    "categories": [
+      {
+        "id": "rag",
+        "count": 7
+      },
+      {
+        "id": "inference",
+        "count": 6
+      },
+      {
+        "id": "app-framework",
+        "count": 6
+      },
+      {
+        "id": "local-runner",
+        "count": 5
+      },
+      {
+        "id": "agents",
+        "count": 5
+      },
+      {
+        "id": "orchestration",
+        "count": 5
+      },
+      {
+        "id": "optimization",
+        "count": 4
+      },
+      {
+        "id": "serving",
+        "count": 3
+      },
+      {
+        "id": "training",
+        "count": 3
+      },
+      {
+        "id": "evaluation",
+        "count": 3
+      },
+      {
+        "id": "fine-tuning",
+        "count": 2
+      },
+      {
+        "id": "prompt-tooling",
+        "count": 2
+      },
+      {
+        "id": "coding",
+        "count": 2
+      },
+      {
+        "id": "observability",
+        "count": 2
+      },
+      {
+        "id": "vector-search",
+        "count": 2
+      },
+      {
+        "id": "quantization",
+        "count": 1
+      },
+      {
+        "id": "ai-gateway",
+        "count": 1
+      }
+    ]
+  }
+}

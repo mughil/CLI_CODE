@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230f172a%27/%3E%3Cpath d=%27M8 11l5 5-5 5M16 21h9%27 stroke=%27%2322c55e%27 stroke-width=%273%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<title>AI models — CLI_CODE</title>
+<meta name="description" content="Search and filter an open directory of AI / LLM models by provider, open-source status, availability, capability, context window and local support. Every fact is source-linked.">
+<!-- SEO:auto -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CLI_CODE">
+<meta property="og:title" content="AI models — CLI_CODE">
+<meta property="og:description" content="Search and filter an open directory of AI / LLM models by provider, open-source status, availability, capability, context window and local support. Every fact is source-linked.">
+<meta property="og:url" content="https://EXAMPLE.invalid/CLI_CODE/models.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI models — CLI_CODE">
+<meta name="twitter:description" content="Search and filter an open directory of AI / LLM models by provider, open-source status, availability, capability, context window and local support. Every fact is source-linked.">
+<!-- /SEO:auto -->
+<link rel="canonical" href="https://EXAMPLE.invalid/CLI_CODE/models.html">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/modeldata.js" defer></script>
+<script src="assets/js/search.js" defer></script>
+<script src="assets/js/store.js" defer></script>
+<script src="assets/js/theme.js" defer></script>
+<script src="assets/js/models.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> cli_code</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="registry.html">Browse</a>
+      <a href="find.html">Find</a>
+      <a href="stacks.html">Stacks</a>
+      <a href="models.html" aria-current="page">Models</a>
+      <a href="docs.html">Docs</a>
+      <a href="saved.html" class="nav-icon" aria-label="Saved" title="Saved"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg><span class="nav-badge" id="nav-fav-count" hidden></span></a>
+      <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap" style="padding-top:30px;padding-bottom:64px">
+  <h1 class="sec-title">AI <span class="g">models</span></h1>
+  <p class="sec-sub">An open, source-linked directory of AI / LLM models. <b>Open source</b> and <b>open weight</b> are labelled by actual license — not by whether weights are downloadable. Related: <a href="find-model.html">Find my model</a> · <a href="model-compare.html">Compare</a> · <a href="run-local.html">Run locally</a> · <a href="ai-explorer.html">AI OSS explorer</a>.</p>
+
+  <div class="browse-toolbar" role="search">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" type="search" placeholder="Search models — reasoning, local, vision, Apache-2.0…" autocomplete="off" aria-label="Search AI models" spellcheck="false">
+    </div>
+    <div class="filters">
+      <label>Provider <select id="f-provider" class="filter"></select></label>
+      <label>Openness <select id="f-openness" class="filter"></select></label>
+      <label>Availability <select id="f-availability" class="filter"></select></label>
+      <label>Capability <select id="f-category" class="filter"></select></label>
+      <label>Context <select id="f-context" class="filter">
+        <option value="all">Any context</option>
+        <option value="small">Small (&le;16K)</option>
+        <option value="medium">Medium (&le;200K)</option>
+        <option value="large">Large (&le;1M)</option>
+        <option value="very-large">Very large (&gt;1M)</option>
+      </select></label>
+      <label class="chk"><input type="checkbox" id="f-local"> Local-capable</label>
+      <button type="button" id="f-clear" class="btn-sm ghost">Clear</button>
+    </div>
+  </div>
+
+  <p class="reg-count" id="result-count" aria-live="polite">Loading…</p>
+
+  <div class="table-scroll">
+    <table class="reg-table">
+      <thead><tr id="thead-row">
+        <th scope="col">Model</th>
+        <th scope="col">Provider</th>
+        <th scope="col">Openness</th>
+        <th scope="col">Context</th>
+        <th scope="col">Deploy</th>
+        <th scope="col"><span class="sr-only">Actions</span></th>
+      </tr></thead>
+      <tbody id="rows"><tr><td colspan="6" class="empty">Loading model dataset…</td></tr></tbody>
+    </table>
+  </div>
+</main>
+
+<footer class="site-foot"><div class="wrap"><span>CLI_CODE — model data is source-linked; see <code>docs/MODEL-DATA.md</code>.</span><span>Apache-2.0</span></div></footer>
+</body>
+</html>

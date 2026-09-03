@@ -1,0 +1,3969 @@
+{
+  "schema": "schema/model.schema.json",
+  "count": 50,
+  "models": [
+    {
+      "id": "claude-fable-5-1",
+      "slug": "claude-fable-5-1",
+      "name": "Claude Fable 5.1",
+      "provider": "Anthropic",
+      "modelFamily": "Claude 5",
+      "version": "fable-5.1",
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "coding",
+        "long-context",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "contextWindow": 1000000,
+      "maxOutput": 128000,
+      "inputModalities": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "structuredOutput": "yes",
+      "vision": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "apiEndpointDocumentation": "https://docs.anthropic.com/en/api/messages",
+      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "pricing": {
+        "inputPerMTok": 10,
+        "outputPerMTok": 50,
+        "currency": "USD"
+      },
+      "pricingVerifiedAt": "2026-09-03",
+      "strengths": [
+        "Most capable widely-released Claude model",
+        "Long-horizon agentic work",
+        "Always-on adaptive thinking"
+      ],
+      "limitations": [
+        "Proprietary, API only",
+        "Raw chain-of-thought never returned",
+        "30-day data retention required"
+      ],
+      "useCases": [
+        "Hard reasoning",
+        "Autonomous coding agents",
+        "Long-context analysis"
+      ],
+      "alternatives": [
+        "claude-opus-5",
+        "gpt-5-6-sol",
+        "gemini-3-1-pro"
+      ],
+      "related": [
+        "claude-opus-5",
+        "claude-sonnet-5"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+          "title": "Anthropic — Models overview",
+          "verifiedAt": "2026-09-03"
+        },
+        {
+          "type": "official-docs",
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/pricing",
+          "title": "Anthropic — Pricing",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "slug": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5",
+      "provider": "Anthropic",
+      "modelFamily": "Claude 4.5",
+      "version": "haiku-4.5",
+      "releaseDate": "2025-10",
+      "modelType": [
+        "chat"
+      ],
+      "categories": [
+        "general-purpose",
+        "small-language-model",
+        "coding",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "contextWindow": 200000,
+      "maxOutput": 128000,
+      "inputModalities": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "hybrid",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "vision": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "pricing": {
+        "inputPerMTok": 1,
+        "outputPerMTok": 5,
+        "currency": "USD"
+      },
+      "pricingVerifiedAt": "2026-09-03",
+      "strengths": [
+        "Fast",
+        "Cheapest current Claude",
+        "Good for sub-agents / high volume"
+      ],
+      "limitations": [
+        "200K context (smaller than the 5-series)",
+        "Proprietary"
+      ],
+      "useCases": [
+        "Sub-agents",
+        "Classification",
+        "High-volume chat",
+        "Latency-sensitive routes"
+      ],
+      "alternatives": [
+        "claude-sonnet-5"
+      ],
+      "related": [
+        "claude-sonnet-5"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+          "title": "Anthropic — Models overview",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "claude-opus-5",
+      "slug": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "provider": "Anthropic",
+      "modelFamily": "Claude 5",
+      "version": "opus-5",
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "coding",
+        "long-context",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "contextWindow": 1000000,
+      "maxOutput": 128000,
+      "inputModalities": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "hybrid",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "structuredOutput": "yes",
+      "vision": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "apiEndpointDocumentation": "https://docs.anthropic.com/en/api/messages",
+      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "pricing": {
+        "inputPerMTok": 5,
+        "outputPerMTok": 25,
+        "currency": "USD"
+      },
+      "pricingVerifiedAt": "2026-09-03",
+      "strengths": [
+        "Strong coding and agentic performance",
+        "Adaptive thinking on by default",
+        "1M context"
+      ],
+      "limitations": [
+        "Proprietary, API only"
+      ],
+      "useCases": [
+        "Coding agents",
+        "Reasoning",
+        "Tool-use workflows"
+      ],
+      "alternatives": [
+        "claude-fable-5-1",
+        "claude-sonnet-5",
+        "gpt-5-6-sol"
+      ],
+      "related": [
+        "claude-sonnet-5",
+        "claude-haiku-4-5"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+          "title": "Anthropic — Models overview",
+          "verifiedAt": "2026-09-03"
+        },
+        {
+          "type": "official-docs",
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/pricing",
+          "title": "Anthropic — Pricing",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "claude-sonnet-5",
+      "slug": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "provider": "Anthropic",
+      "modelFamily": "Claude 5",
+      "version": "sonnet-5",
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "general-purpose",
+        "coding",
+        "long-context",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "contextWindow": 1000000,
+      "maxOutput": 128000,
+      "inputModalities": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "hybrid",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "structuredOutput": "yes",
+      "vision": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "pricing": {
+        "inputPerMTok": 3,
+        "outputPerMTok": 15,
+        "currency": "USD",
+        "notes": "Introductory $2/$10 through 2026-08-31 per pricing page at time of verification"
+      },
+      "pricingVerifiedAt": "2026-09-03",
+      "strengths": [
+        "Price/performance balance",
+        "1M context",
+        "Strong coding"
+      ],
+      "limitations": [
+        "Proprietary, API only"
+      ],
+      "useCases": [
+        "High-volume coding",
+        "Chat products",
+        "Agentic tasks"
+      ],
+      "alternatives": [
+        "claude-opus-5",
+        "gpt-5-6-luna",
+        "gemini-3-8-flash"
+      ],
+      "related": [
+        "claude-opus-5",
+        "claude-haiku-4-5"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+          "title": "Anthropic — Models overview",
+          "verifiedAt": "2026-09-03"
+        },
+        {
+          "type": "pricing-page",
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/pricing",
+          "title": "Anthropic — Pricing",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "command-a",
+      "slug": "command-a",
+      "name": "Command A",
+      "provider": "Cohere",
+      "modelFamily": "Command",
+      "version": "c4ai-command-a-03-2025",
+      "releaseDate": "2025-03",
+      "modelType": [
+        "chat",
+        "instruct"
+      ],
+      "categories": [
+        "general-purpose",
+        "agents",
+        "research",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "api",
+        "research-only"
+      ],
+      "openSourceStatus": "research-license",
+      "license": "CC-BY-NC-4.0 (plus Cohere Acceptable Use Policy)",
+      "commercialUse": "no",
+      "parameters": "111B",
+      "contextWindow": 256000,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm"
+      ],
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/CohereLabs/c4ai-command-a-03-2025",
+      "modelRepository": "https://huggingface.co/CohereLabs/c4ai-command-a-03-2025",
+      "officialDocumentation": "https://docs.cohere.com/",
+      "strengths": [
+        "256K context",
+        "23 languages",
+        "Strong RAG / tool-use focus",
+        "Weights downloadable for research"
+      ],
+      "limitations": [
+        "Weights are CC-BY-NC — NON-commercial only; commercial use requires Cohere's paid API",
+        "Not open source despite downloadable weights"
+      ],
+      "useCases": [
+        "Enterprise RAG (via API)",
+        "Multilingual assistants",
+        "Non-commercial research"
+      ],
+      "alternatives": [
+        "mistral-small-4",
+        "claude-sonnet-5"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/CohereLabs/c4ai-command-a-03-2025",
+          "title": "c4ai-command-a-03-2025 — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-ocr",
+      "slug": "deepseek-ocr",
+      "name": "DeepSeek-OCR",
+      "provider": "DeepSeek",
+      "modelFamily": "DeepSeek-OCR",
+      "releaseDate": "2025-10-21",
+      "modelType": [
+        "multimodal",
+        "vision"
+      ],
+      "categories": [
+        "multimodal",
+        "vision",
+        "small-language-model",
+        "open-source",
+        "local"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "MIT",
+      "commercialUse": "yes",
+      "parameters": "3B",
+      "architecture": "Vision-language; visual-text compression for document conversion",
+      "inputModalities": [
+        "image",
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "vision": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Small — 3B VLM runs on a single consumer GPU; inference resolutions 512–1280",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/deepseek-ai/DeepSeek-OCR",
+      "modelRepository": "https://huggingface.co/deepseek-ai/DeepSeek-OCR",
+      "strengths": [
+        "MIT",
+        "Tiny (3B) — cheap to run",
+        "Markdown output + grounding",
+        "Multiple resolution tiers"
+      ],
+      "limitations": [
+        "Narrow scope: OCR / document conversion, not general chat"
+      ],
+      "useCases": [
+        "Document digitization",
+        "PDF -> Markdown pipelines",
+        "Local OCR at scale"
+      ],
+      "alternatives": [
+        "qwen3-vl-235b-a22b"
+      ],
+      "related": [
+        "deepseek-v4-flash"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-OCR",
+          "title": "deepseek-ai/DeepSeek-OCR — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "slug": "deepseek-v4-flash",
+      "name": "DeepSeek-V4-Flash",
+      "provider": "DeepSeek",
+      "modelFamily": "DeepSeek-V4",
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "coding",
+        "open-source",
+        "open-weight",
+        "local",
+        "long-context"
+      ],
+      "availability": [
+        "api",
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "MIT",
+      "commercialUse": "yes",
+      "parameters": "284B total",
+      "activeParameters": "13B",
+      "architecture": "Mixture-of-Experts; hybrid compressed-sparse attention",
+      "contextWindow": 1000000,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "vllm",
+        "transformers"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Multi-GPU / datacenter class; FP4+FP8 mixed precision for deployment (varies significantly by quant and serving stack — see model card)",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+      "modelRepository": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+      "officialDocumentation": "https://huggingface.co/deepseek-ai",
+      "strengths": [
+        "MIT licensed — genuinely open",
+        "1M context",
+        "MoE: 13B active params keeps inference cheap for the size"
+      ],
+      "limitations": [
+        "Large total footprint (284B) — real hardware needs are substantial",
+        "Text only"
+      ],
+      "useCases": [
+        "Self-hosted frontier reasoning",
+        "Long-context analysis",
+        "Coding"
+      ],
+      "alternatives": [
+        "qwen3-8-2-4t-a95b",
+        "llama-4-maverick",
+        "claude-sonnet-5"
+      ],
+      "related": [
+        "deepseek-v4-flash-vision-exp"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+          "title": "DeepSeek-V4-Flash — Hugging Face model card",
+          "verifiedAt": "2026-09-03"
+        },
+        {
+          "type": "huggingface",
+          "url": "https://huggingface.co/deepseek-ai",
+          "title": "DeepSeek — Hugging Face org",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-v4-flash-vision-exp",
+      "slug": "deepseek-v4-flash-vision-exp",
+      "name": "DeepSeek-V4-Flash-Vision-Exp",
+      "provider": "DeepSeek",
+      "modelFamily": "DeepSeek-V4",
+      "modelType": [
+        "chat",
+        "multimodal",
+        "vision"
+      ],
+      "categories": [
+        "multimodal",
+        "vision",
+        "open-source",
+        "open-weight",
+        "local",
+        "research"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "MIT",
+      "commercialUse": "yes",
+      "parameters": "305B (approx, per org listing)",
+      "architecture": "Mixture-of-Experts, vision-language (experimental)",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "vision": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm"
+      ],
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "modelRepository": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "limitations": [
+        "Explicitly experimental",
+        "Context length and full specs not confirmed this pass"
+      ],
+      "useCases": [
+        "Vision-language research",
+        "Document / image understanding"
+      ],
+      "related": [
+        "deepseek-v4-flash"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "huggingface",
+          "url": "https://huggingface.co/deepseek-ai",
+          "title": "DeepSeek — Hugging Face org (model listing)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "embeddinggemma-300m",
+      "slug": "embeddinggemma-300m",
+      "name": "EmbeddingGemma 300M",
+      "provider": "Google DeepMind",
+      "modelFamily": "EmbeddingGemma",
+      "releaseDate": "2025-09-24",
+      "modelType": [
+        "embedding"
+      ],
+      "categories": [
+        "embeddings",
+        "small-language-model",
+        "local",
+        "open-weight"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-weight",
+      "license": "Gemma Terms of Use",
+      "commercialUse": "restricted",
+      "parameters": "300M",
+      "architecture": "Gemma 3-based encoder",
+      "contextWindow": 2048,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "embeddings"
+      ],
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "ollama",
+        "llama.cpp"
+      ],
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/google/embeddinggemma-300m",
+      "modelRepository": "https://huggingface.co/google/embeddinggemma-300m",
+      "officialDocumentation": "https://ai.google.dev/gemma/docs/embeddinggemma",
+      "strengths": [
+        "Tiny (300M) — runs on-device / CPU",
+        "Matryoshka: 768/512/256/128 dims",
+        "100+ languages",
+        "Built on Gemma 3"
+      ],
+      "limitations": [
+        "Gemma license",
+        "2048-token input limit",
+        "English-optimized despite multilingual training"
+      ],
+      "useCases": [
+        "On-device RAG",
+        "Offline semantic search",
+        "Edge retrieval",
+        "Mobile apps"
+      ],
+      "alternatives": [
+        "qwen3-embedding-8b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/google/embeddinggemma-300m",
+          "title": "google/embeddinggemma-300m — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "falcon-h1-34b-instruct",
+      "slug": "falcon-h1-34b-instruct",
+      "name": "Falcon-H1 34B Instruct",
+      "provider": "Technology Innovation Institute",
+      "modelFamily": "Falcon-H1",
+      "releaseDate": "2025-07-30",
+      "modelType": [
+        "chat",
+        "instruct"
+      ],
+      "categories": [
+        "general-purpose",
+        "open-weight",
+        "local",
+        "research"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-weight",
+      "license": "Falcon LLM License",
+      "commercialUse": "yes",
+      "parameters": "34B",
+      "architecture": "Hybrid Transformer + Mamba, decoder-only",
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm",
+        "llama.cpp"
+      ],
+      "quantizationAvailable": "yes",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct",
+      "modelRepository": "https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct",
+      "officialDocumentation": "https://falconllm.tii.ae/",
+      "strengths": [
+        "Hybrid Transformer/Mamba efficiency",
+        "Family spans 0.5B–34B for different hardware budgets",
+        "Downloadable weights, commercial use permitted"
+      ],
+      "limitations": [
+        "Custom Falcon LLM License (not OSI)",
+        "Context window not confirmed this pass",
+        "Not a reasoning model"
+      ],
+      "useCases": [
+        "Self-hosted assistants across a hardware range",
+        "Research on hybrid architectures"
+      ],
+      "alternatives": [
+        "jamba-large-1-7",
+        "qwen3-8-27b",
+        "granite-4-2-30b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct",
+          "title": "tiiuae/Falcon-H1-34B-Instruct — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "falcon-h1-7b-instruct",
+      "slug": "falcon-h1-7b-instruct",
+      "name": "Falcon-H1 7B Instruct",
+      "provider": "Technology Innovation Institute",
+      "modelFamily": "Falcon-H1",
+      "releaseDate": "2025-07-30",
+      "modelType": [
+        "chat",
+        "instruct"
+      ],
+      "categories": [
+        "general-purpose",
+        "small-language-model",
+        "local",
+        "open-weight"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-weight",
+      "license": "Falcon LLM License",
+      "commercialUse": "yes",
+      "parameters": "7B",
+      "architecture": "Hybrid Transformer + Mamba, decoder-only",
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "codeCapability": "basic",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm",
+        "llama.cpp",
+        "ollama"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "One consumer GPU (~6–16 GB by quant)",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/tiiuae/Falcon-H1-7B-Instruct",
+      "modelRepository": "https://huggingface.co/tiiuae/Falcon-H1-7B-Instruct",
+      "officialDocumentation": "https://falconllm.tii.ae/",
+      "strengths": [
+        "Hybrid Transformer/Mamba at a laptop-friendly size",
+        "Same family / license as Falcon-H1 34B",
+        "Commercial use permitted"
+      ],
+      "limitations": [
+        "Custom Falcon LLM License (not OSI)",
+        "Context window not confirmed this pass",
+        "Basic coding / reasoning at 7B"
+      ],
+      "useCases": [
+        "Local assistants on modest hardware",
+        "Edge deployment",
+        "Hybrid-architecture experimentation"
+      ],
+      "alternatives": [
+        "gemma-3-12b",
+        "granite-4-2-8b",
+        "phi-4-mini-instruct"
+      ],
+      "related": [
+        "falcon-h1-34b-instruct"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct",
+          "title": "Falcon-H1 family — model card (sizes 0.5B/1.5B/3B/7B/34B, shared license + architecture)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "flux-1-dev",
+      "slug": "flux-1-dev",
+      "name": "FLUX.1 [dev]",
+      "provider": "Black Forest Labs",
+      "modelFamily": "FLUX.1",
+      "modelType": [
+        "image-generation"
+      ],
+      "categories": [
+        "multimodal",
+        "open-weight",
+        "local",
+        "research"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "commercial-use-restricted",
+      "license": "FLUX.1 [dev] Non-Commercial License",
+      "commercialUse": "restricted",
+      "parameters": "12B",
+      "architecture": "Rectified-flow transformer (text-to-image)",
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "image"
+      ],
+      "localCapable": true,
+      "localRunners": [
+        "transformers"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "~24 GB GPU at full precision; runs in less with quantization / offloading",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/black-forest-labs/FLUX.1-dev",
+      "modelRepository": "https://huggingface.co/black-forest-labs/FLUX.1-dev",
+      "officialDocumentation": "https://blackforestlabs.ai/",
+      "strengths": [
+        "Leading open-weight text-to-image quality",
+        "Strong prompt following and typography",
+        "Large fine-tune / LoRA ecosystem"
+      ],
+      "limitations": [
+        "Non-commercial license for the model itself (FLUX.1 [pro] is the closed commercial flagship); generated outputs are usable commercially per the license — read it",
+        "Image output only"
+      ],
+      "useCases": [
+        "Local image generation",
+        "Design prototyping",
+        "Fine-tuned style models"
+      ],
+      "alternatives": [
+        "stable-diffusion-3-5-large"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev",
+          "title": "FLUX.1-dev — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gemini-2-5-flash",
+      "slug": "gemini-2-5-flash",
+      "name": "Gemini 2.5 Flash",
+      "provider": "Google DeepMind",
+      "modelFamily": "Gemini 2.5",
+      "version": "2.5-flash",
+      "modelType": [
+        "chat",
+        "multimodal"
+      ],
+      "categories": [
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "long-context"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "contextWindow": 1048576,
+      "inputModalities": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "hybrid",
+      "toolUse": "yes",
+      "vision": "yes",
+      "audio": "yes",
+      "video": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "officialDocumentation": "https://ai.google.dev/gemini-api/docs/models",
+      "useCases": [
+        "High-throughput multimodal",
+        "Cheap chat",
+        "Summarization"
+      ],
+      "alternatives": [
+        "claude-haiku-4-5"
+      ],
+      "related": [
+        "gemini-2-5-pro"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://ai.google.dev/gemini-api/docs/models",
+          "title": "Gemini API — Models",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gemini-2-5-pro",
+      "slug": "gemini-2-5-pro",
+      "name": "Gemini 2.5 Pro",
+      "provider": "Google DeepMind",
+      "modelFamily": "Gemini 2.5",
+      "version": "2.5-pro",
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "reasoning",
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "long-context"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "contextWindow": 1048576,
+      "inputModalities": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "vision": "yes",
+      "audio": "yes",
+      "video": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "officialDocumentation": "https://ai.google.dev/gemini-api/docs/models",
+      "strengths": [
+        "~1M token context",
+        "Thinking model",
+        "Broad multimodal input incl. PDF/video"
+      ],
+      "limitations": [
+        "Superseded by Gemini 3 line for frontier tasks"
+      ],
+      "useCases": [
+        "Long-document reasoning",
+        "Multimodal RAG",
+        "Code understanding"
+      ],
+      "alternatives": [
+        "gemini-3-1-pro",
+        "claude-sonnet-5"
+      ],
+      "related": [
+        "gemini-2-5-flash"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://ai.google.dev/gemini-api/docs/models",
+          "title": "Gemini API — Models",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gemini-3-1-pro",
+      "slug": "gemini-3-1-pro",
+      "name": "Gemini 3.1 Pro",
+      "provider": "Google DeepMind",
+      "modelFamily": "Gemini 3",
+      "version": "3.1-pro-preview",
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "long-context"
+      ],
+      "availability": [
+        "api",
+        "waitlist"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "inputModalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "vision": "yes",
+      "audio": "yes",
+      "video": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "officialDocumentation": "https://ai.google.dev/gemini-api/docs/models",
+      "limitations": [
+        "Preview at time of verification",
+        "Full specs on model card only"
+      ],
+      "useCases": [
+        "Complex reasoning",
+        "Multimodal analysis"
+      ],
+      "alternatives": [
+        "gemini-2-5-pro",
+        "gpt-5-6-sol",
+        "claude-opus-5"
+      ],
+      "related": [
+        "gemini-3-8-flash"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://ai.google.dev/gemini-api/docs/models",
+          "title": "Gemini API — Models",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gemini-3-8-flash",
+      "slug": "gemini-3-8-flash",
+      "name": "Gemini 3.8 Flash",
+      "provider": "Google DeepMind",
+      "modelFamily": "Gemini 3",
+      "version": "3.8-flash",
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "frontier",
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "long-context",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "inputModalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "vision": "yes",
+      "audio": "yes",
+      "video": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "apiEndpointDocumentation": "https://ai.google.dev/gemini-api/docs/models",
+      "officialDocumentation": "https://ai.google.dev/gemini-api/docs/models",
+      "strengths": [
+        "Fast multimodal (text/image/audio/video in)",
+        "Current Flash flagship"
+      ],
+      "limitations": [
+        "Context window / cutoff not stated on the models index page — see model card",
+        "Proprietary"
+      ],
+      "useCases": [
+        "Multimodal understanding",
+        "High-throughput chat",
+        "Agentic tool use"
+      ],
+      "alternatives": [
+        "gemini-2-5-flash",
+        "claude-sonnet-5",
+        "gpt-5-6-luna"
+      ],
+      "related": [
+        "gemini-3-1-pro",
+        "gemini-2-5-pro"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://ai.google.dev/gemini-api/docs/models",
+          "title": "Gemini API — Models",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gemma-3-12b",
+      "slug": "gemma-3-12b",
+      "name": "Gemma 3 12B",
+      "provider": "Google DeepMind",
+      "modelFamily": "Gemma 3",
+      "version": "gemma-3-12b-it",
+      "releaseDate": "2025",
+      "modelType": [
+        "chat",
+        "instruct",
+        "multimodal"
+      ],
+      "categories": [
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "open-weight",
+        "local",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-weight",
+      "license": "Gemma Terms of Use",
+      "commercialUse": "restricted",
+      "parameters": "12B",
+      "contextWindow": 128000,
+      "maxOutput": 8192,
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "vision": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "ollama",
+        "llama.cpp",
+        "mlx",
+        "transformers",
+        "vllm"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "One 12–24 GB GPU depending on quant",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/google/gemma-3-12b-it",
+      "modelRepository": "https://huggingface.co/google/gemma-3-12b-it",
+      "officialDocumentation": "https://ai.google.dev/gemma/docs",
+      "strengths": [
+        "Sweet-spot size for a single mid-range GPU",
+        "128K context",
+        "Multimodal"
+      ],
+      "limitations": [
+        "Gemma license",
+        "Not a reasoning model",
+        "8192 output cap"
+      ],
+      "useCases": [
+        "Local multimodal assistant",
+        "Fine-tuning base",
+        "Cost-efficient inference"
+      ],
+      "alternatives": [
+        "qwen3-8-27b",
+        "mistral-small-4",
+        "granite-4-2-8b"
+      ],
+      "related": [
+        "gemma-3-27b",
+        "gemma-3-4b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/google/gemma-3-27b-it",
+          "title": "Gemma 3 family — model card (sizes 1B/4B/12B/27B, 128K context for 4B+)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gemma-3-1b",
+      "slug": "gemma-3-1b",
+      "name": "Gemma 3 1B",
+      "provider": "Google DeepMind",
+      "modelFamily": "Gemma 3",
+      "version": "gemma-3-1b-it",
+      "releaseDate": "2025",
+      "modelType": [
+        "chat",
+        "instruct"
+      ],
+      "categories": [
+        "small-language-model",
+        "local",
+        "open-weight"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-weight",
+      "license": "Gemma Terms of Use",
+      "commercialUse": "restricted",
+      "parameters": "1B",
+      "contextWindow": 32000,
+      "maxOutput": 8192,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "vision": "no",
+      "codeCapability": "basic",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "ollama",
+        "llama.cpp",
+        "mlx",
+        "transformers"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Runs on phones / CPU (~1–2 GB at 4-bit)",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/google/gemma-3-1b-it",
+      "modelRepository": "https://huggingface.co/google/gemma-3-1b-it",
+      "officialDocumentation": "https://ai.google.dev/gemma/docs",
+      "strengths": [
+        "Genuinely phone-class",
+        "32K context at 1B",
+        "Good instruction following for the size"
+      ],
+      "limitations": [
+        "Text only (no vision at 1B)",
+        "32K context (smaller than 4B+)",
+        "Limited reasoning / knowledge"
+      ],
+      "useCases": [
+        "On-device chat",
+        "Edge classification / routing",
+        "Draft models for speculative decoding"
+      ],
+      "alternatives": [
+        "phi-4-mini-instruct",
+        "gemma-3-4b"
+      ],
+      "related": [
+        "gemma-3-4b",
+        "gemma-3-12b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/google/gemma-3-27b-it",
+          "title": "Gemma 3 family — model card (1B: 32K context, text-only)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gemma-3-27b",
+      "slug": "gemma-3-27b",
+      "name": "Gemma 3 27B",
+      "provider": "Google DeepMind",
+      "modelFamily": "Gemma 3",
+      "version": "gemma-3-27b-it",
+      "releaseDate": "2025",
+      "modelType": [
+        "chat",
+        "instruct",
+        "multimodal"
+      ],
+      "categories": [
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "open-weight",
+        "local",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-weight",
+      "license": "Gemma Terms of Use",
+      "commercialUse": "restricted",
+      "parameters": "27B",
+      "architecture": "Dense decoder-only",
+      "contextWindow": 128000,
+      "maxOutput": 8192,
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "vision": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm",
+        "ollama",
+        "llama.cpp",
+        "mlx"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "One 24 GB GPU at 4-bit; ~54 GB at bf16 (approx — see model card)",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/google/gemma-3-27b-it",
+      "modelRepository": "https://huggingface.co/google/gemma-3-27b-it",
+      "officialDocumentation": "https://ai.google.dev/gemma/docs",
+      "strengths": [
+        "Strong small-model quality",
+        "128K context",
+        "Excellent local-runner support",
+        "Vision input"
+      ],
+      "limitations": [
+        "Gemma license — custom terms, not OSI open source",
+        "Not a reasoning model",
+        "8192 output cap"
+      ],
+      "useCases": [
+        "Local multimodal assistant",
+        "On-device / edge (smaller sizes)",
+        "Fine-tuning base"
+      ],
+      "alternatives": [
+        "qwen3-8-27b",
+        "mistral-small-4",
+        "llama-4-scout"
+      ],
+      "related": [
+        "gemma-3-4b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/google/gemma-3-27b-it",
+          "title": "gemma-3-27b-it — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gemma-3-4b",
+      "slug": "gemma-3-4b",
+      "name": "Gemma 3 4B",
+      "provider": "Google DeepMind",
+      "modelFamily": "Gemma 3",
+      "version": "gemma-3-4b-it",
+      "releaseDate": "2025",
+      "modelType": [
+        "chat",
+        "instruct",
+        "multimodal"
+      ],
+      "categories": [
+        "small-language-model",
+        "multimodal",
+        "vision",
+        "open-weight",
+        "local"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-weight",
+      "license": "Gemma Terms of Use",
+      "commercialUse": "restricted",
+      "parameters": "4B",
+      "contextWindow": 128000,
+      "maxOutput": 8192,
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "vision": "yes",
+      "codeCapability": "basic",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "ollama",
+        "llama.cpp",
+        "mlx",
+        "transformers"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Runs on a laptop / small GPU (~4–8 GB at 4-bit)",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/google/gemma-3-4b-it",
+      "modelRepository": "https://huggingface.co/google/gemma-3-4b-it",
+      "officialDocumentation": "https://ai.google.dev/gemma/docs",
+      "strengths": [
+        "Small enough for consumer hardware",
+        "128K context",
+        "Multimodal at 4B"
+      ],
+      "limitations": [
+        "Gemma license",
+        "Limited reasoning / coding at this size"
+      ],
+      "useCases": [
+        "On-device assistants",
+        "Edge multimodal",
+        "Cheap local inference"
+      ],
+      "alternatives": [
+        "qwen3-8-27b",
+        "gemma-3-27b"
+      ],
+      "related": [
+        "gemma-3-27b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/google/gemma-3-27b-it",
+          "title": "Gemma 3 family — model card (sizes 1B/4B/12B/27B)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "glm-4-1v-9b-thinking",
+      "slug": "glm-4-1v-9b-thinking",
+      "name": "GLM-4.1V-9B-Thinking",
+      "provider": "Zhipu AI",
+      "modelFamily": "GLM-4V",
+      "releaseDate": "2025-07-01",
+      "modelType": [
+        "multimodal",
+        "vision",
+        "reasoning"
+      ],
+      "categories": [
+        "multimodal",
+        "vision",
+        "reasoning",
+        "small-language-model",
+        "open-source",
+        "local"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "MIT",
+      "commercialUse": "yes",
+      "parameters": "10B",
+      "contextWindow": 64000,
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "vision": "yes",
+      "video": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "One 24 GB GPU (10B model); supports arbitrary aspect ratios up to 4K images",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/zai-org/GLM-4.1V-9B-Thinking",
+      "modelRepository": "https://huggingface.co/zai-org/GLM-4.1V-9B-Thinking",
+      "strengths": [
+        "MIT",
+        "Reasoning-focused VLM at only 10B",
+        "4K image + video input",
+        "Bilingual EN/ZH"
+      ],
+      "limitations": [
+        "64K context",
+        "10B capacity limits hard reasoning vs frontier VLMs"
+      ],
+      "useCases": [
+        "Local multimodal reasoning",
+        "Document / chart / diagram understanding",
+        "Video QA on modest hardware"
+      ],
+      "alternatives": [
+        "kimi-vl-a3b-thinking",
+        "qwen3-vl-235b-a22b",
+        "gemma-3-4b"
+      ],
+      "related": [
+        "glm-4-6"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/zai-org/GLM-4.1V-9B-Thinking",
+          "title": "GLM-4.1V-9B-Thinking — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "glm-4-6",
+      "slug": "glm-4-6",
+      "name": "GLM-4.6",
+      "provider": "Zhipu AI",
+      "modelFamily": "GLM-4",
+      "releaseDate": "2025-08-08",
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "general-purpose",
+        "reasoning",
+        "coding",
+        "agents",
+        "open-source",
+        "open-weight",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "api",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "MIT",
+      "commercialUse": "yes",
+      "parameters": "357B total",
+      "architecture": "Mixture-of-Experts (glm4_moe)",
+      "contextWindow": 200000,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "vllm",
+        "transformers"
+      ],
+      "quantizationAvailable": "yes",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/zai-org/GLM-4.6",
+      "modelRepository": "https://huggingface.co/zai-org/GLM-4.6",
+      "officialDocumentation": "https://huggingface.co/zai-org",
+      "strengths": [
+        "MIT licensed",
+        "200K context (expanded from 128K) for agentic tasks",
+        "Strong coding"
+      ],
+      "limitations": [
+        "357B total needs multi-GPU",
+        "Text only"
+      ],
+      "useCases": [
+        "Self-hosted agentic coding",
+        "Long-context reasoning",
+        "Commercial products"
+      ],
+      "alternatives": [
+        "deepseek-v4-flash",
+        "kimi-k2-instruct",
+        "qwen3-8-2-4t-a95b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/zai-org/GLM-4.6",
+          "title": "GLM-4.6 — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gpt-5-6-luna",
+      "slug": "gpt-5-6-luna",
+      "name": "GPT-5.6 Luna",
+      "provider": "OpenAI",
+      "modelFamily": "GPT-5.6",
+      "version": "5.6-luna",
+      "knowledgeCutoff": "2026-02",
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "multimodal"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "contextWindow": 1050000,
+      "maxOutput": 128000,
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "vision": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "officialDocumentation": "https://developers.openai.com/api/docs/models",
+      "alternatives": [
+        "gpt-5-6-sol",
+        "gpt-5-6-terra"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://developers.openai.com/api/docs/models",
+          "title": "OpenAI API — Models",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "slug": "gpt-5-6-sol",
+      "name": "GPT-5.6 Sol",
+      "provider": "OpenAI",
+      "modelFamily": "GPT-5.6",
+      "version": "5.6-sol",
+      "knowledgeCutoff": "2026-02",
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "multimodal",
+        "long-context",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "license": null,
+      "commercialUse": "yes",
+      "contextWindow": 1050000,
+      "maxOutput": 128000,
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "structuredOutput": "yes",
+      "vision": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "apiEndpointDocumentation": "https://developers.openai.com/api/docs/models",
+      "officialDocumentation": "https://developers.openai.com/api/docs/models/gpt-5.6",
+      "strengths": [
+        "Very large 1M+ context",
+        "Configurable reasoning effort",
+        "Native tool use (web/file/computer)"
+      ],
+      "limitations": [
+        "Proprietary, API only",
+        "No local execution"
+      ],
+      "useCases": [
+        "Complex reasoning",
+        "Long-document analysis",
+        "Agentic workflows",
+        "Coding"
+      ],
+      "lastVerified": "2026-09-03",
+      "availabilityVerifiedAt": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://developers.openai.com/api/docs/models",
+          "title": "OpenAI API — Models",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gpt-5-6-terra",
+      "slug": "gpt-5-6-terra",
+      "name": "GPT-5.6 Terra",
+      "provider": "OpenAI",
+      "modelFamily": "GPT-5.6",
+      "version": "5.6-terra",
+      "knowledgeCutoff": "2026-02",
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "multimodal",
+        "long-context"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "contextWindow": 1050000,
+      "maxOutput": 128000,
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "vision": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "apiEndpointDocumentation": "https://developers.openai.com/api/docs/models",
+      "officialDocumentation": "https://developers.openai.com/api/docs/models",
+      "useCases": [
+        "Reasoning",
+        "Long-context tasks",
+        "Agentic tool use"
+      ],
+      "alternatives": [
+        "gpt-5-6-sol",
+        "gpt-5-6-luna"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://developers.openai.com/api/docs/models",
+          "title": "OpenAI API — Models",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-120b",
+      "slug": "gpt-oss-120b",
+      "name": "gpt-oss-120b",
+      "provider": "OpenAI",
+      "modelFamily": "gpt-oss",
+      "releaseDate": "2025-08-07",
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "reasoning",
+        "general-purpose",
+        "coding",
+        "agents",
+        "open-source",
+        "local",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "117B total",
+      "activeParameters": "5.1B",
+      "architecture": "Mixture-of-Experts; MXFP4 quantization on MoE weights",
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm",
+        "ollama",
+        "llama.cpp"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Fits a single 80 GB GPU (H100 / MI300X) per the model card",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/openai/gpt-oss-120b",
+      "modelRepository": "https://huggingface.co/openai/gpt-oss-120b",
+      "officialDocumentation": "https://huggingface.co/openai/gpt-oss-120b",
+      "strengths": [
+        "OpenAI's open-weight model under Apache-2.0",
+        "Configurable reasoning effort with full chain-of-thought access",
+        "Single-GPU deployable",
+        "5.1B active params"
+      ],
+      "limitations": [
+        "Text only",
+        "Context window not stated on the summary — see model card"
+      ],
+      "useCases": [
+        "Self-hosted reasoning",
+        "On-prem agents",
+        "Fine-tuning",
+        "Research on open reasoning models"
+      ],
+      "alternatives": [
+        "gpt-oss-20b",
+        "deepseek-v4-flash",
+        "glm-4-6"
+      ],
+      "related": [
+        "gpt-oss-20b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/openai/gpt-oss-120b",
+          "title": "openai/gpt-oss-120b — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "gpt-oss-20b",
+      "slug": "gpt-oss-20b",
+      "name": "gpt-oss-20b",
+      "provider": "OpenAI",
+      "modelFamily": "gpt-oss",
+      "releaseDate": "2025-08-07",
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "reasoning",
+        "small-language-model",
+        "local",
+        "general-purpose",
+        "coding",
+        "open-source"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "21B total",
+      "activeParameters": "3.6B",
+      "architecture": "Mixture-of-Experts; MXFP4 quantization",
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "ollama",
+        "llama.cpp",
+        "transformers",
+        "mlx",
+        "vllm"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Runs within 16 GB of memory per the model card — laptop / consumer-GPU friendly",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/openai/gpt-oss-20b",
+      "modelRepository": "https://huggingface.co/openai/gpt-oss-20b",
+      "strengths": [
+        "Apache-2.0 reasoning model that fits 16 GB",
+        "Configurable reasoning effort",
+        "Local tool use / function calling"
+      ],
+      "limitations": [
+        "Text only",
+        "Smaller capacity than 120b"
+      ],
+      "useCases": [
+        "Local reasoning assistant",
+        "On-device agents",
+        "Offline coding help"
+      ],
+      "alternatives": [
+        "gpt-oss-120b",
+        "phi-4-mini-instruct",
+        "gemma-3-4b"
+      ],
+      "related": [
+        "gpt-oss-120b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/openai/gpt-oss-20b",
+          "title": "openai/gpt-oss-20b — model card (referenced from gpt-oss-120b)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "granite-4-2-30b",
+      "slug": "granite-4-2-30b",
+      "name": "Granite 4.2 30B",
+      "provider": "IBM",
+      "modelFamily": "Granite 4",
+      "releaseDate": "2026",
+      "modelType": [
+        "chat",
+        "instruct"
+      ],
+      "categories": [
+        "general-purpose",
+        "coding",
+        "agents",
+        "open-source",
+        "local",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "29B",
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm",
+        "ollama"
+      ],
+      "quantizationAvailable": "yes",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/ibm-granite/granite-4.2-30b",
+      "modelRepository": "https://huggingface.co/ibm-granite/granite-4.2-30b",
+      "officialDocumentation": "https://www.ibm.com/granite/docs/",
+      "limitations": [
+        "Context window not individually confirmed this pass (Granite 4.2 8B card states 128K native) — see model card",
+        "Text only"
+      ],
+      "useCases": [
+        "Larger enterprise assistant",
+        "On-prem agentic workloads"
+      ],
+      "alternatives": [
+        "granite-4-2-8b",
+        "qwen3-8-27b",
+        "gemma-3-27b"
+      ],
+      "related": [
+        "granite-4-2-8b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "huggingface",
+          "url": "https://huggingface.co/ibm-granite",
+          "title": "IBM Granite — Hugging Face org (model listing)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "granite-4-2-8b",
+      "slug": "granite-4-2-8b",
+      "name": "Granite 4.2 8B",
+      "provider": "IBM",
+      "modelFamily": "Granite 4",
+      "releaseDate": "2026-08-25",
+      "modelType": [
+        "chat",
+        "instruct"
+      ],
+      "categories": [
+        "general-purpose",
+        "small-language-model",
+        "coding",
+        "agents",
+        "open-source",
+        "local",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "8B",
+      "architecture": "Dense transformer",
+      "contextWindow": 128000,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm",
+        "ollama",
+        "llama.cpp"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Single consumer GPU (~8–16 GB quantized)",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/ibm-granite/granite-4.2-8b",
+      "modelRepository": "https://huggingface.co/ibm-granite/granite-4.2-8b",
+      "officialDocumentation": "https://www.ibm.com/granite/docs/",
+      "strengths": [
+        "Apache-2.0",
+        "128K native context, extendable to 512K",
+        "Enterprise focus: tool use, function calling, RAG",
+        "12 languages"
+      ],
+      "limitations": [
+        "Dense 8B — not a reasoning or frontier model",
+        "Text only"
+      ],
+      "useCases": [
+        "Enterprise assistants",
+        "On-prem RAG",
+        "Agentic automation",
+        "Fine-tuning base"
+      ],
+      "alternatives": [
+        "phi-4-mini-instruct",
+        "qwen3-8-27b",
+        "gemma-3-4b"
+      ],
+      "related": [
+        "granite-4-2-30b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/ibm-granite/granite-4.2-8b",
+          "title": "ibm-granite/granite-4.2-8b — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "grok-4-3",
+      "slug": "grok-4-3",
+      "name": "Grok 4.3",
+      "provider": "xAI",
+      "modelFamily": "Grok 4",
+      "version": "4.3",
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "long-context"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "contextWindow": 1000000,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "officialDocumentation": "https://docs.x.ai/docs/models",
+      "pricing": {
+        "inputPerMTok": 1.25,
+        "outputPerMTok": null,
+        "currency": "USD",
+        "notes": "$1.25–$2.50 per 1M input tokens (tiered) per models page"
+      },
+      "pricingVerifiedAt": "2026-09-03",
+      "strengths": [
+        "1M context",
+        "Lower price than 4.5/4.6"
+      ],
+      "limitations": [
+        "Multimodal not stated",
+        "Proprietary"
+      ],
+      "useCases": [
+        "Long-context analysis",
+        "Cost-sensitive reasoning"
+      ],
+      "alternatives": [
+        "grok-4-6",
+        "gemini-2-5-pro"
+      ],
+      "related": [
+        "grok-4-6"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://docs.x.ai/docs/models",
+          "title": "xAI — Models",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "grok-4-6",
+      "slug": "grok-4-6",
+      "name": "Grok 4.6",
+      "provider": "xAI",
+      "modelFamily": "Grok 4",
+      "version": "4.6",
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
+      "openSourceStatus": "api-only",
+      "commercialUse": "yes",
+      "contextWindow": 500000,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "apiEndpointDocumentation": "https://docs.x.ai/docs/models",
+      "officialDocumentation": "https://docs.x.ai/docs/models",
+      "pricing": {
+        "inputPerMTok": 3,
+        "outputPerMTok": null,
+        "currency": "USD",
+        "notes": "Models page lists $2.00–$4.00 per 1M input tokens (tiered); output not shown in the summary"
+      },
+      "pricingVerifiedAt": "2026-09-03",
+      "strengths": [
+        "500K context",
+        "Reasoning",
+        "Real-time knowledge via X integration (per xAI)"
+      ],
+      "limitations": [
+        "Vision/multimodal not stated on models page",
+        "Proprietary"
+      ],
+      "useCases": [
+        "Reasoning",
+        "Coding",
+        "Research assistants"
+      ],
+      "alternatives": [
+        "grok-4-3",
+        "gpt-5-6-sol",
+        "claude-opus-5"
+      ],
+      "related": [
+        "grok-4-3"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "official-docs",
+          "url": "https://docs.x.ai/docs/models",
+          "title": "xAI — Models",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "jamba-large-1-7",
+      "slug": "jamba-large-1-7",
+      "name": "AI21 Jamba Large 1.7",
+      "provider": "AI21 Labs",
+      "modelFamily": "Jamba",
+      "knowledgeCutoff": "2024-08",
+      "modelType": [
+        "chat",
+        "instruct"
+      ],
+      "categories": [
+        "general-purpose",
+        "long-context",
+        "open-weight",
+        "research"
+      ],
+      "availability": [
+        "download",
+        "api"
+      ],
+      "openSourceStatus": "open-weight",
+      "license": "Jamba Open Model License",
+      "commercialUse": "yes",
+      "parameters": "398B total",
+      "activeParameters": "94B",
+      "architecture": "Hybrid SSM-Transformer (Joint Attention and Mamba)",
+      "contextWindow": 256000,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/ai21labs/AI21-Jamba-Large-1.7",
+      "modelRepository": "https://huggingface.co/ai21labs/AI21-Jamba-Large-1.7",
+      "officialDocumentation": "https://docs.ai21.com/",
+      "strengths": [
+        "Hybrid Mamba/attention — efficient at very long context",
+        "256K context",
+        "Custom but commercially-usable license"
+      ],
+      "limitations": [
+        "Custom Jamba license (not OSI)",
+        "398B total footprint",
+        "Knowledge cutoff Aug 2024"
+      ],
+      "useCases": [
+        "Very long-context processing",
+        "Cost-efficient long-doc inference",
+        "Research on SSM hybrids"
+      ],
+      "alternatives": [
+        "falcon-h1-34b-instruct",
+        "command-a"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/ai21labs/AI21-Jamba-Large-1.7",
+          "title": "AI21-Jamba-Large-1.7 — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "kimi-k2-instruct",
+      "slug": "kimi-k2-instruct",
+      "name": "Kimi K2 Instruct",
+      "provider": "Moonshot AI",
+      "modelFamily": "Kimi K2",
+      "releaseDate": "2025-07",
+      "modelType": [
+        "chat",
+        "instruct"
+      ],
+      "categories": [
+        "frontier",
+        "general-purpose",
+        "coding",
+        "agents",
+        "open-weight",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "api"
+      ],
+      "openSourceStatus": "open-weight",
+      "license": "Modified MIT License",
+      "commercialUse": "restricted",
+      "parameters": "1T total",
+      "activeParameters": "32B",
+      "architecture": "Mixture-of-Experts, 384 experts (8 active + 1 shared)",
+      "contextWindow": 128000,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+      "modelRepository": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+      "officialDocumentation": "https://huggingface.co/moonshotai",
+      "strengths": [
+        "Strong agentic / tool-use performance",
+        "1T MoE with only 32B active",
+        "Weights published"
+      ],
+      "limitations": [
+        "Modified MIT (not standard OSI) — review terms before commercial use",
+        "1T total footprint = datacenter serving",
+        "Text only"
+      ],
+      "useCases": [
+        "Agentic workflows",
+        "Coding assistants",
+        "Open frontier research"
+      ],
+      "alternatives": [
+        "deepseek-v4-flash",
+        "qwen3-8-2-4t-a95b",
+        "glm-4-6"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+          "title": "Kimi-K2-Instruct — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "kimi-vl-a3b-thinking",
+      "slug": "kimi-vl-a3b-thinking",
+      "name": "Kimi-VL-A3B-Thinking",
+      "provider": "Moonshot AI",
+      "modelFamily": "Kimi-VL",
+      "version": "Kimi-VL-A3B-Thinking-2506",
+      "releaseDate": "2025-06",
+      "modelType": [
+        "multimodal",
+        "vision",
+        "reasoning"
+      ],
+      "categories": [
+        "multimodal",
+        "vision",
+        "reasoning",
+        "small-language-model",
+        "open-source",
+        "local"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "MIT",
+      "commercialUse": "yes",
+      "parameters": "16B total",
+      "activeParameters": "~3B (A3B)",
+      "architecture": "Mixture-of-Experts vision-language with extended thinking",
+      "contextWindow": 131072,
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "vision": "yes",
+      "video": "yes",
+      "codeCapability": "basic",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Small — ~3B active params; runs on a single consumer GPU",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking-2506",
+      "modelRepository": "https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking-2506",
+      "strengths": [
+        "MIT",
+        "128K context VLM with only ~3B active params",
+        "Reasoning + video",
+        "20% shorter thinking than predecessor"
+      ],
+      "limitations": [
+        "Small capacity",
+        "Weak at code / text-only tasks"
+      ],
+      "useCases": [
+        "Local multimodal reasoning",
+        "Long-video understanding on modest hardware",
+        "Screenshot / UI agents"
+      ],
+      "alternatives": [
+        "glm-4-1v-9b-thinking",
+        "qwen3-vl-235b-a22b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking-2506",
+          "title": "Kimi-VL-A3B-Thinking-2506 — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "llama-4-maverick",
+      "slug": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "provider": "Meta",
+      "modelFamily": "Llama 4",
+      "version": "Llama-4-Maverick-17B-128E-Instruct",
+      "releaseDate": "2025",
+      "modelType": [
+        "chat",
+        "instruct",
+        "multimodal"
+      ],
+      "categories": [
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "coding",
+        "open-weight",
+        "local"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-weight",
+      "license": "Llama 4 Community License Agreement",
+      "commercialUse": "restricted",
+      "parameters": "402B total",
+      "activeParameters": "17B",
+      "architecture": "Mixture-of-Experts, 128 experts",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "vision": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm"
+      ],
+      "quantizationAvailable": "yes",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct",
+      "modelRepository": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct",
+      "officialDocumentation": "https://www.llama.com/",
+      "limitations": [
+        "Custom community license",
+        "402B total footprint needs multi-GPU",
+        "Exact context window not confirmed this pass"
+      ],
+      "useCases": [
+        "Larger self-hosted multimodal assistant",
+        "Batch inference on owned hardware"
+      ],
+      "alternatives": [
+        "llama-4-scout",
+        "deepseek-v4-flash",
+        "qwen3-8-2-4t-a95b"
+      ],
+      "related": [
+        "llama-4-scout"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "huggingface",
+          "url": "https://huggingface.co/meta-llama",
+          "title": "Meta Llama — Hugging Face org",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "llama-4-scout",
+      "slug": "llama-4-scout",
+      "name": "Llama 4 Scout",
+      "provider": "Meta",
+      "modelFamily": "Llama 4",
+      "version": "Llama-4-Scout-17B-16E-Instruct",
+      "releaseDate": "2025-04-05",
+      "modelType": [
+        "chat",
+        "instruct",
+        "multimodal"
+      ],
+      "categories": [
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "coding",
+        "open-weight",
+        "local",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-weight",
+      "license": "Llama 4 Community License Agreement",
+      "commercialUse": "restricted",
+      "parameters": "109B total",
+      "activeParameters": "17B",
+      "architecture": "Mixture-of-Experts, 16 experts",
+      "contextWindow": 10000000,
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "vision": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm",
+        "llama.cpp",
+        "ollama"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Single high-memory GPU (e.g. one H100) at reduced precision per Meta; more for full precision — see model card",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+      "modelRepository": "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+      "officialDocumentation": "https://www.llama.com/",
+      "strengths": [
+        "Very large stated context (10M)",
+        "MoE keeps active params at 17B",
+        "Broad runner support"
+      ],
+      "limitations": [
+        "Custom community license — not OSI open source; commercial use has conditions (e.g. >700M MAU clause)",
+        "Not a reasoning model"
+      ],
+      "useCases": [
+        "Self-hosted assistants",
+        "Long-context retrieval",
+        "On-prem multimodal"
+      ],
+      "alternatives": [
+        "llama-4-maverick",
+        "qwen3-8-27b",
+        "gemma-3-27b"
+      ],
+      "related": [
+        "llama-4-maverick"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+          "title": "Llama-4-Scout-17B-16E-Instruct — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "ministral-3-8b-reasoning",
+      "slug": "ministral-3-8b-reasoning",
+      "name": "Ministral 3 8B Reasoning",
+      "provider": "Mistral AI",
+      "modelFamily": "Ministral",
+      "version": "Ministral-3-8B-Reasoning-2512",
+      "releaseDate": "2025",
+      "modelType": [
+        "chat",
+        "reasoning",
+        "instruct"
+      ],
+      "categories": [
+        "reasoning",
+        "small-language-model",
+        "local",
+        "open-weight"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "other-unknown",
+      "license": null,
+      "commercialUse": "unknown",
+      "parameters": "8B",
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm",
+        "llama.cpp",
+        "ollama"
+      ],
+      "quantizationAvailable": "yes",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/mistralai/Ministral-3-8B-Reasoning-2512",
+      "modelRepository": "https://huggingface.co/mistralai/Ministral-3-8B-Reasoning-2512",
+      "officialDocumentation": "https://docs.mistral.ai/",
+      "limitations": [
+        "License not confirmed this pass — Ministral models have historically used the Mistral Research License, not Apache-2.0; verify before commercial use",
+        "Context window not confirmed this pass"
+      ],
+      "useCases": [
+        "Local reasoning on an 8B budget",
+        "Edge agents"
+      ],
+      "alternatives": [
+        "gpt-oss-20b",
+        "phi-4-mini-instruct"
+      ],
+      "related": [
+        "mistral-small-4"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "huggingface",
+          "url": "https://huggingface.co/mistralai",
+          "title": "Mistral AI — Hugging Face org (model listing)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "mistral-large-3",
+      "slug": "mistral-large-3",
+      "name": "Mistral Large 3",
+      "provider": "Mistral AI",
+      "modelFamily": "Mistral Large",
+      "version": "Mistral-Large-3-675B-Instruct-2512",
+      "releaseDate": "2025-12-02",
+      "modelType": [
+        "chat",
+        "instruct",
+        "multimodal"
+      ],
+      "categories": [
+        "frontier",
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "coding",
+        "open-source",
+        "open-weight",
+        "long-context",
+        "agents"
+      ],
+      "availability": [
+        "download",
+        "api",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "675B total",
+      "activeParameters": "41B",
+      "architecture": "Granular Mixture-of-Experts (673B LM / 39B active) + 2.5B vision encoder",
+      "contextWindow": 256000,
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "hybrid",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "vision": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "vllm",
+        "transformers"
+      ],
+      "quantizationAvailable": "yes",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512",
+      "modelRepository": "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512",
+      "officialDocumentation": "https://docs.mistral.ai/",
+      "strengths": [
+        "Apache-2.0 at 675B scale",
+        "41B active params",
+        "256K context",
+        "Multimodal (built-in vision encoder)"
+      ],
+      "limitations": [
+        "675B total — datacenter serving",
+        "Text output only"
+      ],
+      "useCases": [
+        "Open frontier assistant (hosted)",
+        "Multimodal RAG",
+        "Commercial products (permissive license)"
+      ],
+      "alternatives": [
+        "deepseek-v4-flash",
+        "qwen3-8-2-4t-a95b",
+        "kimi-k2-instruct"
+      ],
+      "related": [
+        "mistral-small-4"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512",
+          "title": "Mistral-Large-3-675B-Instruct-2512 — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "mistral-small-4",
+      "slug": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "provider": "Mistral AI",
+      "modelFamily": "Mistral Small",
+      "version": "Mistral-Small-4-119B-2603",
+      "releaseDate": "2026",
+      "modelType": [
+        "chat",
+        "instruct",
+        "multimodal"
+      ],
+      "categories": [
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "coding",
+        "open-source",
+        "open-weight",
+        "local",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "119B total",
+      "activeParameters": "6.5B",
+      "architecture": "Mixture-of-Experts, 128 experts (4 active per token)",
+      "contextWindow": 256000,
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "hybrid",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "vision": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm",
+        "llama.cpp",
+        "ollama"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Fits a single high-memory GPU thanks to 6.5B active params (varies by quant — see model card)",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+      "modelRepository": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+      "officialDocumentation": "https://docs.mistral.ai/",
+      "strengths": [
+        "Apache-2.0",
+        "Only 6.5B active params — very cheap inference for a 119B model",
+        "256K context",
+        "Multimodal"
+      ],
+      "limitations": [
+        "MoE routing needs all 119B params resident in memory"
+      ],
+      "useCases": [
+        "Cost-efficient self-hosted assistant",
+        "Commercial products",
+        "Multimodal RAG"
+      ],
+      "alternatives": [
+        "qwen3-8-27b",
+        "gemma-3-27b",
+        "llama-4-scout"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+          "title": "Mistral-Small-4-119B-2603 — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "olmo-2-32b-instruct",
+      "slug": "olmo-2-32b-instruct",
+      "name": "OLMo 2 32B Instruct",
+      "provider": "Allen Institute for AI",
+      "modelFamily": "OLMo 2",
+      "version": "OLMo-2-0325-32B-Instruct",
+      "releaseDate": "2025-03",
+      "modelType": [
+        "chat",
+        "instruct",
+        "base"
+      ],
+      "categories": [
+        "general-purpose",
+        "research",
+        "open-source",
+        "local"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "32B",
+      "architecture": "Dense decoder-only Transformer",
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "codeCapability": "moderate",
+      "multilingual": "no",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm",
+        "llama.cpp"
+      ],
+      "quantizationAvailable": "yes",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct",
+      "modelRepository": "https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct",
+      "officialDocumentation": "https://allenai.org/olmo",
+      "githubRepository": "https://github.com/allenai/OLMo",
+      "strengths": [
+        "Fully open: weights, training code, data, checkpoints and logs all released",
+        "Apache-2.0",
+        "Best choice when reproducibility / auditability matters"
+      ],
+      "limitations": [
+        "Primarily English",
+        "Not a reasoning model",
+        "Trails frontier models on hard benchmarks"
+      ],
+      "useCases": [
+        "Reproducible research",
+        "Training / data-transparency studies",
+        "Fine-tuning from a fully-documented base"
+      ],
+      "alternatives": [
+        "gemma-3-27b",
+        "qwen3-8-27b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct",
+          "title": "allenai/OLMo-2-0325-32B-Instruct — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "phi-4-mini-instruct",
+      "slug": "phi-4-mini-instruct",
+      "name": "Phi-4-mini-instruct",
+      "provider": "Microsoft",
+      "modelFamily": "Phi-4",
+      "releaseDate": "2025-02",
+      "modelType": [
+        "chat",
+        "instruct"
+      ],
+      "categories": [
+        "small-language-model",
+        "local",
+        "general-purpose",
+        "open-source",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "MIT",
+      "commercialUse": "yes",
+      "parameters": "3.8B",
+      "architecture": "Dense decoder-only Transformer, 200K vocab",
+      "contextWindow": 128000,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "ollama",
+        "llama.cpp",
+        "transformers",
+        "mlx",
+        "vllm"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Runs on a laptop / phone-class device at 4-bit (~2–4 GB); designed for memory-constrained environments",
+      "apiAvailable": false,
+      "huggingFace": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "modelRepository": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "officialDocumentation": "https://huggingface.co/microsoft",
+      "strengths": [
+        "MIT licensed",
+        "128K context at 3.8B",
+        "Function calling",
+        "24 languages",
+        "Genuinely edge-deployable"
+      ],
+      "limitations": [
+        "Limited world knowledge and reasoning vs larger models",
+        "Text only"
+      ],
+      "useCases": [
+        "On-device assistants",
+        "Edge inference",
+        "Cheap local automation",
+        "Fine-tuning base"
+      ],
+      "alternatives": [
+        "gemma-3-4b",
+        "qwen3-8-27b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+          "title": "Phi-4-mini-instruct — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "qwen3-8-2-4t-a95b",
+      "slug": "qwen3-8-2-4t-a95b",
+      "name": "Qwen3.8-2.4T-A95B",
+      "provider": "Alibaba Qwen",
+      "modelFamily": "Qwen3.8",
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "coding",
+        "open-source",
+        "open-weight"
+      ],
+      "availability": [
+        "download",
+        "api"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "2.4T total",
+      "activeParameters": "95B",
+      "architecture": "Mixture-of-Experts",
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "yes",
+      "toolUse": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": false,
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "modelRepository": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "officialDocumentation": "https://huggingface.co/Qwen",
+      "strengths": [
+        "Apache-2.0 at frontier scale",
+        "MoE: 95B active from 2.4T total"
+      ],
+      "limitations": [
+        "2.4T total — datacenter-only in practice",
+        "Context window not confirmed this pass"
+      ],
+      "useCases": [
+        "Open frontier reasoning (hosted)",
+        "Research on large open MoE"
+      ],
+      "alternatives": [
+        "deepseek-v4-flash",
+        "llama-4-maverick"
+      ],
+      "related": [
+        "qwen3-8-27b",
+        "qwen3-8-flash-next"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "huggingface",
+          "url": "https://huggingface.co/Qwen",
+          "title": "Alibaba Qwen — Hugging Face org (model listing)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "qwen3-8-27b",
+      "slug": "qwen3-8-27b",
+      "name": "Qwen3.8-27B",
+      "provider": "Alibaba Qwen",
+      "modelFamily": "Qwen3.8",
+      "releaseDate": "2026-08",
+      "modelType": [
+        "chat",
+        "multimodal",
+        "vision"
+      ],
+      "categories": [
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "coding",
+        "open-source",
+        "open-weight",
+        "local",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "27B",
+      "architecture": "Dense; Gated DeltaNet + Gated Attention",
+      "contextWindow": 262144,
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "hybrid",
+      "toolUse": "yes",
+      "vision": "yes",
+      "video": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm",
+        "ollama",
+        "llama.cpp",
+        "mlx"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "One 24–48 GB GPU at 4-bit/8-bit; ~54 GB+ at bf16 (approx — see model card)",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "modelRepository": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "officialDocumentation": "https://huggingface.co/Qwen",
+      "strengths": [
+        "Apache-2.0 — fully open",
+        "262K native context, extensible to 1M",
+        "Dense 27B runs on a single GPU",
+        "Text/image/video input"
+      ],
+      "limitations": [
+        "Dense (no MoE efficiency at this size)"
+      ],
+      "useCases": [
+        "Local multimodal assistant",
+        "Long-context RAG",
+        "Commercial products (permissive license)"
+      ],
+      "alternatives": [
+        "gemma-3-27b",
+        "mistral-small-4",
+        "llama-4-scout"
+      ],
+      "related": [
+        "qwen3-8-flash-next",
+        "qwen3-8-2-4t-a95b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+          "title": "Qwen3.8-27B — Hugging Face model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "qwen3-8-flash-next",
+      "slug": "qwen3-8-flash-next",
+      "name": "Qwen3.8-Flash-Next",
+      "provider": "Alibaba Qwen",
+      "modelFamily": "Qwen3.8",
+      "modelType": [
+        "chat",
+        "multimodal"
+      ],
+      "categories": [
+        "general-purpose",
+        "multimodal",
+        "open-source",
+        "open-weight",
+        "local"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "180B (per org listing)",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "vision": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm"
+      ],
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+      "modelRepository": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+      "officialDocumentation": "https://huggingface.co/Qwen",
+      "limitations": [
+        "Context window and architecture details not confirmed this pass — see model card"
+      ],
+      "useCases": [
+        "Higher-capacity self-hosted multimodal",
+        "Commercial deployment"
+      ],
+      "alternatives": [
+        "qwen3-8-27b",
+        "llama-4-maverick"
+      ],
+      "related": [
+        "qwen3-8-27b",
+        "qwen3-8-2-4t-a95b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "huggingface",
+          "url": "https://huggingface.co/Qwen",
+          "title": "Alibaba Qwen — Hugging Face org (model listing)",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "qwen3-coder-480b-a35b",
+      "slug": "qwen3-coder-480b-a35b",
+      "name": "Qwen3-Coder 480B-A35B",
+      "provider": "Alibaba Qwen",
+      "modelFamily": "Qwen3-Coder",
+      "version": "Qwen3-Coder-480B-A35B-Instruct",
+      "releaseDate": "2025-05-14",
+      "modelType": [
+        "coding",
+        "instruct"
+      ],
+      "categories": [
+        "coding",
+        "agents",
+        "open-source",
+        "open-weight",
+        "long-context"
+      ],
+      "availability": [
+        "download",
+        "api",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "480B total",
+      "activeParameters": "35B",
+      "architecture": "Mixture-of-Experts, 160 experts (8 active per token)",
+      "contextWindow": 262144,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "no",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "codeCapability": "strong",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "vllm",
+        "transformers",
+        "llama.cpp"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Multi-GPU for full precision; quantized GGUF builds run on high-memory single nodes — see model card",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "modelRepository": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "officialDocumentation": "https://huggingface.co/Qwen",
+      "strengths": [
+        "Apache-2.0 code model at frontier scale",
+        "262K native context (1M with YaRN)",
+        "Agentic coding / tool use",
+        "35B active params"
+      ],
+      "limitations": [
+        "480B total footprint",
+        "Not a reasoning model"
+      ],
+      "useCases": [
+        "Self-hosted coding assistant",
+        "Repo-scale code understanding",
+        "Agentic code editing"
+      ],
+      "alternatives": [
+        "deepseek-v4-flash",
+        "glm-4-6",
+        "claude-sonnet-5"
+      ],
+      "related": [
+        "qwen3-8-27b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+          "title": "Qwen3-Coder-480B-A35B-Instruct — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "qwen3-embedding-8b",
+      "slug": "qwen3-embedding-8b",
+      "name": "Qwen3-Embedding-8B",
+      "provider": "Alibaba Qwen",
+      "modelFamily": "Qwen3-Embedding",
+      "releaseDate": "2025-06-05",
+      "modelType": [
+        "embedding"
+      ],
+      "categories": [
+        "embeddings",
+        "open-source",
+        "local"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "8B",
+      "contextWindow": 32768,
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "embeddings"
+      ],
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm"
+      ],
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/Qwen/Qwen3-Embedding-8B",
+      "modelRepository": "https://huggingface.co/Qwen/Qwen3-Embedding-8B",
+      "officialDocumentation": "https://huggingface.co/Qwen",
+      "strengths": [
+        "Apache-2.0",
+        "Matryoshka: user-defined output dim 32–4096",
+        "32K input context",
+        "100+ languages incl. code"
+      ],
+      "limitations": [
+        "8B is large for an embedding model — smaller Qwen3-Embedding sizes exist for lighter deployments"
+      ],
+      "useCases": [
+        "RAG retrieval",
+        "Semantic search",
+        "Clustering / dedup",
+        "Multilingual + code embeddings"
+      ],
+      "alternatives": [
+        "whisper-large-v3"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B",
+          "title": "Qwen3-Embedding-8B — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "qwen3-vl-235b-a22b",
+      "slug": "qwen3-vl-235b-a22b",
+      "name": "Qwen3-VL 235B-A22B Instruct",
+      "provider": "Alibaba Qwen",
+      "modelFamily": "Qwen3-VL",
+      "modelType": [
+        "multimodal",
+        "vision",
+        "instruct"
+      ],
+      "categories": [
+        "multimodal",
+        "vision",
+        "long-context",
+        "open-source",
+        "open-weight",
+        "agents"
+      ],
+      "availability": [
+        "download",
+        "api",
+        "local"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "236B total",
+      "activeParameters": "22B",
+      "architecture": "Mixture-of-Experts vision-language model",
+      "contextWindow": 262144,
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "reasoning": "hybrid",
+      "toolUse": "yes",
+      "vision": "yes",
+      "video": "yes",
+      "codeCapability": "moderate",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm"
+      ],
+      "quantizationAvailable": "yes",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Instruct",
+      "modelRepository": "https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Instruct",
+      "officialDocumentation": "https://huggingface.co/Qwen",
+      "strengths": [
+        "Apache-2.0 large VLM",
+        "256K native context (1M extended), hours-long video recall",
+        "22B active from 236B total"
+      ],
+      "limitations": [
+        "236B total — multi-GPU serving",
+        "Text output only"
+      ],
+      "useCases": [
+        "Long-video understanding",
+        "Document / UI understanding",
+        "Multimodal agents"
+      ],
+      "alternatives": [
+        "gemini-2-5-pro",
+        "deepseek-v4-flash-vision-exp",
+        "llama-4-maverick"
+      ],
+      "related": [
+        "qwen3-8-27b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "title": "Qwen3-VL-235B-A22B-Instruct — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "stable-diffusion-3-5-large",
+      "slug": "stable-diffusion-3-5-large",
+      "name": "Stable Diffusion 3.5 Large",
+      "provider": "Stability AI",
+      "modelFamily": "Stable Diffusion 3.5",
+      "releaseDate": "2024",
+      "modelType": [
+        "image-generation"
+      ],
+      "categories": [
+        "multimodal",
+        "open-weight",
+        "local"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "commercial-use-restricted",
+      "license": "Stability AI Community License",
+      "commercialUse": "restricted",
+      "parameters": "8B",
+      "architecture": "Multimodal diffusion transformer (MMDiT), rectified flow",
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "image"
+      ],
+      "localCapable": true,
+      "localRunners": [
+        "transformers"
+      ],
+      "quantizationAvailable": "yes",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large",
+      "modelRepository": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large",
+      "officialDocumentation": "https://stability.ai/",
+      "strengths": [
+        "Free for research + commercial use under $1M annual revenue",
+        "Improved typography and prompt understanding vs earlier SD",
+        "Huge tooling ecosystem (ComfyUI, Automatic1111)"
+      ],
+      "limitations": [
+        "Community License caps free commercial use at $1M revenue — Enterprise License above that",
+        "Image output only"
+      ],
+      "useCases": [
+        "Local / self-hosted image generation",
+        "Product mockups",
+        "Asset pipelines"
+      ],
+      "alternatives": [
+        "flux-1-dev"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large",
+          "title": "stable-diffusion-3.5-large — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "voxtral-small-24b",
+      "slug": "voxtral-small-24b",
+      "name": "Voxtral Small 24B",
+      "provider": "Mistral AI",
+      "modelFamily": "Voxtral",
+      "version": "Voxtral-Small-24B-2507",
+      "releaseDate": "2025-07",
+      "modelType": [
+        "speech",
+        "audio",
+        "chat"
+      ],
+      "categories": [
+        "speech",
+        "audio",
+        "open-source",
+        "local"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "24B",
+      "architecture": "Audio-text-to-text (speech encoder + LLM)",
+      "contextWindow": 32000,
+      "inputModalities": [
+        "audio",
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "audio": "yes",
+      "toolUse": "yes",
+      "functionCalling": "yes",
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "vllm"
+      ],
+      "quantizationAvailable": "yes",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/mistralai/Voxtral-Small-24B-2507",
+      "modelRepository": "https://huggingface.co/mistralai/Voxtral-Small-24B-2507",
+      "officialDocumentation": "https://docs.mistral.ai/",
+      "strengths": [
+        "Apache-2.0 audio-understanding model (not just ASR)",
+        "Direct Q&A / summarization on audio",
+        "Function-calling from voice",
+        "8 languages"
+      ],
+      "limitations": [
+        "No speech output (text only)",
+        "32K context"
+      ],
+      "useCases": [
+        "Voice assistants",
+        "Meeting transcription + summarization",
+        "Audio search / QA"
+      ],
+      "alternatives": [
+        "whisper-large-v3"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/mistralai/Voxtral-Small-24B-2507",
+          "title": "Voxtral-Small-24B-2507 — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "id": "whisper-large-v3",
+      "slug": "whisper-large-v3",
+      "name": "Whisper large-v3",
+      "provider": "OpenAI",
+      "modelFamily": "Whisper",
+      "releaseDate": "2022-12-06",
+      "modelType": [
+        "speech"
+      ],
+      "categories": [
+        "speech",
+        "audio",
+        "open-source",
+        "local",
+        "research"
+      ],
+      "availability": [
+        "download",
+        "local",
+        "api"
+      ],
+      "openSourceStatus": "open-source",
+      "license": "Apache-2.0",
+      "commercialUse": "yes",
+      "parameters": "1.55B",
+      "architecture": "Encoder-decoder Transformer (sequence-to-sequence ASR)",
+      "inputModalities": [
+        "audio"
+      ],
+      "outputModalities": [
+        "text"
+      ],
+      "multilingual": "yes",
+      "localCapable": true,
+      "localRunners": [
+        "transformers",
+        "llama.cpp",
+        "mlx"
+      ],
+      "quantizationAvailable": "yes",
+      "minimumHardware": "Runs on CPU; a small GPU gives real-time+ transcription. whisper.cpp runs on phones.",
+      "apiAvailable": true,
+      "huggingFace": "https://huggingface.co/openai/whisper-large-v3",
+      "modelRepository": "https://huggingface.co/openai/whisper-large-v3",
+      "officialDocumentation": "https://github.com/openai/whisper",
+      "githubRepository": "https://github.com/openai/whisper",
+      "strengths": [
+        "Apache-2.0",
+        "99 languages, transcription + translation",
+        "10–20% lower error vs large-v2",
+        "Huge ecosystem (whisper.cpp, faster-whisper)"
+      ],
+      "limitations": [
+        "Speech-to-text only (no TTS)",
+        "Can hallucinate on silence / non-speech audio",
+        "Older (2022) — newer ASR models exist"
+      ],
+      "useCases": [
+        "Local transcription",
+        "Subtitle generation",
+        "Voice interfaces",
+        "Meeting notes"
+      ],
+      "alternatives": [
+        "qwen3-embedding-8b"
+      ],
+      "lastVerified": "2026-09-03",
+      "sources": [
+        {
+          "type": "model-card",
+          "url": "https://huggingface.co/openai/whisper-large-v3",
+          "title": "openai/whisper-large-v3 — model card",
+          "verifiedAt": "2026-09-03"
+        }
+      ]
+    }
+  ]
+}

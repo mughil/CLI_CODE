@@ -13,7 +13,7 @@
  * (useCases, alternatives, related, difficulty, examples, precise language) are
  * left empty unless the overlay supplies a human-verified value.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -254,10 +254,60 @@ const meta = {
   tags: tally((e) => e.tags),
 };
 
+// ---------- AI models: merge data/models/*.json -> data/models.json ----------
+
+const modelDir = p('data/models');
+const models = [];
+for (const f of readdirSync(modelDir).filter((x) => x.endsWith('.json')).sort()) {
+  for (const m of (readJSON(`data/models/${f}`).models || [])) models.push(m);
+}
+models.sort((a, b) => a.slug.localeCompare(b.slug));
+
+const ctxBucket = (n) =>
+  n == null ? 'unknown' : n <= 16000 ? 'small' : n <= 200000 ? 'medium' : n <= 1000000 ? 'large' : 'very-large';
+
+// facet counts over the derived model fields
+function mtally(getList) {
+  const m = new Map();
+  for (const e of models) for (const v of getList(e)) m.set(v, (m.get(v) || 0) + 1);
+  return [...m.entries()].map(([id, count]) => ({ id, count })).sort((a, b) => b.count - a.count || String(a.id).localeCompare(String(b.id)));
+}
+const modelMeta = {
+  generated: 'static',
+  counts: {
+    total: models.length,
+    openSource: models.filter((m) => m.openSourceStatus === 'open-source').length,
+    openWeight: models.filter((m) => m.openSourceStatus === 'open-weight').length,
+    proprietary: models.filter((m) => m.openSourceStatus === 'proprietary' || m.openSourceStatus === 'api-only').length,
+    localCapable: models.filter((m) => m.localCapable).length,
+    apiAvailable: models.filter((m) => m.apiAvailable).length,
+    providers: new Set(models.map((m) => m.provider)).size,
+  },
+  providers: mtally((m) => [m.provider]),
+  categories: mtally((m) => m.categories || []),
+  openness: mtally((m) => [m.openSourceStatus]),
+  availability: mtally((m) => m.availability || []),
+  contextBuckets: mtally((m) => [ctxBucket(m.contextWindow)]),
+  localRunners: mtally((m) => m.localRunners || []),
+};
+
+let aiProjects = [];
+try { aiProjects = readJSON('data/ai-projects.json').projects || []; } catch {}
+const projectMeta = {
+  count: aiProjects.length,
+  categories: (() => {
+    const m = new Map();
+    for (const pr of aiProjects) for (const c of pr.category || []) m.set(c, (m.get(c) || 0) + 1);
+    return [...m.entries()].map(([id, count]) => ({ id, count })).sort((a, b) => b.count - a.count);
+  })(),
+};
+
 // ---------- emit ---------------------------------------------------------
 
 const outClis = JSON.stringify({ schema: 'schema/cli.schema.json', count: entries.length, clis: entries }, null, 2) + '\n';
 const outMeta = JSON.stringify(meta, null, 2) + '\n';
+const outModels = JSON.stringify({ schema: 'schema/model.schema.json', count: models.length, models }, null, 2) + '\n';
+const outModelMeta = JSON.stringify({ ...modelMeta, projects: projectMeta }, null, 2) + '\n';
 
 function emit(file, content) {
   if (CHECK) {
@@ -277,6 +327,8 @@ function emit(file, content) {
 
 emit('data/clis.json', outClis);
 emit('data/meta.json', outMeta);
+emit('data/models.json', outModels);
+emit('data/model-meta.json', outModelMeta);
 
 // ---------- sitemap + robots ----------------------------------------------
 // SITE_URL is set by CI from the Pages URL; the default is an obvious placeholder.
@@ -287,6 +339,7 @@ if (!process.env.SITE_URL && !CHECK) console.log('  (note: SITE_URL not set — 
 const CORE_PAGES = [
   'index.html', 'registry.html', 'find.html', 'stacks.html',
   'compare.html', 'cheatsheet.html', 'saved.html', 'docs.html',
+  'models.html', 'find-model.html', 'model-compare.html', 'run-local.html', 'ai-explorer.html',
 ];
 const urlEntry = (loc, priority) =>
   `  <url>\n    <loc>${SITE_URL}/${loc}</loc>\n    <priority>${priority}</priority>\n  </url>`;
@@ -294,6 +347,7 @@ const sitemapUrls = [
   ...CORE_PAGES.map((f) => urlEntry(f, f === 'index.html' ? '1.0' : '0.7')),
   ...meta.categories.map((c) => urlEntry(`registry.html?cat=${encodeURIComponent(c.id)}`, '0.6')),
   ...entries.map((e) => urlEntry(`cli.html?slug=${encodeURIComponent(e.slug)}`, e.dataQuality === 'curated' ? '0.7' : '0.5')),
+  ...models.map((m) => urlEntry(`model.html?slug=${encodeURIComponent(m.slug)}`, '0.6')),
 ];
 emit('sitemap.xml',
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.join('\n')}\n</urlset>\n`);
@@ -307,6 +361,8 @@ emit('robots.txt',
 const SEO_PAGES = [
   'index.html', 'registry.html', 'cli.html', 'find.html', 'stacks.html',
   'compare.html', 'cheatsheet.html', 'saved.html', 'docs.html',
+  'models.html', 'model.html', 'find-model.html', 'model-compare.html',
+  'run-local.html', 'ai-explorer.html',
 ];
 const attr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 for (const file of SEO_PAGES) {
