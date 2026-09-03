@@ -14,6 +14,7 @@
  * left empty unless the overlay supplies a human-verified value.
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -144,6 +145,7 @@ function deriveTags(name, description, category) {
 
 const harness = readJSON('data/registry.json').clis || [];
 const publicClis = readJSON('data/public_registry.json').clis || [];
+const catalog = readJSON('data/catalog_registry.json').clis || [];
 const dates = readJSON('data/registry-dates.json') || {};
 const overlay = readJSON('data/overlay.json').entries || {};
 
@@ -189,7 +191,7 @@ function normalize(raw, source) {
     ...(ov.packageManagers || []),
   ])].sort();
 
-  let license = ov.license ?? null;
+  let license = ov.license ?? raw.license ?? null;
   if (!license && source === 'harness') license = 'Apache-2.0';
 
   return {
@@ -203,7 +205,7 @@ function normalize(raw, source) {
     tags,
     useCases: [...new Set(ov.useCases || [])],
     platforms: ov.platforms || detectPlatforms(raw.requires, runtime),
-    language: ov.language ?? null,
+    language: ov.language ?? raw.language ?? null,
     runtime: runtime || null,
     license,
     install,
@@ -225,6 +227,7 @@ function normalize(raw, source) {
 const entries = [
   ...harness.map((c) => normalize(c, 'harness')),
   ...publicClis.map((c) => normalize(c, 'public')),
+  ...catalog.map((c) => normalize(c, 'catalog')),
 ].sort((a, b) => a.slug.localeCompare(b.slug));
 
 // ---------- facets --------------------------------------------------------
@@ -243,6 +246,7 @@ const meta = {
     total: entries.length,
     harness: entries.filter((e) => e.source === 'harness').length,
     public: entries.filter((e) => e.source === 'public').length,
+    catalog: entries.filter((e) => e.source === 'catalog').length,
     curated: entries.filter((e) => e.dataQuality === 'curated').length,
   },
   categories: tally((e) => e.categories),
@@ -365,6 +369,24 @@ const SEO_PAGES = [
   'run-local.html', 'ai-explorer.html',
 ];
 const attr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+
+// ---------- static-asset cache busting ------------------------------------
+// Stamp every <script>/<link> to assets/{js,css}/*.{js,css} with a short
+// content hash so a returning visitor never runs a stale bundle against a
+// freshly deployed dataset. Deterministic (content-derived) so the drift
+// gate stays green.
+const assetVer = {};
+for (const dir of ['assets/js', 'assets/css']) {
+  for (const f of readdirSync(p(dir))) {
+    if (!/\.(js|css)$/.test(f)) continue;
+    assetVer[`${dir}/${f}`] = createHash('sha1').update(readFileSync(p(dir, f))).digest('hex').slice(0, 8);
+  }
+}
+const stampAssets = (html) => html.replace(
+  /(src|href)="(assets\/(?:js|css)\/[A-Za-z0-9._-]+\.(?:js|css))(?:\?v=[a-f0-9]+)?"/g,
+  (m, a, path) => (assetVer[path] ? `${a}="${path}?v=${assetVer[path]}"` : m),
+);
+
 for (const file of SEO_PAGES) {
   let html;
   try { html = readFileSync(p(file), 'utf8'); } catch { continue; }
@@ -382,7 +404,7 @@ for (const file of SEO_PAGES) {
     `<meta name="twitter:description" content="${attr(desc)}">`,
     '<!-- /SEO:auto -->',
   ].join('\n');
-  let next = html.replace(/<!-- SEO:auto -->[\s\S]*?<!-- \/SEO:auto -->/, block);
+  let next = stampAssets(html.replace(/<!-- SEO:auto -->[\s\S]*?<!-- \/SEO:auto -->/, block));
   // canonical may be authored relative ("./x.html"), bare, or as an absolute
   // placeholder URL — normalise any of them to an absolute SITE_URL canonical.
   next = next.replace(/<link rel="canonical" href="(?:\.\/|https?:\/\/[^"]*\/)?([^"\/]+)">/, `<link rel="canonical" href="${SITE_URL}/$1">`);

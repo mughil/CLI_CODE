@@ -3,7 +3,7 @@
 Updated: 2026-09-03
 
 ## Counts
-- CLI_COUNT: 103 (verified) — "500" is a ROADMAP target, not a delivery gate (no source for +397; non-fabrication rule stands)
+- CLI_COUNT: 500 (79 harness + 24 public + 397 curated catalog); npm run check size gate enforces exactly 500 unique ids/slugs
 - MODEL_COUNT: 50 / >=50  ✅
 - GITHUB_AI_PROJECT_COUNT: 20
 

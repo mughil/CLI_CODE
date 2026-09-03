@@ -59,7 +59,7 @@
     "difficulty": { "enum": ["beginner", "intermediate", "advanced", null] },
     "alternatives": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "uniqueItems": true },
     "related": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "uniqueItems": true },
-    "source": { "enum": ["harness", "public"] },
+    "source": { "enum": ["harness", "public", "catalog"] },
     "dataQuality": { "enum": ["derived", "curated"] },
     "lastVerified": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
   }

@@ -1,30 +1,135 @@
 {
   "generated": "static",
   "counts": {
-    "total": 103,
+    "total": 500,
     "harness": 79,
     "public": 24,
+    "catalog": 397,
     "curated": 25
   },
   "categories": [
     {
+      "id": "devtools",
+      "count": 28
+    },
+    {
+      "id": "network",
+      "count": 28
+    },
+    {
       "id": "ai",
+      "count": 26
+    },
+    {
+      "id": "devops",
+      "count": 23
+    },
+    {
+      "id": "vcs",
+      "count": 21
+    },
+    {
+      "id": "database",
+      "count": 20
+    },
+    {
+      "id": "package-manager",
+      "count": 19
+    },
+    {
+      "id": "cloud",
+      "count": 18
+    },
+    {
+      "id": "kubernetes",
+      "count": 18
+    },
+    {
+      "id": "testing",
+      "count": 18
+    },
+    {
+      "id": "shell",
+      "count": 17
+    },
+    {
+      "id": "docs",
+      "count": 15
+    },
+    {
+      "id": "files",
+      "count": 15
+    },
+    {
+      "id": "monitoring",
+      "count": 15
+    },
+    {
+      "id": "data",
+      "count": 14
+    },
+    {
+      "id": "build",
+      "count": 13
+    },
+    {
+      "id": "image",
+      "count": 12
+    },
+    {
+      "id": "knowledge",
+      "count": 12
+    },
+    {
+      "id": "languages",
+      "count": 12
+    },
+    {
+      "id": "security",
       "count": 12
     },
     {
       "id": "web",
-      "count": 11
+      "count": 12
     },
     {
-      "id": "devops",
+      "id": "terminal",
+      "count": 10
+    },
+    {
+      "id": "video",
+      "count": 10
+    },
+    {
+      "id": "containers",
       "count": 9
+    },
+    {
+      "id": "productivity",
+      "count": 8
+    },
+    {
+      "id": "editor",
+      "count": 7
+    },
+    {
+      "id": "search",
+      "count": 7
+    },
+    {
+      "id": "automation",
+      "count": 6
+    },
+    {
+      "id": "data-science",
+      "count": 6
     },
     {
       "id": "graphics",
       "count": 6
     },
     {
-      "id": "video",
+      "id": "sysadmin",
       "count": 6
     },
     {
@@ -32,11 +137,19 @@
       "count": 5
     },
     {
+      "id": "diagrams",
+      "count": 5
+    },
+    {
+      "id": "audio",
+      "count": 4
+    },
+    {
       "id": "game",
       "count": 4
     },
     {
-      "id": "knowledge",
+      "id": "music",
       "count": 4
     },
     {
@@ -52,19 +165,19 @@
       "count": 3
     },
     {
-      "id": "audio",
+      "id": "backup",
       "count": 3
     },
     {
-      "id": "automation",
+      "id": "ci-cd",
       "count": 3
     },
     {
-      "id": "image",
+      "id": "logs",
       "count": 3
     },
     {
-      "id": "database",
+      "id": "benchmark",
       "count": 2
     },
     {
@@ -76,32 +189,8 @@
       "count": 2
     },
     {
-      "id": "diagrams",
+      "id": "text",
       "count": 2
-    },
-    {
-      "id": "music",
-      "count": 2
-    },
-    {
-      "id": "network",
-      "count": 2
-    },
-    {
-      "id": "productivity",
-      "count": 2
-    },
-    {
-      "id": "search",
-      "count": 2
-    },
-    {
-      "id": "data-science",
-      "count": 1
-    },
-    {
-      "id": "devtools",
-      "count": 1
     },
     {
       "id": "finance",
@@ -130,16 +219,16 @@
     {
       "id": "streaming",
       "count": 1
-    },
-    {
-      "id": "testing",
-      "count": 1
     }
   ],
   "platforms": [
     {
       "id": "cross-platform",
-      "count": 34
+      "count": 126
+    },
+    {
+      "id": "linux",
+      "count": 31
     },
     {
       "id": "windows",
@@ -147,11 +236,7 @@
     },
     {
       "id": "macos",
-      "count": 28
-    },
-    {
-      "id": "linux",
-      "count": 26
+      "count": 29
     },
     {
       "id": "web",
@@ -160,87 +245,215 @@
   ],
   "languages": [
     {
-      "id": "C++",
-      "count": 12
+      "id": "Go",
+      "count": 127
     },
     {
       "id": "Python",
-      "count": 6
-    },
-    {
-      "id": "C",
-      "count": 3
-    },
-    {
-      "id": "JavaScript",
-      "count": 3
-    },
-    {
-      "id": "TypeScript",
-      "count": 3
-    },
-    {
-      "id": "Go",
-      "count": 2
-    },
-    {
-      "id": "Java",
-      "count": 1
+      "count": 78
     },
     {
       "id": "Rust",
+      "count": 67
+    },
+    {
+      "id": "C",
+      "count": 44
+    },
+    {
+      "id": "C++",
+      "count": 28
+    },
+    {
+      "id": "TypeScript",
+      "count": 20
+    },
+    {
+      "id": "JavaScript",
+      "count": 13
+    },
+    {
+      "id": "Haskell",
+      "count": 6
+    },
+    {
+      "id": "Shell",
+      "count": 6
+    },
+    {
+      "id": "Java",
+      "count": 4
+    },
+    {
+      "id": "Perl",
+      "count": 3
+    },
+    {
+      "id": "Ruby",
+      "count": 3
+    },
+    {
+      "id": "Zig",
+      "count": 3
+    },
+    {
+      "id": "Python / C",
+      "count": 2
+    },
+    {
+      "id": "C / C++ / Lua",
+      "count": 1
+    },
+    {
+      "id": "C / Emacs Lisp",
+      "count": 1
+    },
+    {
+      "id": "C / Lua",
+      "count": 1
+    },
+    {
+      "id": "C / Perl",
+      "count": 1
+    },
+    {
+      "id": "C / Vim script",
+      "count": 1
+    },
+    {
+      "id": "C / Zig",
+      "count": 1
+    },
+    {
+      "id": "C#",
+      "count": 1
+    },
+    {
+      "id": "C++ / Go",
+      "count": 1
+    },
+    {
+      "id": "C++ / JavaScript",
+      "count": 1
+    },
+    {
+      "id": "Common Lisp",
+      "count": 1
+    },
+    {
+      "id": "Crystal",
+      "count": 1
+    },
+    {
+      "id": "Elixir",
+      "count": 1
+    },
+    {
+      "id": "Erlang",
+      "count": 1
+    },
+    {
+      "id": "Java / Groovy / Kotlin",
+      "count": 1
+    },
+    {
+      "id": "Java / Starlark",
+      "count": 1
+    },
+    {
+      "id": "Julia / C",
+      "count": 1
+    },
+    {
+      "id": "Lua / TypeScript",
+      "count": 1
+    },
+    {
+      "id": "Nim",
+      "count": 1
+    },
+    {
+      "id": "OCaml",
+      "count": 1
+    },
+    {
+      "id": "PHP",
+      "count": 1
+    },
+    {
+      "id": "Python / OCaml",
+      "count": 1
+    },
+    {
+      "id": "Python / TypeScript",
+      "count": 1
+    },
+    {
+      "id": "Rust / TypeScript",
+      "count": 1
+    },
+    {
+      "id": "Shell / Groovy",
       "count": 1
     }
   ],
   "runtimes": [
     {
-      "id": "node",
-      "count": 21
+      "id": "python",
+      "count": 79
     },
     {
-      "id": "python",
-      "count": 17
+      "id": "node",
+      "count": 46
     },
     {
       "id": "go",
-      "count": 1
-    },
-    {
-      "id": "java",
-      "count": 1
+      "count": 5
     },
     {
       "id": "rust",
+      "count": 2
+    },
+    {
+      "id": "java",
       "count": 1
     }
   ],
   "packageManagers": [
     {
+      "id": "brew",
+      "count": 304
+    },
+    {
       "id": "pip",
-      "count": 83
+      "count": 84
     },
     {
       "id": "git",
       "count": 78
     },
     {
+      "id": "pipx",
+      "count": 62
+    },
+    {
       "id": "npm",
-      "count": 12
+      "count": 35
     },
     {
       "id": "npx",
       "count": 11
     },
     {
-      "id": "brew",
-      "count": 2
-    },
-    {
       "id": "cargo",
-      "count": 1
+      "count": 5
     },
     {
       "id": "go",
+      "count": 1
+    },
+    {
+      "id": "pnpm",
       "count": 1
     },
     {
@@ -264,24 +477,120 @@
   ],
   "tags": [
     {
-      "id": "api",
-      "count": 23
+      "id": "terminal",
+      "count": 51
     },
     {
       "id": "ai",
-      "count": 22
+      "count": 36
     },
     {
-      "id": "agent",
-      "count": 15
+      "id": "api",
+      "count": 35
     },
     {
-      "id": "automation",
-      "count": 15
+      "id": "shell",
+      "count": 31
+    },
+    {
+      "id": "devtools",
+      "count": 28
+    },
+    {
+      "id": "network",
+      "count": 28
     },
     {
       "id": "search",
+      "count": 28
+    },
+    {
+      "id": "automation",
+      "count": 25
+    },
+    {
+      "id": "kubernetes",
+      "count": 25
+    },
+    {
+      "id": "database",
+      "count": 23
+    },
+    {
+      "id": "devops",
+      "count": 23
+    },
+    {
+      "id": "vcs",
+      "count": 21
+    },
+    {
+      "id": "package-manager",
+      "count": 19
+    },
+    {
+      "id": "cloud",
+      "count": 18
+    },
+    {
+      "id": "image",
+      "count": 18
+    },
+    {
+      "id": "testing",
+      "count": 18
+    },
+    {
+      "id": "browser",
+      "count": 17
+    },
+    {
+      "id": "monitoring",
+      "count": 17
+    },
+    {
+      "id": "agent",
+      "count": 16
+    },
+    {
+      "id": "http",
+      "count": 16
+    },
+    {
+      "id": "docs",
+      "count": 15
+    },
+    {
+      "id": "files",
+      "count": 15
+    },
+    {
+      "id": "video",
+      "count": 15
+    },
+    {
+      "id": "data",
       "count": 14
+    },
+    {
+      "id": "build",
+      "count": 13
+    },
+    {
+      "id": "security",
+      "count": 13
+    },
+    {
+      "id": "knowledge",
+      "count": 12
+    },
+    {
+      "id": "languages",
+      "count": 12
+    },
+    {
+      "id": "markdown",
+      "count": 12
     },
     {
       "id": "rest",
@@ -289,30 +598,62 @@
     },
     {
       "id": "web",
-      "count": 11
+      "count": 12
     },
     {
-      "id": "video",
-      "count": 10
-    },
-    {
-      "id": "devops",
+      "id": "ci",
       "count": 9
     },
     {
-      "id": "browser",
-      "count": 7
+      "id": "containers",
+      "count": 9
+    },
+    {
+      "id": "docker",
+      "count": 9
     },
     {
       "id": "editing",
-      "count": 7
+      "count": 9
     },
     {
-      "id": "terminal",
-      "count": 7
+      "id": "audio",
+      "count": 8
     },
     {
       "id": "capture",
+      "count": 8
+    },
+    {
+      "id": "model",
+      "count": 8
+    },
+    {
+      "id": "productivity",
+      "count": 8
+    },
+    {
+      "id": "workflow",
+      "count": 8
+    },
+    {
+      "id": "editor",
+      "count": 7
+    },
+    {
+      "id": "sql",
+      "count": 7
+    },
+    {
+      "id": "container",
+      "count": 6
+    },
+    {
+      "id": "data-science",
+      "count": 6
+    },
+    {
+      "id": "documents",
       "count": 6
     },
     {
@@ -320,7 +661,19 @@
       "count": 6
     },
     {
-      "id": "image",
+      "id": "pdf",
+      "count": 6
+    },
+    {
+      "id": "secrets",
+      "count": 6
+    },
+    {
+      "id": "sysadmin",
+      "count": 6
+    },
+    {
+      "id": "tui",
       "count": 6
     },
     {
@@ -332,23 +685,31 @@
       "count": 5
     },
     {
-      "id": "http",
+      "id": "diagrams",
       "count": 5
     },
     {
-      "id": "audio",
-      "count": 4
+      "id": "mesh",
+      "count": 5
+    },
+    {
+      "id": "notes",
+      "count": 5
+    },
+    {
+      "id": "pipeline",
+      "count": 5
     },
     {
       "id": "game",
       "count": 4
     },
     {
-      "id": "knowledge",
+      "id": "llm",
       "count": 4
     },
     {
-      "id": "notes",
+      "id": "music",
       "count": 4
     },
     {
@@ -356,31 +717,43 @@
       "count": 4
     },
     {
-      "id": "pipeline",
-      "count": 4
-    },
-    {
       "id": "science",
       "count": 4
     },
     {
-      "id": "workflow",
-      "count": 4
-    },
-    {
-      "id": "documents",
+      "id": "backup",
       "count": 3
     },
     {
-      "id": "mesh",
+      "id": "ci-cd",
       "count": 3
     },
     {
-      "id": "model",
+      "id": "ffmpeg",
       "count": 3
     },
     {
-      "id": "pdf",
+      "id": "index",
+      "count": 3
+    },
+    {
+      "id": "inference",
+      "count": 3
+    },
+    {
+      "id": "logs",
+      "count": 3
+    },
+    {
+      "id": "prompt",
+      "count": 3
+    },
+    {
+      "id": "publishing",
+      "count": 3
+    },
+    {
+      "id": "render",
       "count": 3
     },
     {
@@ -388,11 +761,27 @@
       "count": 3
     },
     {
+      "id": "speech",
+      "count": 3
+    },
+    {
+      "id": "svg",
+      "count": 3
+    },
+    {
       "id": "unreal",
       "count": 3
     },
     {
-      "id": "database",
+      "id": "animation",
+      "count": 2
+    },
+    {
+      "id": "benchmark",
+      "count": 2
+    },
+    {
+      "id": "chromium",
       "count": 2
     },
     {
@@ -400,15 +789,15 @@
       "count": 2
     },
     {
+      "id": "deployment",
+      "count": 2
+    },
+    {
       "id": "design",
       "count": 2
     },
     {
-      "id": "diagrams",
-      "count": 2
-    },
-    {
-      "id": "ffmpeg",
+      "id": "diagram",
       "count": 2
     },
     {
@@ -416,23 +805,19 @@
       "count": 2
     },
     {
+      "id": "graphql",
+      "count": 2
+    },
+    {
+      "id": "mock",
+      "count": 2
+    },
+    {
       "id": "modeling",
       "count": 2
     },
     {
-      "id": "monitoring",
-      "count": 2
-    },
-    {
-      "id": "music",
-      "count": 2
-    },
-    {
-      "id": "network",
-      "count": 2
-    },
-    {
-      "id": "productivity",
+      "id": "proxy",
       "count": 2
     },
     {
@@ -440,11 +825,11 @@
       "count": 2
     },
     {
-      "id": "speech",
+      "id": "repl",
       "count": 2
     },
     {
-      "id": "svg",
+      "id": "text",
       "count": 2
     },
     {
@@ -456,35 +841,11 @@
       "count": 2
     },
     {
-      "id": "animation",
-      "count": 1
-    },
-    {
       "id": "cad",
       "count": 1
     },
     {
-      "id": "chromium",
-      "count": 1
-    },
-    {
-      "id": "ci",
-      "count": 1
-    },
-    {
-      "id": "data-science",
-      "count": 1
-    },
-    {
-      "id": "deployment",
-      "count": 1
-    },
-    {
-      "id": "devtools",
-      "count": 1
-    },
-    {
-      "id": "diagram",
+      "id": "chart",
       "count": 1
     },
     {
@@ -512,27 +873,15 @@
       "count": 1
     },
     {
-      "id": "graphql",
-      "count": 1
-    },
-    {
-      "id": "inference",
-      "count": 1
-    },
-    {
-      "id": "llm",
-      "count": 1
-    },
-    {
       "id": "mobile",
       "count": 1
     },
     {
-      "id": "mock",
+      "id": "oauth",
       "count": 1
     },
     {
-      "id": "oauth",
+      "id": "orchestration",
       "count": 1
     },
     {
@@ -544,11 +893,19 @@
       "count": 1
     },
     {
+      "id": "playwright",
+      "count": 1
+    },
+    {
+      "id": "presentation",
+      "count": 1
+    },
+    {
       "id": "project-management",
       "count": 1
     },
     {
-      "id": "proxy",
+      "id": "rag",
       "count": 1
     },
     {
@@ -556,11 +913,7 @@
       "count": 1
     },
     {
-      "id": "secrets",
-      "count": 1
-    },
-    {
-      "id": "security",
+      "id": "sound",
       "count": 1
     },
     {
@@ -569,10 +922,6 @@
     },
     {
       "id": "streaming",
-      "count": 1
-    },
-    {
-      "id": "testing",
       "count": 1
     },
     {

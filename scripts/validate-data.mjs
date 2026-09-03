@@ -68,11 +68,32 @@ for (const s of stacks) {
   }
 }
 
+// 6. hard registry-size gate — the active dataset must contain exactly this many
+//    unique tools. Override only with intent: EXPECT_TOOLS=<n> npm run check
+const EXPECT = Number(process.env.EXPECT_TOOLS || 500);
+const ids = entries.map((e) => e.id);
+const slugs = entries.map((e) => e.slug);
+const uniqIds = new Set(ids).size;
+const uniqSlugs = new Set(slugs).size;
+const dupIds = ids.length - uniqIds;
+const dupSlugs = slugs.length - uniqSlugs;
+const sizeOk = entries.length === EXPECT && uniqIds === EXPECT && uniqSlugs === EXPECT && dupIds === 0 && dupSlugs === 0;
+console.log(
+  '\nCLI DATA VALIDATION\n' +
+  `Total tools: ${entries.length}\n` +
+  `Unique IDs: ${uniqIds}\n` +
+  `Unique slugs: ${uniqSlugs}\n` +
+  `Duplicate IDs: ${dupIds}\n` +
+  `Duplicate slugs: ${dupSlugs}\n` +
+  (sizeOk ? 'PASS' : 'FAIL'),
+);
+if (!sizeOk) errors.push(`registry size gate: expected exactly ${EXPECT} unique tools, got ${entries.length} (unique ids ${uniqIds}, unique slugs ${uniqSlugs}, dup ids ${dupIds}, dup slugs ${dupSlugs})`);
+
 if (errors.length) {
-  console.error(`[FAIL] ${errors.length} validation error(s):\n` + errors.map((e) => '  - ' + e).join('\n'));
+  console.error(`\n[FAIL] ${errors.length} validation error(s):\n` + errors.map((e) => '  - ' + e).join('\n'));
   process.exit(1);
 }
-console.log(`[ok] ${entries.length} entries + ${stacks.length} stacks valid (schema + ${countRefs()} cross-references resolve)`);
+console.log(`\n[ok] ${entries.length} entries + ${stacks.length} stacks valid (schema + ${countRefs()} cross-references resolve)`);
 
 function countRefs() {
   let n = 0;

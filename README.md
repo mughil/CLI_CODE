@@ -6,7 +6,7 @@ the right model, run it locally — all client-side. No backend, no tracking, no
 
 - **Live demo:** `https://mughil.github.io/CLI_CODE/`
 - **Datasets (independent ids/slugs/validation/stats):**
-  - **CLI tools** — 103 entries (25 hand-verified), from the HKUDS/CLI-Anything registry
+  - **CLI tools** — 500 entries: 79 agent-native harnesses (HKUDS/CLI-Anything), 24 public CLIs, and a 397-entry hand-curated catalog of widely-used developer command-line tools
   - **AI models** — 50 entries, 18 providers, every fact source-linked (`docs/MODEL-DATA.md`)
   - **AI GitHub projects** — 20 entries, verified against the GitHub API
 - **Stack:** vanilla HTML/CSS/JS for the site; Node only for the build + CI
@@ -64,7 +64,8 @@ npx http-server -p 4173   # or: python -m http.server 4173
 
 ```
 data/registry.json          upstream harness CLIs        ─┐
-data/public_registry.json    upstream public CLIs          ├─ build inputs
+data/public_registry.json    upstream public CLIs          │
+data/catalog_registry.json   hand-curated CLI catalog (397) ├─ build inputs
 data/registry-dates.json     last-verified dates          ─┘
 data/overlay.json            human-verified facts, by slug ── contributor-editable
         │  scripts/build-data.mjs  (deterministic, no network)
@@ -109,5 +110,7 @@ on every push to `main`. One-time: repo **Settings → Pages → Source: GitHub 
 
 ## License
 
-Apache-2.0. Underlying registry data is sourced from the upstream
-[CLI-Anything](https://github.com/HKUDS/CLI-Anything) project.
+Apache-2.0. The harness/public registry snapshots come from the upstream
+[CLI-Anything](https://github.com/HKUDS/CLI-Anything) project; the curated
+catalog in `data/catalog_registry.json` is maintained in this repo, one real
+tool per entry, with facets derived by the build.

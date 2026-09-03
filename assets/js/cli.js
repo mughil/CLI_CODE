@@ -112,7 +112,7 @@
         </div>
         <p class="cli-summary">${esc(e.summary)}</p>
         <div class="cli-pills">
-          ${pill(e.source === 'harness' ? 'CLI_CODE harness' : 'public CLI', 'src ' + e.source)}
+          ${pill({ harness: 'CLI_CODE harness', public: 'public CLI', catalog: 'curated catalog' }[e.source] || e.source, 'src ' + e.source)}
           ${e.dataQuality === 'curated' ? pill('curated', 'curated', 'Human-verified profile') : ''}
           ${e.difficulty ? pill(e.difficulty, 'diff-' + e.difficulty) : ''}
           ${catLinks}

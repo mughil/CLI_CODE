@@ -430,6 +430,8 @@ a.tagcat:hover { border-color: var(--accent); color: var(--accent-ink); text-dec
 .pill.src.harness { border-color: color-mix(in srgb, var(--accent) 50%, transparent); color: var(--accent-ink); }
 .pill.src.public { border-color: color-mix(in srgb, #38bdf8 55%, transparent); color: #7dd3fc; }
 [data-theme="light"] .pill.src.public { color: #0369a1; }
+.pill.src.catalog { border-color: color-mix(in srgb, #a78bfa 55%, transparent); color: #c4b5fd; }
+[data-theme="light"] .pill.src.catalog { color: #6d28d9; }
 .pill.curated { border-color: color-mix(in srgb, var(--warn) 55%, transparent); color: var(--warn); }
 .pill.diff-beginner { border-color: color-mix(in srgb, var(--accent) 50%, transparent); color: var(--accent-ink); }
 .pill.diff-intermediate { border-color: color-mix(in srgb, #38bdf8 50%, transparent); color: #7dd3fc; }

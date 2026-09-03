@@ -13,14 +13,15 @@ about data.
 
 ## Now
 
-- **CLI dataset → 500.** Currently 103 verified entries from the
-  HKUDS/CLI-Anything snapshots. Expanding to 500 needs a real source for the
-  additional tools — no fabrication. Tracked here as a target, not a gate.
+- **CLI dataset — 500 tools.** 79 agent-native harnesses + 24 public CLIs +
+  a 397-entry hand-curated catalog (`data/catalog_registry.json`) of widely-used
+  real developer command-line tools. The `npm run check` size gate keeps the
+  active dataset at exactly 500 unique ids/slugs. Next: deepen curated profiles.
 - **Grow the model dataset** past 50 — Nemotron, Jamba variants, more small
   local models, image/video/audio families — every field source-linked.
 - **Model pricing freshness** — a scheduled job to re-verify `pricingVerifiedAt`.
 
-- **Grow the verified overlay.** 25 / 103 tools have hand-checked profiles.
+- **Grow the verified overlay.** 25 / 500 tools have deep hand-checked profiles.
   Every added `useCases` / `alternatives` / `difficulty` improves Find, Compare
   and Stacks at once.
 - **Examples.** Almost no entry has `examples[]` yet — the piece the cheat sheet

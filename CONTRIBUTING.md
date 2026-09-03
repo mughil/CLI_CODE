@@ -47,8 +47,16 @@ pick a one-line `role`. Keep presets to ≤ 12 tools. If coverage is thin, add a
 
 ## New source entries
 
-The tool list itself comes from the upstream
-[CLI-Anything](https://github.com/HKUDS/CLI-Anything) registry snapshots in `data/`.
+The tool list comes from two places in `data/`: the upstream
+[CLI-Anything](https://github.com/HKUDS/CLI-Anything) registry snapshots
+(`registry.json`, `public_registry.json`), and the hand-curated
+`catalog_registry.json` in this repo. To add a mainstream CLI tool, append a
+real entry to `catalog_registry.json` (name, display_name, description,
+category, homepage, install_cmd) — one real project per entry, no duplicates
+of an existing slug — then run `npm run build`. The `npm run check` size gate
+holds the active dataset at exactly 500 unique tools, so an addition must be
+paired with a removal until the gate is intentionally raised
+(`EXPECT_TOOLS=<n>`).
 To propose a brand-new tool, open an issue using the **Add CLI** template.
 
 ## Schemas
