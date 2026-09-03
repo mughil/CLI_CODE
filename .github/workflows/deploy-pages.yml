@@ -18,6 +18,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # canonical / og:url / sitemap use this; every build step in the job sees it
+      SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
