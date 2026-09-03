@@ -10,16 +10,34 @@
       "modelFamily": "GPT-5.6",
       "version": "5.6-sol",
       "knowledgeCutoff": "2026-02",
-      "modelType": ["chat", "reasoning", "multimodal"],
-      "categories": ["frontier", "reasoning", "general-purpose", "multimodal", "long-context", "agents"],
-      "availability": ["api"],
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "multimodal",
+        "long-context",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "license": null,
       "commercialUse": "yes",
       "contextWindow": 1050000,
       "maxOutput": 128000,
-      "inputModalities": ["text", "image"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "yes",
       "toolUse": "yes",
       "functionCalling": "yes",
@@ -31,13 +49,30 @@
       "apiAvailable": true,
       "apiEndpointDocumentation": "https://developers.openai.com/api/docs/models",
       "officialDocumentation": "https://developers.openai.com/api/docs/models/gpt-5.6",
-      "strengths": ["Very large 1M+ context", "Configurable reasoning effort", "Native tool use (web/file/computer)"],
-      "limitations": ["Proprietary, API only", "No local execution"],
-      "useCases": ["Complex reasoning", "Long-document analysis", "Agentic workflows", "Coding"],
+      "strengths": [
+        "Very large 1M+ context",
+        "Configurable reasoning effort",
+        "Native tool use (web/file/computer)"
+      ],
+      "limitations": [
+        "Proprietary, API only",
+        "No local execution"
+      ],
+      "useCases": [
+        "Complex reasoning",
+        "Long-document analysis",
+        "Agentic workflows",
+        "Coding"
+      ],
       "lastVerified": "2026-09-03",
       "availabilityVerifiedAt": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://developers.openai.com/api/docs/models", "title": "OpenAI API — Models", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://developers.openai.com/api/docs/models",
+          "title": "OpenAI API — Models",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -48,15 +83,32 @@
       "modelFamily": "GPT-5.6",
       "version": "5.6-terra",
       "knowledgeCutoff": "2026-02",
-      "modelType": ["chat", "reasoning", "multimodal"],
-      "categories": ["frontier", "reasoning", "general-purpose", "multimodal", "long-context"],
-      "availability": ["api"],
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "multimodal",
+        "long-context"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
       "contextWindow": 1050000,
       "maxOutput": 128000,
-      "inputModalities": ["text", "image"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "yes",
       "toolUse": "yes",
       "functionCalling": "yes",
@@ -67,11 +119,23 @@
       "apiAvailable": true,
       "apiEndpointDocumentation": "https://developers.openai.com/api/docs/models",
       "officialDocumentation": "https://developers.openai.com/api/docs/models",
-      "useCases": ["Reasoning", "Long-context tasks", "Agentic tool use"],
-      "alternatives": ["gpt-5-6-sol", "gpt-5-6-luna"],
+      "useCases": [
+        "Reasoning",
+        "Long-context tasks",
+        "Agentic tool use"
+      ],
+      "alternatives": [
+        "gpt-5-6-sol",
+        "gpt-5-6-luna"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://developers.openai.com/api/docs/models", "title": "OpenAI API — Models", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://developers.openai.com/api/docs/models",
+          "title": "OpenAI API — Models",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -82,15 +146,31 @@
       "modelFamily": "GPT-5.6",
       "version": "5.6-luna",
       "knowledgeCutoff": "2026-02",
-      "modelType": ["chat", "reasoning", "multimodal"],
-      "categories": ["frontier", "reasoning", "general-purpose", "multimodal"],
-      "availability": ["api"],
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "multimodal"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
       "contextWindow": 1050000,
       "maxOutput": 128000,
-      "inputModalities": ["text", "image"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "yes",
       "toolUse": "yes",
       "vision": "yes",
@@ -99,10 +179,18 @@
       "localCapable": false,
       "apiAvailable": true,
       "officialDocumentation": "https://developers.openai.com/api/docs/models",
-      "alternatives": ["gpt-5-6-sol", "gpt-5-6-terra"],
+      "alternatives": [
+        "gpt-5-6-sol",
+        "gpt-5-6-terra"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://developers.openai.com/api/docs/models", "title": "OpenAI API — Models", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://developers.openai.com/api/docs/models",
+          "title": "OpenAI API — Models",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -112,15 +200,33 @@
       "provider": "Anthropic",
       "modelFamily": "Claude 5",
       "version": "fable-5.1",
-      "modelType": ["chat", "reasoning"],
-      "categories": ["frontier", "reasoning", "general-purpose", "coding", "long-context", "agents"],
-      "availability": ["api"],
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "coding",
+        "long-context",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "inputModalities": ["text", "image", "pdf"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "yes",
       "toolUse": "yes",
       "functionCalling": "yes",
@@ -130,19 +236,52 @@
       "multilingual": "yes",
       "localCapable": false,
       "apiAvailable": true,
-      "apiEndpointDocumentation": "https://docs.anthropic.com/en/api/messages",
-      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
-      "pricing": { "inputPerMTok": 10, "outputPerMTok": 50, "currency": "USD" },
+      "apiEndpointDocumentation": "https://platform.claude.com/docs/en/api/messages",
+      "officialDocumentation": "https://platform.claude.com/docs/en/about-claude/models",
+      "pricing": {
+        "inputPerMTok": 10,
+        "outputPerMTok": 50,
+        "currency": "USD"
+      },
       "pricingVerifiedAt": "2026-09-03",
-      "strengths": ["Most capable widely-released Claude model", "Long-horizon agentic work", "Always-on adaptive thinking"],
-      "limitations": ["Proprietary, API only", "Raw chain-of-thought never returned", "30-day data retention required"],
-      "useCases": ["Hard reasoning", "Autonomous coding agents", "Long-context analysis"],
-      "alternatives": ["claude-opus-5", "gpt-5-6-sol", "gemini-3-1-pro"],
-      "related": ["claude-opus-5", "claude-sonnet-5"],
+      "strengths": [
+        "Most capable widely-released Claude model",
+        "Long-horizon agentic work",
+        "Always-on adaptive thinking"
+      ],
+      "limitations": [
+        "Proprietary, API only",
+        "Raw chain-of-thought never returned",
+        "30-day data retention required"
+      ],
+      "useCases": [
+        "Hard reasoning",
+        "Autonomous coding agents",
+        "Long-context analysis"
+      ],
+      "alternatives": [
+        "claude-opus-5",
+        "gpt-5-6-sol",
+        "gemini-3-1-pro"
+      ],
+      "related": [
+        "claude-opus-5",
+        "claude-sonnet-5"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://docs.anthropic.com/en/docs/about-claude/models", "title": "Anthropic — Models overview", "verifiedAt": "2026-09-03" },
-        { "type": "official-docs", "url": "https://docs.anthropic.com/en/docs/build-with-claude/pricing", "title": "Anthropic — Pricing", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://platform.claude.com/docs/en/about-claude/models",
+          "title": "Anthropic — Models overview",
+          "verifiedAt": "2026-09-03"
+        },
+        {
+          "type": "pricing-page",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "title": "Anthropic — Pricing",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -152,15 +291,33 @@
       "provider": "Anthropic",
       "modelFamily": "Claude 5",
       "version": "opus-5",
-      "modelType": ["chat", "reasoning"],
-      "categories": ["frontier", "reasoning", "general-purpose", "coding", "long-context", "agents"],
-      "availability": ["api"],
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "coding",
+        "long-context",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "inputModalities": ["text", "image", "pdf"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "hybrid",
       "toolUse": "yes",
       "functionCalling": "yes",
@@ -170,19 +327,50 @@
       "multilingual": "yes",
       "localCapable": false,
       "apiAvailable": true,
-      "apiEndpointDocumentation": "https://docs.anthropic.com/en/api/messages",
-      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
-      "pricing": { "inputPerMTok": 5, "outputPerMTok": 25, "currency": "USD" },
+      "apiEndpointDocumentation": "https://platform.claude.com/docs/en/api/messages",
+      "officialDocumentation": "https://platform.claude.com/docs/en/about-claude/models",
+      "pricing": {
+        "inputPerMTok": 5,
+        "outputPerMTok": 25,
+        "currency": "USD"
+      },
       "pricingVerifiedAt": "2026-09-03",
-      "strengths": ["Strong coding and agentic performance", "Adaptive thinking on by default", "1M context"],
-      "limitations": ["Proprietary, API only"],
-      "useCases": ["Coding agents", "Reasoning", "Tool-use workflows"],
-      "alternatives": ["claude-fable-5-1", "claude-sonnet-5", "gpt-5-6-sol"],
-      "related": ["claude-sonnet-5", "claude-haiku-4-5"],
+      "strengths": [
+        "Strong coding and agentic performance",
+        "Adaptive thinking on by default",
+        "1M context"
+      ],
+      "limitations": [
+        "Proprietary, API only"
+      ],
+      "useCases": [
+        "Coding agents",
+        "Reasoning",
+        "Tool-use workflows"
+      ],
+      "alternatives": [
+        "claude-fable-5-1",
+        "claude-sonnet-5",
+        "gpt-5-6-sol"
+      ],
+      "related": [
+        "claude-sonnet-5",
+        "claude-haiku-4-5"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://docs.anthropic.com/en/docs/about-claude/models", "title": "Anthropic — Models overview", "verifiedAt": "2026-09-03" },
-        { "type": "official-docs", "url": "https://docs.anthropic.com/en/docs/build-with-claude/pricing", "title": "Anthropic — Pricing", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://platform.claude.com/docs/en/about-claude/models",
+          "title": "Anthropic — Models overview",
+          "verifiedAt": "2026-09-03"
+        },
+        {
+          "type": "pricing-page",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "title": "Anthropic — Pricing",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -192,15 +380,32 @@
       "provider": "Anthropic",
       "modelFamily": "Claude 5",
       "version": "sonnet-5",
-      "modelType": ["chat", "reasoning"],
-      "categories": ["frontier", "general-purpose", "coding", "long-context", "agents"],
-      "availability": ["api"],
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "general-purpose",
+        "coding",
+        "long-context",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "inputModalities": ["text", "image", "pdf"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "hybrid",
       "toolUse": "yes",
       "functionCalling": "yes",
@@ -210,18 +415,50 @@
       "multilingual": "yes",
       "localCapable": false,
       "apiAvailable": true,
-      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
-      "pricing": { "inputPerMTok": 3, "outputPerMTok": 15, "currency": "USD", "notes": "Introductory $2/$10 through 2026-08-31 per pricing page at time of verification" },
+      "officialDocumentation": "https://platform.claude.com/docs/en/about-claude/models",
+      "pricing": {
+        "inputPerMTok": 2,
+        "outputPerMTok": 10,
+        "currency": "USD",
+        "notes": "The $2/$10 launch pricing is now the standard price; the previously scheduled increase to $3/$15 will not occur (per the pricing page)."
+      },
       "pricingVerifiedAt": "2026-09-03",
-      "strengths": ["Price/performance balance", "1M context", "Strong coding"],
-      "limitations": ["Proprietary, API only"],
-      "useCases": ["High-volume coding", "Chat products", "Agentic tasks"],
-      "alternatives": ["claude-opus-5", "gpt-5-6-luna", "gemini-3-8-flash"],
-      "related": ["claude-opus-5", "claude-haiku-4-5"],
+      "strengths": [
+        "Price/performance balance",
+        "1M context",
+        "Strong coding"
+      ],
+      "limitations": [
+        "Proprietary, API only"
+      ],
+      "useCases": [
+        "High-volume coding",
+        "Chat products",
+        "Agentic tasks"
+      ],
+      "alternatives": [
+        "claude-opus-5",
+        "gpt-5-6-luna",
+        "gemini-3-8-flash"
+      ],
+      "related": [
+        "claude-opus-5",
+        "claude-haiku-4-5"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://docs.anthropic.com/en/docs/about-claude/models", "title": "Anthropic — Models overview", "verifiedAt": "2026-09-03" },
-        { "type": "pricing-page", "url": "https://docs.anthropic.com/en/docs/build-with-claude/pricing", "title": "Anthropic — Pricing", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://platform.claude.com/docs/en/about-claude/models",
+          "title": "Anthropic — Models overview",
+          "verifiedAt": "2026-09-03"
+        },
+        {
+          "type": "pricing-page",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "title": "Anthropic — Pricing",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -232,15 +469,30 @@
       "modelFamily": "Claude 4.5",
       "version": "haiku-4.5",
       "releaseDate": "2025-10",
-      "modelType": ["chat"],
-      "categories": ["general-purpose", "small-language-model", "coding", "agents"],
-      "availability": ["api"],
+      "modelType": [
+        "chat"
+      ],
+      "categories": [
+        "general-purpose",
+        "small-language-model",
+        "coding",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
       "contextWindow": 200000,
       "maxOutput": 128000,
-      "inputModalities": ["text", "image", "pdf"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "hybrid",
       "toolUse": "yes",
       "functionCalling": "yes",
@@ -249,17 +501,42 @@
       "multilingual": "yes",
       "localCapable": false,
       "apiAvailable": true,
-      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
-      "pricing": { "inputPerMTok": 1, "outputPerMTok": 5, "currency": "USD" },
+      "officialDocumentation": "https://platform.claude.com/docs/en/about-claude/models",
+      "pricing": {
+        "inputPerMTok": 1,
+        "outputPerMTok": 5,
+        "currency": "USD"
+      },
       "pricingVerifiedAt": "2026-09-03",
-      "strengths": ["Fast", "Cheapest current Claude", "Good for sub-agents / high volume"],
-      "limitations": ["200K context (smaller than the 5-series)", "Proprietary"],
-      "useCases": ["Sub-agents", "Classification", "High-volume chat", "Latency-sensitive routes"],
-      "alternatives": ["claude-sonnet-5"],
-      "related": ["claude-sonnet-5"],
+      "strengths": [
+        "Fast",
+        "Cheapest current Claude",
+        "Good for sub-agents / high volume"
+      ],
+      "limitations": [
+        "200K context (smaller than the 5-series)",
+        "Proprietary"
+      ],
+      "useCases": [
+        "Sub-agents",
+        "Classification",
+        "High-volume chat",
+        "Latency-sensitive routes"
+      ],
+      "alternatives": [
+        "claude-sonnet-5"
+      ],
+      "related": [
+        "claude-sonnet-5"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://docs.anthropic.com/en/docs/about-claude/models", "title": "Anthropic — Models overview", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://platform.claude.com/docs/en/about-claude/models",
+          "title": "Anthropic — Models overview",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -269,13 +546,33 @@
       "provider": "Google DeepMind",
       "modelFamily": "Gemini 3",
       "version": "3.8-flash",
-      "modelType": ["chat", "reasoning", "multimodal"],
-      "categories": ["frontier", "general-purpose", "multimodal", "vision", "long-context", "agents"],
-      "availability": ["api"],
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "frontier",
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "long-context",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
-      "inputModalities": ["text", "image", "audio", "video"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "yes",
       "toolUse": "yes",
       "functionCalling": "yes",
@@ -288,14 +585,36 @@
       "apiAvailable": true,
       "apiEndpointDocumentation": "https://ai.google.dev/gemini-api/docs/models",
       "officialDocumentation": "https://ai.google.dev/gemini-api/docs/models",
-      "strengths": ["Fast multimodal (text/image/audio/video in)", "Current Flash flagship"],
-      "limitations": ["Context window / cutoff not stated on the models index page — see model card", "Proprietary"],
-      "useCases": ["Multimodal understanding", "High-throughput chat", "Agentic tool use"],
-      "alternatives": ["gemini-2-5-flash", "claude-sonnet-5", "gpt-5-6-luna"],
-      "related": ["gemini-3-1-pro", "gemini-2-5-pro"],
+      "strengths": [
+        "Fast multimodal (text/image/audio/video in)",
+        "Current Flash flagship"
+      ],
+      "limitations": [
+        "Context window / cutoff not stated on the models index page — see model card",
+        "Proprietary"
+      ],
+      "useCases": [
+        "Multimodal understanding",
+        "High-throughput chat",
+        "Agentic tool use"
+      ],
+      "alternatives": [
+        "gemini-2-5-flash",
+        "claude-sonnet-5",
+        "gpt-5-6-luna"
+      ],
+      "related": [
+        "gemini-3-1-pro",
+        "gemini-2-5-pro"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://ai.google.dev/gemini-api/docs/models", "title": "Gemini API — Models", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://ai.google.dev/gemini-api/docs/models",
+          "title": "Gemini API — Models",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -305,13 +624,34 @@
       "provider": "Google DeepMind",
       "modelFamily": "Gemini 3",
       "version": "3.1-pro-preview",
-      "modelType": ["chat", "reasoning", "multimodal"],
-      "categories": ["frontier", "reasoning", "general-purpose", "multimodal", "vision", "long-context"],
-      "availability": ["api", "waitlist"],
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "long-context"
+      ],
+      "availability": [
+        "api",
+        "waitlist"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
-      "inputModalities": ["text", "image", "audio", "video"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "yes",
       "toolUse": "yes",
       "vision": "yes",
@@ -322,13 +662,30 @@
       "localCapable": false,
       "apiAvailable": true,
       "officialDocumentation": "https://ai.google.dev/gemini-api/docs/models",
-      "limitations": ["Preview at time of verification", "Full specs on model card only"],
-      "useCases": ["Complex reasoning", "Multimodal analysis"],
-      "alternatives": ["gemini-2-5-pro", "gpt-5-6-sol", "claude-opus-5"],
-      "related": ["gemini-3-8-flash"],
+      "limitations": [
+        "Preview at time of verification",
+        "Full specs on model card only"
+      ],
+      "useCases": [
+        "Complex reasoning",
+        "Multimodal analysis"
+      ],
+      "alternatives": [
+        "gemini-2-5-pro",
+        "gpt-5-6-sol",
+        "claude-opus-5"
+      ],
+      "related": [
+        "gemini-3-8-flash"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://ai.google.dev/gemini-api/docs/models", "title": "Gemini API — Models", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://ai.google.dev/gemini-api/docs/models",
+          "title": "Gemini API — Models",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -338,14 +695,34 @@
       "provider": "Google DeepMind",
       "modelFamily": "Gemini 2.5",
       "version": "2.5-pro",
-      "modelType": ["chat", "reasoning", "multimodal"],
-      "categories": ["reasoning", "general-purpose", "multimodal", "vision", "long-context"],
-      "availability": ["api"],
+      "modelType": [
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "categories": [
+        "reasoning",
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "long-context"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
       "contextWindow": 1048576,
-      "inputModalities": ["text", "image", "audio", "video", "pdf"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "yes",
       "toolUse": "yes",
       "vision": "yes",
@@ -356,14 +733,34 @@
       "localCapable": false,
       "apiAvailable": true,
       "officialDocumentation": "https://ai.google.dev/gemini-api/docs/models",
-      "strengths": ["~1M token context", "Thinking model", "Broad multimodal input incl. PDF/video"],
-      "limitations": ["Superseded by Gemini 3 line for frontier tasks"],
-      "useCases": ["Long-document reasoning", "Multimodal RAG", "Code understanding"],
-      "alternatives": ["gemini-3-1-pro", "claude-sonnet-5"],
-      "related": ["gemini-2-5-flash"],
+      "strengths": [
+        "~1M token context",
+        "Thinking model",
+        "Broad multimodal input incl. PDF/video"
+      ],
+      "limitations": [
+        "Superseded by Gemini 3 line for frontier tasks"
+      ],
+      "useCases": [
+        "Long-document reasoning",
+        "Multimodal RAG",
+        "Code understanding"
+      ],
+      "alternatives": [
+        "gemini-3-1-pro",
+        "claude-sonnet-5"
+      ],
+      "related": [
+        "gemini-2-5-flash"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://ai.google.dev/gemini-api/docs/models", "title": "Gemini API — Models", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://ai.google.dev/gemini-api/docs/models",
+          "title": "Gemini API — Models",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -373,14 +770,32 @@
       "provider": "Google DeepMind",
       "modelFamily": "Gemini 2.5",
       "version": "2.5-flash",
-      "modelType": ["chat", "multimodal"],
-      "categories": ["general-purpose", "multimodal", "vision", "long-context"],
-      "availability": ["api"],
+      "modelType": [
+        "chat",
+        "multimodal"
+      ],
+      "categories": [
+        "general-purpose",
+        "multimodal",
+        "vision",
+        "long-context"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
       "contextWindow": 1048576,
-      "inputModalities": ["text", "image", "audio", "video", "pdf"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "pdf"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "hybrid",
       "toolUse": "yes",
       "vision": "yes",
@@ -391,12 +806,25 @@
       "localCapable": false,
       "apiAvailable": true,
       "officialDocumentation": "https://ai.google.dev/gemini-api/docs/models",
-      "useCases": ["High-throughput multimodal", "Cheap chat", "Summarization"],
-      "alternatives": ["claude-haiku-4-5"],
-      "related": ["gemini-2-5-pro"],
+      "useCases": [
+        "High-throughput multimodal",
+        "Cheap chat",
+        "Summarization"
+      ],
+      "alternatives": [
+        "claude-haiku-4-5"
+      ],
+      "related": [
+        "gemini-2-5-pro"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://ai.google.dev/gemini-api/docs/models", "title": "Gemini API — Models", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://ai.google.dev/gemini-api/docs/models",
+          "title": "Gemini API — Models",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -406,14 +834,28 @@
       "provider": "xAI",
       "modelFamily": "Grok 4",
       "version": "4.6",
-      "modelType": ["chat", "reasoning"],
-      "categories": ["frontier", "reasoning", "general-purpose", "agents"],
-      "availability": ["api"],
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "agents"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
       "contextWindow": 500000,
-      "inputModalities": ["text"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "yes",
       "toolUse": "yes",
       "functionCalling": "yes",
@@ -423,16 +865,43 @@
       "apiAvailable": true,
       "apiEndpointDocumentation": "https://docs.x.ai/docs/models",
       "officialDocumentation": "https://docs.x.ai/docs/models",
-      "pricing": { "inputPerMTok": 3, "outputPerMTok": null, "currency": "USD", "notes": "Models page lists $2.00–$4.00 per 1M input tokens (tiered); output not shown in the summary" },
+      "pricing": {
+        "inputPerMTok": 3,
+        "outputPerMTok": null,
+        "currency": "USD",
+        "notes": "Models page lists $2.00–$4.00 per 1M input tokens (tiered); output not shown in the summary"
+      },
       "pricingVerifiedAt": "2026-09-03",
-      "strengths": ["500K context", "Reasoning", "Real-time knowledge via X integration (per xAI)"],
-      "limitations": ["Vision/multimodal not stated on models page", "Proprietary"],
-      "useCases": ["Reasoning", "Coding", "Research assistants"],
-      "alternatives": ["grok-4-3", "gpt-5-6-sol", "claude-opus-5"],
-      "related": ["grok-4-3"],
+      "strengths": [
+        "500K context",
+        "Reasoning",
+        "Real-time knowledge via X integration (per xAI)"
+      ],
+      "limitations": [
+        "Vision/multimodal not stated on models page",
+        "Proprietary"
+      ],
+      "useCases": [
+        "Reasoning",
+        "Coding",
+        "Research assistants"
+      ],
+      "alternatives": [
+        "grok-4-3",
+        "gpt-5-6-sol",
+        "claude-opus-5"
+      ],
+      "related": [
+        "grok-4-3"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://docs.x.ai/docs/models", "title": "xAI — Models", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://docs.x.ai/docs/models",
+          "title": "xAI — Models",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     },
     {
@@ -442,14 +911,28 @@
       "provider": "xAI",
       "modelFamily": "Grok 4",
       "version": "4.3",
-      "modelType": ["chat", "reasoning"],
-      "categories": ["frontier", "reasoning", "general-purpose", "long-context"],
-      "availability": ["api"],
+      "modelType": [
+        "chat",
+        "reasoning"
+      ],
+      "categories": [
+        "frontier",
+        "reasoning",
+        "general-purpose",
+        "long-context"
+      ],
+      "availability": [
+        "api"
+      ],
       "openSourceStatus": "api-only",
       "commercialUse": "yes",
       "contextWindow": 1000000,
-      "inputModalities": ["text"],
-      "outputModalities": ["text"],
+      "inputModalities": [
+        "text"
+      ],
+      "outputModalities": [
+        "text"
+      ],
       "reasoning": "yes",
       "toolUse": "yes",
       "codeCapability": "strong",
@@ -457,16 +940,40 @@
       "localCapable": false,
       "apiAvailable": true,
       "officialDocumentation": "https://docs.x.ai/docs/models",
-      "pricing": { "inputPerMTok": 1.25, "outputPerMTok": null, "currency": "USD", "notes": "$1.25–$2.50 per 1M input tokens (tiered) per models page" },
+      "pricing": {
+        "inputPerMTok": 1.25,
+        "outputPerMTok": null,
+        "currency": "USD",
+        "notes": "$1.25–$2.50 per 1M input tokens (tiered) per models page"
+      },
       "pricingVerifiedAt": "2026-09-03",
-      "strengths": ["1M context", "Lower price than 4.5/4.6"],
-      "limitations": ["Multimodal not stated", "Proprietary"],
-      "useCases": ["Long-context analysis", "Cost-sensitive reasoning"],
-      "alternatives": ["grok-4-6", "gemini-2-5-pro"],
-      "related": ["grok-4-6"],
+      "strengths": [
+        "1M context",
+        "Lower price than 4.5/4.6"
+      ],
+      "limitations": [
+        "Multimodal not stated",
+        "Proprietary"
+      ],
+      "useCases": [
+        "Long-context analysis",
+        "Cost-sensitive reasoning"
+      ],
+      "alternatives": [
+        "grok-4-6",
+        "gemini-2-5-pro"
+      ],
+      "related": [
+        "grok-4-6"
+      ],
       "lastVerified": "2026-09-03",
       "sources": [
-        { "type": "official-docs", "url": "https://docs.x.ai/docs/models", "title": "xAI — Models", "verifiedAt": "2026-09-03" }
+        {
+          "type": "official-docs",
+          "url": "https://docs.x.ai/docs/models",
+          "title": "xAI — Models",
+          "verifiedAt": "2026-09-03"
+        }
       ]
     }
   ]

@@ -42,6 +42,8 @@ if (NET) {
   await Promise.all([...urls.keys()].map(async (u) => {
     try {
       const r = await fetch(u, { method: 'GET', redirect: 'follow', headers: { 'user-agent': 'cli-code-linkcheck' } });
+      // 403/429 from api.github.com is unauthenticated rate-limiting, not a dead link
+      if (r.status === 403 || r.status === 429) { console.warn(`  ${r.status} (rate-limited, not counted) ${u}`); return; }
       if (r.status >= 400) { console.error(`  ${r.status} ${u}`); fail++; }
     } catch (e) { console.error(`  ERR ${u} (${e.message})`); fail++; }
   }));

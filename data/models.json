@@ -45,8 +45,8 @@
       "multilingual": "yes",
       "localCapable": false,
       "apiAvailable": true,
-      "apiEndpointDocumentation": "https://docs.anthropic.com/en/api/messages",
-      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "apiEndpointDocumentation": "https://platform.claude.com/docs/en/api/messages",
+      "officialDocumentation": "https://platform.claude.com/docs/en/about-claude/models",
       "pricing": {
         "inputPerMTok": 10,
         "outputPerMTok": 50,
@@ -81,13 +81,13 @@
       "sources": [
         {
           "type": "official-docs",
-          "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+          "url": "https://platform.claude.com/docs/en/about-claude/models",
           "title": "Anthropic — Models overview",
           "verifiedAt": "2026-09-03"
         },
         {
-          "type": "official-docs",
-          "url": "https://docs.anthropic.com/en/docs/build-with-claude/pricing",
+          "type": "pricing-page",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
           "title": "Anthropic — Pricing",
           "verifiedAt": "2026-09-03"
         }
@@ -133,7 +133,7 @@
       "multilingual": "yes",
       "localCapable": false,
       "apiAvailable": true,
-      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "officialDocumentation": "https://platform.claude.com/docs/en/about-claude/models",
       "pricing": {
         "inputPerMTok": 1,
         "outputPerMTok": 5,
@@ -165,7 +165,7 @@
       "sources": [
         {
           "type": "official-docs",
-          "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+          "url": "https://platform.claude.com/docs/en/about-claude/models",
           "title": "Anthropic — Models overview",
           "verifiedAt": "2026-09-03"
         }
@@ -214,8 +214,8 @@
       "multilingual": "yes",
       "localCapable": false,
       "apiAvailable": true,
-      "apiEndpointDocumentation": "https://docs.anthropic.com/en/api/messages",
-      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "apiEndpointDocumentation": "https://platform.claude.com/docs/en/api/messages",
+      "officialDocumentation": "https://platform.claude.com/docs/en/about-claude/models",
       "pricing": {
         "inputPerMTok": 5,
         "outputPerMTok": 25,
@@ -248,13 +248,13 @@
       "sources": [
         {
           "type": "official-docs",
-          "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+          "url": "https://platform.claude.com/docs/en/about-claude/models",
           "title": "Anthropic — Models overview",
           "verifiedAt": "2026-09-03"
         },
         {
-          "type": "official-docs",
-          "url": "https://docs.anthropic.com/en/docs/build-with-claude/pricing",
+          "type": "pricing-page",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
           "title": "Anthropic — Pricing",
           "verifiedAt": "2026-09-03"
         }
@@ -302,12 +302,12 @@
       "multilingual": "yes",
       "localCapable": false,
       "apiAvailable": true,
-      "officialDocumentation": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "officialDocumentation": "https://platform.claude.com/docs/en/about-claude/models",
       "pricing": {
-        "inputPerMTok": 3,
-        "outputPerMTok": 15,
+        "inputPerMTok": 2,
+        "outputPerMTok": 10,
         "currency": "USD",
-        "notes": "Introductory $2/$10 through 2026-08-31 per pricing page at time of verification"
+        "notes": "The $2/$10 launch pricing is now the standard price; the previously scheduled increase to $3/$15 will not occur (per the pricing page)."
       },
       "pricingVerifiedAt": "2026-09-03",
       "strengths": [
@@ -336,13 +336,13 @@
       "sources": [
         {
           "type": "official-docs",
-          "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+          "url": "https://platform.claude.com/docs/en/about-claude/models",
           "title": "Anthropic — Models overview",
           "verifiedAt": "2026-09-03"
         },
         {
           "type": "pricing-page",
-          "url": "https://docs.anthropic.com/en/docs/build-with-claude/pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
           "title": "Anthropic — Pricing",
           "verifiedAt": "2026-09-03"
         }
