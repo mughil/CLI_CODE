@@ -1,6 +1,34 @@
 # CLI_CODE — verification log
 
-Updated: 2026-09-03 · HEAD 50e22d5 · live https://mughil.github.io/CLI_CODE/
+Updated: 2026-09-03 · HEAD fdc61d6 · live https://mughil.github.io/CLI_CODE/
+
+## Production-readiness pass (HEAD fdc61d6)
+- `npm ci` clean install + `npm audit` → **0 vulnerabilities**.
+- `npm run check` → PASS (500/500/500 + schema + drift + links + html + models + 124 model URLs well-formed).
+- `node scripts/check-links.mjs --net` → **505 reachable, 0 dead**, 7 inconclusive
+  (5× www.gnu.org/software/* + renderdoc.org + open.work.weixin.qq.com — all
+  canonical official URLs; those hosts block automated clients / geo-restrict).
+- `node scripts/check-model-links.mjs --net` → **all 124 model/project URLs reachable**.
+- Data fixes: dog→github.com/ogham/dog, curlie→github.com/rs/curlie (curlie.io
+  had lapsed to a squatter domain), dooit→dooit-org.github.io, iotop→Tomas-M/iotop,
+  websocketd http→https. anygen/intelwatch/stata dead upstream links suppressed
+  via data/overlay.json (explicit null; entries stay dataQuality "derived").
+- Security: 404.html <base href> segment restricted to [A-Za-z0-9._-]; XSS review
+  of all URL-param sinks (escapeHtml) clean; all target=_blank carry rel=noopener;
+  no inline handlers / eval / document.write (except the hardened 404 base trick).
+- A11y: Lighthouse **A100 / B100 / SEO100 on all 16 pages** (mobile). .star toggle
+  now 24×24 (32 on coarse pointers); .linklike tap padding on touch. Skip link,
+  landmarks, aria-live count, :focus-visible outlines all present.
+- Responsive: 375 (mobile) + 768 (tablet) + desktop — **no page-level horizontal
+  scroll**; wide tables scroll inside .table-scroll.
+- Perf (live, mobile Lighthouse): registry **P98**, cli **P100**, index **P98**,
+  models **P99** — all A/B/SEO 100. registry.js builds the 500-item search index
+  lazily (first query, warmed via requestIdleCallback), not on load.
+- Functional (live): Browse "500 of 500", 60-row cap + show-all, search finds
+  catalog tools, category/source filters, sort, favourites + compare persist to
+  localStorage (clicode:state), saved.html renders them, keyboard nav lifts the
+  row cap, zero console/JS errors. cli-ld / model-ld JSON-LD parse valid.
+
 
 ## `npm run check` (local + CI, GitHub Actions runs #9–#12 all green)
 ```

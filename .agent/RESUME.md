@@ -3,8 +3,11 @@
 Updated: 2026-09-03
 
 ## Status: COMPLETE — nothing pending
-- HEAD 50e22d5 == origin/main. Working tree clean.
-- Live: https://mughil.github.io/CLI_CODE/ — GitHub Actions run #12 build+deploy success.
+- HEAD fdc61d6 == origin/main. Working tree clean.
+- Live: https://mughil.github.io/CLI_CODE/ — GitHub Actions run #14 build+deploy success.
+- Production-readiness pass done (fdc61d6): dead external links fixed/suppressed,
+  a11y touch targets, lazy search index, 404 hardening, `check-links --net` mode.
+  npm audit 0 vulns; live Lighthouse A100/B100/SEO100, perf median ~98.
 
 ## Counts
 - CLI_COUNT: 500 (79 harness + 24 public + 397 curated catalog)

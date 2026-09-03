@@ -1,5 +1,32 @@
 # CLI_CODE — project state
 
+Updated: 2026-09-03 · HEAD fdc61d6 · production-readiness pass complete
+
+## Production-readiness pass (commit fdc61d6)
+- npm ci clean install + `npm audit` → 0 vulnerabilities.
+- `npm run check` → PASS (500/500/500, schema, drift, links, html, models).
+- New opt-in `node scripts/check-links.mjs --net`: GETs every external URL in
+  data/clis.json, fails only on HTTP 4xx/5xx, warns on bot-blocked/unreachable.
+  Result: 505 reachable, 0 dead, 7 inconclusive (5 gnu.org + renderdoc + wecom —
+  all verified-correct canonical URLs that block automated clients).
+- `check-model-links.mjs --net` → all 124 model URLs reachable.
+- Dead catalog links fixed: dog / dooit / curlie / iotop / websocketd repointed
+  to live canonical URLs (curlie.io had lapsed to a squatter). Upstream dead
+  links (anygen, intelwatch, stata) suppressed via data/overlay.json explicit
+  null — build-data.mjs now honours `null` in overlay for repository/documentation.
+- A11y/responsive: .star toggle 17x20 -> 24x24 (32 on coarse pointers);
+  .linklike tap padding on touch. Lighthouse A100/B100/SEO100 on all 16 pages;
+  mobile 375 + tablet 768 + desktop: no page horizontal scroll, wide tables
+  scroll in their own container.
+- Perf: registry.js builds the 500-item search index lazily (first query,
+  warmed in requestIdleCallback) not on load. Live mobile Lighthouse:
+  registry P98, cli P100, index P98, models P99 — all A/B/SEO 100.
+- Security: 404.html restricts the Pages-root path segment to [A-Za-z0-9._-]
+  before writing <base href>. No inline handlers, no eval; all URL params
+  rendered through CLISearch.escapeHtml; every target=_blank has rel=noopener.
+- Known limitation: on phones (<560px) the sticky header scrolls horizontally
+  to reach the theme toggle + saved icon (keyboard-reachable; Lighthouse passes).
+
 Updated: 2026-09-03
 
 ## Counts
