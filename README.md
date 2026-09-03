@@ -1,36 +1,53 @@
 # CLI_CODE
 
-**An open, self-contained directory of command-line tools for developers.**
-Search by task, compare alternatives, assemble a stack, print a cheat sheet — all
-client-side. No backend, no tracking, no account.
+**An open, self-contained developer directory of command-line tools *and* AI models.**
+Search by task, compare alternatives, assemble a stack, print a cheat sheet, find
+the right model, run it locally — all client-side. No backend, no tracking, no account.
 
-- **Live demo:** _add your GitHub Pages URL here after first deploy_ (`https://<you>.github.io/CLI_CODE/`)
-- **Dataset:** 103 tools, 25 with hand-verified profiles
+- **Live demo:** `https://mughil.github.io/CLI_CODE/`
+- **Datasets (independent ids/slugs/validation/stats):**
+  - **CLI tools** — 103 entries (25 hand-verified), from the HKUDS/CLI-Anything registry
+  - **AI models** — 50 entries, 18 providers, every fact source-linked (`docs/MODEL-DATA.md`)
+  - **AI GitHub projects** — 20 entries, verified against the GitHub API
 - **Stack:** vanilla HTML/CSS/JS for the site; Node only for the build + CI
 
 ## Why it's different
 
 | | |
 |---|---|
-| **Task-first** | *Find my CLI* takes a plain-language goal and ranks tools by the tags and use cases that match — and shows you why. |
-| **Honest data** | A build step derives what it safely can and leaves the rest empty. Verified facts live in a human-maintained overlay. Nothing is fabricated. |
-| **Real comparison** | *Compare* leads with the differences that matter (difficulty, language, license, platform gaps), not a metadata dump. |
-| **Portable** | Every path is relative; works at `/` or `/CLI_CODE/`. One JSON dataset drives every page. |
+| **Task-first** | *Find my CLI* / *Find my model* take a plain-language goal or a checklist and rank by what actually matches — and show you why. |
+| **Honest data** | Derive what's safe, leave the rest blank. Verified facts live in human-maintained overlays with `sources[]`. Nothing is fabricated. |
+| **Open ≠ downloadable** | AI models are labelled **open source** / **open weight** / **proprietary** by their *actual license*, not by whether weights can be pulled. |
+| **Real comparison** | *Compare* / *Model Battle* lead with the differences that matter, not a metadata dump. |
+| **Portable** | Every path is relative; works at `/` or `/CLI_CODE/`. Built JSON drives every page. |
 
 ## Pages
 
+**CLI tools**
+
 | Page | Purpose |
 |------|---------|
-| `index.html` | Search-first landing — live counts, categories, verified highlights |
-| `registry.html` | **Browse** — weighted search, 6 facets, sortable columns, full keyboard control, URL-persisted |
-| `cli.html?slug=<slug>` | Canonical tool profile — install, platforms, use cases, alternatives, related |
-| `find.html` | **Find my CLI** — deterministic natural-language recommendations with explanations |
-| `stacks.html` | **Stacks** — 7 curated tool sets + capability matrices for agents |
-| `compare.html?slugs=a,b` | **Compare** 2–4 tools with key differences called out |
-| `cheatsheet.html` | Printable command reference for a set / stack / favorites |
+| `index.html` | Search-first landing |
+| `registry.html` | **Browse** — weighted search, 6 facets, sortable, keyboard-driven, URL-persisted |
+| `cli.html?slug=` | Tool profile — install, platforms, use cases, alternatives |
+| `find.html` | **Find my CLI** — natural-language recommendations with explanations |
+| `stacks.html` | **Stacks** — 7 curated tool sets + capability matrices |
+| `compare.html?slugs=a,b` | **Compare** 2–4 tools |
+| `cheatsheet.html` | Printable command reference |
 | `saved.html` | Favorites, compare queue, recently viewed (local only) |
-| `docs.html` | Full documentation |
-| `404.html` | Not-found, resolves assets against the site root |
+
+**AI models**
+
+| Page | Purpose |
+|------|---------|
+| `models.html` | **Models** — search + facets (provider, openness, availability, capability, context, local) |
+| `model.html?slug=` | Model profile — capabilities, license, pricing, alternatives, **Sources** list, JSON-LD |
+| `find-model.html` | **Find my model** — deterministic requirement scoring |
+| `model-compare.html?slugs=a,b` | **Model Battle** — 2–4 models, key differences |
+| `run-local.html` | Local-capable models grouped by runner |
+| `ai-explorer.html` | The 20 GitHub AI projects, filterable by category |
+
+`docs.html` · `404.html` (resolves assets against the site root).
 
 ## Local setup
 
@@ -59,11 +76,31 @@ data/meta.json               facet counts                        (generated)
 Built entries validate against `schema/cli.schema.json` (JSON Schema 2020-12).
 `data/stacks.json` picks must reference real slugs — enforced in CI.
 
+**AI models** are a separate dataset:
+
+```
+data/models/*.json     per-group model records, each with sources[]   ── contributor-editable
+data/ai-projects.json  GitHub AI projects (GitHub-API verified)       ── contributor-editable
+        │  scripts/build-data.mjs
+        ▼
+data/models.json       merged, normalized                              (generated)
+data/model-meta.json   facet counts + project meta                     (generated)
+```
+
+Validated by `scripts/validate-models.mjs` (`npm run check:models`): schema
+(`schema/model.schema.json`, `schema/aiproject.schema.json`), unique ids/slugs,
+resolving `alternatives`/`related`, openness-enum, URL well-formedness. Full rules
+and the DISCOVER → VERIFY → NORMALIZE → VALIDATE → REVIEW → PUBLISH workflow in
+[`docs/MODEL-DATA.md`](docs/MODEL-DATA.md).
+
 ## Contributing
 
-Add or correct a tool's verified facts in `data/overlay.json` (keyed by slug), then
-`npm run build && npm run check`. See [`docs.html#contributing`](docs.html) and
-`CONTRIBUTING.md`. A failing schema or dangling reference blocks the deploy.
+- **CLI tool facts** → `data/overlay.json` (keyed by slug)
+- **AI model** → add/edit a record in `data/models/<group>.json` with `sources[]`
+- **AI GitHub project** → `data/ai-projects.json` (verify against the GitHub API)
+
+Then `npm run build && npm run check`. See `CONTRIBUTING.md`, `docs.html`,
+`docs/MODEL-DATA.md`. A failing schema or dangling reference blocks the deploy.
 
 ## Deploy
 

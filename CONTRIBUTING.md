@@ -60,3 +60,26 @@ To propose a brand-new tool, open an issue using the **Add CLI** template.
 
 Site code is dependency-free vanilla JS/CSS. Keep it that way. Node is for the
 build and CI only.
+
+## Add or fix an AI model
+
+Edit `data/models/<group>.json` (`frontier`, `open-weight`, `coding`,
+`small-local`, ...). Required: `id`/`slug` (equal, kebab-case), `name`,
+`provider`, `modelType[]`, `categories[]`, `availability[]`, `openSourceStatus`,
+`lastVerified`, `sources[]` (>=1). Everything else only if you can verify it from
+an official source -- **omit or `null` otherwise**.
+
+- `openSourceStatus` reflects the **license**, not downloadability:
+  `open-source` (Apache-2.0 / MIT), `open-weight` (Llama / Gemma / custom),
+  `proprietary`, `api-only`, `research-license`, `commercial-use-restricted`,
+  `other-unknown`.
+- `alternatives` / `related` must point at slugs that exist.
+- Volatile data: pair `pricing` with `pricingVerifiedAt`, etc.
+
+Then `npm run build && npm run check`. Details in `docs/MODEL-DATA.md`.
+
+## Add an AI GitHub project
+
+Edit `data/ai-projects.json`. Verify `stars`, `license`, `language` against
+`https://api.github.com/repos/OWNER/REPO` and set `starsVerifiedAt`. Never
+hard-code a star count you didn't fetch.

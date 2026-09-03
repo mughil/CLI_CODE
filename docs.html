@@ -72,6 +72,7 @@
       <a href="#stacks">Stacks</a>
       <a href="#compare">Compare</a>
       <a href="#cheatsheet">Cheat sheets</a>
+      <a href="#models">AI models</a>
       <a href="#local">Local state</a>
       <a href="#urls">Tool pages &amp; URLs</a>
       <a href="#data">Data model</a>
@@ -128,8 +129,43 @@
       <h2 id="cheatsheet">Cheat sheets</h2>
       <p><a href="cheatsheet.html">Cheat sheet</a> composes a printable command reference from a set of tools — <code>?slugs=a,b</code>, <code>?stack=devops</code>, <code>?favorites=1</code>, or the compare queue. It shows install steps and any documented examples; it never invents commands, so derived entries show install steps plus a pointer to <code>--help</code>.</p>
 
+      <h2 id="models">AI models</h2>
+      <p>A separate dataset — <b>50 AI/LLM models across 18 providers</b>, with an
+        independent schema, validation and stats. Every factual field traces to a
+        source in the record's <code>sources[]</code> (official docs, model cards,
+        GitHub, technical reports); unverified fields are left blank.</p>
+      <ul>
+        <li><b>Openness is by license, not downloadability</b> — <code>open-source</code>
+          (OSI-style: Apache-2.0, MIT), <code>open-weight</code> (Llama / Gemma /
+          Modified-MIT and similar custom licenses), <code>proprietary</code> /
+          <code>api-only</code>, <code>research-license</code>,
+          <code>commercial-use-restricted</code>.</li>
+        <li><a href="models.html">Models</a> — search + facets: provider, openness,
+          availability, capability, context-window bucket, local-capable.</li>
+        <li><a href="find-model.html">Find my model</a> — pick requirements
+          (coding, reasoning, local, low-resource, multimodal, large context,
+          commercial use, open source, cheap API…); deterministic scoring, each
+          result explains which requirements it met.</li>
+        <li><a href="model-compare.html">Model Battle</a> — 2–4 models with a
+          key-differences summary (openness, license, commercial use, context
+          range, local support) then a diff-marked table. No "winner".</li>
+        <li><a href="run-local.html">Run locally</a> — the local-capable models
+          grouped by runner (Ollama, llama.cpp, MLX, vLLM, Transformers).
+          Hardware notes come from each model card, not estimates.</li>
+        <li><a href="ai-explorer.html">AI OSS explorer</a> — <b>20 GitHub AI
+          projects</b> (inference, serving, training, fine-tuning, agents, RAG,
+          eval, observability, vector search), each verified against the GitHub
+          API with a timestamped star count.</li>
+      </ul>
+      <p>Volatile data carries its own timestamp — <code>pricingVerifiedAt</code>,
+        <code>starsVerifiedAt</code>, <code>availabilityVerifiedAt</code> — and is
+        never presented as permanently current. See
+        <a href="https://github.com/mughil/CLI_CODE/blob/main/docs/MODEL-DATA.md">docs/MODEL-DATA.md</a>
+        for the full policy and the DISCOVER → VERIFY → NORMALIZE → VALIDATE →
+        REVIEW → PUBLISH workflow.</p>
+
       <h2 id="local">Local state</h2>
-      <p><a href="saved.html">Saved</a> holds favorites, the compare queue, and recently-viewed tools. All of it lives in <code>localStorage</code> on this device only (schema-versioned; corrupt or old data is discarded on load). No account, nothing synced, nothing sent anywhere.</p>
+      <p><a href="saved.html">Saved</a> holds favorites, the compare queue, and recently-viewed tools. All of it lives in <code>localStorage</code> on this device only (schema-versioned; corrupt or old data is discarded on load). No account, nothing synced, nothing sent anywhere. The model comparison list is stored the same way under a separate key.</p>
 
       <h2 id="urls">Tool pages &amp; URLs</h2>
       <p>Every tool has a stable, deep-linkable page at <code>cli.html?slug=&lt;slug&gt;</code>: at-a-glance metadata, install methods, use cases, alternatives and related tools (cross-linked), tags, and authoritative external references. Categories are addressable via <code>registry.html?cat=&lt;category&gt;</code>.</p>
