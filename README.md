@@ -75,7 +75,9 @@ data/meta.json               facet counts                        (generated)
 ```
 
 Built entries validate against `schema/cli.schema.json` (JSON Schema 2020-12).
-`data/stacks.json` picks must reference real slugs — enforced in CI.
+`data/stacks.json` picks must reference real slugs — enforced in CI. A size gate
+in `npm run check` fails unless the active dataset is exactly **500** tools with
+500 unique ids and 500 unique slugs (`EXPECT_TOOLS=<n>` to change it).
 
 **AI models** are a separate dataset:
 

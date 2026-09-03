@@ -5,6 +5,12 @@ about data.
 
 ## Shipped
 
+- **CLI dataset — 500 tools.** 79 agent-native harnesses (HKUDS/CLI-Anything) +
+  24 public CLIs + a 397-entry hand-curated catalog (`data/catalog_registry.json`)
+  of widely-used real developer command-line tools, merged by `build-data.mjs`.
+  A size gate in `npm run check` fails CI unless the active dataset is exactly
+  500 unique ids/slugs (`EXPECT_TOOLS` to change). Content-hash `?v=` cache
+  busting on every JS/CSS asset so returning visitors never run a stale bundle.
 - **AI model intelligence hub** — 50 source-linked models (18 providers),
   20 GitHub-API-verified OSS projects, 6 UI surfaces (Models, model profile,
   Find my model, Model Battle, Run locally, AI OSS explorer), separate schema +
@@ -13,21 +19,17 @@ about data.
 
 ## Now
 
-- **CLI dataset — 500 tools.** 79 agent-native harnesses + 24 public CLIs +
-  a 397-entry hand-curated catalog (`data/catalog_registry.json`) of widely-used
-  real developer command-line tools. The `npm run check` size gate keeps the
-  active dataset at exactly 500 unique ids/slugs. Next: deepen curated profiles.
 - **Grow the model dataset** past 50 — Nemotron, Jamba variants, more small
   local models, image/video/audio families — every field source-linked.
 - **Model pricing freshness** — a scheduled job to re-verify `pricingVerifiedAt`.
 
-- **Grow the verified overlay.** 25 / 500 tools have deep hand-checked profiles.
-  Every added `useCases` / `alternatives` / `difficulty` improves Find, Compare
-  and Stacks at once.
+- **Grow the verified overlay.** 25 / 500 tools have deep hand-checked profiles
+  (`useCases`, `alternatives`, `difficulty`, `examples[]`). The other 475 carry
+  a real summary, category, language, license and install command but derive the
+  rest. Every promoted profile improves Find, Compare and Stacks at once —
+  prioritise the widely-used catalog and public CLIs.
 - **Examples.** Almost no entry has `examples[]` yet — the piece the cheat sheet
-  most wants. Prioritise the widely-used public CLIs.
-- **Fill category gaps** the presets exposed (build/lint/test runners; cloud
-  provider CLIs; security tooling).
+  most wants.
 
 ## Next
 
