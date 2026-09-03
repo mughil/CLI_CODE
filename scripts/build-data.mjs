@@ -168,7 +168,11 @@ function normalize(raw, source) {
     if (label) e.label = label;
     install.push(e);
   };
-  if (raw.install_cmd) pushInstall(installMethod(raw.install_cmd), raw.install_cmd, 'Install');
+  const INSTALL_LABELS = { brew: 'macOS / Homebrew' };
+  if (raw.install_cmd) {
+    const method = installMethod(raw.install_cmd);
+    pushInstall(method, raw.install_cmd, INSTALL_LABELS[method] || 'Install');
+  }
   if (raw.npx_cmd) pushInstall('npx', raw.npx_cmd, 'Run via npx');
   if (raw.skill_md && /^(npx|pnpm|uvx?) /.test(raw.skill_md)) pushInstall('agent-skill', raw.skill_md, 'Agent skill');
   if (raw.update_cmd) pushInstall(installMethod(raw.update_cmd), raw.update_cmd, 'Update');
