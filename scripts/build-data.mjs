@@ -383,7 +383,9 @@ for (const file of SEO_PAGES) {
     '<!-- /SEO:auto -->',
   ].join('\n');
   let next = html.replace(/<!-- SEO:auto -->[\s\S]*?<!-- \/SEO:auto -->/, block);
-  next = next.replace(/<link rel="canonical" href="\.\/([^"]+)">/, `<link rel="canonical" href="${SITE_URL}/$1">`);
+  // canonical may be authored relative ("./x.html"), bare, or as an absolute
+  // placeholder URL — normalise any of them to an absolute SITE_URL canonical.
+  next = next.replace(/<link rel="canonical" href="(?:\.\/|https?:\/\/[^"]*\/)?([^"\/]+)">/, `<link rel="canonical" href="${SITE_URL}/$1">`);
 
   if (file === 'index.html' && next.includes('<!-- LD:auto -->')) {
     const ld = {
