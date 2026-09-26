@@ -34,7 +34,7 @@
         {
           "method": "brew",
           "command": "brew install --cask 1password-cli",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         },
         {
           "method": "brew",
@@ -127,7 +127,7 @@
         {
           "method": "brew",
           "command": "brew install act",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -207,7 +207,7 @@
         {
           "method": "brew",
           "command": "brew install age",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -248,7 +248,7 @@
         {
           "method": "brew",
           "command": "brew install aichat",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -327,7 +327,7 @@
         {
           "method": "brew",
           "command": "brew install --cask alacritty",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -401,7 +401,7 @@
         {
           "method": "brew",
           "command": "brew install angle-grinder",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -564,7 +564,7 @@
         {
           "method": "brew",
           "command": "brew install argocd",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -603,7 +603,7 @@
         {
           "method": "brew",
           "command": "brew install aria2",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -679,7 +679,7 @@
         {
           "method": "brew",
           "command": "brew install asciinema",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -717,7 +717,7 @@
         {
           "method": "brew",
           "command": "brew install asdf",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -755,7 +755,7 @@
         {
           "method": "brew",
           "command": "brew install ariga/tap/atlas",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -794,7 +794,7 @@
         {
           "method": "brew",
           "command": "brew install atmos",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -833,7 +833,7 @@
         {
           "method": "brew",
           "command": "brew install atuin",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -919,7 +919,7 @@
         {
           "method": "brew",
           "command": "brew install aws-vault",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -958,7 +958,7 @@
         {
           "method": "brew",
           "command": "brew install awscli",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -996,7 +996,7 @@
         {
           "method": "brew",
           "command": "brew install azure-cli",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1035,7 +1035,7 @@
         {
           "method": "brew",
           "command": "brew install bandwhich",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1073,7 +1073,7 @@
         {
           "method": "brew",
           "command": "brew install bat",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1111,7 +1111,7 @@
         {
           "method": "brew",
           "command": "brew install bazelisk",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1324,7 +1324,7 @@
         {
           "method": "brew",
           "command": "brew install bombardier",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1362,7 +1362,7 @@
         {
           "method": "brew",
           "command": "brew install borgbackup",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1401,7 +1401,7 @@
         {
           "method": "brew",
           "command": "brew install bottom",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1480,7 +1480,7 @@
         {
           "method": "brew",
           "command": "brew install broot",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1657,7 +1657,7 @@
         {
           "method": "brew",
           "command": "brew install btop",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1698,7 +1698,7 @@
         {
           "method": "brew",
           "command": "brew install buildah",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1777,7 +1777,7 @@
         {
           "method": "brew",
           "command": "brew install oven-sh/bun/bun",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1851,7 +1851,7 @@
         {
           "method": "brew",
           "command": "brew install byobu",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1889,7 +1889,7 @@
         {
           "method": "brew",
           "command": "brew install caddy",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -1927,7 +1927,7 @@
         {
           "method": "brew",
           "command": "brew install calcurse",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2019,7 +2019,7 @@
         {
           "method": "brew",
           "command": "brew install rust",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2139,7 +2139,7 @@
         {
           "method": "brew",
           "command": "brew install chafa",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2177,7 +2177,7 @@
         {
           "method": "brew",
           "command": "brew install cheat",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2257,7 +2257,7 @@
         {
           "method": "brew",
           "command": "brew install chezmoi",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2296,7 +2296,7 @@
         {
           "method": "brew",
           "command": "brew install choose-rust",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2387,7 +2387,7 @@
         {
           "method": "brew",
           "command": "brew install clang-format",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2599,7 +2599,7 @@
         {
           "method": "brew",
           "command": "brew install cloudflared",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2638,7 +2638,7 @@
         {
           "method": "brew",
           "command": "brew install cloudquery/tap/cloudquery",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2676,7 +2676,7 @@
         {
           "method": "brew",
           "command": "brew install cmake",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2887,7 +2887,7 @@
         {
           "method": "brew",
           "command": "brew install composer",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2925,7 +2925,7 @@
         {
           "method": "brew",
           "command": "brew install --cask miniconda",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -2964,7 +2964,7 @@
         {
           "method": "brew",
           "command": "brew install consul",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3048,7 +3048,7 @@
         {
           "method": "brew",
           "command": "brew install croc",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3086,7 +3086,7 @@
         {
           "method": "brew",
           "command": "brew install crystal",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3165,7 +3165,7 @@
         {
           "method": "brew",
           "command": "brew install ctop",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3203,7 +3203,7 @@
         {
           "method": "brew",
           "command": "brew install cue",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3242,7 +3242,7 @@
         {
           "method": "brew",
           "command": "brew install curl",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3280,7 +3280,7 @@
         {
           "method": "brew",
           "command": "brew install curlie",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3361,7 +3361,7 @@
         {
           "method": "brew",
           "command": "brew install d2",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3400,7 +3400,7 @@
         {
           "method": "brew",
           "command": "brew install dagger/tap/dagger",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3438,7 +3438,7 @@
         {
           "method": "brew",
           "command": "brew install dasel",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3517,7 +3517,7 @@
         {
           "method": "brew",
           "command": "brew install dbmate",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3558,7 +3558,7 @@
         {
           "method": "brew",
           "command": "brew install ddgr",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3596,7 +3596,7 @@
         {
           "method": "brew",
           "command": "brew install git-delta",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3635,7 +3635,7 @@
         {
           "method": "brew",
           "command": "brew install deno",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3674,7 +3674,7 @@
         {
           "method": "brew",
           "command": "brew install deployhq/tap/dhq",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         },
         {
           "method": "brew",
@@ -3722,7 +3722,7 @@
         {
           "method": "brew",
           "command": "brew install difftastic",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3800,7 +3800,7 @@
         {
           "method": "brew",
           "command": "brew install direnv",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3840,7 +3840,7 @@
         {
           "method": "brew",
           "command": "brew install dive",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3879,7 +3879,7 @@
         {
           "method": "brew",
           "command": "brew install --cask docker",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3919,7 +3919,7 @@
         {
           "method": "brew",
           "command": "brew install docker-compose",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3958,7 +3958,7 @@
         {
           "method": "brew",
           "command": "brew install doctl",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -3996,7 +3996,7 @@
         {
           "method": "brew",
           "command": "brew install dog",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4034,7 +4034,7 @@
         {
           "method": "brew",
           "command": "brew install doggo",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4113,7 +4113,7 @@
         {
           "method": "brew",
           "command": "brew install dotenvx/brew/dotenvx",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4151,7 +4151,7 @@
         {
           "method": "brew",
           "command": "brew install --cask dotnet-sdk",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4242,7 +4242,7 @@
         {
           "method": "brew",
           "command": "brew install dsq",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4282,7 +4282,7 @@
         {
           "method": "brew",
           "command": "brew install dstat",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4321,7 +4321,7 @@
         {
           "method": "brew",
           "command": "brew install duckdb",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4359,7 +4359,7 @@
         {
           "method": "brew",
           "command": "brew install duf",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4397,7 +4397,7 @@
         {
           "method": "brew",
           "command": "brew install dust",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4475,7 +4475,7 @@
         {
           "method": "brew",
           "command": "brew install earthly/earthly/earthly",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4514,7 +4514,7 @@
         {
           "method": "brew",
           "command": "brew install editorconfig-checker",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4594,7 +4594,7 @@
         {
           "method": "brew",
           "command": "brew install eksctl",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4719,7 +4719,7 @@
         {
           "method": "brew",
           "command": "brew install elixir",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4757,7 +4757,7 @@
         {
           "method": "brew",
           "command": "brew install emacs",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4795,7 +4795,7 @@
         {
           "method": "brew",
           "command": "brew install entr",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4834,7 +4834,7 @@
         {
           "method": "brew",
           "command": "brew install gettext",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -4998,7 +4998,7 @@
         {
           "method": "brew",
           "command": "brew install exiftool",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5036,7 +5036,7 @@
         {
           "method": "brew",
           "command": "brew install eza",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5074,7 +5074,7 @@
         {
           "method": "brew",
           "command": "brew install fastfetch",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5112,7 +5112,7 @@
         {
           "method": "brew",
           "command": "brew install fd",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5204,7 +5204,7 @@
         {
           "method": "brew",
           "command": "brew install ffmpeg",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5324,7 +5324,7 @@
         {
           "method": "brew",
           "command": "brew install fish",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5362,7 +5362,7 @@
         {
           "method": "brew",
           "command": "brew install fluxcd/tap/flux",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5401,7 +5401,7 @@
         {
           "method": "brew",
           "command": "brew install flyctl",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5439,7 +5439,7 @@
         {
           "method": "brew",
           "command": "brew install flyway",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5478,7 +5478,7 @@
         {
           "method": "brew",
           "command": "brew install fnm",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5570,7 +5570,7 @@
         {
           "method": "brew",
           "command": "brew install fx",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5608,7 +5608,7 @@
         {
           "method": "brew",
           "command": "brew install fzf",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5728,7 +5728,7 @@
         {
           "method": "brew",
           "command": "brew install --cask google-cloud-sdk",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5863,7 +5863,7 @@
         {
           "method": "brew",
           "command": "brew install gh",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -5976,7 +5976,7 @@
         {
           "method": "brew",
           "command": "brew install ghcup",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6014,7 +6014,7 @@
         {
           "method": "brew",
           "command": "brew install --cask ghostty",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6053,7 +6053,7 @@
         {
           "method": "brew",
           "command": "brew install gifsicle",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6143,7 +6143,7 @@
         {
           "method": "brew",
           "command": "brew install git",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6181,7 +6181,7 @@
         {
           "method": "brew",
           "command": "brew install git-absorb",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6297,7 +6297,7 @@
         {
           "method": "brew",
           "command": "brew install git-lfs",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6377,7 +6377,7 @@
         {
           "method": "brew",
           "command": "brew install git-town",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6453,7 +6453,7 @@
         {
           "method": "brew",
           "command": "brew install gitleaks",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6531,7 +6531,7 @@
         {
           "method": "brew",
           "command": "brew install glab",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6612,7 +6612,7 @@
         {
           "method": "brew",
           "command": "brew install glow",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6651,7 +6651,7 @@
         {
           "method": "brew",
           "command": "brew install parallel",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6689,7 +6689,7 @@
         {
           "method": "brew",
           "command": "brew install go",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6728,7 +6728,7 @@
         {
           "method": "brew",
           "command": "brew install goaccess",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6818,7 +6818,7 @@
         {
           "method": "brew",
           "command": "brew install golang-migrate",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6859,7 +6859,7 @@
         {
           "method": "brew",
           "command": "brew install golangci-lint",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6897,7 +6897,7 @@
         {
           "method": "brew",
           "command": "brew install gomplate",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6939,7 +6939,7 @@
         {
           "method": "brew",
           "command": "brew install googler",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -6978,7 +6978,7 @@
         {
           "method": "brew",
           "command": "brew install goose",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7018,7 +7018,7 @@
         {
           "method": "brew",
           "command": "brew install goreleaser",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7057,7 +7057,7 @@
         {
           "method": "brew",
           "command": "brew install gping",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7096,7 +7096,7 @@
         {
           "method": "brew",
           "command": "brew install gradle",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7135,7 +7135,7 @@
         {
           "method": "brew",
           "command": "brew install graphviz",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7173,7 +7173,7 @@
         {
           "method": "brew",
           "command": "brew install gron",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7211,7 +7211,7 @@
         {
           "method": "brew",
           "command": "brew install grpcurl",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7290,7 +7290,7 @@
         {
           "method": "brew",
           "command": "brew install gum",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7369,7 +7369,7 @@
         {
           "method": "brew",
           "command": "brew install hadolint",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7491,7 +7491,7 @@
         {
           "method": "brew",
           "command": "brew install hcloud",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7529,7 +7529,7 @@
         {
           "method": "brew",
           "command": "brew install helix",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7567,7 +7567,7 @@
         {
           "method": "brew",
           "command": "brew install helm",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7605,7 +7605,7 @@
         {
           "method": "brew",
           "command": "brew install helmfile",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7644,7 +7644,7 @@
         {
           "method": "brew",
           "command": "brew install hey",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7723,7 +7723,7 @@
         {
           "method": "brew",
           "command": "brew install htmlq",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7761,7 +7761,7 @@
         {
           "method": "brew",
           "command": "brew install htop",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7801,7 +7801,7 @@
         {
           "method": "brew",
           "command": "brew install httpie",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7839,7 +7839,7 @@
         {
           "method": "brew",
           "command": "brew install hub",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7917,7 +7917,7 @@
         {
           "method": "brew",
           "command": "brew install hugo",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -7957,7 +7957,7 @@
         {
           "method": "brew",
           "command": "brew install hurl",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8035,7 +8035,7 @@
         {
           "method": "brew",
           "command": "brew install hyperfine",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8073,7 +8073,7 @@
         {
           "method": "brew",
           "command": "brew install iftop",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8111,7 +8111,7 @@
         {
           "method": "brew",
           "command": "brew install imagemagick",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8149,7 +8149,7 @@
         {
           "method": "brew",
           "command": "brew install infracost",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8356,7 +8356,7 @@
         {
           "method": "brew",
           "command": "brew install iperf3",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8475,7 +8475,7 @@
         {
           "method": "brew",
           "command": "brew install jless",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8567,7 +8567,7 @@
         {
           "method": "brew",
           "command": "brew install jpegoptim",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8605,7 +8605,7 @@
         {
           "method": "brew",
           "command": "brew install jq",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8684,7 +8684,7 @@
         {
           "method": "brew",
           "command": "brew install jsonnet",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8722,7 +8722,7 @@
         {
           "method": "brew",
           "command": "brew install julia",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8841,7 +8841,7 @@
         {
           "method": "brew",
           "command": "brew install just",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8880,7 +8880,7 @@
         {
           "method": "brew",
           "command": "brew install k3d",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8918,7 +8918,7 @@
         {
           "method": "brew",
           "command": "brew install k6",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -8957,7 +8957,7 @@
         {
           "method": "brew",
           "command": "brew install k9s",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9037,7 +9037,7 @@
         {
           "method": "brew",
           "command": "brew install kakoune",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9167,7 +9167,7 @@
         {
           "method": "brew",
           "command": "brew install kind",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9207,7 +9207,7 @@
         {
           "method": "brew",
           "command": "brew install --cask kitty",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9245,7 +9245,7 @@
         {
           "method": "brew",
           "command": "brew install kopia",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9284,7 +9284,7 @@
         {
           "method": "brew",
           "command": "brew install krew",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9376,7 +9376,7 @@
         {
           "method": "brew",
           "command": "brew install kube-bench",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9414,7 +9414,7 @@
         {
           "method": "brew",
           "command": "brew install kubeconform",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9452,7 +9452,7 @@
         {
           "method": "brew",
           "command": "brew install kubernetes-cli",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9490,7 +9490,7 @@
         {
           "method": "brew",
           "command": "brew install kubectx",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9529,7 +9529,7 @@
         {
           "method": "brew",
           "command": "brew install kubescape",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9567,7 +9567,7 @@
         {
           "method": "brew",
           "command": "brew install kustomize",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9607,7 +9607,7 @@
         {
           "method": "brew",
           "command": "brew install lazydocker",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9646,7 +9646,7 @@
         {
           "method": "brew",
           "command": "brew install lazygit",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9685,7 +9685,7 @@
         {
           "method": "brew",
           "command": "brew install lf",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9853,7 +9853,7 @@
         {
           "method": "brew",
           "command": "brew install llama.cpp",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -9974,7 +9974,7 @@
         {
           "method": "brew",
           "command": "brew install lnav",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10052,7 +10052,7 @@
         {
           "method": "brew",
           "command": "brew install lsd",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10132,7 +10132,7 @@
         {
           "method": "brew",
           "command": "brew install mage",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10296,7 +10296,7 @@
         {
           "method": "brew",
           "command": "brew install make",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10418,7 +10418,7 @@
         {
           "method": "brew",
           "command": "brew install maven",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10457,7 +10457,7 @@
         {
           "method": "brew",
           "command": "brew install mcfly",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10496,7 +10496,7 @@
         {
           "method": "brew",
           "command": "brew install mdbook",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10537,7 +10537,7 @@
         {
           "method": "brew",
           "command": "brew install mdcat",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10742,7 +10742,7 @@
         {
           "method": "brew",
           "command": "brew install micro",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10780,7 +10780,7 @@
         {
           "method": "brew",
           "command": "brew install micromamba",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10818,7 +10818,7 @@
         {
           "method": "brew",
           "command": "brew install miller",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10856,7 +10856,7 @@
         {
           "method": "brew",
           "command": "brew install minikube",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -10983,7 +10983,7 @@
         {
           "method": "brew",
           "command": "brew install mise",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11022,7 +11022,7 @@
         {
           "method": "brew",
           "command": "brew install mkcert",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11187,7 +11187,7 @@
         {
           "method": "brew",
           "command": "brew install mongosh",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11225,7 +11225,7 @@
         {
           "method": "brew",
           "command": "brew install moreutils",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11265,7 +11265,7 @@
         {
           "method": "brew",
           "command": "brew install mosh",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11303,7 +11303,7 @@
         {
           "method": "brew",
           "command": "brew install mpv",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11341,7 +11341,7 @@
         {
           "method": "brew",
           "command": "brew install mtr",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11598,7 +11598,7 @@
         {
           "method": "brew",
           "command": "brew install nano",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11636,7 +11636,7 @@
         {
           "method": "brew",
           "command": "brew install navi",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11675,7 +11675,7 @@
         {
           "method": "brew",
           "command": "brew install nb",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11753,7 +11753,7 @@
         {
           "method": "brew",
           "command": "brew install ncdu",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11791,7 +11791,7 @@
         {
           "method": "brew",
           "command": "brew install ncmpcpp",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11829,7 +11829,7 @@
         {
           "method": "brew",
           "command": "brew install neofetch",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11868,7 +11868,7 @@
         {
           "method": "brew",
           "command": "brew install neovim",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11907,7 +11907,7 @@
         {
           "method": "brew",
           "command": "brew install nerdctl",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -11948,7 +11948,7 @@
         {
           "method": "brew",
           "command": "brew install nethogs",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12069,7 +12069,7 @@
         {
           "method": "brew",
           "command": "brew install ngrok",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12107,7 +12107,7 @@
         {
           "method": "brew",
           "command": "brew install nim",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12145,7 +12145,7 @@
         {
           "method": "brew",
           "command": "brew install ninja",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12183,7 +12183,7 @@
         {
           "method": "brew",
           "command": "brew install nmap",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12222,7 +12222,7 @@
         {
           "method": "brew",
           "command": "brew install nnn",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12261,7 +12261,7 @@
         {
           "method": "brew",
           "command": "brew install node",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12299,7 +12299,7 @@
         {
           "method": "brew",
           "command": "brew install nomad",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12539,7 +12539,7 @@
         {
           "method": "brew",
           "command": "brew install nushell",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12578,7 +12578,7 @@
         {
           "method": "brew",
           "command": "brew install nvm",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12616,7 +12616,7 @@
         {
           "method": "brew",
           "command": "brew install nvtop",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12835,7 +12835,7 @@
         {
           "method": "brew",
           "command": "brew install oh-my-posh",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12875,7 +12875,7 @@
         {
           "method": "brew",
           "command": "brew install oha",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -12968,7 +12968,7 @@
         {
           "method": "brew",
           "command": "brew install onefetch",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -13006,7 +13006,7 @@
         {
           "method": "brew",
           "command": "brew install opam",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -13168,7 +13168,7 @@
         {
           "method": "brew",
           "command": "brew install opentofu",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -13247,7 +13247,7 @@
         {
           "method": "brew",
           "command": "brew install ouch",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -13285,7 +13285,7 @@
         {
           "method": "brew",
           "command": "brew install oxipng",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -13323,7 +13323,7 @@
         {
           "method": "brew",
           "command": "brew install packer",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -13406,7 +13406,7 @@
         {
           "method": "brew",
           "command": "brew install pandoc",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -13562,7 +13562,7 @@
         {
           "method": "brew",
           "command": "brew install pgloader",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -13601,7 +13601,7 @@
         {
           "method": "brew",
           "command": "brew install pgweb",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -13723,7 +13723,7 @@
         {
           "method": "brew",
           "command": "brew install plantuml",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -13853,7 +13853,7 @@
         {
           "method": "brew",
           "command": "brew install pngquant",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -13934,7 +13934,7 @@
         {
           "method": "brew",
           "command": "brew install podman",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14012,7 +14012,7 @@
         {
           "method": "brew",
           "command": "brew install popeye",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14132,7 +14132,7 @@
         {
           "method": "brew",
           "command": "brew install procs",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14171,7 +14171,7 @@
         {
           "method": "brew",
           "command": "brew install pspg",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14209,7 +14209,7 @@
         {
           "method": "brew",
           "command": "brew install pulumi",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14247,7 +14247,7 @@
         {
           "method": "brew",
           "command": "brew install pup",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14286,7 +14286,7 @@
         {
           "method": "brew",
           "command": "brew install pv",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14366,7 +14366,7 @@
         {
           "method": "brew",
           "command": "brew install pyenv",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14534,7 +14534,7 @@
         {
           "method": "brew",
           "command": "brew install qsv",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14574,7 +14574,7 @@
         {
           "method": "brew",
           "command": "brew install --cask quarto",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14732,7 +14732,7 @@
         {
           "method": "brew",
           "command": "brew install rbenv",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14770,7 +14770,7 @@
         {
           "method": "brew",
           "command": "brew install rclone",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14808,7 +14808,7 @@
         {
           "method": "brew",
           "command": "brew install rebar3",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14846,7 +14846,7 @@
         {
           "method": "brew",
           "command": "brew install redis",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -14969,7 +14969,7 @@
         {
           "method": "brew",
           "command": "brew install restic",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -15007,7 +15007,7 @@
         {
           "method": "brew",
           "command": "brew install ripgrep",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -15087,7 +15087,7 @@
         {
           "method": "brew",
           "command": "brew install rsync",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -15125,7 +15125,7 @@
         {
           "method": "brew",
           "command": "brew install ruff",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -15163,7 +15163,7 @@
         {
           "method": "brew",
           "command": "brew install rustup",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -15243,7 +15243,7 @@
         {
           "method": "brew",
           "command": "brew install s5cmd",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -15412,7 +15412,7 @@
         {
           "method": "brew",
           "command": "brew install scw",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -15450,7 +15450,7 @@
         {
           "method": "brew",
           "command": "brew install scc",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -15529,7 +15529,7 @@
         {
           "method": "brew",
           "command": "brew install scmpuff",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -15567,7 +15567,7 @@
         {
           "method": "brew",
           "command": "brew install sd",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -15810,7 +15810,7 @@
         {
           "method": "brew",
           "command": "brew install shellcheck",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -15849,7 +15849,7 @@
         {
           "method": "brew",
           "command": "brew install shfmt",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16039,7 +16039,7 @@
         {
           "method": "brew",
           "command": "brew install skaffold",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16118,7 +16118,7 @@
         {
           "method": "brew",
           "command": "brew install skopeo",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16294,7 +16294,7 @@
         {
           "method": "brew",
           "command": "brew install so",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16332,7 +16332,7 @@
         {
           "method": "brew",
           "command": "brew install sops",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16371,7 +16371,7 @@
         {
           "method": "brew",
           "command": "brew install sox",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16531,7 +16531,7 @@
         {
           "method": "brew",
           "command": "brew install haskell-stack",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16570,7 +16570,7 @@
         {
           "method": "brew",
           "command": "brew install starship",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16653,7 +16653,7 @@
         {
           "method": "brew",
           "command": "brew install staticcheck",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16693,7 +16693,7 @@
         {
           "method": "brew",
           "command": "brew install turbot/tap/steampipe",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16732,7 +16732,7 @@
         {
           "method": "brew",
           "command": "brew install stern",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16770,7 +16770,7 @@
         {
           "method": "brew",
           "command": "brew install stow",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16848,7 +16848,7 @@
         {
           "method": "brew",
           "command": "brew install stress-ng",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -16976,7 +16976,7 @@
         {
           "method": "brew",
           "command": "brew install supabase/tap/supabase",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17055,7 +17055,7 @@
         {
           "method": "brew",
           "command": "brew install syncthing",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17095,7 +17095,7 @@
         {
           "method": "brew",
           "command": "brew install sysstat",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17134,7 +17134,7 @@
         {
           "method": "brew",
           "command": "brew install tailscale",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17210,7 +17210,7 @@
         {
           "method": "brew",
           "command": "brew install go-task",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17249,7 +17249,7 @@
         {
           "method": "brew",
           "command": "brew install task",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17288,7 +17288,7 @@
         {
           "method": "brew",
           "command": "brew install tcpdump",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17326,7 +17326,7 @@
         {
           "method": "brew",
           "command": "brew install telepresenceio/telepresence/telepresence-oss",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17365,7 +17365,7 @@
         {
           "method": "brew",
           "command": "brew install termshark",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17403,7 +17403,7 @@
         {
           "method": "brew",
           "command": "brew install terraform",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17442,7 +17442,7 @@
         {
           "method": "brew",
           "command": "brew install terraform-docs",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17480,7 +17480,7 @@
         {
           "method": "brew",
           "command": "brew install terragrunt",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17518,7 +17518,7 @@
         {
           "method": "brew",
           "command": "brew install tflint",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17556,7 +17556,7 @@
         {
           "method": "brew",
           "command": "brew install tfsec",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17635,7 +17635,7 @@
         {
           "method": "brew",
           "command": "brew install tig",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17714,7 +17714,7 @@
         {
           "method": "brew",
           "command": "brew install tilt-dev/tap/tilt",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17752,7 +17752,7 @@
         {
           "method": "brew",
           "command": "brew install timewarrior",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17834,7 +17834,7 @@
         {
           "method": "brew",
           "command": "brew install tlrc",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17872,7 +17872,7 @@
         {
           "method": "brew",
           "command": "brew install tmux",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17910,7 +17910,7 @@
         {
           "method": "brew",
           "command": "brew install tokei",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -17948,7 +17948,7 @@
         {
           "method": "brew",
           "command": "brew install topgrade",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18026,7 +18026,7 @@
         {
           "method": "brew",
           "command": "brew install tree",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18065,7 +18065,7 @@
         {
           "method": "brew",
           "command": "brew install trippy",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18104,7 +18104,7 @@
         {
           "method": "brew",
           "command": "brew install trivy",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18143,7 +18143,7 @@
         {
           "method": "brew",
           "command": "brew install ttyd",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18181,7 +18181,7 @@
         {
           "method": "brew",
           "command": "brew install typos-cli",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18348,7 +18348,7 @@
         {
           "method": "brew",
           "command": "brew install usql",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18386,7 +18386,7 @@
         {
           "method": "brew",
           "command": "brew install uv",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18424,7 +18424,7 @@
         {
           "method": "brew",
           "command": "brew install --cask vagrant",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18463,7 +18463,7 @@
         {
           "method": "brew",
           "command": "brew install vale",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18503,7 +18503,7 @@
         {
           "method": "brew",
           "command": "brew install vault",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18587,7 +18587,7 @@
         {
           "method": "brew",
           "command": "brew install vegeta",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18666,7 +18666,7 @@
         {
           "method": "brew",
           "command": "brew install vhs",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18747,7 +18747,7 @@
         {
           "method": "brew",
           "command": "brew install vim",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18877,7 +18877,7 @@
         {
           "method": "brew",
           "command": "brew install vnstat",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18915,7 +18915,7 @@
         {
           "method": "brew",
           "command": "brew install volta",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -18993,7 +18993,7 @@
         {
           "method": "brew",
           "command": "brew install watchexec",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19116,7 +19116,7 @@
         {
           "method": "brew",
           "command": "brew install websocat",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19154,7 +19154,7 @@
         {
           "method": "brew",
           "command": "brew install websocketd",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19243,7 +19243,7 @@
         {
           "method": "brew",
           "command": "brew install --cask wezterm",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19282,7 +19282,7 @@
         {
           "method": "brew",
           "command": "brew install wget",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19323,7 +19323,7 @@
         {
           "method": "brew",
           "command": "brew install whisper-cpp",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19447,7 +19447,7 @@
         {
           "method": "brew",
           "command": "brew install wrk",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19528,7 +19528,7 @@
         {
           "method": "brew",
           "command": "brew install xh",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19607,7 +19607,7 @@
         {
           "method": "brew",
           "command": "brew install xsv",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19687,7 +19687,7 @@
         {
           "method": "brew",
           "command": "brew install yarn",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19727,7 +19727,7 @@
         {
           "method": "brew",
           "command": "brew install yazi",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19765,7 +19765,7 @@
         {
           "method": "brew",
           "command": "brew install yq",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19804,7 +19804,7 @@
         {
           "method": "brew",
           "command": "brew install yt-dlp",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19843,7 +19843,7 @@
         {
           "method": "brew",
           "command": "brew install zellij",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19881,7 +19881,7 @@
         {
           "method": "brew",
           "command": "brew install zig",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -19920,7 +19920,7 @@
         {
           "method": "brew",
           "command": "brew install zola",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -20042,7 +20042,7 @@
         {
           "method": "brew",
           "command": "brew install zoxide",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -20080,7 +20080,7 @@
         {
           "method": "brew",
           "command": "brew install zsh",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
@@ -20118,7 +20118,7 @@
         {
           "method": "brew",
           "command": "brew install zstd",
-          "label": "Install"
+          "label": "macOS / Homebrew"
         }
       ],
       "examples": [],
