@@ -1,0 +1,25 @@
+name: Generate og image
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  og:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: feat/discovery-pages
+      - run: pip install pillow --quiet
+      - name: Generate assets/og.png
+        run: |
+          echo "ZnJvbSBQSUwgaW1wb3J0IEltYWdlLCBJbWFnZURyYXcsIEltYWdlRm9udAoKVyxIPTEyMDAsNjMwCkJHPSgxNSwyMyw0Mik7IFBBTkVMPSgzMCw0MSw1OSk7IEdSRUVOPSgzNCwxOTcsOTQpOyBXSElURT0oMjQxLDI0NSwyNDkpOyBESU09KDE0OCwxNjMsMTg0KQppbWc9SW1hZ2UubmV3KCdSR0InLChXLEgpLEJHKQpkPUltYWdlRHJhdy5EcmF3KGltZykKbW9ubz0nL3Vzci9zaGFyZS9mb250cy90cnVldHlwZS9kZWphdnUvRGVqYVZ1U2Fuc01vbm8udHRmJwptb25vYj0nL3Vzci9zaGFyZS9mb250cy90cnVldHlwZS9kZWphdnUvRGVqYVZ1U2Fuc01vbm8tQm9sZC50dGYnCmZfYnJhbmQ9SW1hZ2VGb250LnRydWV0eXBlKG1vbm9iLDY0KQpmX3RhZz1JbWFnZUZvbnQudHJ1ZXR5cGUobW9ubywzMCkKZl9zbT1JbWFnZUZvbnQudHJ1ZXR5cGUobW9ubywyNikKZl90ZXJtPUltYWdlRm9udC50cnVldHlwZShtb25vLDI1KQpmX3Byb21wdD1JbWFnZUZvbnQudHJ1ZXR5cGUobW9ub2IsNDQpCgojIGJyYW5kIGNoaXAgKGZhdmljb24gbW90aWYpCmQucm91bmRlZF9yZWN0YW5nbGUoWzcwLDY0LDE1MCwxNDRdLHJhZGl1cz0xOCxmaWxsPVBBTkVMKQpkLnRleHQoKDg4LDgyKSwnPl8nLGZvbnQ9Zl9wcm9tcHQsZmlsbD1HUkVFTikKZC50ZXh0KCgxNzgsNzQpLCdjbGlfY29kZScsZm9udD1mX2JyYW5kLGZpbGw9V0hJVEUpCmQudGV4dCgoNzIsMTk2KSwnVGhlIG9wZW4gZGlyZWN0b3J5IG9mIGNvbW1hbmQtbGluZSB0b29scycsZm9udD1mX3RhZyxmaWxsPVdISVRFKQpkLnRleHQoKDcyLDI0OCksJzUwMCsgdG9vbHMgIC0gIGluc3RhbGwgY29tbWFuZHMgIC0gIHRlc3RlZCBleGFtcGxlcycsZm9udD1mX3NtLGZpbGw9RElNKQoKIyB0ZXJtaW5hbCBjYXJkCnR4LHR5LHR3LHRoPTcwLDMzMCwxMDYwLDI0MApkLnJvdW5kZWRfcmVjdGFuZ2xlKFt0eCx0eSx0eCt0dyx0eSt0aF0scmFkaXVzPTE2LGZpbGw9KDIsNiwyMyksb3V0bGluZT0oNTEsNjUsODUpLHdpZHRoPTIpCmZvciBpLGMgaW4gZW51bWVyYXRlKFsoMjM5LDY4LDY4KSwoMjM0LDE3OSw4KSwoMzQsMTk3LDk0KV0pOgogICAgZC5lbGxpcHNlKFt0eCsyNCtpKjMwLHR5KzIwLHR4KzM4K2kqMzAsdHkrMzRdLGZpbGw9YykKbGluZXM9WygnJCBjbGlfY29kZSBmaW5kICJjb252ZXJ0IHZpZGVvIicsR1JFRU4pLAogICAgICAgKCctPiBmZm1wZWcgLSBmYXN0LCBsb3NzbGVzcy1mcmllbmRseSBjb252ZXJ0ZXInLERJTSksCiAgICAgICAoJyQgZmZtcGVnIC1pIGlucHV0Lm1vdiAtY3JmIDI4IG91dHB1dC5tcDQnLFdISVRFKSwKICAgICAgICgnLT4gb25lIGNvbW1hbmQsIHJlYWR5IHRvIGNvcHknLERJTSldCnk9dHkrNTgKZm9yIHRleHQsY29sIGluIGxpbmVzOgogICAgZC50ZXh0KCh0eCsyOCx5KSx0ZXh0LGZvbnQ9Zl90ZXJtLGZpbGw9Y29sKTsgeSs9NDQKaW1nLnNhdmUoJ2Fzc2V0cy9vZy5wbmcnKQpwcmludCgnb2cucG5nJyxpbWcuc2l6ZSkK" | base64 -d > /tmp/gen_og.py
+          ls /usr/share/fonts/truetype/dejavu/DejaVuSansMono*.ttf
+          python3 /tmp/gen_og.py
+      - name: Commit og.png
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/og.png
+          git commit -m "Add og.png social share card"
+          git push origin feat/discovery-pages
