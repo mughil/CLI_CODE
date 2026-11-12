@@ -2,9 +2,16 @@
 // Precaches the page shell so every page opens offline after one visit;
 // data/ JSON stays network-first so fresh data wins when online;
 // stamped assets (assets/...?v=hash) are cache-first.
-const VERSION = 'clicode-v1';
+// Cache-version policy: VERSION is restamped by scripts/build-data.mjs from
+// the content the shell cache serves. A content change bumps VERSION -> new
+// cache names -> activate purges the previous CLI_CODE-owned caches only
+// (shell-clicode-* / runtime-clicode-*). Other projects' caches on this
+// shared github.io origin are never touched. Byte-identical sw.js means no
+// service-worker reinstall, so unchanged content never re-caches.
+const VERSION = 'clicode-dbcd39c4';
 const SHELL = 'shell-' + VERSION;
 const RUNTIME = 'runtime-' + VERSION;
+const OWNED = /^(shell|runtime)-clicode-/;
 const PRECACHE = [
   './',
   '404.html',
@@ -43,7 +50,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k !== SHELL && k !== RUNTIME).map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(keys.filter((k) => OWNED.test(k) && k !== SHELL && k !== RUNTIME).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
