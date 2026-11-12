@@ -25,7 +25,6 @@
 <link rel="canonical" href="https://EXAMPLE.invalid/CLI_CODE/best-terminal-cli-tools.html">
 <link rel="stylesheet" href="assets/css/site.css?v=eaa23aeb">
 <script src="assets/js/theme.js?v=82531afb" defer></script>
-<script src="assets/js/data.js?v=5b049d0c" defer></script>
 </head>
 <body>
 
@@ -49,7 +48,7 @@
   <h1 class="sec-title">Terminal <span class="g">CLI Tools &amp; Utilities</span></h1>
   <p class="sec-sub">Directory of terminal command-line tools and utilities: multiplexers, prompts, monitors and productivity helpers, with install commands.</p>
 
-  <p class="reg-count" id="result-count" aria-live="polite">Loading...</p>
+  <p class="reg-count" id="result-count" aria-live="polite"><b>10</b> tools in this category</p>
 
   <div class="table-scroll">
     <table class="reg-table">
@@ -60,7 +59,18 @@
           <th scope="col">Language</th>
         </tr>
       </thead>
-      <tbody id="rows"><tr><td colspan="3" class="empty">Loading dataset...</td></tr></tbody>
+      <tbody id="rows"><!-- ROWS:auto -->
+<tr class="row"><td class="c-name"><a href="cli.html?slug=alacritty"><b>Alacritty</b></a><div class="sm" style="color:var(--dim)">GPU-accelerated terminal emulator focused on performance and simplicity, configured via a TOML file.</div></td><td class="mono sm">—</td><td class="mono sm">Rust</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=asciinema"><b>asciinema</b></a><div class="sm" style="color:var(--dim)">Record terminal sessions and share them as lightweight, text-based recordings you can copy from.</div></td><td class="mono sm">—</td><td class="mono sm">Rust</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=byobu"><b>Byobu</b></a><div class="sm" style="color:var(--dim)">Text-based window manager and terminal multiplexer wrapping tmux with status notifications and profiles.</div></td><td class="mono sm">—</td><td class="mono sm">Python</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=ghostty"><b>Ghostty</b></a><div class="sm" style="color:var(--dim)">Fast, native, GPU-accelerated terminal emulator that prioritises platform integration and standards.</div></td><td class="mono sm">—</td><td class="mono sm">Zig</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=kitty"><b>kitty</b></a><div class="sm" style="color:var(--dim)">Fast, feature-rich, GPU-based terminal with image protocol, ligatures, tabs, layouts, and a kittens API.</div></td><td class="mono sm">—</td><td class="mono sm">Python / C</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=tmux"><b>tmux</b></a><div class="sm" style="color:var(--dim)">Terminal multiplexer — split panes, detach/reattach sessions, and keep processes running after logout.</div></td><td class="mono sm">—</td><td class="mono sm">C</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=ttyd"><b>ttyd</b></a><div class="sm" style="color:var(--dim)">Share your terminal over the web — a command-line tool that turns any program into a browser terminal.</div></td><td class="mono sm">—</td><td class="mono sm">C</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=vhs"><b>VHS</b></a><div class="sm" style="color:var(--dim)">Write terminal GIFs as code — a .tape script drives keystrokes and produces a reproducible recording.</div></td><td class="mono sm">—</td><td class="mono sm">Go</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=wezterm"><b>WezTerm</b></a><div class="sm" style="color:var(--dim)">GPU-accelerated cross-platform terminal emulator and multiplexer configured in Lua, by Wez Furlong.</div></td><td class="mono sm">—</td><td class="mono sm">Rust</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=zellij"><b>Zellij</b></a><div class="sm" style="color:var(--dim)">Terminal workspace with batteries included — panes, tabs, layouts, floating panes, and a plugin API.</div></td><td class="mono sm">—</td><td class="mono sm">Rust</td></tr>
+<!-- /ROWS:auto --></tbody>
     </table>
   </div>
 
@@ -73,29 +83,5 @@
     <span>Apache-2.0</span>
   </div>
 </footer>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  'use strict';
-  var CAT = 'terminal';
-  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
-    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-  }); };
-  window.CLIData.load().then(function (d) {
-    var list = d.clis.filter(function (c) { return (c.categories || []).indexOf(CAT) !== -1; })
-      .sort(function (a, b) { return a.name.localeCompare(b.name); });
-    document.getElementById('result-count').innerHTML = '<b>' + list.length + '</b> tools in this category';
-    document.getElementById('rows').innerHTML = list.map(function (e) {
-      return '<tr class="row">' +
-        '<td class="c-name"><a href="cli.html?slug=' + encodeURIComponent(e.slug) + '"><b>' + esc(e.name) + '</b></a>' +
-        '<div class="sm" style="color:var(--dim)">' + esc(e.summary || '') + '</div></td>' +
-        '<td class="mono sm">' + esc((e.platforms || []).join(', ') || '\u2014') + '</td>' +
-        '<td class="mono sm">' + esc(e.language || e.runtime || '\u2014') + '</td>' +
-        '</tr>';
-    }).join('');
-  }).catch(function (err) {
-    document.getElementById('rows').innerHTML = '<tr><td colspan="3" class="empty">Could not load the dataset (' + esc(err && err.message || err) + ').</td></tr>';
-  });
-});
-</script>
 </body>
 </html>
