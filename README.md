@@ -52,7 +52,7 @@ your browser from static JSON, so there is no backend, no account and no trackin
 
 ## Key capabilities
 
-- **Weighted search** across name, tags, summary and use cases — instant, client-side.
+- **Typo-tolerant weighted search** across name, tags, summary and use cases — instant, client-side.
 - **Find my CLI** — describe a task in plain language, get ranked tools *and the reason each matched*.
 - **Find my model** — tick requirements (local, coding, open source, large context…), get deterministic scoring with a per-result explanation.
 - **Compare** — 2–4 CLI tools side by side with the differences called out.

@@ -12,8 +12,9 @@
     "check:links": "node scripts/check-links.mjs",
     "check:html": "html-validate \"*.html\"",
     "check:models": "node scripts/validate-models.mjs && node scripts/check-model-links.mjs",
+    "check:search": "node scripts/check-search.mjs",
     "model-stats": "node scripts/model-stats.mjs",
-    "check": "npm run validate && npm run check:drift && npm run check:links && npm run check:html && npm run check:models"
+    "check": "npm run validate && npm run check:drift && npm run check:links && npm run check:html && npm run check:models && npm run check:search"
   },
   "devDependencies": {
     "ajv": "^8.17.1",
