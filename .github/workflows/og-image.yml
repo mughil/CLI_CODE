@@ -1,0 +1,24 @@
+name: Generate og image
+on:
+  push:
+    branches: [feat/static-landing-rows]
+    paths: [.github/workflows/og-image.yml]
+permissions:
+  contents: write
+jobs:
+  og:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: pip install pillow --quiet
+      - name: Generate assets/og.png
+        run: |
+          echo "ZnJvbSBQSUwgaW1wb3J0IEltYWdlLCBJbWFnZURyYXcsIEltYWdlRm9udAoKVyxIPTEyMDAsNjMwCkJHPSgxNSwyMyw0Mik7IFBBTkVMPSgzMCw0MSw1OSk7IEdSRUVOPSgzNCwxOTcsOTQpOyBXSElURT0oMjQxLDI0NSwyNDkpOyBESU09KDE0OCwxNjMsMTg0KQppbWc9SW1hZ2UubmV3KCdSR0InLChXLEgpLEJHKQpkPUltYWdlRHJhdy5EcmF3KGltZykKbW9ubz0nL3Vzci9zaGFyZS9mb250cy90cnVldHlwZS9kZWphdnUvRGVqYVZ1U2Fuc01vbm8udHRmJwptb25vYj0nL3Vzci9zaGFyZS9mb250cy90cnVldHlwZS9kZWphdnUvRGVqYVZ1U2Fuc01vbm8tQm9sZC50dGYnCmZfYnJhbmQ9SW1hZ2VGb250LnRydWV0eXBlKG1vbm9iLDY0KQpmX3RhZz1JbWFnZUZvbnQudHJ1ZXR5cGUobW9ubywzMCkKZl9zbT1JbWFnZUZvbnQudHJ1ZXR5cGUobW9ubywyNikKZl90ZXJtPUltYWdlRm9udC50cnVldHlwZShtb25vLDI1KQpmX3Byb21wdD1JbWFnZUZvbnQudHJ1ZXR5cGUobW9ub2IsNDQpCgojIGJyYW5kIGNoaXAgKGZhdmljb24gbW90aWYpCmQucm91bmRlZF9yZWN0YW5nbGUoWzcwLDY0LDE1MCwxNDRdLHJhZGl1cz0xOCxmaWxsPVBBTkVMKQpkLnRleHQoKDg4LDgyKSwnPl8nLGZvbnQ9Zl9wcm9tcHQsZmlsbD1HUkVFTikKZC50ZXh0KCgxNzgsNzQpLCdjbGlfY29kZScsZm9udD1mX2JyYW5kLGZpbGw9V0hJVEUpCmQudGV4dCgoNzIsMTk2KSwnVGhlIG9wZW4gZGlyZWN0b3J5IG9mIGNvbW1hbmQtbGluZSB0b29scycsZm9udD1mX3RhZyxmaWxsPVdISVRFKQpkLnRleHQoKDcyLDI0OCksJzUwMCsgdG9vbHMgIC0gIGluc3RhbGwgY29tbWFuZHMgIC0gIGNvbW1hbmQgZXhhbXBsZXMnLGZvbnQ9Zl9zbSxmaWxsPURJTSkKCiMgdGVybWluYWwgY2FyZAp0eCx0eSx0dyx0aD03MCwzMzAsMTA2MCwyNDAKZC5yb3VuZGVkX3JlY3RhbmdsZShbdHgsdHksdHgrdHcsdHkrdGhdLHJhZGl1cz0xNixmaWxsPSgyLDYsMjMpLG91dGxpbmU9KDUxLDY1LDg1KSx3aWR0aD0yKQpmb3IgaSxjIGluIGVudW1lcmF0ZShbKDIzOSw2OCw2OCksKDIzNCwxNzksOCksKDM0LDE5Nyw5NCldKToKICAgIGQuZWxsaXBzZShbdHgrMjQraSozMCx0eSsyMCx0eCszOCtpKjMwLHR5KzM0XSxmaWxsPWMpCmxpbmVzPVsoJyQgY2xpX2NvZGUgZmluZCAiY29udmVydCB2aWRlbyInLEdSRUVOKSwKICAgICAgICgnLT4gZmZtcGVnIC0gZmFzdCwgbG9zc2xlc3MtZnJpZW5kbHkgY29udmVydGVyJyxESU0pLAogICAgICAgKCckIGZmbXBlZyAtaSBpbnB1dC5tb3YgLWNyZiAyOCBvdXRwdXQubXA0JyxXSElURSksCiAgICAgICAoJy0+IG9uZSBjb21tYW5kLCByZWFkeSB0byBjb3B5JyxESU0pXQp5PXR5KzU4CmZvciB0ZXh0LGNvbCBpbiBsaW5lczoKICAgIGQudGV4dCgodHgrMjgseSksdGV4dCxmb250PWZfdGVybSxmaWxsPWNvbCk7IHkrPTQ0CmltZy5zYXZlKCdhc3NldHMvb2cucG5nJykKcHJpbnQoJ29nLnBuZycsaW1nLnNpemUpCg==" | base64 -d > /tmp/gen_og.py
+          python3 /tmp/gen_og.py
+      - name: Commit og.png
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/og.png
+          git commit -m "Update og.png wording to command examples"
+          git push origin HEAD:feat/static-landing-rows
