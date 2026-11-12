@@ -1076,7 +1076,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "View a file with highlighting",
+          "command": "bat data/meta.json",
+          "description": "Syntax colours and line numbers."
+        },
+        {
+          "title": "Plain output",
+          "command": "bat --style=plain file.txt",
+          "description": "No decorations, easy to copy from."
+        },
+        {
+          "title": "Force a language",
+          "command": "bat -l json data.txt",
+          "description": "Highlights as JSON regardless of extension."
+        }
+      ],
       "repository": "https://github.com/sharkdp/bat",
       "documentation": "https://github.com/sharkdp/bat",
       "packageManagers": [
@@ -1086,7 +1102,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -3245,7 +3261,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Download a file",
+          "command": "curl -O https://example.com/file.zip",
+          "description": "Saves the file with its remote name."
+        },
+        {
+          "title": "Follow redirects, show headers",
+          "command": "curl -IL https://github.com",
+          "description": "Prints response headers across the redirect chain."
+        },
+        {
+          "title": "POST JSON to an API",
+          "command": "curl -X POST -H \"Content-Type: application/json\" -d '{\"a\":1}' https://example.com/api",
+          "description": "Sends a JSON body with the right content type."
+        }
+      ],
       "repository": null,
       "documentation": "https://curl.se",
       "packageManagers": [
@@ -3255,7 +3287,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -3882,7 +3914,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Run a throwaway container",
+          "command": "docker run --rm hello-world",
+          "description": "Starts a container and removes it when it exits."
+        },
+        {
+          "title": "List running containers",
+          "command": "docker ps",
+          "description": "Shows containers currently running; add -a to include stopped ones."
+        },
+        {
+          "title": "Run a server in the background",
+          "command": "docker run -d --name web nginx:alpine",
+          "description": "Detaches an nginx container named web."
+        }
+      ],
       "repository": null,
       "documentation": "https://www.docker.com",
       "packageManagers": [
@@ -3892,7 +3940,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -5115,7 +5163,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Find files by extension",
+          "command": "fd -e json",
+          "description": "Lists every .json file below the current folder."
+        },
+        {
+          "title": "Find names matching a pattern",
+          "command": "fd '^overlay'",
+          "description": "Regex search on file and folder names."
+        },
+        {
+          "title": "Run a command on every match",
+          "command": "fd -e json -x wc -c",
+          "description": "Runs wc -c on each JSON file found."
+        }
+      ],
       "repository": "https://github.com/sharkdp/fd",
       "documentation": "https://github.com/sharkdp/fd",
       "packageManagers": [
@@ -5125,7 +5189,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -5207,7 +5271,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Convert a video to MP4",
+          "command": "ffmpeg -i input.mov output.mp4",
+          "description": "Re-encodes the file with default settings."
+        },
+        {
+          "title": "Extract the audio track",
+          "command": "ffmpeg -i input.mov -vn audio.mp3",
+          "description": "Drops the video stream and saves audio only."
+        },
+        {
+          "title": "Trim without re-encoding",
+          "command": "ffmpeg -i input.mp4 -t 30 -c copy clip.mp4",
+          "description": "Keeps the first 30 seconds, stream-copied for speed."
+        }
+      ],
       "repository": null,
       "documentation": "https://ffmpeg.org",
       "packageManagers": [
@@ -5217,7 +5297,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -5611,7 +5691,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Select several lines",
+          "command": "fzf --multi",
+          "description": "Tab marks multiple entries, Enter prints them."
+        },
+        {
+          "title": "Preview files while searching",
+          "command": "fzf --preview 'cat {}'",
+          "description": "Shows the highlighted file's contents alongside."
+        },
+        {
+          "title": "Filter without the UI",
+          "command": "ls | fzf --filter=report",
+          "description": "Non-interactive match, useful inside scripts."
+        }
+      ],
       "repository": "https://github.com/junegunn/fzf",
       "documentation": "https://github.com/junegunn/fzf",
       "packageManagers": [
@@ -5621,7 +5717,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -5866,7 +5962,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Clone a repository",
+          "command": "gh repo clone owner/repo",
+          "description": "Clones using your GitHub authentication."
+        },
+        {
+          "title": "List open pull requests",
+          "command": "gh pr list",
+          "description": "Shows PRs for the current repository."
+        },
+        {
+          "title": "Create an issue",
+          "command": "gh issue create --title \"Bug report\" --body \"What happened\"",
+          "description": "Files an issue from the terminal."
+        }
+      ],
       "repository": "https://cli.github.com",
       "documentation": "https://cli.github.com",
       "packageManagers": [
@@ -5876,7 +5988,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -6146,7 +6258,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Clone a repository",
+          "command": "git clone https://github.com/mughil/CLI_CODE.git",
+          "description": "Copies the full project into a new folder."
+        },
+        {
+          "title": "See what changed",
+          "command": "git status --short",
+          "description": "One-line summary of modified and untracked files."
+        },
+        {
+          "title": "Commit tracked changes with a message",
+          "command": "git commit -am \"Update docs\"",
+          "description": "Stages tracked file edits and commits them in one step."
+        }
+      ],
       "repository": null,
       "documentation": "https://git-scm.com",
       "packageManagers": [
@@ -6156,7 +6284,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -7764,7 +7892,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Show processes as a tree",
+          "command": "htop -t",
+          "description": "Groups processes by parent-child relationship."
+        },
+        {
+          "title": "Show one user's processes",
+          "command": "htop -u $USER",
+          "description": "Filters the list to processes you own."
+        },
+        {
+          "title": "Filter processes by name",
+          "command": "htop -F nginx",
+          "description": "Shows only processes matching nginx."
+        }
+      ],
       "repository": null,
       "documentation": "https://htop.dev",
       "packageManagers": [
@@ -7774,7 +7918,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -8608,7 +8752,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Pretty-print a JSON file",
+          "command": "jq . data/meta.json",
+          "description": "Formats the whole document with indentation."
+        },
+        {
+          "title": "Extract one field",
+          "command": "jq '.count' data/clis.json",
+          "description": "Prints just the count value."
+        },
+        {
+          "title": "List an object's keys",
+          "command": "jq 'keys' data/meta.json",
+          "description": "Shows the top-level key names."
+        }
+      ],
       "repository": null,
       "documentation": "https://jqlang.github.io/jq/",
       "packageManagers": [
@@ -8618,7 +8778,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -9455,7 +9615,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "List pods",
+          "command": "kubectl get pods",
+          "description": "Shows pods in the current namespace."
+        },
+        {
+          "title": "List pods with IPs and nodes",
+          "command": "kubectl get pods -o wide",
+          "description": "Adds node and IP columns to the list."
+        },
+        {
+          "title": "Describe a resource in detail",
+          "command": "kubectl describe pod my-pod",
+          "description": "Replace my-pod with the pod name; shows events and status."
+        }
+      ],
       "repository": null,
       "documentation": "https://kubernetes.io/docs/reference/kubectl/",
       "packageManagers": [
@@ -9465,7 +9641,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -10299,7 +10475,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Run the default target",
+          "command": "make",
+          "description": "Runs the first target in the Makefile."
+        },
+        {
+          "title": "Run a named target",
+          "command": "make build",
+          "description": "Runs the build target."
+        },
+        {
+          "title": "Print commands without running",
+          "command": "make -n build",
+          "description": "Dry run; shows what make would execute."
+        }
+      ],
       "repository": null,
       "documentation": "https://www.gnu.org/software/make/",
       "packageManagers": [
@@ -10309,7 +10501,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -12186,7 +12378,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Scan a host's common ports",
+          "command": "nmap scanme.nmap.org",
+          "description": "Checks the 1,000 most common ports; scanme.nmap.org is Nmap's authorised test host."
+        },
+        {
+          "title": "Detect service versions",
+          "command": "nmap -sV scanme.nmap.org",
+          "description": "Probes open ports to name and version each service."
+        },
+        {
+          "title": "Scan specific ports",
+          "command": "nmap -p 80,443 scanme.nmap.org",
+          "description": "Limits the scan to the listed ports."
+        }
+      ],
       "repository": null,
       "documentation": "https://nmap.org",
       "packageManagers": [
@@ -12196,7 +12404,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -15010,7 +15218,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Search a word, ignore case",
+          "command": "rg -i todo",
+          "description": "Finds todo, TODO and Todo in every file below the current folder."
+        },
+        {
+          "title": "Search one file type",
+          "command": "rg -t json \"useCases\"",
+          "description": "Restricts the search to JSON files."
+        },
+        {
+          "title": "Show lines around each match",
+          "command": "rg -C 2 \"examples\"",
+          "description": "Prints two lines of context above and below every hit."
+        }
+      ],
       "repository": "https://github.com/BurntSushi/ripgrep",
       "documentation": "https://github.com/BurntSushi/ripgrep",
       "packageManagers": [
@@ -15020,7 +15244,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -15090,7 +15314,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Mirror a folder locally",
+          "command": "rsync -av src/ dest/",
+          "description": "Copies contents of src into dest, preserving permissions."
+        },
+        {
+          "title": "Preview what would change",
+          "command": "rsync -avn src/ dest/",
+          "description": "Dry run; lists transfers without writing anything."
+        },
+        {
+          "title": "Make dest an exact copy",
+          "command": "rsync -av --delete src/ dest/",
+          "description": "Also removes files in dest that no longer exist in src."
+        }
+      ],
       "repository": null,
       "documentation": "https://rsync.samba.org",
       "packageManagers": [
@@ -15100,7 +15340,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -17406,7 +17646,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Initialise a project",
+          "command": "terraform init",
+          "description": "Downloads providers and prepares the working directory."
+        },
+        {
+          "title": "Preview changes",
+          "command": "terraform plan",
+          "description": "Shows what would be created, changed or destroyed."
+        },
+        {
+          "title": "Apply changes",
+          "command": "terraform apply",
+          "description": "Executes the plan against real infrastructure."
+        }
+      ],
       "repository": null,
       "documentation": "https://www.terraform.io",
       "packageManagers": [
@@ -17416,7 +17672,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -17875,7 +18131,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Start a named session",
+          "command": "tmux new-session -s work",
+          "description": "Creates a session called work that survives disconnects."
+        },
+        {
+          "title": "List sessions",
+          "command": "tmux list-sessions",
+          "description": "Shows every running session."
+        },
+        {
+          "title": "Reattach to a session",
+          "command": "tmux attach-session -t work",
+          "description": "Connects back to the work session."
+        }
+      ],
       "repository": "https://github.com/tmux/tmux",
       "documentation": "https://github.com/tmux/tmux",
       "packageManagers": [
@@ -17885,7 +18157,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -18750,7 +19022,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Open a file at a line",
+          "command": "vim +42 README.md",
+          "description": "Jumps straight to line 42."
+        },
+        {
+          "title": "Open files in tabs",
+          "command": "vim -p *.json",
+          "description": "One tab per file."
+        },
+        {
+          "title": "Open read-only",
+          "command": "vim -R config.txt",
+          "description": "View mode; blocks accidental edits."
+        }
+      ],
       "repository": null,
       "documentation": "https://www.vim.org",
       "packageManagers": [
@@ -18760,7 +19048,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -19285,7 +19573,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "Download a file",
+          "command": "wget https://example.com/file.zip",
+          "description": "Saves the file to the current folder."
+        },
+        {
+          "title": "Resume a partial download",
+          "command": "wget -c https://example.com/file.zip",
+          "description": "Continues where an interrupted download stopped."
+        },
+        {
+          "title": "Download quietly",
+          "command": "wget -q https://example.com/file.zip",
+          "description": "Suppresses progress output, for scripts."
+        }
+      ],
       "repository": null,
       "documentation": "https://www.gnu.org/software/wget/",
       "packageManagers": [
@@ -19295,7 +19599,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
@@ -19807,7 +20111,23 @@
           "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
+      "examples": [
+        {
+          "title": "List available formats",
+          "command": "yt-dlp -F URL",
+          "description": "Shows every quality/format a video offers."
+        },
+        {
+          "title": "Download audio only as MP3",
+          "command": "yt-dlp -x --audio-format mp3 URL",
+          "description": "Extracts and converts the audio track."
+        },
+        {
+          "title": "Save with a custom filename",
+          "command": "yt-dlp -o '%(title)s.%(ext)s' URL",
+          "description": "Names the file after the video title."
+        }
+      ],
       "repository": "https://github.com/yt-dlp/yt-dlp",
       "documentation": "https://github.com/yt-dlp/yt-dlp",
       "packageManagers": [
@@ -19817,7 +20137,7 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
+      "dataQuality": "curated",
       "lastVerified": null
     },
     {
