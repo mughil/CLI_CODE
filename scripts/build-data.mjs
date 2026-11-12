@@ -482,3 +482,29 @@ for (const file of SEO_PAGES) {
   }
   emit(file, next);
 }
+// ---------- service-worker cache version ----------------------------------
+// Derive the SW cache-buster from everything the shell cache serves: the
+// precache list, the precached pages + manifest (host-normalised so the
+// SITE_URL placeholder vs the deploy host does not perturb the stamp), the
+// stamped asset versions, and the dataset. Any content change -> new VERSION
+// -> new cache names -> the SW activate handler purges the previous
+// CLI_CODE-owned caches. Unchanged content -> byte-identical sw.js -> the
+// browser does not reinstall the worker.
+{
+  const normHost = (s) => s.replace(/https:\/\/[A-Za-z0-9.-]+\/CLI_CODE/g, 'https://HOST/CLI_CODE');
+  const h = createHash('sha1');
+  let swSrc = '';
+  try { swSrc = readFileSync(p('sw.js'), 'utf8'); } catch {}
+  const pm = swSrc.match(/PRECACHE = \[([\s\S]*?)\]/);
+  const precache = pm ? [...pm[1].matchAll(/'([^']+)'/g)].map((x) => x[1]) : [];
+  h.update(precache.join('\n'));
+  for (const u of precache) {
+    const f = u === './' ? 'index.html' : u.replace(/^\.\//, '');
+    try { h.update(normHost(readFileSync(p(f), 'utf8'))); } catch {}
+  }
+  for (const k of Object.keys(assetVer).sort()) h.update(k + '=' + assetVer[k]);
+  h.update(outClis);
+  const stamp = h.digest('hex').slice(0, 8);
+  emit('sw.js', swSrc.replace(/const VERSION = 'clicode-[a-f0-9]{8}'/, `const VERSION = 'clicode-${stamp}'`));
+}
+
