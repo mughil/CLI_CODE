@@ -1,0 +1,31 @@
+name: Apply PWA offline changes + regenerate build outputs
+on:
+  push:
+    branches: [feat/offline-pwa]
+    paths: [.github/workflows/regen-pwa.yml]
+permissions:
+  contents: write
+jobs:
+  regen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: node scripts/tmp-pwa-edits.mjs
+      - name: Rasterize icons (ImageMagick is preinstalled on ubuntu-latest)
+        run: |
+          convert -background none -density 384 assets/icon.svg -resize 512x512 assets/icon-512.png
+          convert -background none -density 384 assets/icon.svg -resize 192x192 assets/icon-192.png
+          rm assets/icon.svg
+      - run: npm run build
+      - name: Commit PWA changes + regenerated outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Add offline support (manifest + service worker) and regenerate build outputs"
+          git push origin HEAD:feat/offline-pwa
