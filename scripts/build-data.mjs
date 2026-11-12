@@ -354,6 +354,8 @@ const CORE_PAGES = [
   'index.html', 'registry.html', 'find.html', 'stacks.html',
   'compare.html', 'cheatsheet.html', 'saved.html', 'docs.html',
   'models.html', 'find-model.html', 'model-compare.html', 'run-local.html', 'ai-explorer.html',
+
+  'best-ai-cli-tools.html', 'best-devops-cli-tools.html', 'best-kubernetes-cli-tools.html', 'best-network-cli-tools.html', 'best-security-cli-tools.html', 'best-database-cli-tools.html', 'best-git-cli-tools.html', 'best-terminal-cli-tools.html',
 ];
 const urlEntry = (loc, priority) =>
   `  <url>\n    <loc>${SITE_URL}/${loc}</loc>\n    <priority>${priority}</priority>\n  </url>`;
@@ -377,6 +379,8 @@ const SEO_PAGES = [
   'compare.html', 'cheatsheet.html', 'saved.html', 'docs.html',
   'models.html', 'model.html', 'find-model.html', 'model-compare.html',
   'run-local.html', 'ai-explorer.html',
+
+  'best-ai-cli-tools.html', 'best-devops-cli-tools.html', 'best-kubernetes-cli-tools.html', 'best-network-cli-tools.html', 'best-security-cli-tools.html', 'best-database-cli-tools.html', 'best-git-cli-tools.html', 'best-terminal-cli-tools.html',
 ];
 const attr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
@@ -409,9 +413,13 @@ for (const file of SEO_PAGES) {
     `<meta property="og:title" content="${attr(title)}">`,
     `<meta property="og:description" content="${attr(desc)}">`,
     `<meta property="og:url" content="${attr(`${SITE_URL}/${file}`)}">`,
-    '<meta name="twitter:card" content="summary">',
+    `<meta property="og:image" content="${attr(`${SITE_URL}/assets/og.png`)}">`,
+    '<meta property="og:image:width" content="1200">',
+    '<meta property="og:image:height" content="630">',
+    '<meta name="twitter:card" content="summary_large_image">',
     `<meta name="twitter:title" content="${attr(title)}">`,
     `<meta name="twitter:description" content="${attr(desc)}">`,
+    `<meta name="twitter:image" content="${attr(`${SITE_URL}/assets/og.png`)}">`,
     '<!-- /SEO:auto -->',
   ].join('\n');
   let next = stampAssets(html.replace(/<!-- SEO:auto -->[\s\S]*?<!-- \/SEO:auto -->/, block));
