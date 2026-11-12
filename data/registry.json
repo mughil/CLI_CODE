@@ -234,25 +234,6 @@
       ]
     },
     {
-      "name": "comfyui",
-      "display_name": "ComfyUI",
-      "version": "1.0.0",
-      "description": "AI image generation workflow management via ComfyUI REST API",
-      "requires": "ComfyUI running at http://localhost:8188",
-      "homepage": "https://github.com/comfyanonymous/ComfyUI",
-      "source_url": null,
-      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=comfyui/agent-harness",
-      "entry_point": "cli-anything-comfyui",
-      "skill_md": null,
-      "category": "ai",
-      "contributors": [
-        {
-          "name": "Bortlesboat",
-          "url": "https://github.com/Bortlesboat"
-        }
-      ]
-    },
-    {
       "name": "drawio",
       "display_name": "Draw.io",
       "version": "1.0.0",
@@ -534,7 +515,7 @@
       "requires": "notebooklm CLI from notebooklm-py + valid local NotebookLM login session",
       "homepage": "https://notebooklm.google.com",
       "source_url": null,
-      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=notebooklm/agent-harness",
+      "install_cmd": "pip install notebooklm-py",
       "entry_point": "cli-anything-notebooklm",
       "skill_md": "skills/cli-anything-notebooklm/SKILL.md",
       "category": "ai",
@@ -542,25 +523,6 @@
         {
           "name": "Haimbeau1o",
           "url": "https://github.com/Haimbeau1o"
-        }
-      ]
-    },
-    {
-      "name": "ollama",
-      "display_name": "Ollama",
-      "version": "1.0.1",
-      "description": "Local LLM inference and model management via Ollama REST API",
-      "requires": "Ollama running at http://localhost:11434",
-      "homepage": "https://ollama.com",
-      "source_url": null,
-      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=ollama/agent-harness",
-      "entry_point": "cli-anything-ollama",
-      "skill_md": "skills/cli-anything-ollama/SKILL.md",
-      "category": "ai",
-      "contributors": [
-        {
-          "name": "CLI-Anything-Team",
-          "url": "https://github.com/HKUDS/CLI-Anything"
         }
       ]
     },
@@ -1080,7 +1042,7 @@
       "requires": "Upstream dify-workflow CLI installed from https://github.com/Akabane71/dify-workflow-cli",
       "homepage": "https://github.com/Akabane71/dify-workflow-cli",
       "source_url": null,
-      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=dify-workflow/agent-harness",
+      "install_cmd": "python -m pip install \"dify-ai-workflow-tools @ git+https://github.com/Akabane71/dify-workflow-cli.git@main\"",
       "entry_point": "cli-anything-dify-workflow",
       "skill_md": "skills/cli-anything-dify-workflow/SKILL.md",
       "category": "ai",

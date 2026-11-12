@@ -290,6 +290,11 @@
           "method": "pipx",
           "command": "pipx install aider-install",
           "label": "Install"
+        },
+        {
+          "method": "shell",
+          "command": "aider-install",
+          "label": "Run the installer"
         }
       ],
       "examples": [],
@@ -302,8 +307,8 @@
       "alternatives": [],
       "related": [],
       "source": "catalog",
-      "dataQuality": "derived",
-      "lastVerified": null
+      "dataQuality": "curated",
+      "lastVerified": "2026-11-12"
     },
     {
       "id": "alacritty",
@@ -2753,17 +2758,14 @@
       "slug": "comfyui",
       "name": "ComfyUI",
       "aliases": [],
-      "summary": "AI image generation workflow management via ComfyUI REST API",
-      "description": "AI image generation workflow management via ComfyUI REST API",
+      "summary": "Official ComfyUI CLI (comfy-cli) — install, launch, and extend ComfyUI, manage custom nodes and models, and run workflows from the terminal.",
+      "description": "Official ComfyUI CLI (comfy-cli) — install, launch, and extend ComfyUI, manage custom nodes and models, and run workflows from the terminal.",
       "categories": [
         "ai"
       ],
       "tags": [
         "ai",
-        "api",
-        "image",
-        "rest",
-        "workflow"
+        "terminal"
       ],
       "useCases": [
         "Node-based image generation",
@@ -2776,30 +2778,43 @@
         "windows"
       ],
       "language": "Python",
-      "runtime": null,
+      "runtime": "python",
       "license": "GPL-3.0-only",
       "install": [
         {
-          "method": "pip",
-          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=comfyui/agent-harness",
+          "method": "pipx",
+          "command": "pipx install comfy-cli",
           "label": "Install"
         }
       ],
-      "examples": [],
-      "repository": null,
-      "documentation": "https://github.com/comfyanonymous/ComfyUI",
+      "examples": [
+        {
+          "title": "Install ComfyUI",
+          "command": "comfy install",
+          "description": "Set up ComfyUI locally (from the comfy-cli README)"
+        },
+        {
+          "title": "Launch the server",
+          "command": "comfy launch"
+        },
+        {
+          "title": "Run a workflow",
+          "command": "comfy run --workflow ./workflow.json"
+        }
+      ],
+      "repository": "https://github.com/Comfy-Org/comfy-cli",
+      "documentation": "https://github.com/Comfy-Org/comfy-cli",
       "packageManagers": [
-        "git",
-        "pip"
+        "pipx"
       ],
       "difficulty": "advanced",
       "alternatives": [],
       "related": [
         "ollama"
       ],
-      "source": "harness",
+      "source": "catalog",
       "dataQuality": "curated",
-      "lastVerified": "2026-08-03"
+      "lastVerified": "2026-11-12"
     },
     {
       "id": "commitizen",
@@ -3792,8 +3807,13 @@
       "install": [
         {
           "method": "pip",
-          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=dify-workflow/agent-harness",
+          "command": "python -m pip install \"dify-ai-workflow-tools @ git+https://github.com/Akabane71/dify-workflow-cli.git@main\"",
           "label": "Install"
+        },
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=dify-workflow/agent-harness",
+          "label": "CLI-Anything harness (after prerequisite)"
         }
       ],
       "examples": [],
@@ -3807,8 +3827,8 @@
       "alternatives": [],
       "related": [],
       "source": "harness",
-      "dataQuality": "derived",
-      "lastVerified": "2026-04-07"
+      "dataQuality": "curated",
+      "lastVerified": "2026-11-12"
     },
     {
       "id": "direnv",
@@ -5996,14 +6016,13 @@
       "slug": "gh-copilot",
       "name": "GitHub Copilot CLI",
       "aliases": [],
-      "summary": "GitHub Copilot in the terminal — explain shell commands and suggest commands from a natural-language ask.",
-      "description": "GitHub Copilot in the terminal — explain shell commands and suggest commands from a natural-language ask.",
+      "summary": "GitHub's official agentic Copilot CLI for the terminal — build, debug, and understand code through natural language (replaces the gh-copilot extension,…",
+      "description": "GitHub's official agentic Copilot CLI for the terminal — build, debug, and understand code through natural language (replaces the gh-copilot extension, deprecated 2025-10-25).",
       "categories": [
         "ai"
       ],
       "tags": [
         "ai",
-        "shell",
         "terminal"
       ],
       "useCases": [],
@@ -6013,21 +6032,23 @@
       "license": "proprietary",
       "install": [
         {
-          "method": "shell",
-          "command": "gh extension install github/gh-copilot",
+          "method": "npm",
+          "command": "npm install -g @github/copilot",
           "label": "Install"
         }
       ],
       "examples": [],
-      "repository": "https://docs.github.com/copilot/github-copilot-in-the-cli",
-      "documentation": "https://docs.github.com/copilot/github-copilot-in-the-cli",
-      "packageManagers": [],
+      "repository": "https://github.com/github/copilot-cli",
+      "documentation": "https://github.com/github/copilot-cli",
+      "packageManagers": [
+        "npm"
+      ],
       "difficulty": null,
       "alternatives": [],
       "related": [],
       "source": "catalog",
       "dataQuality": "derived",
-      "lastVerified": null
+      "lastVerified": "2026-11-12"
     },
     {
       "id": "gh-dash",
@@ -8022,7 +8043,7 @@
       "install": [
         {
           "method": "pipx",
-          "command": "pipx install 'huggingface_hub[cli]'",
+          "command": "pipx install huggingface_hub",
           "label": "Install"
         }
       ],
@@ -8037,7 +8058,7 @@
       "related": [],
       "source": "catalog",
       "dataQuality": "derived",
-      "lastVerified": null
+      "lastVerified": "2026-11-12"
     },
     {
       "id": "hugo",
@@ -11111,14 +11132,18 @@
       "slug": "minimax-cli",
       "name": "MiniMax CLI",
       "aliases": [],
-      "summary": "MiniMax AI platform CLI for managing tokens, models, and API interactions from the command line",
-      "description": "MiniMax AI platform CLI for managing tokens, models, and API interactions from the command line",
+      "summary": "Official MiniMax CLI (`mmx`) — use MiniMax text, image, video, speech, vision, and web search from the terminal or from AI agents (requires an M Plan…",
+      "description": "Official MiniMax CLI (`mmx`) — use MiniMax text, image, video, speech, vision, and web search from the terminal or from AI agents (requires an M Plan subscription).",
       "categories": [
         "ai"
       ],
       "tags": [
         "ai",
-        "api"
+        "image",
+        "search",
+        "speech",
+        "terminal",
+        "video"
       ],
       "useCases": [],
       "platforms": [
@@ -11130,18 +11155,18 @@
       "install": [
         {
           "method": "npm",
-          "command": "npm install -g minimax-cli",
+          "command": "npm install -g mmx-cli",
           "label": "Install"
         },
         {
-          "method": "npx",
-          "command": "npx minimax-cli",
-          "label": "Run via npx"
+          "method": "agent-skill",
+          "command": "npx skills add MiniMax-AI/cli -y -g",
+          "label": "Agent skill"
         }
       ],
       "examples": [],
-      "repository": null,
-      "documentation": "https://platform.minimax.io",
+      "repository": "https://github.com/MiniMax-AI/cli",
+      "documentation": "https://platform.minimax.io/docs/token-plan/minimax-cli",
       "packageManagers": [
         "npm",
         "npx"
@@ -11151,7 +11176,7 @@
       "related": [],
       "source": "public",
       "dataQuality": "derived",
-      "lastVerified": "2026-01-06"
+      "lastVerified": "2026-11-12"
     },
     {
       "id": "mise",
@@ -12544,8 +12569,13 @@
       "install": [
         {
           "method": "pip",
-          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=notebooklm/agent-harness",
+          "command": "pip install notebooklm-py",
           "label": "Install"
+        },
+        {
+          "method": "pip",
+          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=notebooklm/agent-harness",
+          "label": "CLI-Anything harness (after prerequisite)"
         }
       ],
       "examples": [],
@@ -12559,8 +12589,8 @@
       "alternatives": [],
       "related": [],
       "source": "harness",
-      "dataQuality": "derived",
-      "lastVerified": "2026-03-17"
+      "dataQuality": "curated",
+      "lastVerified": "2026-11-12"
     },
     {
       "id": "novita",
@@ -13104,18 +13134,14 @@
       "slug": "ollama",
       "name": "Ollama",
       "aliases": [],
-      "summary": "Local LLM inference and model management via Ollama REST API",
-      "description": "Local LLM inference and model management via Ollama REST API",
+      "summary": "Get up and running with large language models locally — pull, run, and serve open-weight models from the terminal.",
+      "description": "Get up and running with large language models locally — pull, run, and serve open-weight models from the terminal.",
       "categories": [
         "ai"
       ],
       "tags": [
         "ai",
-        "api",
-        "inference",
-        "llm",
-        "model",
-        "rest"
+        "terminal"
       ],
       "useCases": [
         "Running local LLMs",
@@ -13132,17 +13158,27 @@
       "license": "MIT",
       "install": [
         {
-          "method": "pip",
-          "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=ollama/agent-harness",
+          "method": "shell",
+          "command": "curl -fsSL https://ollama.com/install.sh | sh",
           "label": "Install"
+        },
+        {
+          "method": "brew",
+          "command": "brew install ollama",
+          "label": "macOS / Homebrew"
         }
       ],
-      "examples": [],
-      "repository": null,
+      "examples": [
+        {
+          "title": "Run a model",
+          "command": "ollama run gemma4",
+          "description": "Download and chat with a model in one step (from the official Ollama README)"
+        }
+      ],
+      "repository": "https://github.com/ollama/ollama",
       "documentation": "https://ollama.com",
       "packageManagers": [
-        "git",
-        "pip"
+        "brew"
       ],
       "difficulty": "beginner",
       "alternatives": [],
@@ -13150,9 +13186,9 @@
         "comfyui",
         "openwebui"
       ],
-      "source": "harness",
+      "source": "catalog",
       "dataQuality": "curated",
-      "lastVerified": "2026-03-22"
+      "lastVerified": "2026-11-12"
     },
     {
       "id": "onefetch",
@@ -19098,7 +19134,7 @@
       "name": "Vivideo CLI",
       "aliases": [],
       "summary": "Vivideo AI video generation CLI — create avatar and text-to-video content from the terminal, scripts, CI, or agents.",
-      "description": "Vivideo AI video generation CLI — create avatar and text-to-video content from the terminal, scripts, CI, or agents. Supports auto and manual modes, model/avatar/voice/brand-kit listing, credit estimates, and status/wait polling.",
+      "description": "Vivideo AI video generation CLI — create avatar and text-to-video content from the terminal, scripts, CI, or agents. Supports auto and manual modes, model/avatar/voice/brand-kit listing, credit estimates, and status/wait polling. The scoped @vivideo npm package is real; the vivideo.ai site does not currently document the CLI, so official status is unverified.",
       "categories": [
         "ai"
       ],
@@ -19131,7 +19167,7 @@
       ],
       "examples": [],
       "repository": null,
-      "documentation": "https://vivideo.ai",
+      "documentation": "https://www.npmjs.com/package/@vivideo/cli",
       "packageManagers": [
         "npm",
         "npx"
@@ -19141,7 +19177,7 @@
       "related": [],
       "source": "public",
       "dataQuality": "derived",
-      "lastVerified": "2026-07-28"
+      "lastVerified": "2026-11-12"
     },
     {
       "id": "vnstat",
@@ -19626,7 +19662,7 @@
       "install": [
         {
           "method": "brew",
-          "command": "brew install whisper-cpp",
+          "command": "brew install whisper.cpp",
           "label": "macOS / Homebrew"
         }
       ],
@@ -19641,7 +19677,7 @@
       "related": [],
       "source": "catalog",
       "dataQuality": "derived",
-      "lastVerified": null
+      "lastVerified": "2026-11-12"
     },
     {
       "id": "wiremock",

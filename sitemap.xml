@@ -322,7 +322,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=aider</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=alacritty</loc>
@@ -666,7 +666,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=dify-workflow</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=direnv</loc>
@@ -1522,7 +1522,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=notebooklm</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=novita</loc>

@@ -31,21 +31,20 @@
       "name": "minimax-cli",
       "display_name": "MiniMax CLI",
       "version": "latest",
-      "description": "MiniMax AI platform CLI for managing tokens, models, and API interactions from the command line",
+      "description": "Official MiniMax CLI (`mmx`) — use MiniMax text, image, video, speech, vision, and web search from the terminal or from AI agents (requires an M Plan subscription).",
       "category": "ai",
-      "requires": "Node.js >= 16, MINIMAX_API_KEY",
-      "homepage": "https://platform.minimax.io",
-      "source_url": null,
+      "requires": "Node.js >= 18, MiniMax M Plan subscription",
+      "homepage": "https://platform.minimax.io/docs/token-plan/minimax-cli",
+      "source_url": "https://github.com/MiniMax-AI/cli",
       "package_manager": "npm",
-      "npm_package": "minimax-cli",
-      "install_cmd": "npm install -g minimax-cli",
-      "npx_cmd": "npx minimax-cli",
-      "skill_md": "https://platform.minimax.io/docs/token-plan/minimax-cli",
-      "entry_point": "minimax-cli",
+      "npm_package": "mmx-cli",
+      "install_cmd": "npm install -g mmx-cli",
+      "skill_md": "npx skills add MiniMax-AI/cli -y -g",
+      "entry_point": "mmx",
       "contributors": [
         {
           "name": "MiniMax",
-          "url": "https://platform.minimax.io"
+          "url": "https://github.com/MiniMax-AI"
         }
       ]
     },
@@ -520,10 +519,10 @@
       "name": "vivideo",
       "display_name": "Vivideo CLI",
       "version": "1.0.2",
-      "description": "Vivideo AI video generation CLI — create avatar and text-to-video content from the terminal, scripts, CI, or agents. Supports auto and manual modes, model/avatar/voice/brand-kit listing, credit estimates, and status/wait polling.",
+      "description": "Vivideo AI video generation CLI — create avatar and text-to-video content from the terminal, scripts, CI, or agents. Supports auto and manual modes, model/avatar/voice/brand-kit listing, credit estimates, and status/wait polling. The scoped @vivideo npm package is real; the vivideo.ai site does not currently document the CLI, so official status is unverified.",
       "category": "ai",
       "requires": "Node.js >= 18.17, VIVIDEO_API_KEY",
-      "homepage": "https://vivideo.ai",
+      "homepage": "https://www.npmjs.com/package/@vivideo/cli",
       "source_url": null,
       "package_manager": "npm",
       "npm_package": "@vivideo/cli",

@@ -61,7 +61,15 @@
       "platforms": ["linux", "macos", "windows"],
       "difficulty": "beginner",
       "useCases": ["Running local LLMs", "Serving models over a local HTTP API", "Offline inference"],
-      "related": ["openwebui", "comfyui"]
+      "related": ["openwebui", "comfyui"],
+      "summary": "Get up and running with large language models locally — pull, run, and serve open-weight models from the terminal.",
+      "description": "Get up and running with large language models locally — pull, run, and serve open-weight models from the terminal.",
+      "install": [
+        {"method": "brew", "command": "brew install ollama", "label": "macOS / Homebrew"}
+      ],
+      "examples": [
+        {"title": "Run a model", "command": "ollama run gemma4", "description": "Download and chat with a model in one step (from the official Ollama README)"}
+      ]
     },
     "n8n": {
       "language": "TypeScript",
@@ -207,7 +215,14 @@
       "platforms": ["linux", "macos", "windows"],
       "difficulty": "advanced",
       "useCases": ["Node-based image generation", "Diffusion pipeline design", "Batch generation workflows"],
-      "related": ["ollama"]
+      "related": ["ollama"],
+      "summary": "Official ComfyUI CLI (comfy-cli) — install, launch, and extend ComfyUI, manage custom nodes and models, and run workflows from the terminal.",
+      "description": "Official ComfyUI CLI (comfy-cli) — install, launch, and extend ComfyUI, manage custom nodes and models, and run workflows from the terminal.",
+      "examples": [
+        {"title": "Install ComfyUI", "command": "comfy install", "description": "Set up ComfyUI locally (from the comfy-cli README)"},
+        {"title": "Launch the server", "command": "comfy launch"},
+        {"title": "Run a workflow", "command": "comfy run --workflow ./workflow.json"}
+      ]
     },
     "bat": {
       "examples": [
@@ -347,6 +362,21 @@
         {"title": "List available formats", "command": "yt-dlp -F URL", "description": "Shows every quality/format a video offers."},
         {"title": "Download audio only as MP3", "command": "yt-dlp -x --audio-format mp3 URL", "description": "Extracts and converts the audio track."},
         {"title": "Save with a custom filename", "command": "yt-dlp -o '%(title)s.%(ext)s' URL", "description": "Names the file after the video title."}
+      ]
+    },
+    "dify-workflow": {
+      "install": [
+        {"method": "pip", "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=dify-workflow/agent-harness", "label": "CLI-Anything harness (after prerequisite)"}
+      ]
+    },
+    "notebooklm": {
+      "install": [
+        {"method": "pip", "command": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=notebooklm/agent-harness", "label": "CLI-Anything harness (after prerequisite)"}
+      ]
+    },
+    "aider": {
+      "install": [
+        {"method": "shell", "command": "aider-install", "label": "Run the installer"}
       ]
     }
   }
