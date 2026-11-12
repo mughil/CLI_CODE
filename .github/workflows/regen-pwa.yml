@@ -16,11 +16,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: node scripts/tmp-pwa-edits.mjs
-      - name: Rasterize icons (ImageMagick is preinstalled on ubuntu-latest)
-        run: |
-          convert -background none -density 384 assets/icon.svg -resize 512x512 assets/icon-512.png
-          convert -background none -density 384 assets/icon.svg -resize 192x192 assets/icon-192.png
-          rm assets/icon.svg
       - run: npm run build
       - name: Commit PWA changes + regenerated outputs
         run: |
