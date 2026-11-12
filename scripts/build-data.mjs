@@ -384,6 +384,27 @@ const SEO_PAGES = [
 ];
 const attr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
+// ---------- keyword landing pages: bake the category rows ------------------
+// The best-* landing pages carry "<!-- ROWS:auto -->...<!-- /ROWS:auto -->" in
+// their <tbody> plus a result-count paragraph; fill both from the merged
+// dataset so the full tool list is in the initial HTML (no JS required).
+const LANDING_CATS = {
+  'best-ai-cli-tools.html': 'ai',
+  'best-devops-cli-tools.html': 'devops',
+  'best-kubernetes-cli-tools.html': 'kubernetes',
+  'best-network-cli-tools.html': 'network',
+  'best-security-cli-tools.html': 'security',
+  'best-database-cli-tools.html': 'database',
+  'best-git-cli-tools.html': 'vcs',
+  'best-terminal-cli-tools.html': 'terminal',
+};
+const escHtml = (v) => String(v ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+const landingRow = (e) =>
+  '<tr class="row"><td class="c-name"><a href="cli.html?slug=' + encodeURIComponent(e.slug) + '"><b>' +
+  escHtml(e.name) + '</b></a><div class="sm" style="color:var(--dim)">' + escHtml(e.summary || '') +
+  '</div></td><td class="mono sm">' + escHtml((e.platforms || []).join(', ') || '\u2014') +
+  '</td><td class="mono sm">' + escHtml(e.language || e.runtime || '\u2014') + '</td></tr>';
+
 // ---------- static-asset cache busting ------------------------------------
 // Stamp every <script>/<link> to assets/{js,css}/*.{js,css} with a short
 // content hash so a returning visitor never runs a stale bundle against a
@@ -423,6 +444,20 @@ for (const file of SEO_PAGES) {
     '<!-- /SEO:auto -->',
   ].join('\n');
   let next = stampAssets(html.replace(/<!-- SEO:auto -->[\s\S]*?<!-- \/SEO:auto -->/, block));
+  const landCat = LANDING_CATS[file];
+  if (landCat) {
+    const list = entries
+      .filter((e) => (e.categories || []).includes(landCat))
+      .sort((a, b) => a.name.localeCompare(b.name));
+    next = next.replace(
+      /<!-- ROWS:auto -->[\s\S]*?<!-- \/ROWS:auto -->/,
+      '<!-- ROWS:auto -->\n' + list.map(landingRow).join('\n') + '\n<!-- /ROWS:auto -->',
+    );
+    next = next.replace(
+      /(<p class="reg-count" id="result-count"[^>]*>)[\s\S]*?(<\/p>)/,
+      '$1<b>' + list.length + '</b> tools in this category$2',
+    );
+  }
   // canonical may be authored relative ("./x.html"), bare, or as an absolute
   // placeholder URL — normalise any of them to an absolute SITE_URL canonical.
   next = next.replace(/<link rel="canonical" href="(?:\.\/|https?:\/\/[^"]*\/)?([^"\/]+)">/, `<link rel="canonical" href="${SITE_URL}/$1">`);

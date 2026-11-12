@@ -25,7 +25,6 @@
 <link rel="canonical" href="https://EXAMPLE.invalid/CLI_CODE/best-security-cli-tools.html">
 <link rel="stylesheet" href="assets/css/site.css?v=eaa23aeb">
 <script src="assets/js/theme.js?v=82531afb" defer></script>
-<script src="assets/js/data.js?v=5b049d0c" defer></script>
 </head>
 <body>
 
@@ -49,7 +48,7 @@
   <h1 class="sec-title">Security <span class="g">CLI Tools</span></h1>
   <p class="sec-sub">Directory of security command-line tools: scanners, auditors, password utilities and forensics tools, with install commands.</p>
 
-  <p class="reg-count" id="result-count" aria-live="polite">Loading...</p>
+  <p class="reg-count" id="result-count" aria-live="polite"><b>12</b> tools in this category</p>
 
   <div class="table-scroll">
     <table class="reg-table">
@@ -60,7 +59,20 @@
           <th scope="col">Language</th>
         </tr>
       </thead>
-      <tbody id="rows"><tr><td colspan="3" class="empty">Loading dataset...</td></tr></tbody>
+      <tbody id="rows"><!-- ROWS:auto -->
+<tr class="row"><td class="c-name"><a href="cli.html?slug=age"><b>age</b></a><div class="sm" style="color:var(--dim)">Simple, modern, secure file encryption — small explicit key model, no config, composable with pipes.</div></td><td class="mono sm">—</td><td class="mono sm">Go</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=checkov"><b>Checkov</b></a><div class="sm" style="color:var(--dim)">Static code analysis for IaC — Terraform, CloudFormation, Kubernetes, Helm, ARM, and more.</div></td><td class="mono sm">cross-platform</td><td class="mono sm">Python</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=gitleaks"><b>Gitleaks</b></a><div class="sm" style="color:var(--dim)">SAST tool for detecting hardcoded secrets — API keys, tokens, passwords — in Git repos and history.</div></td><td class="mono sm">—</td><td class="mono sm">Go</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=kube-bench"><b>kube-bench</b></a><div class="sm" style="color:var(--dim)">Checks whether Kubernetes is deployed according to the CIS Kubernetes Benchmark security guidelines.</div></td><td class="mono sm">—</td><td class="mono sm">Go</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=kubescape"><b>Kubescape</b></a><div class="sm" style="color:var(--dim)">Kubernetes security platform CLI — scans clusters, manifests, and images against frameworks like NSA and MITRE.</div></td><td class="mono sm">—</td><td class="mono sm">Go</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=mkcert"><b>mkcert</b></a><div class="sm" style="color:var(--dim)">Zero-config tool to make locally-trusted development certificates — no more browser TLS warnings.</div></td><td class="mono sm">—</td><td class="mono sm">Go</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=nmap"><b>Nmap</b></a><div class="sm" style="color:var(--dim)">Network exploration and security auditing — host discovery, port scanning, and service/OS fingerprinting.</div></td><td class="mono sm">—</td><td class="mono sm">C / C++ / Lua</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=semgrep"><b>Semgrep</b></a><div class="sm" style="color:var(--dim)">Fast, open-source static analysis to find bugs and enforce code standards with rules that look like code.</div></td><td class="mono sm">cross-platform</td><td class="mono sm">Python / OCaml</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=sops"><b>SOPS</b></a><div class="sm" style="color:var(--dim)">Encrypt values inside YAML, JSON, ENV, and INI files with KMS, age, or PGP — safe to commit to Git.</div></td><td class="mono sm">—</td><td class="mono sm">Go</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=tfsec"><b>tfsec</b></a><div class="sm" style="color:var(--dim)">Static analysis security scanner for Terraform code — now part of Trivy, spotting misconfigurations.</div></td><td class="mono sm">—</td><td class="mono sm">Go</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=trivy"><b>Trivy</b></a><div class="sm" style="color:var(--dim)">Comprehensive, versatile security scanner — vulnerabilities, misconfig, secrets, and SBOM for containers and IaC.</div></td><td class="mono sm">—</td><td class="mono sm">Go</td></tr>
+<tr class="row"><td class="c-name"><a href="cli.html?slug=vault"><b>Vault</b></a><div class="sm" style="color:var(--dim)">Secrets management — store, access, and distribute API keys, passwords, and certificates with leasing.</div></td><td class="mono sm">—</td><td class="mono sm">Go</td></tr>
+<!-- /ROWS:auto --></tbody>
     </table>
   </div>
 
@@ -73,29 +85,5 @@
     <span>Apache-2.0</span>
   </div>
 </footer>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  'use strict';
-  var CAT = 'security';
-  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
-    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-  }); };
-  window.CLIData.load().then(function (d) {
-    var list = d.clis.filter(function (c) { return (c.categories || []).indexOf(CAT) !== -1; })
-      .sort(function (a, b) { return a.name.localeCompare(b.name); });
-    document.getElementById('result-count').innerHTML = '<b>' + list.length + '</b> tools in this category';
-    document.getElementById('rows').innerHTML = list.map(function (e) {
-      return '<tr class="row">' +
-        '<td class="c-name"><a href="cli.html?slug=' + encodeURIComponent(e.slug) + '"><b>' + esc(e.name) + '</b></a>' +
-        '<div class="sm" style="color:var(--dim)">' + esc(e.summary || '') + '</div></td>' +
-        '<td class="mono sm">' + esc((e.platforms || []).join(', ') || '\u2014') + '</td>' +
-        '<td class="mono sm">' + esc(e.language || e.runtime || '\u2014') + '</td>' +
-        '</tr>';
-    }).join('');
-  }).catch(function (err) {
-    document.getElementById('rows').innerHTML = '<tr><td colspan="3" class="empty">Could not load the dataset (' + esc(err && err.message || err) + ').</td></tr>';
-  });
-});
-</script>
 </body>
 </html>
