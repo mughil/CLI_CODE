@@ -163,21 +163,7 @@ links still reachable; no page-level horizontal scroll; Accessibility stays 100.
 
 ---
 
-## 12. Add typo tolerance to search
-
-**Labels:** `enhancement` `help wanted`
-**Files:** `assets/js/search.js`
-
-Search is exact-token AND matching, so `kubctl` or `ripgrpe` return nothing. Add
-bounded fuzzy matching (e.g. edit distance ≤ 1 for tokens of 5+ characters) as a
-fallback *after* exact matches, so ranking does not regress.
-
-**Acceptance:** exact-match ordering unchanged; common typos resolve; still
-instant over 500 entries; no new dependency.
-
----
-
-## 13. Document Homebrew-only install commands as such
+## 12. Document Homebrew-only install commands as such
 
 **Labels:** `good first issue` `documentation`
 **Files:** `assets/js/cli.js`, `data/overlay.json`
@@ -190,7 +176,7 @@ only. Label the platform on each install method so a Windows visitor is not misl
 
 ---
 
-## 14. Add a contributor scaffold script
+## 13. Add a contributor scaffold script
 
 **Labels:** `enhancement` `help wanted`
 **Files:** `scripts/` , `package.json`
@@ -204,7 +190,7 @@ and appends a correctly-shaped entry would lower the barrier.
 
 ---
 
-## 15. Audit the print stylesheet for cheat sheets
+## 14. Audit the print stylesheet for cheat sheets
 
 **Labels:** `good first issue` `enhancement`
 **Files:** `assets/css/site.css`

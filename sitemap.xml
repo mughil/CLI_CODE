@@ -53,6 +53,38 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://EXAMPLE.invalid/CLI_CODE/best-ai-cli-tools.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://EXAMPLE.invalid/CLI_CODE/best-devops-cli-tools.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://EXAMPLE.invalid/CLI_CODE/best-kubernetes-cli-tools.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://EXAMPLE.invalid/CLI_CODE/best-network-cli-tools.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://EXAMPLE.invalid/CLI_CODE/best-security-cli-tools.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://EXAMPLE.invalid/CLI_CODE/best-database-cli-tools.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://EXAMPLE.invalid/CLI_CODE/best-git-cli-tools.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://EXAMPLE.invalid/CLI_CODE/best-terminal-cli-tools.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/registry.html?cat=devtools</loc>
     <priority>0.6</priority>
   </url>
@@ -370,7 +402,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=bat</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=bazel</loc>
@@ -582,7 +614,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=curl</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=curlie</loc>
@@ -646,7 +678,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=docker</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=docker-compose</loc>
@@ -770,7 +802,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=fd</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=feishu</loc>
@@ -778,7 +810,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=ffmpeg</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=files-to-prompt</loc>
@@ -818,7 +850,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=fzf</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=gallery-dl</loc>
@@ -842,7 +874,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=gh</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=gh-copilot</loc>
@@ -870,7 +902,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=git</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=git-absorb</loc>
@@ -1034,7 +1066,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=htop</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=httpie</loc>
@@ -1118,7 +1150,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=jq</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=jrnl</loc>
@@ -1202,7 +1234,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=kubectl</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=kubectx</loc>
@@ -1286,7 +1318,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=make</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=markdownlint-cli2</loc>
@@ -1474,7 +1506,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=nmap</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=nnn</loc>
@@ -1754,7 +1786,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=ripgrep</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=rms</loc>
@@ -1762,7 +1794,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=rsync</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=ruff</loc>
@@ -1990,7 +2022,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=terraform</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=terraform-docs</loc>
@@ -2038,7 +2070,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=tmux</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=tokei</loc>
@@ -2126,7 +2158,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=vim</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=visidata</loc>
@@ -2178,7 +2210,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=wget</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=whisper-cpp</loc>
@@ -2230,7 +2262,7 @@
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=yt-dlp</loc>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://EXAMPLE.invalid/CLI_CODE/cli.html?slug=zellij</loc>
