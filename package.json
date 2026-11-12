@@ -19,6 +19,6 @@
   "devDependencies": {
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
-    "html-validate": "^9.5.3"
+    "html-validate": "^11.21.0"
   }
 }
