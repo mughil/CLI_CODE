@@ -86,3 +86,10 @@ document.addEventListener('click', function (e) {
     setTimeout(function () { b.textContent = old; b.classList.remove('done'); }, 1400);
   });
 });
+
+// Shared: offline support - register the service worker (silent no-op where unsupported).
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').catch(function () { /* offline support unavailable */ });
+  });
+}
