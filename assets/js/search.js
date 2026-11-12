@@ -7,6 +7,11 @@
  *   useCases 4 · language 2 · platforms 2
  * A result must match every query token somewhere (AND). Score = sum of best
  * per-token contributions. Curated entries win ties.
+ *
+ * Typo tolerance: when a token of 5+ characters matches nothing exactly or by
+ * prefix, fall back to a bounded edit-distance match (Damerau-Levenshtein,
+ * distance <= 1, or <= 2 for tokens of 8+ characters) at roughly half weight,
+ * so exact-match ordering is unchanged and typos still resolve.
  */
 (function () {
   'use strict';
@@ -48,6 +53,60 @@
     });
   }
 
+  const FUZZY_MIN_LEN = 5;
+
+  // Damerau-Levenshtein (optimal string alignment) with a length-difference
+  // pre-check. Words compared here are short name/tag tokens, so the full
+  // matrix is cheap.
+  function editDistance(a, b, maxDist) {
+    if (Math.abs(a.length - b.length) > maxDist) return maxDist + 1;
+    const n = b.length;
+    let prev2 = null;
+    let prev = new Array(n + 1);
+    let cur = new Array(n + 1);
+    for (let j = 0; j <= n; j++) prev[j] = j;
+    for (let i = 1; i <= a.length; i++) {
+      cur[0] = i;
+      for (let j = 1; j <= n; j++) {
+        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        let v = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+        if (prev2 && i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) {
+          v = Math.min(v, prev2[j - 2] + 1);
+        }
+        cur[j] = v;
+      }
+      prev2 = prev;
+      prev = cur;
+      cur = new Array(n + 1);
+    }
+    return prev[n];
+  }
+
+  // Smallest distance between t and any candidate token, capped at maxDist + 1.
+  function bestDist(candidates, t, maxDist) {
+    let best = maxDist + 1;
+    for (const cand of candidates) {
+      if (Math.abs(cand.length - t.length) > maxDist) continue;
+      const d = editDistance(cand, t, maxDist);
+      if (d < best) best = d;
+      if (best === 1) break;
+    }
+    return best;
+  }
+
+  // Typo fallback, only reached when exact/prefix matching scored 0.
+  function fuzzyToken(rec, t) {
+    const matched = { name: false, text: false };
+    if (t.length < FUZZY_MIN_LEN) return { s: 0, matched };
+    const maxDist = t.length >= 8 ? 2 : 1;
+    let s = 0;
+    if (bestDist(rec.nameTokens, t, maxDist) <= maxDist) { s = 5; matched.name = true; }
+    if (bestDist(rec.aliasTokens, t, maxDist) <= maxDist) s = Math.max(s, 4);
+    if (bestDist(rec.tags, t, maxDist) <= maxDist) s = Math.max(s, 3);
+    if (bestDist(rec.descTokens, t, 1) <= 1) { s = Math.max(s, 2); matched.text = true; }
+    return { s, matched };
+  }
+
   function scoreToken(rec, t) {
     let s = 0;
     const matched = { name: false, text: false };
@@ -74,6 +133,7 @@
     if (rec.langLower && rec.langLower.includes(t) && t.length >= 2) s = Math.max(s, 2);
     if (rec.platforms.has(t)) s = Math.max(s, 2);
 
+    if (s === 0) return fuzzyToken(rec, t);
     return { s, matched };
   }
 
@@ -123,5 +183,5 @@
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
   }
 
-  window.CLISearch = { build, query, tokenize, queryTokens, highlight, escapeHtml };
+  window.CLISearch = { build, query, tokenize, queryTokens, highlight, escapeHtml, editDistance };
 })();
