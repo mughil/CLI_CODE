@@ -75,7 +75,8 @@
         <ul class="diff-list">${keyDifferences(entries).map((d) => `<li>${d}</li>`).join('')}</ul>
       </section>
 
-      <div class="table-scroll">
+      <p class="cmp-scroll-hint muted sm">Scroll sideways to see all tools.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Tools comparison, scroll sideways">
         <table class="reg-table cmp-table">
           <thead><tr><th scope="col">Field</th>${entries.map((e) => `<th scope="col"><a href="cli.html?slug=${encodeURIComponent(e.slug)}">${esc(e.name)}</a></th>`).join('')}</tr></thead>
           <tbody>

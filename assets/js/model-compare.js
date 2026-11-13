@@ -62,7 +62,8 @@
         <button class="btn-sm ghost" id="mc-clear">Clear</button>
       </div>
       <section class="cli-sec"><h2>Key differences</h2><ul class="diff-list">${keyDiffs(ms).map((d) => `<li>${esc(d)}</li>`).join('')}</ul></section>
-      <div class="table-scroll"><table class="reg-table cmp-table">
+      <p class="cmp-scroll-hint muted sm">Scroll sideways to see all models.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Models comparison, scroll sideways"><table class="reg-table cmp-table">
         <thead><tr><th scope="col">Field</th>${ms.map((m) => `<th scope="col"><a href="model.html?slug=${encodeURIComponent(m.slug)}">${esc(m.name)}</a></th>`).join('')}</tr></thead>
         <tbody>${ROWS.map(([k, label, fn]) => {
           const d = differs(ms, k);

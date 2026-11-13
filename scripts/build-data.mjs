@@ -495,6 +495,17 @@ for (const file of SEO_PAGES) {
   const h = createHash('sha1');
   let swSrc = '';
   try { swSrc = readFileSync(p('sw.js'), 'utf8'); } catch {}
+  const resources = [
+    ...Object.keys(assetVer).sort().map((path) => `${path}?v=${assetVer[path]}`),
+    ...readdirSync(p('assets/fonts')).filter((f) => f.endsWith('.woff2')).sort().map((f) => `assets/fonts/${f}`),
+    'data/clis.json', 'data/meta.json', 'data/stacks.json', 'data/matrix_registry.json',
+    'data/models.json', 'data/model-meta.json', 'data/ai-projects.json',
+  ];
+  swSrc = swSrc.replace(/\/\/ APP_RESOURCES:auto[\s\S]*?\/\/ \/APP_RESOURCES:auto/,
+    `// APP_RESOURCES:auto\nconst APP_RESOURCES = ${JSON.stringify(resources, null, 2)};\n// /APP_RESOURCES:auto`);
+  // Include worker behavior and every app resource in its version, not only HTML.
+  h.update(swSrc.replace(/const VERSION = 'clicode-[a-f0-9]{8}'/, "const VERSION = 'clicode-VERSION'"));
+  for (const resource of resources) h.update(readFileSync(p(resource.split('?')[0])));
   const pm = swSrc.match(/PRECACHE = \[([\s\S]*?)\]/);
   const precache = pm ? [...pm[1].matchAll(/'([^']+)'/g)].map((x) => x[1]) : [];
   h.update(precache.join('\n'));
