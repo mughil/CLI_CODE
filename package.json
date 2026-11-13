@@ -14,11 +14,12 @@
     "check:models": "node scripts/validate-models.mjs && node scripts/check-model-links.mjs",
     "check:search": "node scripts/check-search.mjs",
     "model-stats": "node scripts/model-stats.mjs",
-    "check": "npm run validate && npm run check:drift && npm run check:links && npm run check:html && npm run check:models && npm run check:search"
+    "check": "npm run validate && npm run check:drift && npm run check:links && npm run check:html && npm run check:models && npm run check:search && npm run check:offline",
+    "check:offline": "node scripts/check-offline.mjs"
   },
   "devDependencies": {
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
-    "html-validate": "^9.5.3"
+    "html-validate": "^11.21.1"
   }
 }

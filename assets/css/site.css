@@ -300,10 +300,10 @@ select.filter:focus { outline: none; border-color: var(--accent); box-shadow: 0 
 .empty { padding: var(--space-4); text-align: center; color: var(--ink-3); font-family: var(--mono); font-size: 0.85rem; }
 
 @media (max-width: 720px) {
-  .reg-table thead { display: none; }
-  .reg-table, .reg-table tbody, .reg-table tr, .reg-table td { display: block; width: 100%; }
+  .reg-table:not(.cmp-table) thead { display: none; }
+  .reg-table:not(.cmp-table), .reg-table:not(.cmp-table) tbody, .reg-table:not(.cmp-table) tr, .reg-table:not(.cmp-table) td { display: block; width: 100%; }
   .reg-table tr.row { border: 1px solid var(--line); border-radius: var(--radius-sm); margin-bottom: 10px; padding: 6px; background: var(--card); }
-  .reg-table td { border: 0; padding: 5px 8px; }
+  .reg-table:not(.cmp-table) td { border: 0; padding: 5px 8px; }
 }
 
 /* ---- drawer ---- */
@@ -529,7 +529,11 @@ a.chip:hover, button.chip:hover { border-color: var(--accent); color: var(--acce
 .search-box.lg svg { width: 18px; height: 18px; left: 14px; }
 .search-box.lg input { flex: 1; }
 .search-box.lg .btn { flex: 0 0 auto; }
-@media (max-width: 520px) { .search-box.lg { flex-wrap: wrap; } .search-box.lg .btn { width: 100%; justify-content: center; } }
+@media (max-width: 520px) {
+  .search-box.lg { flex-wrap: wrap; }
+  .search-box.lg svg { top: 26px; }
+  .search-box.lg .btn { width: 100%; justify-content: center; }
+}
 .home-stats { margin-top: 18px; color: var(--ink-3); font: 500 0.85rem var(--mono); }
 .home-stats b { color: var(--ink); }
 .home-recent { margin-top: 22px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
@@ -641,3 +645,10 @@ a.chip:hover, button.chip:hover { border-color: var(--accent); color: var(--acce
 
 .src-list { margin: 0; padding-left: 20px; }
 .src-list li { margin: 6px 0; font-size: 0.88rem; color: var(--ink-2); }
+
+/* Keep side-by-side labels and commands readable inside the scroll container. */
+.cmp-scroll-hint { display: none; }
+@media (max-width: 720px) {
+  .cmp-table { min-width: 680px; }
+  .cmp-scroll-hint { display: block; margin: 18px 0 8px; }
+}
